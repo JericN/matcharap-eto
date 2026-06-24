@@ -80,10 +80,10 @@ export default function Calculator({ matchaOptions, milkOptions, drinks, ingredi
               <div className="grid grid-cols-3 gap-[7px]">
                 <div className="cost-cell"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-brown-soft">COGS</span><span className="block font-mono font-medium text-[1.05rem] text-forest mt-[3px]">₱{cogs}</span></div>
                 <div className="cost-cell"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-brown-soft">SRP ✎</span><input className="srp-input" type="number" min="0" step="5" value={srp} inputMode="numeric" aria-label={"Selling price for " + d.name} onChange={(e) => setSrp(idx, +e.target.value || 0)} /></div>
-                <div className="cost-cell cost-cell--hl"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-[#cdd9bd]">Profit</span><span className="block font-mono font-medium text-[1.05rem] text-cream-light mt-[3px]">₱{p}</span></div>
+                <div className="cost-cell cost-cell--hl"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-onforest-mut">Profit</span><span className="block font-mono font-medium text-[1.05rem] text-cream-light mt-[3px]">₱{p}</span></div>
               </div>
               <div className="flex justify-between font-mono text-[.56rem] tracking-[.06em] uppercase text-brown-soft"><span>gross margin · <b className="text-clay">{mar}%</b></span><span>{marginWord(mar)}</span></div>
-              <div className="h-4 border-2 border-brown rounded-[10px] bg-cream-card overflow-hidden"><div className="h-full" style={{ width: Math.max(0, mar) + "%", background: "repeating-linear-gradient(45deg,#8aa15a 0 7px,#a7c06a 7px 14px)", borderRight: "2px solid #6b4f2f", borderRadius: "8px 3px 3px 8px" }} /></div>
+              <div className="h-4 border-2 border-brown rounded-[10px] bg-cream-card overflow-hidden"><div className="margin-fill h-full" style={{ width: Math.max(0, mar) + "%" }} /></div>
               <div className="font-mono text-[.58rem] leading-relaxed tracking-[.01em] text-brown bg-cream-card border-[1.5px] border-dashed border-brown-soft rounded-[11px] px-[11px] py-[9px]">🧮 matcha ₱{mCost} + milk ₱{Math.round(milkCost)}{d.fl > 0 ? " + " + d.flavor + " ₱" + d.fl : ""} + cup/ice/sugar ₱{extras} = <b className="text-forest">₱{cogs}</b> · type your price in SRP ✎</div>
             </article>
           );

@@ -9,7 +9,7 @@ export default function EventCard({ event }) {
   const stampVariant = STAMP_VARIANT[event.status[1]] || '';
 
   return (
-    <article className="paper-card" style={event.star ? { background: 'linear-gradient(180deg,#f9f3e4,#f7f1e3)' } : undefined}>
+    <article className={`paper-card${event.star ? ' is-star' : ''}`}>
       <span className={`stamp ${stampVariant}`}>{stampText}</span>
 
       <div className="flex gap-[13px] items-start px-4 pt-4 pb-2.5">

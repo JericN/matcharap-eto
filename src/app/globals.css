@@ -2,16 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- base: paper texture + scaffolding utilities can't express ---------- */
+/* ===========================================================================
+   THEME — single source of truth. Colours are RGB channel triplets so they
+   work with Tailwind opacity modifiers (e.g. bg-matcha-bright/10). Change a
+   value here and the whole site reskins; Tailwind tokens map to these in
+   tailwind.config.js.
+   =========================================================================== */
 @layer base {
+  :root {
+    --c-cream: 239 231 211;
+    --c-cream-light: 243 236 219;
+    --c-cream-card: 247 241 227;
+    --c-cream-deep: 233 224 201;
+    --c-kraft: 227 212 176;
+    --c-forest: 63 80 49;
+    --c-olive: 86 104 63;
+    --c-olive-soft: 111 127 84;
+    --c-brown: 107 79 47;
+    --c-brown-soft: 138 108 69;
+    --c-matcha: 138 161 90;
+    --c-matcha-bright: 167 192 106;
+    --c-matcha-fill: 169 192 138;
+    --c-clay: 185 84 45;
+    --c-blush: 217 138 99;
+    --c-star: 249 243 228;        /* star-card highlight */
+    --c-onforest-mut: 205 217 189; /* muted text on forest */
+    --c-onforest-soft: 223 230 210;/* soft text on forest */
+    --c-cat-ph: 94 123 58;        /* powder category swatches */
+    --c-cat-jp: 122 148 71;
+    --c-cat-import: 155 177 92;
+  }
+
   body {
     @apply font-body text-forest bg-cream leading-relaxed antialiased;
     background-image:
-      radial-gradient(rgba(107,79,47,.05) 1px, transparent 1.4px),
-      radial-gradient(rgba(63,80,49,.045) 1px, transparent 1.4px),
+      radial-gradient(rgb(var(--c-brown) / .05) 1px, transparent 1.4px),
+      radial-gradient(rgb(var(--c-forest) / .045) 1px, transparent 1.4px),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E"),
       linear-gradient(125deg, rgba(255,255,255,.28), rgba(255,255,255,0) 45%),
-      radial-gradient(120% 120% at 80% 0%, #f3ecdb, #e9e0c9);
+      radial-gradient(120% 120% at 80% 0%, rgb(var(--c-cream-light)), rgb(var(--c-cream-deep)));
     background-size: 7px 7px, 11px 11px, 180px 180px, 100% 100%, 100% 100%;
     background-position: 0 0, 3px 4px, 0 0, 0 0, 0 0;
     background-attachment: fixed;
@@ -28,6 +57,7 @@
 
   /* card shells */
   .paper-card { @apply relative bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard-sm overflow-hidden flex flex-col transition-transform hover:-translate-x-px hover:-translate-y-0.5; }
+  .paper-card.is-star { background: linear-gradient(180deg, rgb(var(--c-star)), rgb(var(--c-cream-card))); }
 
   /* chips (filters) */
   .chip { @apply font-mono text-[.64rem] tracking-[.1em] uppercase text-brown bg-cream-light border-2 border-brown rounded-pill px-[15px] py-[7px] cursor-pointer leading-tight text-center transition-transform hover:-translate-y-0.5; }
@@ -37,17 +67,17 @@
   .meta-line { @apply font-mono text-[.64rem] text-brown flex gap-[7px] items-center my-[3px] uppercase; }
 
   /* stamp status badge */
-  .stamp { @apply absolute top-[11px] right-[11px] z-[2] font-mono font-medium uppercase tracking-[.08em] text-[.55rem] text-clay border-2 border-clay rounded-[8px_13px_9px_12px] px-2 py-[5px] -rotate-[7deg] leading-none; background: rgba(185,84,45,.07); box-shadow: inset 0 0 0 1px rgba(185,84,45,.2); }
+  .stamp { @apply absolute top-[11px] right-[11px] z-[2] font-mono font-medium uppercase tracking-[.08em] text-[.55rem] text-clay border-2 border-clay rounded-[8px_13px_9px_12px] px-2 py-[5px] -rotate-[7deg] leading-none; background: rgb(var(--c-clay) / .07); box-shadow: inset 0 0 0 1px rgb(var(--c-clay) / .2); }
   .stamp--live::before { content: "●"; font-size: .45rem; margin-right: 5px; vertical-align: middle; }
-  .stamp--soon { @apply text-olive border-olive; background: rgba(86,104,63,.07); box-shadow: inset 0 0 0 1px rgba(86,104,63,.2); }
-  .stamp--ended { @apply text-brown-soft border-brown-soft shadow-none; background: rgba(138,108,69,.06); }
+  .stamp--soon { @apply text-olive border-olive; background: rgb(var(--c-olive) / .07); box-shadow: inset 0 0 0 1px rgb(var(--c-olive) / .2); }
+  .stamp--ended { @apply text-brown-soft border-brown-soft shadow-none; background: rgb(var(--c-brown-soft) / .06); }
 
   /* form controls (appearance resets utilities can't do) */
   .field-label { @apply block font-mono text-[.58rem] tracking-[.12em] uppercase text-brown mb-[5px]; }
   .field-select { @apply w-full font-body text-[.85rem] text-forest bg-cream-card border-2 border-olive rounded-[10px_8px_11px_8px] py-2 pl-[11px] pr-7 cursor-pointer appearance-none bg-no-repeat; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%233f5031' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E"); background-position: right 10px center; }
   .range-input { @apply w-full appearance-none h-1.5 rounded-md bg-cream-card border border-olive outline-none cursor-pointer mt-1.5; }
-  .range-input::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #3f5031; border: 2px solid #f3ecdb; cursor: pointer; }
-  .range-input::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #3f5031; border: 2px solid #f3ecdb; cursor: pointer; }
+  .range-input::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: rgb(var(--c-forest)); border: 2px solid rgb(var(--c-cream-light)); cursor: pointer; }
+  .range-input::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: rgb(var(--c-forest)); border: 2px solid rgb(var(--c-cream-light)); cursor: pointer; }
   .srp-input { @apply font-mono font-medium text-[1.05rem] text-clay bg-transparent border-0 w-full text-center mt-[3px] pb-px outline-none border-b-[1.6px] border-dashed border-clay; -moz-appearance: textfield; }
   .srp-input:focus { @apply border-solid; }
   .srp-input::-webkit-outer-spin-button, .srp-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -55,6 +85,7 @@
   /* drink cost cells */
   .cost-cell { @apply text-center border-2 border-brown rounded-cell px-1 py-2 bg-cream-card; }
   .cost-cell--hl { @apply bg-forest border-forest; }
+  .margin-fill { background: repeating-linear-gradient(45deg, rgb(var(--c-matcha)) 0 7px, rgb(var(--c-matcha-bright)) 7px 14px); border-right: 2px solid rgb(var(--c-brown)); border-radius: 8px 3px 3px 8px; }
 
   /* powder per-gram badge */
   .perg-box { @apply flex items-center gap-[11px] mx-4 mb-[11px] px-[14px] py-2 bg-forest rounded-[13px_10px_14px_9px] shadow-hard-sm; }

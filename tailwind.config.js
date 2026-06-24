@@ -1,17 +1,29 @@
 /** @type {import('tailwindcss').Config} */
+
+// Colours are driven by CSS variables (RGB channel triplets) defined in
+// src/app/globals.css :root. To reskin the whole site, edit that one block —
+// every Tailwind utility, @apply rule, and component reads from these tokens.
+const c = (v) => `rgb(var(${v}) / <alpha-value>)`;
+
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
       colors: {
-        cream: { DEFAULT: '#efe7d3', light: '#f3ecdb', card: '#f7f1e3', deep: '#e9e0c9' },
-        kraft: '#e3d4b0',
-        forest: '#3f5031',
-        olive: { DEFAULT: '#56683f', soft: '#6f7f54' },
-        brown: { DEFAULT: '#6b4f2f', soft: '#8a6c45' },
-        matcha: { DEFAULT: '#8aa15a', bright: '#a7c06a', fill: '#a9c08a' },
-        clay: '#b9542d',
-        blush: '#d98a63',
+        cream: { DEFAULT: c('--c-cream'), light: c('--c-cream-light'), card: c('--c-cream-card'), deep: c('--c-cream-deep') },
+        kraft: c('--c-kraft'),
+        forest: c('--c-forest'),
+        olive: { DEFAULT: c('--c-olive'), soft: c('--c-olive-soft') },
+        brown: { DEFAULT: c('--c-brown'), soft: c('--c-brown-soft') },
+        matcha: { DEFAULT: c('--c-matcha'), bright: c('--c-matcha-bright'), fill: c('--c-matcha-fill') },
+        clay: c('--c-clay'),
+        blush: c('--c-blush'),
+        star: c('--c-star'),
+        onforest: { mut: c('--c-onforest-mut'), soft: c('--c-onforest-soft') },
+        cat: { ph: c('--c-cat-ph'), jp: c('--c-cat-jp'), import: c('--c-cat-import') },
+      },
+      borderColor: {
+        ink: 'rgb(var(--c-forest) / 0.30)',
       },
       fontFamily: {
         display: ['Caveat', 'Comic Sans MS', 'cursive'],
@@ -26,12 +38,9 @@ module.exports = {
         pill: '20px',
       },
       boxShadow: {
-        hard: '6px 7px 0 rgba(63,80,49,.16)',
-        'hard-sm': '3px 4px 0 rgba(63,80,49,.16)',
-        'hard-brown': '6px 7px 0 rgba(107,79,47,.18)',
-      },
-      borderColor: {
-        ink: 'rgba(63,80,49,.30)',
+        hard: '6px 7px 0 rgb(var(--c-forest) / 0.16)',
+        'hard-sm': '3px 4px 0 rgb(var(--c-forest) / 0.16)',
+        'hard-brown': '6px 7px 0 rgb(var(--c-brown) / 0.18)',
       },
     },
   },

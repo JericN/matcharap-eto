@@ -1,14 +1,12 @@
-const PDOT = { ph: "#5e7b3a", jp: "#7a9447", import: "#9bb15c" };
+// category swatch colours (themeable via :root --c-cat-*)
+const PDOT = { ph: "rgb(var(--c-cat-ph))", jp: "rgb(var(--c-cat-jp))", import: "rgb(var(--c-cat-import))" };
 
 export default function PowderCard({ powder, img }) {
   const m = powder.price.match(/₱[\d.]+(?:[–-][\d.]+)?\s*\/\s*g/);
   const perg = (m ? m[0] : "—").replace(/\s*\/\s*g/, "");
 
   return (
-    <article
-      className="paper-card"
-      style={powder.star ? { background: "linear-gradient(180deg,#f9f3e4,#f7f1e3)" } : undefined}
-    >
+    <article className={`paper-card${powder.star ? " is-star" : ""}`}>
       {powder.star && <span className="stamp">top pick</span>}
       <div className="flex gap-[13px] items-start px-4 pt-4 pb-2.5">
         <span
@@ -46,7 +44,7 @@ export default function PowderCard({ powder, img }) {
           <span className="font-mono text-[.5rem] tracking-[.18em] uppercase text-matcha-bright">
             per gram
           </span>
-          <span className="font-mono text-[.58rem] tracking-[.02em] text-[#dfe6d2]">
+          <span className="font-mono text-[.58rem] tracking-[.02em] text-onforest-soft">
             ☕ {powder.serving} / serving
           </span>
         </span>
