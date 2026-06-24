@@ -3,6 +3,14 @@ import { CalIcon, PinIcon } from '@/components/icons';
 // status pill-class -> stamp visual variant
 const STAMP_VARIANT = { 'p-up': '', 'p-rec': 'stamp--soon', 'p-soon': 'stamp--live' };
 const TAG_COLOR = { open: 'text-clay', warn: 'text-olive', wait: 'text-brown-soft' };
+const LINK_META = {
+  web: { icon: '🔎', label: 'Search' },
+  ig: { icon: '📷', label: 'Instagram' },
+  fb: { icon: '📘', label: 'Facebook' },
+  tiktok: { icon: '🎵', label: 'TikTok' },
+  maps: { icon: '🗺️', label: 'Map' },
+  order: { icon: '🛒', label: 'Order' },
+};
 
 export default function EventCard({ event }) {
   const stampText = event.status[0].replace(/^[^A-Za-z]+/, '').trim();
@@ -30,12 +38,35 @@ export default function EventCard({ event }) {
         </div>
       </div>
 
-      <div className="mt-auto border-t-2 border-dashed border-ink px-4 py-[11px] flex gap-2 items-center bg-matcha-bright/10">
-        <span className={`font-mono text-[.6rem] tracking-[.04em] leading-snug uppercase flex gap-1.5 items-start ${TAG_COLOR[event.vendor.c]}`}>
-          {event.vendor.ic} {event.vendor.t}
-        </span>
-        {event.star && (
-          <span className="font-mono text-[.55rem] tracking-[.06em] uppercase text-clay bg-clay/10 border-[1.5px] border-clay rounded-lg px-[7px] py-[3px] ml-auto whitespace-nowrap">⭐ fit</span>
+      <div className="mt-auto border-t-2 border-dashed border-ink bg-matcha-bright/10">
+        <div className="px-4 pt-[11px] pb-2 flex gap-2 items-start">
+          <span className={`font-mono text-[.6rem] tracking-[.04em] leading-snug uppercase flex gap-1.5 items-start ${TAG_COLOR[event.vendor.c]}`}>
+            {event.vendor.ic} {event.vendor.t}
+          </span>
+          {event.star && (
+            <span className="font-mono text-[.55rem] tracking-[.06em] uppercase text-clay bg-clay/10 border-[1.5px] border-clay rounded-lg px-[7px] py-[3px] ml-auto whitespace-nowrap">⭐ fit</span>
+          )}
+        </div>
+        {event.links.length > 0 && (
+          <div className="px-4 pb-[12px] flex flex-wrap items-center gap-[6px]">
+            <span className="font-mono text-[.52rem] tracking-[.1em] uppercase text-brown-soft mr-0.5">sources</span>
+            {event.links.map((l) => {
+              const meta = LINK_META[l.kind];
+              return (
+                <a
+                  key={l.kind + l.url}
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener"
+                  title={`${meta.label} — opens in a new tab`}
+                  className="font-mono text-[.56rem] tracking-[.04em] uppercase text-forest bg-cream-light border-2 border-forest rounded-pill px-[9px] py-[4px] no-underline inline-flex items-center gap-[4px] transition-transform hover:-translate-y-px hover:bg-forest hover:text-cream-light"
+                >
+                  <span aria-hidden="true">{meta.icon}</span>
+                  {meta.label}
+                </a>
+              );
+            })}
+          </div>
         )}
       </div>
     </article>

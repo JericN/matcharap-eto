@@ -12,7 +12,10 @@ import { getState, writeState } from './state';
 
 export const repo = {
   // ---- content (read-only) ----
-  events: async () => (await getSiteData()).events,
+  events: async () => {
+    const { events, eventLinks } = await getSiteData();
+    return events.map((e) => ({ ...e, links: eventLinks[e.name] ?? [] }));
+  },
   powders: async () => (await getSiteData()).powders,
   competitors: async () => (await getSiteData()).competitors,
   drinks: async () => (await getSiteData()).drinks,

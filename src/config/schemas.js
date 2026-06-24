@@ -8,6 +8,12 @@ export const VendorSchema = z.object({
   t: z.string(), // vendor-call note
 });
 
+// A human-navigable source link (organizer socials, venue map, web).
+export const LinkSchema = z.object({
+  kind: z.enum(['web', 'ig', 'fb', 'tiktok', 'maps', 'order']),
+  url: z.string().url(),
+});
+
 export const EventSchema = z.object({
   name: z.string(),
   org: z.string(),
@@ -60,6 +66,9 @@ export const CompetitorSchema = z.object({
   health: z.enum(['go', 'warn', 'wait']),
   healthTxt: z.string(),
   note: z.string().optional(),
+  opened: z.string(),                               // year / "Est. ..." — momentum
+  threat: z.enum(['strong', 'moderate', 'niche']),  // competitive threat tier
+  takeaway: z.string(),                             // one-line strategic read
   // Clickable channels for human follow-up research (rendered in array order).
   links: z.array(z.object({
     kind: z.enum(['web', 'ig', 'fb', 'tiktok', 'maps', 'order']),
@@ -92,6 +101,8 @@ export const PricingSchema = z.object({
 // The whole config blob (one Edge Config key / one seed object).
 export const SiteDataSchema = z.object({
   events: z.array(EventSchema).min(1),
+  // source links per event, keyed by event name (overlay, like powderImages)
+  eventLinks: z.record(z.string(), z.array(LinkSchema)).default({}),
   powders: z.array(PowderSchema).min(1),
   competitors: z.array(CompetitorSchema).default([]),
   // matchaOptions is no longer stored — the calculator derives it from `powders`
