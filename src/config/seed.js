@@ -434,5 +434,6 @@ export const seed = {
     'Hibiki-an': 'https://www.hibiki-an.com/images/upload/MatchaSupPre_B01.jpg',
     'Nakamura Tokichi': 'https://cdn.shopify.com/s/files/1/0655/4550/2972/files/01_b3f3099f-86e4-4280-a557-96807276f70f.jpg?v=1735027945',
     'Hoshinoen (Yame no Hana)': 'https://cdn.shopify.com/s/files/1/0839/9296/9542/files/tin_2.jpg?v=1779986139',
+    'Sobamatsu': '/powders/sobamatsu.jpg', // self-hosted (no durable hotlink — Shopee/Lazada/IG only)
   },
 };

@@ -111,7 +111,8 @@ export const SiteDataSchema = z.object({
   drinks: z.array(DrinkSchema).min(1),
   ingredients: z.array(IngredientSchema).min(1),
   pricing: PricingSchema,
-  powderImages: z.record(z.string(), z.string().url()),
+  // absolute URL (hotlinked) or root-relative path (self-hosted under /public)
+  powderImages: z.record(z.string(), z.string().refine((s) => /^(https?:\/\/|\/)/.test(s), 'must be an absolute URL or a root-relative path')),
 });
 
 // Shared mutable state (Edge Config `state` key) — saved prices + selections.

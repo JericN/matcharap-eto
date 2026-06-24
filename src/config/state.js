@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { get } from '@vercel/edge-config';
 import { StateSchema } from './schemas';
 
@@ -13,7 +14,9 @@ const FILE = '.data/state.json';
 
 const canEdgeWrite = () => !!(process.env.EDGE_CONFIG_ID && process.env.VERCEL_API_TOKEN);
 
-export async function getState() {
+// Per-request memoized (cache()): one read per render, fresh on the next
+// request so writes show up immediately.
+export const getState = cache(async () => {
   if (process.env.EDGE_CONFIG) {
     const value = await get('state');
     return StateSchema.parse(value ?? DEFAULT);
@@ -24,7 +27,7 @@ export async function getState() {
   } catch {
     return DEFAULT;
   }
-}
+});
 
 export async function writeState(next) {
   const value = StateSchema.parse(next);
