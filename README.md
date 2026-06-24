@@ -75,6 +75,10 @@ All content (events, powders, drinks, pricing, ingredients, images) is config,
 validated by `SiteDataSchema`. The store reads it from **Vercel Edge Config**
 when connected, otherwise from `src/config/seed.js`.
 
+**Per-user state** (saved selling prices in the calculator, ♥-saved powders) is
+*not* content — it lives in the browser via `localStorage` (`src/lib/useLocalStorage.js`),
+so it persists per device without a backend. Config still supplies the default SRPs.
+
 To use Edge Config in production:
 
 1. Create an Edge Config store in the Vercel dashboard and connect it to the

@@ -1,19 +1,18 @@
 "use client";
 import { useState } from "react";
+import { useLocalStorage } from "@/lib/useLocalStorage";
 import { matchaCostPerCup, milkCostPerCup, cogsForDrink, profit, marginPct, marginWord } from "@/features/calculator/cost";
 
 export default function Calculator({ matchaOptions, milkOptions, drinks, ingredients, extras }) {
   const [mi, setMi] = useState(1);
   const [ki, setKi] = useState(1);
   const [dose, setDose] = useState(3);
-  const [srps, setSrps] = useState(() => drinks.map((d) => d.srp));
 
-  const setSrp = (i, v) =>
-    setSrps((s) => {
-      const n = [...s];
-      n[i] = v;
-      return n;
-    });
+  // Saved selling prices per product (config holds the defaults).
+  const [srpMap, setSrpMap] = useLocalStorage("mre:srp", {});
+  const srpFor = (d) => (d.name in srpMap ? srpMap[d.name] : d.srp);
+  const setSrp = (name, v) => setSrpMap((m) => ({ ...m, [name]: v }));
+  const resetPrices = () => setSrpMap({});
 
   const pricePerGram = matchaOptions[mi].g;
   const milkPricePerMl = milkOptions[ki].ml;
@@ -45,6 +44,9 @@ export default function Calculator({ matchaOptions, milkOptions, drinks, ingredi
           </div>
         </div>
         <div className="mt-3.5 font-mono text-[.72rem] tracking-[.02em] text-forest bg-cream-card border-2 border-dashed border-olive rounded-xl px-3.5 py-2.5 text-center">🍵 Matcha <b className="text-clay">₱{mCost}</b>/cup ({dose}g × ₱{pricePerGram.toFixed(2)}/g) &nbsp;·&nbsp; 🥛 Milk <b className="text-clay">₱{Math.round(180 * milkPricePerMl)}</b>/180ml &nbsp;·&nbsp; 🥤 cup+ice+sugar <b className="text-clay">₱{extras}</b></div>
+        <div className="mt-2 text-center">
+          <button type="button" onClick={resetPrices} className="font-mono text-[.55rem] tracking-[.08em] uppercase text-brown-soft underline underline-offset-2 hover:text-clay">↺ reset saved prices</button>
+        </div>
       </div>
 
       <div className="bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard-sm px-5 py-[18px] my-[18px] max-md:p-[14px]">
@@ -62,10 +64,10 @@ export default function Calculator({ matchaOptions, milkOptions, drinks, ingredi
       </div>
 
       <div className="grid gap-[18px] [grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))]">
-        {drinks.map((d, idx) => {
+        {drinks.map((d) => {
           const milkCost = milkCostPerCup(milkPricePerMl, d.milkMl);
           const cogs = cogsForDrink(d, { pricePerGram, doseGrams: dose, milkPricePerMl, extras });
-          const srp = srps[idx];
+          const srp = srpFor(d);
           const p = profit(srp, cogs);
           const mar = marginPct(srp, cogs);
           return (
@@ -79,7 +81,7 @@ export default function Calculator({ matchaOptions, milkOptions, drinks, ingredi
               </div>
               <div className="grid grid-cols-3 gap-[7px]">
                 <div className="cost-cell"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-brown-soft">COGS</span><span className="block font-mono font-medium text-[1.05rem] text-forest mt-[3px]">₱{cogs}</span></div>
-                <div className="cost-cell"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-brown-soft">SRP ✎</span><input className="srp-input" type="number" min="0" step="5" value={srp} inputMode="numeric" aria-label={"Selling price for " + d.name} onChange={(e) => setSrp(idx, +e.target.value || 0)} /></div>
+                <div className="cost-cell"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-brown-soft">SRP ✎</span><input className="srp-input" type="number" min="0" step="5" value={srp} inputMode="numeric" aria-label={"Selling price for " + d.name} onChange={(e) => setSrp(d.name, +e.target.value || 0)} /></div>
                 <div className="cost-cell cost-cell--hl"><span className="block font-mono text-[.52rem] tracking-[.1em] uppercase text-onforest-mut">Profit</span><span className="block font-mono font-medium text-[1.05rem] text-cream-light mt-[3px]">₱{p}</span></div>
               </div>
               <div className="flex justify-between font-mono text-[.56rem] tracking-[.06em] uppercase text-brown-soft"><span>gross margin · <b className="text-clay">{mar}%</b></span><span>{marginWord(mar)}</span></div>
