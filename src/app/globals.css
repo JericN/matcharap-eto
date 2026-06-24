@@ -33,6 +33,12 @@
     --c-cat-import: 155 177 92;
   }
 
+  /* Scale the whole UI down a notch on phones — most type & spacing is rem-based,
+     so dropping the root size shrinks it all proportionally. */
+  html { font-size: 16px; }
+  @media (max-width: 640px) { html { font-size: 15px; } }
+  @media (max-width: 380px) { html { font-size: 14px; } }
+
   body {
     @apply font-body text-forest bg-cream leading-relaxed antialiased;
     background-image:
@@ -98,7 +104,7 @@
   .ing-tile { @apply bg-cream-light border-[1.8px] border-ink rounded-soft px-[13px] py-[11px] flex flex-col gap-[3px]; }
 
   /* navbar + landing */
-  .nav-link { @apply font-mono text-[.62rem] tracking-[.1em] uppercase text-brown no-underline px-[13px] py-[7px] border-2 border-transparent rounded-pill transition-transform whitespace-nowrap hover:-translate-y-px hover:border-ink; }
+  .nav-link { @apply font-mono text-[.62rem] tracking-[.1em] uppercase text-brown no-underline px-[13px] py-[7px] border-2 border-transparent rounded-pill transition-transform whitespace-nowrap hover:-translate-y-px hover:border-ink max-md:px-[9px] max-md:py-[5px] max-md:text-[.55rem] max-md:tracking-[.06em]; }
   .nav-link--active { @apply bg-forest text-cream-light border-forest; }
   .home-card { @apply relative flex flex-col gap-[9px] bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard p-6 no-underline text-inherit transition-transform hover:-translate-x-0.5 hover:-translate-y-[3px]; }
 }
