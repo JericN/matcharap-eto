@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manila Matcha — Style Tile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Shantell+Sans:ital,wght@0,400;0,600;0,700;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
+<style>
+  /* ===================================================================
+     MANILA MATCHA — DESIGN TOKENS
+     A cozy hand-drawn directory for a Filipino matcha brand (BriarBear).
+     Lean: bobo bread / CREAM CHEERS — warm kraft paper, forest ink,
+     woodblock/zine restraint. All colors live here.
+     =================================================================== */
+  :root{
+    /* ---- Paper / cream backgrounds (NOT plain white) ---- */
+    --cream:        #efe7d3;   /* base page */
+    --cream-light:  #f3ecdb;   /* lighter card */
+    --cream-card:   #f7f1e3;   /* lightest card surface */
+    --cream-deep:   #e9e0c9;   /* recessed wells, inputs */
+    --kraft:        #e3d4b0;   /* kraft accent panels */
+
+    /* ---- Forest / olive ink (primary) ---- */
+    --forest:       #3f5031;   /* primary ink */
+    --olive:        #56683f;   /* secondary ink */
+    --olive-soft:   #6f7f54;   /* muted ink for sub-labels */
+
+    /* ---- Warm brown (secondary) ---- */
+    --brown:        #6b4f2f;   /* labels, mono text */
+    --brown-soft:   #8a6c45;   /* faint mono */
+
+    /* ---- Living-matcha greens + clay stamp accent ---- */
+    --matcha:       #8aa15a;   /* mid matcha */
+    --matcha-bright:#a7c06a;   /* bright fill */
+    --matcha-fill:  #a9c08a;   /* mascot/leaf body fill */
+    --clay:         #b9542d;   /* stamp red-clay accent */
+    --blush:        #d98a63;   /* mascot cheeks */
+
+    /* ---- Derived ink washes ---- */
+    --ink-faint:    rgba(63,80,49,.16);
+    --ink-line:     rgba(63,80,49,.30);
+    --brown-faint:  rgba(107,79,47,.18);
+    --shadow:       6px 7px 0 var(--ink-faint);
+    --shadow-sm:    3px 4px 0 var(--ink-faint);
+
+    /* ---- Typography stacks ---- */
+    --display: "Caveat", "Comic Sans MS", cursive;   /* logo + headlines */
+    --doodle:  "Shantell Sans", "Comic Sans MS", cursive; /* card titles */
+    --mono:    "DM Mono", ui-monospace, monospace;   /* labels + prices */
+    --body:    "Nunito Sans", system-ui, sans-serif; /* reading */
+
+    /* ---- Hand-drawn irregular radii ---- */
+    --r-card:  18px 14px 20px 13px;
+    --r-soft:  14px 11px 15px 10px;
+    --r-pill:  20px;
+    --line:    2.2px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    font-family:var(--body);
+    color:var(--forest);
+    background-color:var(--cream);
+    /* layered paper-grain: fine speckle + soft fibres + warm wash + svg noise */
+    background-image:
+      radial-gradient(rgba(107,79,47,.05) 1px, transparent 1.4px),
+      radial-gradient(rgba(63,80,49,.045) 1px, transparent 1.4px),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E"),
+      linear-gradient(125deg, rgba(255,255,255,.28), rgba(255,255,255,0) 45%),
+      radial-gradient(120% 120% at 80% 0%, var(--cream-light), var(--cream-deep));
+    background-size: 7px 7px, 11px 11px, 180px 180px, 100% 100%, 100% 100%;
+    background-position: 0 0, 3px 4px, 0 0, 0 0, 0 0;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{ max-width:1080px; margin:0 auto; padding:30px 20px 80px; }
+
+  /* ---------- shared bits ---------- */
+  .mono{ font-family:var(--mono); text-transform:uppercase; letter-spacing:.14em; font-size:.66rem; color:var(--brown); }
+
+  .section-tag{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--brown); background:var(--cream-light);
+    border:2px solid var(--brown); border-radius:var(--r-pill);
+    padding:4px 13px; margin:0 0 14px; transform:rotate(-1.2deg);
+  }
+  .section-tag b{ color:var(--clay); font-weight:500; }
+
+  section{ margin-top:48px; }
+  .sec-title{
+    font-family:var(--doodle); font-weight:700; font-size:1.4rem;
+    color:var(--forest); margin:0 0 18px;
+  }
+  .sec-title .sub{ font-family:var(--body); font-weight:400; font-size:.85rem; color:var(--olive-soft); display:block; margin-top:2px; }
+
+  /* hand-drawn dashed rule */
+  .rule{ border:none; border-top:2.2px dashed var(--ink-line); margin:40px 0 0; opacity:.6; }
+
+  /* generic paper card */
+  .panel{
+    position:relative; background:var(--cream-card);
+    border:var(--line) solid var(--forest); border-radius:var(--r-card);
+    box-shadow:var(--shadow); padding:22px 22px 24px;
+  }
+  .panel.kraft{ background:var(--kraft); }
+  .panel.bare{ background:transparent; border:none; box-shadow:none; padding:0; }
+
+  /* ===================================================================
+     1) HERO — arched logo over whisking mascot
+     =================================================================== */
+  .hero{
+    text-align:center; position:relative; overflow:hidden;
+    background:
+      radial-gradient(60% 80% at 50% 10%, rgba(167,192,106,.16), transparent 70%),
+      var(--kraft);
+    border:2.5px solid var(--forest);
+    border-radius:30px 24px 32px 22px;
+    box-shadow:var(--shadow);
+    padding:26px 18px 24px;
+  }
+  .hero .corner{
+    position:absolute; font-family:var(--mono); font-size:.58rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--brown-soft);
+  }
+  .hero .corner.tl{ top:14px; left:18px; }
+  .hero .corner.bl{ bottom:14px; left:18px; }
+  .hero .corner.br{ bottom:14px; right:18px; }
+  @media (max-width:560px){ .hero .corner{ display:none; } }
+
+  .stamp-corner{ position:absolute; top:12px; right:14px; width:78px; height:78px; transform:rotate(8deg); }
+  @media (max-width:560px){ .stamp-corner{ width:60px; height:60px; top:8px; right:8px; } }
+
+  .arch-wrap{ max-width:500px; margin:0 auto; }
+  .arch-wrap svg{ width:100%; height:auto; display:block; }
+  .hero .tagline{ font-family:var(--mono); font-size:.7rem; letter-spacing:.28em; text-transform:uppercase; color:var(--brown); margin:8px 0 0; }
+  .hero .sub{ font-family:var(--display); font-weight:600; font-size:1.5rem; color:var(--olive); margin:2px 0 0; }
+
+  /* ===================================================================
+     2) PALETTE + PAPER
+     =================================================================== */
+  .swatches{ display:grid; grid-template-columns:repeat(auto-fit,minmax(112px,1fr)); gap:13px; }
+  .sw{
+    border:var(--line) solid var(--forest); border-radius:var(--r-soft);
+    overflow:hidden; box-shadow:var(--shadow-sm); background:var(--cream-card);
+  }
+  .sw .chip{ height:66px; }
+  .sw .meta{ padding:7px 10px 9px; border-top:2px solid var(--forest); }
+  .sw .name{ font-family:var(--doodle); font-weight:600; font-size:.8rem; line-height:1.1; }
+  .sw .hex{ font-family:var(--mono); font-size:.6rem; letter-spacing:.06em; color:var(--brown); }
+  .sw.tex .chip{
+    background-color:var(--cream);
+    background-image:
+      radial-gradient(rgba(107,79,47,.14) 1px, transparent 1.5px),
+      radial-gradient(rgba(63,80,49,.11) 1px, transparent 1.5px);
+    background-size:7px 7px, 11px 11px; background-position:0 0, 3px 4px;
+  }
+
+  /* ===================================================================
+     3) TYPE SPECIMENS
+     =================================================================== */
+  .type-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .spec{ border:2.2px dashed var(--olive); border-radius:16px; padding:14px 16px 16px; background:var(--cream-light); }
+  .spec .label{ font-family:var(--mono); font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--brown); margin-bottom:4px; }
+  .spec .fname{ font-family:var(--mono); font-size:.62rem; color:var(--clay); letter-spacing:.04em; margin-bottom:10px; }
+  .spec .big-d{ font-family:var(--display); font-weight:700; font-size:2.6rem; line-height:.95; color:var(--forest); }
+  .spec .big-doodle{ font-family:var(--doodle); font-weight:700; font-size:1.65rem; color:var(--olive); }
+  .spec .big-mono{ font-family:var(--mono); font-size:1.05rem; color:var(--brown); line-height:1.7; }
+  .spec .big-body{ font-family:var(--body); font-size:1rem; color:var(--forest); }
+  .spec .glyphs{ font-size:.78rem; color:var(--olive-soft); margin-top:8px; }
+
+  /* ===================================================================
+     4 & 5) SAMPLE CARDS
+     =================================================================== */
+  .cards-2{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:720px){ .cards-2{ grid-template-columns:1fr; } }
+
+  /* shared event-card look (also reused in the 12-card grid) */
+  .event-card{
+    position:relative; background:var(--cream-card);
+    border:var(--line) solid var(--forest); border-radius:var(--r-card);
+    box-shadow:var(--shadow-sm); padding:0; overflow:hidden;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .event-card:hover{ transform:translate(-1px,-1px); box-shadow:5px 6px 0 var(--ink-faint); }
+  .event-top{ display:flex; gap:14px; align-items:flex-start; padding:16px 16px 12px; }
+  .event-doodle{ flex:0 0 58px; }
+  .event-meta{ flex:1; min-width:0; }
+  .event-name{ font-family:var(--doodle); font-weight:700; font-size:1.22rem; color:var(--forest); margin:0 0 4px; line-height:1.15; }
+  .meta-line{ font-family:var(--mono); font-size:.66rem; letter-spacing:.02em; color:var(--brown); display:flex; gap:7px; align-items:center; margin:3px 0; text-transform:uppercase; }
+  .meta-line svg{ flex:0 0 auto; }
+  .event-foot{
+    border-top:2px dashed var(--ink-line); padding:10px 16px;
+    display:flex; justify-content:space-between; align-items:center; gap:8px;
+    background:rgba(167,192,106,.10);
+  }
+  .event-foot .tag{ font-family:var(--mono); font-size:.6rem; letter-spacing:.08em; color:var(--olive); text-transform:uppercase; }
+  .event-foot .tag.go{ color:var(--clay); }
+
+  /* stamp status badge */
+  .stamp{
+    position:absolute; top:12px; right:12px; z-index:2;
+    font-family:var(--mono); font-weight:500; text-transform:uppercase;
+    letter-spacing:.1em; font-size:.58rem; color:var(--clay);
+    border:2px solid var(--clay); border-radius:8px 13px 9px 12px;
+    padding:5px 9px; transform:rotate(-7deg);
+    background:rgba(185,84,45,.07); line-height:1;
+    box-shadow:inset 0 0 0 1px rgba(185,84,45,.2);
+  }
+  .stamp.live::before{ content:"●"; font-size:.5rem; margin-right:5px; vertical-align:middle; }
+  .stamp.soon{ color:var(--olive); border-color:var(--olive); background:rgba(86,104,63,.07); box-shadow:inset 0 0 0 1px rgba(86,104,63,.2); }
+  .stamp.ended{ color:var(--brown-soft); border-color:var(--brown-soft); background:rgba(138,108,69,.06); box-shadow:none; }
+
+  /* DRINK card */
+  .drink-card{
+    position:relative; background:var(--cream-deep);
+    border:var(--line) solid var(--brown); border-radius:var(--r-card);
+    box-shadow:6px 7px 0 var(--brown-faint); padding:18px 18px 18px;
+  }
+  .drink-head{ display:flex; gap:12px; align-items:center; margin-bottom:12px; }
+  .drink-name{ font-family:var(--doodle); font-weight:700; font-size:1.22rem; color:var(--brown); margin:0; line-height:1.1; }
+  .drink-sub{ font-family:var(--mono); font-size:.62rem; letter-spacing:.06em; text-transform:uppercase; color:var(--brown-soft); }
+  .cogs-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:4px 0 14px; }
+  .cogs-cell{ text-align:center; border:2px solid var(--brown); border-radius:11px 8px 12px 9px; padding:8px 6px; background:var(--cream-card); }
+  .cogs-cell .k{ font-family:var(--mono); font-size:.55rem; letter-spacing:.12em; text-transform:uppercase; color:var(--brown-soft); display:block; }
+  .cogs-cell .v{ font-family:var(--mono); font-weight:500; font-size:1.1rem; color:var(--forest); margin-top:3px; display:block; }
+  .cogs-cell.hl{ background:var(--forest); border-color:var(--forest); }
+  .cogs-cell.hl .k{ color:#cdd9bd; }
+  .cogs-cell.hl .v{ color:var(--cream-light); }
+  .margin-lab{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; color:var(--brown-soft); margin-bottom:6px; }
+  .margin-bar{ height:18px; border:2px solid var(--brown); border-radius:11px; background:var(--cream-card); position:relative; overflow:hidden; }
+  .margin-fill{
+    height:100%; width:65%;
+    background:repeating-linear-gradient(45deg, var(--matcha) 0 7px, var(--matcha-bright) 7px 14px);
+    border-right:2px solid var(--brown); border-radius:9px 4px 4px 9px;
+  }
+
+  /* ===================================================================
+     DATA-DENSE PREVIEWS (proves the system scales)
+     =================================================================== */
+  .grid-event{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .grid-powder{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  @media (max-width:720px){ .grid-event{ grid-template-columns:repeat(2,1fr); } .grid-powder{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:440px){ .grid-event{ grid-template-columns:1fr; } }
+
+  /* mini event card for the grid */
+  .mini-event{
+    position:relative; background:var(--cream-card); border:2px solid var(--forest);
+    border-radius:var(--r-soft); box-shadow:var(--shadow-sm); padding:12px 12px 10px;
+  }
+  .mini-event .me-name{ font-family:var(--doodle); font-weight:600; font-size:.95rem; color:var(--forest); line-height:1.1; margin:0 0 4px; padding-right:14px; }
+  .mini-event .me-meta{ font-family:var(--mono); font-size:.56rem; letter-spacing:.04em; text-transform:uppercase; color:var(--brown); }
+  .mini-stamp{ position:absolute; top:8px; right:8px; width:9px; height:9px; border-radius:50%; background:var(--clay); box-shadow:0 0 0 2px rgba(185,84,45,.25); }
+  .mini-stamp.soon{ background:var(--matcha); box-shadow:0 0 0 2px rgba(138,161,90,.25); }
+  .mini-stamp.ended{ background:var(--brown-soft); box-shadow:none; opacity:.6; }
+
+  /* powder swatch card */
+  .powder{
+    text-align:center; background:var(--cream-light); border:2px solid var(--olive);
+    border-radius:var(--r-soft); box-shadow:var(--shadow-sm); padding:12px 10px 11px;
+  }
+  .powder .pdot{ width:34px; height:34px; border-radius:50%; margin:0 auto 7px; border:2px solid var(--forest); }
+  .powder .pname{ font-family:var(--doodle); font-weight:600; font-size:.85rem; color:var(--forest); line-height:1.05; }
+  .powder .pgrade{ font-family:var(--mono); font-size:.55rem; letter-spacing:.1em; text-transform:uppercase; color:var(--brown-soft); margin-top:2px; }
+
+  /* calculator card with controls */
+  .calc-card{ background:var(--cream-card); border:2px solid var(--forest); border-radius:var(--r-card); box-shadow:var(--shadow-sm); padding:16px; }
+  .calc-card .calc-name{ font-family:var(--doodle); font-weight:700; font-size:1.05rem; color:var(--forest); margin:0 0 12px; }
+  .field{ margin-bottom:11px; }
+  .field label{ display:block; font-family:var(--mono); font-size:.56rem; letter-spacing:.12em; text-transform:uppercase; color:var(--brown); margin-bottom:4px; }
+  .field select{
+    width:100%; font-family:var(--body); font-size:.85rem; color:var(--forest);
+    background:var(--cream-deep); border:2px solid var(--olive); border-radius:10px 8px 11px 8px;
+    padding:7px 28px 7px 10px; -webkit-appearance:none; appearance:none; cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%233f5031' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 10px center;
+  }
+  .field input[type=range]{ width:100%; -webkit-appearance:none; appearance:none; height:6px; border-radius:6px; background:var(--cream-deep); border:1.5px solid var(--olive); outline:none; cursor:pointer; }
+  .field input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:18px; height:18px; border-radius:50%; background:var(--forest); border:2px solid var(--cream-light); box-shadow:1px 1px 0 var(--ink-faint); cursor:pointer; }
+  .field input[type=range]::-moz-range-thumb{ width:18px; height:18px; border-radius:50%; background:var(--forest); border:2px solid var(--cream-light); cursor:pointer; }
+  .field .rangeval{ float:right; font-family:var(--mono); font-size:.6rem; color:var(--olive); text-transform:none; letter-spacing:0; }
+
+  /* ===================================================================
+     6) CATEGORY ICONS
+     =================================================================== */
+  .icon-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  @media (max-width:560px){ .icon-row{ grid-template-columns:repeat(2,1fr); } }
+  .icon-cell{ text-align:center; border:2px solid var(--forest); border-radius:16px 12px 17px 11px; padding:16px 8px 12px; background:var(--cream-light); box-shadow:var(--shadow-sm); }
+  .icon-cell svg{ display:block; margin:0 auto 8px; width:52px; height:52px; }
+  .icon-cell .cap{ font-family:var(--mono); font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:var(--brown); }
+
+  /* ===================================================================
+     7) BUTTONS
+     =================================================================== */
+  .btn-row{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+  .btn{
+    font-family:var(--doodle); font-weight:700; font-size:1rem; cursor:pointer; border:none;
+    display:inline-flex; align-items:center; gap:9px; padding:12px 22px;
+    transition:transform .1s ease, box-shadow .1s ease, background .12s ease;
+  }
+  .btn:active{ transform:translate(2px,2px); }
+  .btn-primary{
+    background:var(--forest); color:var(--cream-light); border:2.4px solid var(--forest);
+    border-radius:22px 16px 22px 16px; box-shadow:4px 5px 0 var(--brown);
+  }
+  .btn-primary:hover{ transform:translate(1px,1px); box-shadow:2px 3px 0 var(--brown); }
+  .btn-ghost{
+    background:transparent; color:var(--forest); border:2.4px dashed var(--olive);
+    border-radius:22px 16px 22px 16px;
+  }
+  .btn-ghost:hover{ background:rgba(86,104,63,.10); }
+
+  /* footer */
+  .foot{ margin-top:54px; text-align:center; font-family:var(--mono); font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--brown-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- =============================================================
+       REUSABLE INLINE-SVG DOODLE SET
+       Hidden <symbol> defs: cup, whisk, leaf, mascot + 4 category icons.
+       Use anywhere via <svg><use href="#mm-..."/></svg>. Single-weight strokes.
+  ============================================================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- matcha cup -->
+      <symbol id="mm-cup" viewBox="0 0 64 64">
+        <g fill="none" stroke="#3f5031" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 24 h28 l-3 18 q-1 8 -11 8 t-11 -8 z"/>
+          <path d="M17 30 q14 6 27 0" stroke="#8aa15a"/>
+          <path d="M44 28 q9 0 9 8 t-9 8"/>
+          <path d="M25 18 q-4 -6 2 -11 M37 18 q-4 -6 2 -11" stroke="#6b4f2f" stroke-width="2.6"/>
+        </g>
+      </symbol>
+      <!-- bamboo whisk (chasen) -->
+      <symbol id="mm-whisk" viewBox="0 0 64 64">
+        <g fill="none" stroke="#3f5031" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 30 v20" stroke-width="3.6"/>
+          <ellipse cx="32" cy="29" rx="13" ry="5" stroke-width="2.6"/>
+          <path d="M20 28 l4 -17 M26 27 l2 -18 M32 27 v-19 M38 27 l-2 -18 M44 28 l-4 -17"/>
+          <path d="M26 50 q6 5 12 0"/>
+        </g>
+      </symbol>
+      <!-- tea leaf -->
+      <symbol id="mm-leaf" viewBox="0 0 64 64">
+        <g fill="none" stroke="#3f5031" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 48 C15 22 33 13 49 13 C49 39 33 50 15 48 Z"/>
+          <path d="M18 45 C29 36 40 27 47 16" stroke="#8aa15a"/>
+          <path d="M27 36 l6 4 M34 28 l6 4" stroke="#56683f" stroke-width="2.6"/>
+        </g>
+      </symbol>
+      <!-- mascot face -->
+      <symbol id="mm-mascot" viewBox="0 0 64 64">
+        <g fill="none" stroke="#3f5031" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="32" cy="36" r="18"/>
+          <path d="M27 18 q4 -11 -3 -13 q12 0 14 12" stroke="#56683f"/>
+          <path d="M23 33 q5 -7 10 0 M35 33 q5 -7 10 0"/>
+          <path d="M26 42 q6 6 12 0"/>
+          <circle cx="22" cy="40" r="3" fill="#d98a63" stroke="none"/>
+          <circle cx="44" cy="40" r="3" fill="#d98a63" stroke="none"/>
+        </g>
+      </symbol>
+      <!-- map pin (events location) -->
+      <symbol id="mm-pin" viewBox="0 0 64 64">
+        <g fill="none" stroke="#3f5031" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 56 q-16 -20 -16 -32 a16 16 0 0 1 32 0 q0 12 -16 32z"/>
+          <circle cx="32" cy="24" r="6" stroke="#b9542d"/>
+        </g>
+      </symbol>
+      <!-- market tent / stall (event doodle) -->
+      <symbol id="mm-tent" viewBox="0 0 64 64">
+        <g fill="none" stroke="#3f5031" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 28 q22 -14 44 0"/>
+          <path d="M10 28 l5 9 6 -8 6 9 6 -9 6 9 6 -8 5 9" stroke="#56683f"/>
+          <path d="M14 42 v18 M50 42 v18"/>
+          <rect x="22" y="44" width="20" height="16" rx="2"/>
+          <path d="M32 44 v16"/>
+        </g>
+      </symbol>
+      <!-- iced glass (drink doodle) -->
+      <symbol id="mm-glass" viewBox="0 0 64 64">
+        <g fill="none" stroke="#3f5031" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 14 h28 l-3 42 q-1 4 -11 4 t-11 -4 z"/>
+          <path d="M20 28 q12 5 24 0" stroke="#8aa15a"/>
+          <line x1="22" y1="36" x2="42" y2="36" stroke="#a7c06a" stroke-width="2.4"/>
+          <line x1="23" y1="44" x2="41" y2="44" stroke="#a7c06a" stroke-width="2.4"/>
+          <path d="M40 14 l5 -9" stroke="#b9542d"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- =============================================================
+       1) HERO
+  ============================================================== -->
+  <header class="hero">
+    <span class="corner tl">est. 2026</span>
+    <span class="corner bl">ceremonial+</span>
+    <span class="corner br">by BriarBear</span>
+
+    <!-- corner stamp badge -->
+    <svg class="stamp-corner" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M50 6c8 4 16 0 22 6s2 14 6 22-2 16 0 22-8 14-16 16-12 8-22 6-16-2-22-8-8-10-10-18 0-16 2-24 6-14 14-18 18-8 26-4Z"
+            stroke="#b9542d" stroke-width="2.4" fill="rgba(185,84,45,.06)"/>
+      <text x="50" y="40" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="#b9542d" letter-spacing="1">EST.</text>
+      <text x="50" y="57" text-anchor="middle" font-family="Caveat, cursive" font-size="23" font-weight="700" fill="#b9542d">2026</text>
+      <text x="50" y="73" text-anchor="middle" font-family="DM Mono, monospace" font-size="7" fill="#b9542d" letter-spacing="1.5">MANILA · PH</text>
+    </svg>
+
+    <div class="arch-wrap">
+      <svg viewBox="0 0 520 350" role="img" aria-label="Manila Matcha logo with whisking mascot">
+        <defs>
+          <path id="archTop" d="M 56 168 A 204 204 0 0 1 464 168" fill="none"/>
+          <path id="archBottom" d="M 100 252 A 152 152 0 0 0 420 252" fill="none"/>
+        </defs>
+
+        <!-- arched brand name -->
+        <text font-family="Caveat, cursive" font-weight="700" fill="#3f5031" font-size="66" letter-spacing="2">
+          <textPath href="#archTop" startOffset="50%" text-anchor="middle">Manila Matcha</textPath>
+        </text>
+
+        <!-- flanking tea leaves -->
+        <g stroke="#56683f" stroke-width="2.4" fill="rgba(86,104,63,.18)" stroke-linecap="round">
+          <path d="M70 134 q-16 -10 -8 -28 q18 4 18 24 q0 6 -10 4Z"/>
+          <path d="M450 134 q16 -10 8 -28 q-18 4 -18 24 q0 6 10 4Z"/>
+        </g>
+
+        <!-- ===== MASCOT: round matcha character whisking a cup ===== -->
+        <g stroke="#3f5031" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <!-- body -->
+          <path d="M196 196 c-30 0 -54 22 -54 52 c0 34 26 58 64 58 c40 0 66 -24 66 -58 c0 -30 -24 -52 -54 -52 Z" fill="#a9c08a"/>
+          <!-- leaf sprout -->
+          <path d="M206 196 q4 -22 -8 -34 q20 2 22 26" fill="#7c9b58"/>
+          <path d="M218 188 q14 -16 30 -14 q-4 18 -26 22" fill="#8caa64"/>
+          <!-- cheeks -->
+          <circle cx="178" cy="262" r="9" fill="#d98a63" stroke="none" opacity=".7"/>
+          <circle cx="246" cy="262" r="9" fill="#d98a63" stroke="none" opacity=".7"/>
+          <!-- eyes + mouth -->
+          <path d="M186 244 q5 -8 11 0" stroke-width="3.4"/>
+          <path d="M229 244 q5 -8 11 0" stroke-width="3.4"/>
+          <path d="M203 256 q9 9 18 0" stroke-width="3"/>
+          <!-- arms -->
+          <path d="M156 268 q-22 4 -34 22"/>
+          <path d="M268 250 q26 -8 34 -34"/>
+          <!-- held cup -->
+          <g>
+            <path d="M96 290 h54 l-6 30 a8 8 0 0 1 -8 7 h-26 a8 8 0 0 1 -8 -7 Z" fill="#eef0e2"/>
+            <path d="M104 298 h38 l-3 16 h-32 Z" fill="#7faa4e" stroke="none"/>
+            <path d="M118 282 q6 -8 0 -16 q-6 -8 0 -16" stroke-width="2.4"/>
+            <path d="M132 282 q6 -8 0 -16 q-6 -8 0 -16" stroke-width="2.4"/>
+          </g>
+          <!-- chasen whisk in raised hand -->
+          <g stroke-width="2.6">
+            <path d="M300 214 l14 -26"/>
+            <path d="M306 214 l16 -24"/>
+            <path d="M295 218 l10 -28"/>
+            <path d="M292 224 h18" stroke-width="3"/>
+            <path d="M300 226 l4 18" stroke-width="3.4"/>
+          </g>
+        </g>
+
+        <!-- lower arched sub-words -->
+        <text font-family="DM Mono, monospace" fill="#6b4f2f" font-size="15" letter-spacing="4">
+          <textPath href="#archBottom" startOffset="50%" text-anchor="middle">· POP-UP DIRECTORY · MNL ·</textPath>
+        </text>
+      </svg>
+    </div>
+
+    <p class="tagline">whisked fresh in metro manila</p>
+    <p class="sub">events · cost calculator · powder guide</p>
+  </header>
+
+  <!-- =============================================================
+       2) PALETTE + PAPER
+  ============================================================== -->
+  <section>
+    <span class="section-tag"><b>01</b> palette &amp; paper</span>
+    <h2 class="sec-title">Cream paper, forest &amp; brown ink
+      <span class="sub">warm kraft base · muted forest/olive primary · warm brown secondary · clay stamp accent</span>
+    </h2>
+    <div class="swatches">
+      <div class="sw tex"><div class="chip"></div><div class="meta"><div class="name">Paper grain</div><div class="hex">texture base</div></div></div>
+      <div class="sw"><div class="chip" style="background:#efe7d3"></div><div class="meta"><div class="name">Cream</div><div class="hex">#EFE7D3</div></div></div>
+      <div class="sw"><div class="chip" style="background:#f3ecdb"></div><div class="meta"><div class="name">Cream Light</div><div class="hex">#F3ECDB</div></div></div>
+      <div class="sw"><div class="chip" style="background:#e9e0c9"></div><div class="meta"><div class="name">Cream Deep</div><div class="hex">#E9E0C9</div></div></div>
+      <div class="sw"><div class="chip" style="background:#e3d4b0"></div><div class="meta"><div class="name">Kraft</div><div class="hex">#E3D4B0</div></div></div>
+      <div class="sw"><div class="chip" style="background:#3f5031"></div><div class="meta"><div class="name">Forest Ink</div><div class="hex">#3F5031</div></div></div>
+      <div class="sw"><div class="chip" style="background:#56683f"></div><div class="meta"><div class="name">Olive Ink</div><div class="hex">#56683F</div></div></div>
+      <div class="sw"><div class="chip" style="background:#a7c06a"></div><div class="meta"><div class="name">Matcha</div><div class="hex">#A7C06A</div></div></div>
+      <div class="sw"><div class="chip" style="background:#6b4f2f"></div><div class="meta"><div class="name">Warm Brown</div><div class="hex">#6B4F2F</div></div></div>
+      <div class="sw"><div class="chip" style="background:#b9542d"></div><div class="meta"><div class="name">Stamp Clay</div><div class="hex">#B9542D</div></div></div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       3) TYPE SPECIMENS
+  ============================================================== -->
+  <section>
+    <span class="section-tag"><b>02</b> typography</span>
+    <h2 class="sec-title">Handwritten + typewriter + body
+      <span class="sub">a display script, a doodle display, a mono for labels/prices, a readable body</span>
+    </h2>
+    <div class="type-row">
+      <div class="spec">
+        <div class="label">Display / Logo</div>
+        <div class="fname">Caveat · Google Fonts</div>
+        <div class="big-d">Manila Matcha</div>
+        <div class="glyphs">Ag Bb Cc 1234 &amp; ?! — arched logo &amp; headlines</div>
+      </div>
+      <div class="spec">
+        <div class="label">Doodle / Titles</div>
+        <div class="fname">Shantell Sans · Google Fonts</div>
+        <div class="big-doodle">Whisk it good</div>
+        <div class="glyphs">Ag Bb Cc 1234 &amp; ?! — card titles &amp; playful UI</div>
+      </div>
+      <div class="spec">
+        <div class="label">Mono / Labels</div>
+        <div class="fname">DM Mono · Google Fonts</div>
+        <div class="big-mono">COGS · SRP · ₱149<br>OPEN NOW · GRADE A</div>
+        <div class="glyphs">0123456789 / % ₱ — tags, prices, captions</div>
+      </div>
+      <div class="spec">
+        <div class="label">Body / Reading</div>
+        <div class="fname">Nunito Sans · Google Fonts</div>
+        <div class="big-body">Soft ceremonial-grade matcha, whisked to order at cozy pop-ups across the metro.</div>
+        <div class="glyphs">Ag Bb Cc 1234 &amp; ?! — paragraphs</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- =============================================================
+       4 & 5) SAMPLE EVENT + DRINK CARDS
+  ============================================================== -->
+  <section>
+    <span class="section-tag"><b>03</b> sample cards</span>
+    <h2 class="sec-title">One event · one drink calculation</h2>
+    <div class="cards-2">
+
+      <!-- EVENT CARD -->
+      <article class="event-card">
+        <span class="stamp live">live now</span>
+        <div class="event-top">
+          <svg class="event-doodle" viewBox="0 0 64 64" aria-hidden="true"><use href="#mm-tent"/></svg>
+          <div class="event-meta">
+            <h3 class="event-name">Whisk &amp; Wander Pop-up</h3>
+            <div class="meta-line">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="#6b4f2f" stroke-width="1.8"><rect x="1.5" y="2.5" width="11" height="9.5" rx="1.5"/><path d="M1.5 5h11M4 1v3M10 1v3"/></svg>
+              SAT · 28 JUN 2026 · 10A–6P
+            </div>
+            <div class="meta-line">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="#6b4f2f" stroke-width="1.8"><path d="M7 1c3 0 5 2.2 5 5 0 3.5-5 7-5 7S2 9.5 2 6c0-2.8 2-5 5-5Z"/><circle cx="7" cy="6" r="1.7"/></svg>
+              The Grid · Rockwell, Makati
+            </div>
+          </div>
+        </div>
+        <div class="event-foot">
+          <span class="tag">pop-up · 12 vendors</span>
+          <span class="tag go">free entry →</span>
+        </div>
+      </article>
+
+      <!-- DRINK CARD -->
+      <article class="drink-card">
+        <div class="drink-head">
+          <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true"><use href="#mm-glass"/></svg>
+          <div>
+            <h3 class="drink-name">Iced Strawberry Matcha</h3>
+            <span class="drink-sub">16 oz · oat milk option</span>
+          </div>
+        </div>
+        <div class="cogs-row">
+          <div class="cogs-cell"><span class="k">COGS</span><span class="v">₱63</span></div>
+          <div class="cogs-cell"><span class="k">SRP</span><span class="v">₱180</span></div>
+          <div class="cogs-cell hl"><span class="k">Margin</span><span class="v">65%</span></div>
+        </div>
+        <div class="margin-lab"><span>gross margin</span><span>healthy ✓</span></div>
+        <div class="margin-bar"><div class="margin-fill"></div></div>
+      </article>
+
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- =============================================================
+       DATA-DENSE PREVIEW — proves the system scales to the real page
+  ============================================================== -->
+  <section>
+    <span class="section-tag"><b>04</b> at scale</span>
+    <h2 class="sec-title">Built for data-dense grids
+      <span class="sub">12-card event grid · 9-card calculator with dropdowns + slider · 13-card powder grid</span>
+    </h2>
+
+    <p class="mono" style="margin:0 0 10px">Event grid (compact)</p>
+    <div class="grid-event">
+      <div class="mini-event"><span class="mini-stamp"></span><p class="me-name">Whisk &amp; Wander</p><p class="me-meta">JUN 28 · Makati</p></div>
+      <div class="mini-event"><span class="mini-stamp soon"></span><p class="me-name">Matcha Madness</p><p class="me-meta">JUL 05 · BGC</p></div>
+      <div class="mini-event"><span class="mini-stamp soon"></span><p class="me-name">Ceremony Café</p><p class="me-meta">JUL 12 · QC</p></div>
+      <div class="mini-event"><span class="mini-stamp"></span><p class="me-name">Green Hour MNL</p><p class="me-meta">JUL 19 · Pasig</p></div>
+      <div class="mini-event"><span class="mini-stamp ended"></span><p class="me-name">Stone &amp; Stalk</p><p class="me-meta">JUN 14 · Manila</p></div>
+      <div class="mini-event"><span class="mini-stamp soon"></span><p class="me-name">Uji Sundays</p><p class="me-meta">AUG 02 · Alabang</p></div>
+    </div>
+
+    <div class="cards-2" style="margin-top:22px">
+      <!-- calculator card -->
+      <div class="calc-card">
+        <p class="calc-name">Drink cost calculator</p>
+        <div class="field">
+          <label>Base powder</label>
+          <select><option>Ceremonial — Uji, ₱2.10/g</option><option>Premium — Nishio</option><option>Culinary — house blend</option></select>
+        </div>
+        <div class="field">
+          <label>Milk / base</label>
+          <select><option>Oat milk</option><option>Fresh cow milk</option><option>Almond</option><option>Sparkling water</option></select>
+        </div>
+        <div class="field">
+          <label>SRP target <span class="rangeval">₱180</span></label>
+          <input type="range" min="120" max="260" value="180" />
+        </div>
+      </div>
+      <!-- powder grid -->
+      <div>
+        <p class="mono" style="margin:0 0 10px">Powder guide grid</p>
+        <div class="grid-powder">
+          <div class="powder"><div class="pdot" style="background:#5e7b3a"></div><div class="pname">Uji</div><div class="pgrade">Ceremonial</div></div>
+          <div class="powder"><div class="pdot" style="background:#7a9447"></div><div class="pname">Nishio</div><div class="pgrade">Premium</div></div>
+          <div class="powder"><div class="pdot" style="background:#9bb15c"></div><div class="pname">Yame</div><div class="pgrade">Daily</div></div>
+          <div class="powder"><div class="pdot" style="background:#b6c47e"></div><div class="pname">House</div><div class="pgrade">Culinary</div></div>
+          <div class="powder"><div class="pdot" style="background:#4f6b33"></div><div class="pname">Okumi</div><div class="pgrade">Ceremonial</div></div>
+          <div class="powder"><div class="pdot" style="background:#86a04e"></div><div class="pname">Shizuoka</div><div class="pgrade">Premium</div></div>
+          <div class="powder"><div class="pdot" style="background:#a3b86a"></div><div class="pname">Blend No.4</div><div class="pgrade">Latte</div></div>
+          <div class="powder"><div class="pdot" style="background:#c0cb8a"></div><div class="pname">Baking</div><div class="pgrade">Culinary</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- =============================================================
+       6) CATEGORY ICONS
+  ============================================================== -->
+  <section>
+    <span class="section-tag"><b>05</b> doodle icons</span>
+    <h2 class="sec-title">Line-art categories
+      <span class="sub">single-weight strokes · mono captions · reusable from the doodle set above</span>
+    </h2>
+    <div class="icon-row">
+      <div class="icon-cell"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mm-pin"/></svg><div class="cap">events</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mm-cup"/></svg><div class="cap">drinks</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mm-whisk"/></svg><div class="cap">calculator</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mm-leaf"/></svg><div class="cap">powders</div></div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- =============================================================
+       7) BUTTONS
+  ============================================================== -->
+  <section>
+    <span class="section-tag"><b>06</b> buttons</span>
+    <h2 class="sec-title">Two styles</h2>
+    <div class="btn-row">
+      <button class="btn btn-primary">
+        Find a pop-up
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#f3ecdb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8 3l5 5-5 5"/></svg>
+      </button>
+      <button class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#3f5031" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v12M2 8h12"/></svg>
+        Calculate a drink
+      </button>
+    </div>
+  </section>
+
+  <p class="foot">Manila Matcha · a BriarBear brand · style tile · cream + forest · hand-drawn editorial · 2026</p>
+
+</div>
+</body>
+</html>

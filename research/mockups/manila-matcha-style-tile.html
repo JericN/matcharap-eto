@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manila Matcha — Style Tile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Shantell+Sans:ital,wght@0,400;0,600;0,700;1,500&family=Cutive+Mono&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* paper / cream */
+    --kraft:      #e3d4b0;
+    --cream:      #efe7d3;
+    --cream-2:    #f3ecdb;
+    --cream-deep: #e9e0c9;
+    --tan:        #ddc9a3;
+
+    /* ink */
+    --ink:        #3f5031; /* forest */
+    --ink-2:      #56683f; /* olive  */
+    --brown:      #6b4f2f; /* warm brown */
+    --brown-2:    #8a6a40;
+    --clay:       #b9542d; /* accent stamp red-clay */
+
+    --line: 2.4px;
+    --r: 16px;
+    --shadow: 6px 7px 0 rgba(63,80,49,.16);
+
+    --display: 'Caveat', 'Comic Sans MS', cursive;
+    --doodle:  'Shantell Sans', 'Comic Sans MS', cursive;
+    --mono:    'Cutive Mono', ui-monospace, monospace;
+    --body:    'Nunito', system-ui, sans-serif;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background-color:var(--cream);
+    /* paper-grain: layered noise + speckle + warm gradient */
+    background-image:
+      radial-gradient(circle at 18% 22%, rgba(107,79,47,.045) 0 1px, transparent 1px),
+      radial-gradient(circle at 62% 68%, rgba(63,80,49,.05) 0 1px, transparent 1px),
+      radial-gradient(circle at 85% 38%, rgba(107,79,47,.04) 0 1.2px, transparent 1.2px),
+      radial-gradient(circle at 40% 85%, rgba(63,80,49,.04) 0 1px, transparent 1px),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
+      linear-gradient(135deg, #f1e9d6 0%, #e9dfc6 55%, #ead9b8 100%);
+    background-size: 22px 22px, 26px 26px, 30px 30px, 28px 28px, 180px 180px, 100% 100%;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+  }
+
+  .wrap{ max-width:1080px; margin:0 auto; padding:28px 20px 80px; }
+
+  /* ---------- generic blocky paper card ---------- */
+  .panel{
+    position:relative;
+    background:var(--cream-2);
+    border:var(--line) solid var(--ink);
+    border-radius:var(--r) 22px 18px 24px / 22px 18px 24px 18px; /* hand-drawn irregular */
+    box-shadow:var(--shadow);
+    padding:22px 22px 24px;
+    margin:0 0 26px;
+  }
+  .panel.tan{ background:var(--cream-deep); }
+  .panel.kraft{ background:var(--kraft); }
+
+  .section-tag{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--brown);
+    background:var(--cream);
+    border:2px solid var(--brown);
+    border-radius:20px;
+    padding:3px 12px;
+    margin:0 0 16px;
+    transform:rotate(-1.4deg);
+  }
+
+  h2.sec{ font-family:var(--doodle); font-weight:700; font-size:1.45rem; margin:.1em 0 .5em; color:var(--ink); }
+
+  /* ============================================================
+     1) HERO — arched logo + mascot
+  ============================================================ */
+  .hero{
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 18%, rgba(86,104,63,.10), transparent 60%),
+      var(--kraft);
+    border:var(--line) solid var(--ink);
+    border-radius:30px 26px 32px 24px / 26px 30px 24px 30px;
+    box-shadow:var(--shadow);
+    padding:30px 18px 26px;
+    margin-bottom:30px;
+    overflow:hidden;
+  }
+  .hero .arch-wrap{ max-width:520px; margin:0 auto; }
+  .hero .tagline{
+    font-family:var(--mono);
+    font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--brown);
+    margin-top:6px;
+  }
+  .hero .sub{
+    font-family:var(--doodle); font-weight:600; font-size:1.05rem;
+    color:var(--ink-2); margin-top:2px;
+  }
+  /* stamp badge top-corner */
+  .stamp-corner{
+    position:absolute; top:14px; right:16px;
+    width:84px; height:84px;
+    transform:rotate(8deg);
+  }
+
+  /* ============================================================
+     2) PALETTE
+  ============================================================ */
+  .swatches{ display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:14px; }
+  .sw{
+    border:2.4px solid var(--ink);
+    border-radius:14px 18px 12px 16px / 16px 12px 18px 12px;
+    overflow:hidden;
+    box-shadow:3px 4px 0 rgba(63,80,49,.14);
+    background:var(--cream-2);
+  }
+  .sw .chip{ height:64px; }
+  .sw .meta{ padding:7px 9px; }
+  .sw .name{ font-family:var(--doodle); font-weight:600; font-size:.85rem; line-height:1.1; }
+  .sw .hex{ font-family:var(--mono); font-size:11px; color:var(--brown); }
+
+  .paper-chip{ position:relative; }
+  .paper-chip::after{
+    content:'paper-grain'; position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:10px; color:var(--brown);
+    background:
+      radial-gradient(circle at 30% 30%, rgba(107,79,47,.10) 0 1px, transparent 1px),
+      radial-gradient(circle at 70% 60%, rgba(63,80,49,.10) 0 1px, transparent 1px);
+    background-size:8px 8px,10px 10px;
+  }
+
+  /* ============================================================
+     3) TYPE SPECIMENS
+  ============================================================ */
+  .type-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; }
+  .spec{
+    border:2.4px dashed var(--ink-2);
+    border-radius:16px;
+    padding:14px 16px 16px;
+    background:var(--cream);
+  }
+  .spec .label{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--brown); margin-bottom:6px; }
+  .spec .fname{ font-family:var(--mono); font-size:11px; color:var(--ink-2); margin-bottom:10px; }
+  .spec .big-d{ font-family:var(--display); font-size:2.6rem; line-height:.95; color:var(--ink); }
+  .spec .big-doodle{ font-family:var(--doodle); font-weight:700; font-size:1.7rem; color:var(--ink); }
+  .spec .big-mono{ font-family:var(--mono); font-size:1.1rem; color:var(--ink); }
+  .spec .big-body{ font-family:var(--body); font-size:1rem; color:var(--ink); }
+  .spec . glyphs{ }
+  .spec .glyphs{ font-size:.78rem; color:var(--ink-2); margin-top:8px; opacity:.85; }
+
+  /* ============================================================
+     4 & 5) sample cards row
+  ============================================================ */
+  .cards-2{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+
+  /* EVENT CARD */
+  .event-card{
+    position:relative;
+    background:var(--cream-2);
+    border:var(--line) solid var(--ink);
+    border-radius:20px 22px 18px 24px / 22px 18px 24px 18px;
+    box-shadow:var(--shadow);
+    padding:18px 18px 20px;
+  }
+  .event-card .doodle-top{ display:flex; justify-content:center; margin-bottom:6px; }
+  .event-card h3{
+    font-family:var(--doodle); font-weight:700; font-size:1.35rem;
+    margin:.1em 0 .15em; color:var(--ink);
+  }
+  .meta-line{ font-family:var(--mono); font-size:12px; color:var(--brown); display:flex; gap:8px; align-items:center; margin:3px 0; }
+  .meta-line svg{ flex:0 0 auto; }
+
+  .status-stamp{
+    position:absolute; top:14px; right:12px;
+    font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--clay);
+    border:2.2px solid var(--clay);
+    border-radius:8px;
+    padding:5px 9px;
+    transform:rotate(7deg);
+    background:rgba(255,255,255,.25);
+    box-shadow:inset 0 0 0 1px rgba(185,84,45,.25);
+  }
+  .status-stamp.on::before{ content:'● '; }
+
+  /* DRINK CARD */
+  .drink-card{
+    position:relative;
+    background:var(--cream-deep);
+    border:var(--line) solid var(--brown);
+    border-radius:22px 18px 24px 18px / 18px 24px 18px 24px;
+    box-shadow:6px 7px 0 rgba(107,79,47,.18);
+    padding:18px 18px 20px;
+  }
+  .drink-card h3{
+    font-family:var(--doodle); font-weight:700; font-size:1.35rem;
+    margin:.1em 0 .2em; color:var(--brown);
+  }
+  .drink-head{ display:flex; gap:12px; align-items:center; }
+  .cogs-row{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:8px;
+    margin:12px 0 8px;
+  }
+  .cogs-row .cell{
+    border:2px solid var(--brown);
+    border-radius:12px;
+    padding:7px 6px;
+    text-align:center;
+    background:var(--cream-2);
+  }
+  .cogs-row .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--brown-2); }
+  .cogs-row .v{ font-family:var(--doodle); font-weight:700; font-size:1.05rem; color:var(--ink); }
+  .cogs-row .cell.hi{ background:var(--ink); border-color:var(--ink); }
+  .cogs-row .cell.hi .k{ color:#cdd9bd; }
+  .cogs-row .cell.hi .v{ color:#f3ecdb; }
+
+  .margin-bar-label{ font-family:var(--mono); font-size:11px; color:var(--brown); margin:6px 0 4px; display:flex; justify-content:space-between; }
+
+  /* ============================================================
+     6) category icons
+  ============================================================ */
+  .icon-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .icon-cell{
+    text-align:center;
+    border:2.2px solid var(--ink);
+    border-radius:16px 18px 14px 18px / 18px 14px 18px 14px;
+    padding:14px 8px 12px;
+    background:var(--cream);
+    box-shadow:3px 4px 0 rgba(63,80,49,.12);
+  }
+  .icon-cell svg{ display:block; margin:0 auto 6px; }
+  .icon-cell .cap{ font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--brown); }
+
+  /* ============================================================
+     7) buttons
+  ============================================================ */
+  .btn-row{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+  .btn{
+    font-family:var(--doodle); font-weight:700; font-size:1.05rem;
+    cursor:pointer; border:none;
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px;
+  }
+  .btn-primary{
+    background:var(--ink); color:var(--cream-2);
+    border:2.6px solid var(--ink);
+    border-radius:24px 16px 22px 16px / 16px 22px 16px 22px;
+    box-shadow:4px 5px 0 var(--brown);
+    transition:transform .08s ease, box-shadow .08s ease;
+  }
+  .btn-primary:hover{ transform:translate(2px,2px); box-shadow:2px 3px 0 var(--brown); }
+  .btn-ghost{
+    background:transparent; color:var(--ink);
+    border:2.6px dashed var(--ink);
+    border-radius:22px 16px 24px 16px / 16px 24px 16px 22px;
+    box-shadow:none;
+    transition:background .12s ease;
+  }
+  .btn-ghost:hover{ background:rgba(63,80,49,.08); }
+
+  /* dashed rule divider doodle */
+  .rule{ border:none; border-top:2.4px dashed var(--ink-2); margin:0 0 26px; opacity:.55; }
+
+  /* footer note */
+  .foot{ text-align:center; font-family:var(--mono); font-size:11px; color:var(--brown); letter-spacing:.1em; }
+
+  @media (max-width:720px){
+    .cards-2{ grid-template-columns:1fr; }
+    .icon-row{ grid-template-columns:repeat(2,1fr); }
+    .spec .big-d{ font-size:2.2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============================================================
+       1) HERO — arched logo over mascot
+  ============================================================ -->
+  <header class="hero">
+    <!-- corner stamp badge -->
+    <svg class="stamp-corner" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M50 6c8 4 16 0 22 6s2 14 6 22-2 16 0 22-8 14-16 16-12 8-22 6-16-2-22-8-8-10-10-18 0-16 2-24 6-14 14-18 18-8 26-4Z"
+            stroke="#b9542d" stroke-width="2.4" fill="rgba(185,84,45,.06)"/>
+      <text x="50" y="40" text-anchor="middle" font-family="Cutive Mono, monospace" font-size="10" fill="#b9542d" letter-spacing="1">EST.</text>
+      <text x="50" y="56" text-anchor="middle" font-family="Caveat, cursive" font-size="22" font-weight="700" fill="#b9542d">2026</text>
+      <text x="50" y="72" text-anchor="middle" font-family="Cutive Mono, monospace" font-size="7.5" fill="#b9542d" letter-spacing="1.5">MANILA · PH</text>
+    </svg>
+
+    <div class="arch-wrap">
+      <svg viewBox="0 0 520 360" width="100%" role="img" aria-label="Manila Matcha logo with whisking mascot">
+        <defs>
+          <path id="archTop" d="M 56 168 A 204 204 0 0 1 464 168" fill="none"/>
+          <path id="archBottom" d="M 96 250 A 150 150 0 0 0 424 250" fill="none"/>
+        </defs>
+
+        <!-- arched brand name -->
+        <text font-family="Caveat, cursive" font-weight="700" fill="#3f5031" font-size="64" letter-spacing="2">
+          <textPath href="#archTop" startOffset="50%" text-anchor="middle">Manila Matcha</textPath>
+        </text>
+
+        <!-- little decorative tea leaves flanking -->
+        <g stroke="#56683f" stroke-width="2.4" fill="rgba(86,104,63,.18)" stroke-linecap="round">
+          <path d="M70 132 q-16 -10 -8 -28 q18 4 18 24 q0 6 -10 4Z"/>
+          <path d="M450 132 q16 -10 8 -28 q-18 4 -18 24 q0 6 10 4Z"/>
+        </g>
+
+        <!-- ===== MASCOT: round matcha character whisking a cup ===== -->
+        <g stroke="#3f5031" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <!-- body / blob -->
+          <path d="M196 196
+                   c-30 0 -54 22 -54 52
+                   c0 34 26 58 64 58
+                   c40 0 66 -24 66 -58
+                   c0 -30 -24 -52 -54 -52 Z"
+                fill="#a9c08a"/>
+          <!-- cheeks blush -->
+          <circle cx="178" cy="262" r="9" fill="#d98a63" stroke="none" opacity=".7"/>
+          <circle cx="246" cy="262" r="9" fill="#d98a63" stroke="none" opacity=".7"/>
+          <!-- eyes -->
+          <path d="M186 244 q5 -8 11 0" stroke-width="3.4"/>
+          <path d="M229 244 q5 -8 11 0" stroke-width="3.4"/>
+          <!-- happy mouth -->
+          <path d="M203 256 q9 9 18 0" stroke-width="3"/>
+          <!-- little leaf sprout on head -->
+          <path d="M206 196 q4 -22 -8 -34 q20 2 22 26" fill="#7c9b58"/>
+          <path d="M218 188 q14 -16 30 -14 q-4 18 -26 22" fill="#8caa64"/>
+
+          <!-- left arm holding cup -->
+          <path d="M156 268 q-22 4 -34 22"/>
+          <!-- right arm raised, holding whisk -->
+          <path d="M268 250 q26 -8 34 -34"/>
+
+          <!-- the matcha cup the mascot holds -->
+          <g>
+            <path d="M96 290 h54 l-6 30 a8 8 0 0 1 -8 7 h-26 a8 8 0 0 1 -8 -7 Z" fill="#eef0e2"/>
+            <path d="M104 298 h38 l-3 16 h-32 Z" fill="#7faa4e" stroke="none"/>
+            <!-- steam -->
+            <path d="M118 282 q6 -8 0 -16 q-6 -8 0 -16" stroke-width="2.4"/>
+            <path d="M132 282 q6 -8 0 -16 q-6 -8 0 -16" stroke-width="2.4"/>
+          </g>
+
+          <!-- chasen (bamboo whisk) in raised hand -->
+          <g stroke-width="2.6">
+            <path d="M300 214 l14 -26"/>
+            <path d="M306 214 l16 -24"/>
+            <path d="M295 218 l10 -28"/>
+            <path d="M292 224 h18" stroke-width="3"/>
+            <!-- handle -->
+            <path d="M300 226 l4 18" stroke-width="3.4"/>
+          </g>
+        </g>
+
+        <!-- lower arched sub-words -->
+        <text font-family="Cutive Mono, monospace" fill="#6b4f2f" font-size="15" letter-spacing="4">
+          <textPath href="#archBottom" startOffset="50%" text-anchor="middle">· POP-UP DIRECTORY · MNL ·</textPath>
+        </text>
+      </svg>
+    </div>
+
+    <p class="tagline">whisked fresh in metro manila</p>
+    <p class="sub">events &middot; cost calculator &middot; powder guide</p>
+  </header>
+
+  <!-- ============================================================
+       2) PALETTE + PAPER TEXTURE
+  ============================================================ -->
+  <section class="panel">
+    <span class="section-tag">01 — palette &amp; paper</span>
+    <h2 class="sec">Cream paper, forest &amp; brown ink</h2>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#efe7d3"></div><div class="meta"><div class="name">Cream</div><div class="hex">#efe7d3</div></div></div>
+      <div class="sw"><div class="chip" style="background:#f3ecdb"></div><div class="meta"><div class="name">Cream Light</div><div class="hex">#f3ecdb</div></div></div>
+      <div class="sw"><div class="chip" style="background:#e9e0c9"></div><div class="meta"><div class="name">Cream Deep</div><div class="hex">#e9e0c9</div></div></div>
+      <div class="sw"><div class="chip" style="background:#e3d4b0"></div><div class="meta"><div class="name">Kraft</div><div class="hex">#e3d4b0</div></div></div>
+      <div class="sw"><div class="chip" style="background:#3f5031"></div><div class="meta"><div class="name">Forest Ink</div><div class="hex">#3f5031</div></div></div>
+      <div class="sw"><div class="chip" style="background:#56683f"></div><div class="meta"><div class="name">Olive Ink</div><div class="hex">#56683f</div></div></div>
+      <div class="sw"><div class="chip" style="background:#6b4f2f"></div><div class="meta"><div class="name">Warm Brown</div><div class="hex">#6b4f2f</div></div></div>
+      <div class="sw"><div class="chip" style="background:#b9542d"></div><div class="meta"><div class="name">Stamp Clay</div><div class="hex">#b9542d</div></div></div>
+      <div class="sw"><div class="chip paper-chip" style="background:#ece2cb"></div><div class="meta"><div class="name">Paper Grain</div><div class="hex">texture</div></div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3) TYPE SPECIMENS
+  ============================================================ -->
+  <section class="panel tan">
+    <span class="section-tag">02 — typography</span>
+    <h2 class="sec">Handwritten + typewriter + body</h2>
+    <div class="type-row">
+      <div class="spec">
+        <div class="label">Display / Logo</div>
+        <div class="fname">Caveat &middot; Google Fonts</div>
+        <div class="big-d">Manila Matcha</div>
+        <div class="glyphs">Ag Bb Cc 1234 &amp; ?! — headlines, the arched logo</div>
+      </div>
+      <div class="spec">
+        <div class="label">Display 2 / Doodle</div>
+        <div class="fname">Shantell Sans &middot; Google Fonts</div>
+        <div class="big-doodle">Whisk it good &#127861;</div>
+        <div class="glyphs">Ag Bb Cc 1234 &amp; ?! — card titles, playful UI</div>
+      </div>
+      <div class="spec">
+        <div class="label">Mono / Labels</div>
+        <div class="fname">Cutive Mono &middot; Google Fonts</div>
+        <div class="big-mono">SRP &middot; COGS &middot; ₱149</div>
+        <div class="glyphs">Ag Bb Cc 1234 &amp; ?! — tags, prices, captions</div>
+      </div>
+      <div class="spec">
+        <div class="label">Body / Reading</div>
+        <div class="fname">Nunito &middot; Google Fonts</div>
+        <div class="big-body">Soft ceremonial-grade matcha, whisked to order at cozy pop-ups across the metro.</div>
+        <div class="glyphs">Ag Bb Cc 1234 &amp; ?! — paragraphs &amp; descriptions</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ============================================================
+       4 & 5) SAMPLE EVENT CARD + SAMPLE DRINK CARD
+  ============================================================ -->
+  <section class="panel" style="background:transparent;border:none;box-shadow:none;padding:0;">
+    <span class="section-tag">03 — sample cards</span>
+    <div class="cards-2">
+
+      <!-- EVENT CARD -->
+      <article class="event-card">
+        <div class="status-stamp on">live now</div>
+        <div class="doodle-top">
+          <!-- doodle: market tent / stall -->
+          <svg width="92" height="70" viewBox="0 0 92 70" fill="none" stroke="#3f5031" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 26 q36 -22 72 0" fill="#a9c08a"/>
+            <path d="M10 26 l6 12 l8 -10 l8 12 l8 -12 l8 12 l8 -12 l8 12 l8 -12 l4 10" fill="#eef0e2"/>
+            <path d="M16 38 v26 M76 36 v28"/>
+            <rect x="24" y="46" width="44" height="18" rx="3" fill="#efe7d3"/>
+            <path d="M33 46 v18 M46 46 v18 M59 46 v18"/>
+          </svg>
+        </div>
+        <h3>Whisk &amp; Wander Pop-up</h3>
+        <div class="meta-line">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#6b4f2f" stroke-width="1.8"><rect x="1.5" y="2.5" width="11" height="9.5" rx="1.5"/><path d="M1.5 5h11M4 1v3M10 1v3"/></svg>
+          SAT &middot; 28 JUN 2026 &middot; 10AM–6PM
+        </div>
+        <div class="meta-line">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#6b4f2f" stroke-width="1.8"><path d="M7 1c3 0 5 2.2 5 5 0 3.5-5 7-5 7S2 9.5 2 6c0-2.8 2-5 5-5Z"/><circle cx="7" cy="6" r="1.7"/></svg>
+          The Grid Food Hall &middot; Rockwell, Makati
+        </div>
+        <div class="meta-line">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#6b4f2f" stroke-width="1.8"><circle cx="7" cy="7" r="5.5"/><path d="M7 4v3l2 1.4"/></svg>
+          12 matcha vendors &middot; free entry
+        </div>
+      </article>
+
+      <!-- DRINK CARD -->
+      <article class="drink-card">
+        <div class="drink-head">
+          <!-- doodle: iced matcha glass -->
+          <svg width="54" height="74" viewBox="0 0 54 74" fill="none" stroke="#6b4f2f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 14 h30 l-3 50 a4 4 0 0 1 -4 3 H19 a4 4 0 0 1 -4 -3 Z" fill="#eef0e2"/>
+            <path d="M13 30 h28 l-2 22 H15 Z" fill="#8caa64" stroke="none"/>
+            <path d="M14 38 h26" stroke="#fff" stroke-width="1.6" opacity=".6"/>
+            <path d="M30 14 l8 -10" />
+            <circle cx="39" cy="3" r="2.4" fill="#a9c08a"/>
+          </svg>
+          <div>
+            <h3>Iced Strawberry Matcha</h3>
+            <div class="meta-line">16oz &middot; oat milk option</div>
+          </div>
+        </div>
+
+        <div class="cogs-row">
+          <div class="cell"><div class="k">COGS</div><div class="v">₱63</div></div>
+          <div class="cell"><div class="k">SRP</div><div class="v">₱180</div></div>
+          <div class="cell hi"><div class="k">Margin</div><div class="v">65%</div></div>
+        </div>
+
+        <div class="margin-bar-label"><span>margin</span><span>65%</span></div>
+        <!-- hand-drawn margin bar -->
+        <svg width="100%" height="26" viewBox="0 0 320 26" preserveAspectRatio="none" aria-hidden="true">
+          <rect x="2" y="4" width="316" height="18" rx="9" fill="#efe7d3" stroke="#6b4f2f" stroke-width="2.4"/>
+          <path d="M8 13 h196 a4 4 0 0 1 0 0" fill="none"/>
+          <rect x="6" y="8" width="200" height="10" rx="5" fill="#3f5031"/>
+          <path d="M6 13 q100 -3 200 0" stroke="#56683f" stroke-width="1.2" fill="none" opacity=".5"/>
+        </svg>
+      </article>
+
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- ============================================================
+       6) CATEGORY ICONS
+  ============================================================ -->
+  <section class="panel kraft">
+    <span class="section-tag">04 — doodle icons</span>
+    <h2 class="sec">Line-art categories</h2>
+    <div class="icon-row">
+
+      <div class="icon-cell">
+        <!-- matcha cup -->
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#3f5031" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 26 h28 l-3 18 a5 5 0 0 1 -5 4 H22 a5 5 0 0 1 -5 -4 Z" fill="#eef0e2"/>
+          <path d="M42 30 q8 0 8 7 t-8 7" />
+          <path d="M16 32 h24 l-2 10 H18 Z" fill="#8caa64" stroke="none"/>
+          <path d="M22 20 q5 -8 0 -14 M30 20 q5 -8 0 -14" stroke-width="2.2"/>
+        </svg>
+        <div class="cap">drinks</div>
+      </div>
+
+      <div class="icon-cell">
+        <!-- chasen whisk -->
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#3f5031" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M28 30 v18" stroke-width="3.2"/>
+          <ellipse cx="28" cy="30" rx="12" ry="5" fill="#eef0e2"/>
+          <path d="M18 28 l4 -16 M23 27 l2 -17 M28 27 v-18 M33 27 l-2 -17 M38 28 l-4 -16"/>
+          <path d="M24 48 q4 4 8 0" />
+        </svg>
+        <div class="cap">powder</div>
+      </div>
+
+      <div class="icon-cell">
+        <!-- tea leaf -->
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#3f5031" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 42 C14 20 30 12 44 12 C44 34 30 44 14 42 Z" fill="#a9c08a"/>
+          <path d="M16 40 C26 32 36 24 42 14" stroke-width="2.2"/>
+          <path d="M24 32 l5 3 M30 26 l5 3" stroke-width="2"/>
+        </svg>
+        <div class="cap">guide</div>
+      </div>
+
+      <div class="icon-cell">
+        <!-- mascot face / events -->
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#3f5031" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="28" cy="32" r="16" fill="#a9c08a"/>
+          <path d="M24 16 q4 -10 -2 -12 q10 0 12 11" fill="#7c9b58"/>
+          <path d="M21 30 q4 -6 8 0 M31 30 q4 -6 8 0" stroke-width="3"/>
+          <path d="M24 38 q5 5 10 0"/>
+          <circle cx="20" cy="37" r="3" fill="#d98a63" stroke="none" opacity=".6"/>
+          <circle cx="38" cy="37" r="3" fill="#d98a63" stroke="none" opacity=".6"/>
+        </svg>
+        <div class="cap">events</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7) BUTTONS
+  ============================================================ -->
+  <section class="panel">
+    <span class="section-tag">05 — buttons</span>
+    <h2 class="sec">Two styles</h2>
+    <div class="btn-row">
+      <button class="btn btn-primary">
+        Find a pop-up
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#f3ecdb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9M8 3l5 5-5 5"/></svg>
+      </button>
+      <button class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#3f5031" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v12M2 8h12"/></svg>
+        Calculate a drink
+      </button>
+    </div>
+  </section>
+
+  <p class="foot">MANILA MATCHA &middot; A BRIARBEAR BRAND &middot; STYLE TILE v1 &middot; 2026</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,2479 @@
+{
+  "goal": "Top 10 Japanese matcha houses (unique-weighted) for product/concept ideas",
+  "counts": {
+    "rawMentions": 64,
+    "unique": 53,
+    "validated": 34
+  },
+  "top10": [
+    {
+      "name": "Horii Shichimeien",
+      "nameJp": "堀井七茗園",
+      "city": "Uji",
+      "area": "Myoraku, near Agata-jinja Shrine and Byodoin Temple, Uji, Kyoto",
+      "founded": "1879 (Meiji 12); tea-garden heritage traces to the Muromachi-period \"Uji Shichimeien\" seven gardens (14th-15th c.)",
+      "realAndOperating": true,
+      "famousFor": "Owning \"Okunoyama\" (奥ノ山), the only surviving garden of the seven Muromachi-era Uji Shichimeien gardens designated by the Ashikaga shogunate; premium award-winning Uji matcha and the \"Seiri-no/Nariino\" (成里乃) cultivar.",
+      "unique": "This is a deeply pedigreed, ideas-rich house. (1) It is the SOLE active grower of one of the original seven historic Uji \"famous gardens\" — a 600-year provenance story money cannot buy. (2) The 3rd-generation owner Horii Chojiro invented the \"Horii-style tencha machine\" in 1924, now the prototype for essentially every tencha machine in Japan — a manufacturer-innovator heritage. (3) They ran a 20-year (1981-2002) cultivar breeding program producing their own registered varietals (\"Seiri-no/Nariino\" for matcha, \"Okunoyama\" for gyokuro), which then won the national Minister of Agriculture Prize (2010). Borrowable concepts: a single-origin \"heritage garden\" hero product with a named, registered house cultivar; tiered matcha line named by terroir/grade (\"...no Mukashi\" naming ladder); a tasting room overlooking the source garden where staff demonstrate proper brewing; and storytelling structured as \"seven chapters\" mirroring the seven gardens. A small farm-to-cup brand could borrow the \"named house blend + provenance chapter narrative + in-house brewing demo\" framework.",
+      "signatures": [
+        {
+          "item": "Matcha Seiri-no / Nariino (成里乃) — flagship, 2010 Minister of Agriculture Prize winner, 20g",
+          "priceYen": 3780
+        },
+        {
+          "item": "Matcha Uji Mukashi (宇治昔), 30g can",
+          "priceYen": 2484
+        },
+        {
+          "item": "Matcha Choko no Mukashi (長閑の昔) — top cafe-grade matcha",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha Shichimei no Mukashi (七茗の昔)",
+          "priceYen": null
+        },
+        {
+          "item": "Cafe matcha tasting (usucha) served with a confection",
+          "priceYen": 600
+        },
+        {
+          "item": "Okunoyama Gyokuro (奥ノ山 玉露) — flagship gyokuro from the heritage garden",
+          "priceYen": null
+        }
+      ],
+      "popularity": "Tabelog 3.09 (5 reviews) — modest as a \"restaurant,\" but it is fundamentally a revered tea producer, not a cafe. Strong global wholesale fame: stocked by Sazen Tea, Rocky's Matcha, Tsukimi, and featured by matcha influencers. ~12K Instagram followers / ~134 posts. National competition awards (2010 Minister of Agriculture Prize; 2025 Kansai Tea Competition award-winning lot sold). Praised on Wanderlog/travel guides for personalized tastings and English-speaking owners.",
+      "rating": 3.09,
+      "reviews": 5,
+      "website": "https://horiishichimeien.com/en-sb",
+      "ig": "https://www.instagram.com/horiishichimeien/",
+      "uniquenessScore": 9,
+      "popularityScore": 7,
+      "confidence": 0.88,
+      "sources": [
+        "https://horiishichimeien.com/en-sb",
+        "https://horiishichimeien.com/products/matcha-ujimukashi",
+        "https://horiishichimeien.com/en-sb/collections/all",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26021818/",
+        "https://www.instagram.com/horiishichimeien/",
+        "https://nihonchaseikatsu.com/introduce/horiishichimeien/",
+        "https://www.ujimiyage.com/store/profile60",
+        "https://wanderlog.com/place/details/5930818/horii-shichimeien",
+        "https://www.sazentea.com/en/products/c41-horii-shichimeien-matcha",
+        "https://www.rockysmatcha.com/products/rockys-matcha-horii-shichimeien-ceremonial-blend-20g",
+        "https://ochanokyoto.jp/spot/detail.php?sid=776"
+      ],
+      "spotlight": "unique"
+    },
+    {
+      "name": "SAKURAI JAPANESE TEA EXPERIENCE",
+      "nameJp": "櫻井焙茶研究所",
+      "city": "Tokyo",
+      "area": "Minami-Aoyama / Omotesando, Minato-ku (5F Spiral Building, 5-6-23 Minami-Aoyama)",
+      "founded": "2014 (opened December 3, 2014; Heisei era)",
+      "realAndOperating": true,
+      "famousFor": "A modern \"tea research laboratory\" (焙茶研究所 = roasted-tea research institute) that roasts hojicha to order in front of guests and reinterprets the tea ceremony as a multi-sensory, minimalist experience. Equally renowned by night as a tea-cocktail bar — one of Tokyo's most acclaimed bars, featured on The World's 50 Best Bars Discovery list. Founded by tea master Shinya Sakurai; the celebrated interior/spatial design is by Shinichiro Ogata's Simplicity studio.",
+      "unique": "The \"roast-to-order\" hojicha concept: tea is roasted fresh at the counter (baicha), so aroma becomes a live, theatrical act rather than a pre-packaged product. Two equally strong, borrowable ideas: (1) the 茶酒 \"chashu\" tea-and-liquor program — 18 differently-processed teas each infused into a matched spirit, served as a day-time flight, then flipped at night into a full tea-cocktail bar (Gyokuro Martini, Hojicha Toddy, Bancha Negroni); and (2) a tiered \"experience ladder\" — a casual tea+wagashi pairing (¥2,500) up to a guided multi-infusion Tea Course (gyokuro → blend → roasted → matcha, ¥5,950) — that turns tea drinking into a curated, reservation-worthy omakase. The whole brand (utensils, packaging, retail tea, gelato, interior) is designed as one coherent system, making it a model for an elevated, design-led matcha/tea retail-plus-experience concept.",
+      "signatures": [
+        {
+          "item": "Tea Course — guided tasting: gyokuro, seasonal blend, freshly-roasted hojicha, matcha + wagashi",
+          "priceYen": 5950
+        },
+        {
+          "item": "Tea & Japanese Sweets — choose a tea, brewed up to 3 infusions, paired with wagashi",
+          "priceYen": 2500
+        },
+        {
+          "item": "Chashu / 茶酒 — tea infused into a matched liquor (18 varieties)",
+          "priceYen": 1620
+        },
+        {
+          "item": "Gyokuro Martini (tea cocktail, bar time)",
+          "priceYen": 2200
+        },
+        {
+          "item": "Hojicha Toddy (tea cocktail, bar time)",
+          "priceYen": 1950
+        },
+        {
+          "item": "Bancha Negroni (tea cocktail, bar time)",
+          "priceYen": 1900
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 46,
+      "popularity": "High / iconic within tea-culture and design circles. Tabelog 3.55-3.56 (189 reviews) — strong for a tea house; Tripadvisor 4.6/5, ranked #153 of 7,707 restaurants in Minato; Instagram @sakurai_tea_shop ~34.7K followers; on The World's 50 Best Bars Discovery list; frequently covered by Time Out, design/travel media. Counter is only 10 seats, reservation-recommended, average spend ¥8,000-9,999 — a sought-after, must-know Tokyo tea destination.",
+      "website": "https://sakurai-tea.jp/en",
+      "ig": "https://www.instagram.com/sakurai_tea_shop/",
+      "uniquenessScore": 9,
+      "popularityScore": 8,
+      "confidence": 0.9,
+      "sources": [
+        "https://sakurai-tea.jp/en",
+        "https://sakurai-tea.jp/about",
+        "https://sakurai-tea.jp/experience-daytime",
+        "https://sakurai-tea.jp/en/experience-bartime",
+        "https://tabelog.com/en/tokyo/A1306/A130602/13197815/",
+        "https://www.instagram.com/sakurai_tea_shop/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066451-d11689654-Reviews-Sakurai_Tea_Experience-Minato_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://www.theworlds50best.com/discovery/Establishments/Japan/Tokyo/Sakurai.html",
+        "https://www.timeout.com/tokyo/restaurants/sakurai",
+        "https://whenin.tokyo/Sakurai-Japanese-Tea-Experience-Aoyama"
+      ],
+      "spotlight": "unique"
+    },
+    {
+      "name": "Tokyo Saryo",
+      "nameJp": "東京茶寮",
+      "city": "Tokyo",
+      "area": "Sangenjaya (Kamiuma), Setagaya",
+      "founded": "2017 (opened January 5, 2017)",
+      "realAndOperating": true,
+      "famousFor": "The world's first hand-drip Japanese green tea (sencha) specialty cafe — brewing single-origin sencha pour-over style like specialty coffee, served as a temperature-progression tasting flight.",
+      "unique": "BORROWABLE CONCEPT (very rich): \"Hand-drip tea\" reframes Japanese sencha as a specialty-coffee-style ritual. They invented a proprietary branded brewing tool (GREEN DRIPPER) that holds the poured water inside to steam the leaves — a productizable, sellable object. The signature tasting format takes ONE single-origin leaf and serves it as THREE different drinks: 1st infusion at 70°C (sweet/umami), 2nd at 80°C (astringent/aroma), 3rd blended with genmaicha (roasted rice) — teaching customers how temperature transforms a single leaf. Combined with a minimalist white U-shaped counter where a \"tea barista\" brews in front of you, single-origin sourcing by farm/cultivar/steaming/roasting, and a strong design-led brand (run by design firm LUCY ALTER DESIGN) with a retail arm (Senchado Tokyo) selling single-origin teas in display-window glass jars. Highly translatable to a matcha context: a 'hand-drip matcha flight,' a branded brewing/whisking tool, single-origin matcha by farm/cultivar, and counter-side preparation as theater.",
+      "signatures": [
+        {
+          "item": "Sencha 2-variety tasting flight + tea confection (same leaf served at 70°C, 80°C, then as genmaicha)",
+          "priceYen": 1400
+        },
+        {
+          "item": "Sencha 1-variety + tea confection",
+          "priceYen": 900
+        },
+        {
+          "item": "Take-out iced tea",
+          "priceYen": 450
+        }
+      ],
+      "popularity": "Cult/iconic design-press darling rather than a queue-driven mass attraction. Widely covered in English-language Tokyo guides (Time Out, goop, When in Tokyo, Savvy Tokyo, Japan Travel) and Japanese media (Yahoo Life Magazine, XD, goodroom, Santatsu). Pioneered the now-widely-imitated 'hand-drip Japanese tea' category. Tabelog score 3.11 with ~40-42 reviews (a low number typical of a tiny 9-seat reservation-only tearoom). Sister/parent brand Senchado Tokyo Instagram (@senchado_tokyo) ~44K followers; dedicated @tokyosaryo ~3,100 followers. No Michelin star. Tiny footprint (9 seats), now open on an irregular/reduced schedule (Sundays per latest site info), reservation-recommended.",
+      "rating": 3.11,
+      "reviews": 42,
+      "website": "https://www.tokyosaryo.jp/",
+      "ig": "https://www.instagram.com/tokyosaryo/",
+      "uniquenessScore": 9,
+      "popularityScore": 6.5,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.tokyosaryo.jp/",
+        "https://tabelog.com/en/tokyo/A1317/A131706/13204215/",
+        "https://shop.senchado.jp/pages/tokyosaryo",
+        "https://www.instagram.com/tokyosaryo/",
+        "https://www.instagram.com/senchado_tokyo/",
+        "https://lifemagazine.yahoo.co.jp/articles/6413",
+        "https://fashionmarketingjournal.com/2017/01/greenbrewing-tokyosaryo.html",
+        "https://exp-d.com/interview/6097/",
+        "https://www.timeout.com/tokyo/restaurants/tokyo-saryo",
+        "https://whenin.tokyo/Tokyo-Saryo-Sangenjaya",
+        "https://goop.com/place/japan/sangenjaya/tokyo-saryo"
+      ],
+      "spotlight": "unique"
+    },
+    {
+      "name": "Nanaya",
+      "nameJp": "ななや（丸七製茶）",
+      "city": "Fujieda, Shizuoka",
+      "area": "Uchiseto, Fujieda (main store / factory); also Shizuoka Gofukucho, Aoyama Tokyo, Kyoto Sanjo",
+      "founded": "Parent Marushichi Seicha founded 1907 (Meiji era); Nanaya gelato brand / Fujieda store opened 2010",
+      "realAndOperating": true,
+      "famousFor": "The \"world's darkest/strongest matcha gelato\" served in a 7-level intensity gradient (No.1 to No.7), using premium Fujieda-grown Shizuoka matcha. No.7 is the headline item — capped because only top-grade matcha can be pushed to extreme concentration without becoming unpalatably bitter.",
+      "unique": "The numbered 1-to-7 matcha intensity ladder is a brilliant, borrowable concept: it turns \"how strong do you want your matcha?\" into a guided, gamified menu and a photogenic green color-gradient display. No.7 uses leaves costing ~3x No.6 from an Agriculture Minister Prize-winning tea garden, and the \"world's strongest\" claim is defensible because only premium matcha stays delicious at extreme density. The same intensity-tier framework extends across their line (e.g., Premium No.7 tea chocolate). Borrowable: an intensity-numbered menu, a gradient flight/sampler, and a flagship \"max strength\" hero product positioned as a destination/bragging item.",
+      "signatures": [
+        {
+          "item": "Matcha Gelato No.7 (world's strongest, single scoop)",
+          "priceYen": 560
+        },
+        {
+          "item": "Matcha Gelato No.7 (double scoop)",
+          "priceYen": 650
+        },
+        {
+          "item": "Matcha Gelato No.7 (triple scoop)",
+          "priceYen": 700
+        },
+        {
+          "item": "Standard matcha gelato No.1-No.6 (single scoop)",
+          "priceYen": 370
+        },
+        {
+          "item": "Standard matcha gelato (double scoop)",
+          "priceYen": 470
+        },
+        {
+          "item": "Premium No.7 tea chocolate (TEA CHOCOLATE MATCHA 7, gift box)",
+          "priceYen": null
+        }
+      ],
+      "popularity": "High and iconic. Weekend car queues at the Fujieda main store; frequently featured on Japanese TV (e.g., Gacchiri Monday) and food/travel media; multi-city expansion (Shizuoka, Tokyo Aoyama, Kyoto Sanjo, plus an overseas Brisbane presence). Selected for Tabelog Ice Cream/Gelato \"Tabelog 100\" 2023. Multiple official Instagram accounts per store.",
+      "rating": 3.51,
+      "reviews": 520,
+      "website": "https://nanaya-matcha.com/",
+      "ig": "https://www.instagram.com/nanaya_fujieda/",
+      "uniquenessScore": 9,
+      "popularityScore": 8,
+      "confidence": 0.9,
+      "sources": [
+        "https://nanaya-matcha.com/",
+        "https://tabelog.com/en/shizuoka/A2203/A220301/22018670/",
+        "https://cake.tokyo/16931",
+        "https://nihonchaseikatsu.com/introduce/nanayashizuoka/",
+        "https://www.sakuyaoi.com/entry/nanayashizuoka",
+        "https://co-trip.jp/spot/74788",
+        "https://www.instagram.com/nanaya_fujieda/",
+        "https://www.instagram.com/nanaya_aoyama/",
+        "https://www.instagram.com/nanaya_kyoto/",
+        "https://www.instagram.com/nanaya_shizuoka/",
+        "https://map.yahoo.co.jp/v3/place/fOAKks35mvw/review",
+        "https://www.marushichi-group.jp/shop/default.asp",
+        "https://carapeko.com/gattiri-mattya"
+      ],
+      "spotlight": "unique"
+    },
+    {
+      "name": "Suzukien x Nanaya (Asakusa)",
+      "nameJp": "壽々喜園×ななや 浅草本店",
+      "city": "Tokyo",
+      "area": "Asakusa (Taito Ward) — 3-4-3 Asakusa, near Sensoji Temple",
+      "founded": "Tea house (Suzukien): late Edo period, c.1848 (Kaei era), 150+ years; Suzukien×Nanaya matcha-gelato collaboration shop opened Jan 4, 2016",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Matcha Gelato No.1–No.6 (high-grade matcha, escalating intensity), single cup",
+          "priceYen": 390
+        },
+        {
+          "item": "Matcha Gelato No.1–No.6, double cup",
+          "priceYen": 500
+        },
+        {
+          "item": "Matcha Gelato Premium No.7 — 'world's richest matcha gelato' (uses Minister of Agriculture award-winning matcha ~¥150,000/kg), single cup",
+          "priceYen": 590
+        },
+        {
+          "item": "Matcha Gelato No.7 double (paired with one non-No.7 flavor)",
+          "priceYen": 680
+        },
+        {
+          "item": "Cone upgrade (add-on to any cup)",
+          "priceYen": 20
+        },
+        {
+          "item": "Four-types matcha an-dango (matcha-bean dumplings) with sencha set",
+          "priceYen": 500
+        }
+      ],
+      "famousFor": "The \"world's richest matcha gelato\" — seven graded intensity levels (No.1 to No.7), where No.7 is roughly 7x the matcha concentration of ordinary premium matcha gelato and pushes past the No.5 'richness limit' that the gelato industry considers the point where gelato can no longer set.",
+      "unique": "The graded 1-to-7 intensity ladder is a brilliant borrowable concept: it turns matcha richness into a gamified, photogenic spectrum (a visual gradient of green) that drives upsell (pay more for No.7), repeat visits to 'climb' the scale, and viral social content. It pairs a 150-year-old Asakusa tea wholesaler (Suzukien / Tokyo Tea Wholesale Co.) with a Shizuoka matcha-sweets maker (Nanaya, matcha sourced from Marushichi Seicha, est. 1907), using single contract-farm matcha for consistency — and anchors a premium tier with genuinely award-winning (Minister of Agriculture) matcha. The model: heritage tea brand + dessert collaborator + a tiered 'how intense can you go' menu architecture.",
+      "popularity": "Iconic Asakusa tourist destination with frequent queues; featured on Japanese TV (Matsuko no Shiranai Sekai) and covered by Hanako, Colocal, Rurubu, GIGAZINE, MATCHA, etc. Instagram @suzukien.asakusa ~10K followers. Selected for Tabelog Ice Cream/Gelato 'Tabelog 100' (2023). Cross-platform praise: Tripadvisor 4.5/5 (183 reviews, #17 of 800 Asakusa restaurants), Facebook 98% recommend (619 reviews).",
+      "rating": 3.69,
+      "reviews": 1405,
+      "website": "https://www.suzukien.tokyo/",
+      "ig": "https://www.instagram.com/suzukien.asakusa/",
+      "uniquenessScore": 9,
+      "popularityScore": 9,
+      "confidence": 0.88,
+      "sources": [
+        "https://www.tocha.co.jp/",
+        "https://www.suzukien.tokyo/",
+        "https://www.suzukien.tokyo/view/company",
+        "https://tabelog.com/en/tokyo/A1311/A131102/13153620/",
+        "https://www.instagram.com/suzukien.asakusa/",
+        "https://colocal.jp/news/61163.html",
+        "https://namalog.jeez.jp/namalog/suzukien/",
+        "https://rurubu.jp/andmore/article/4171",
+        "https://gigazine.net/gsc_news/en/20160906-suzukien-matcha-gelato/",
+        "https://magazineworld.jp/hanako/comme-ca/newshop1104-2/",
+        "https://www.tripadvisor.com/Restaurant_Review-g14134311-d7494173-Reviews-Suzukien_Asakusa_Honten-Asakusa_Taito_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://matcha-jp.com/en/1632"
+      ],
+      "spotlight": "unique"
+    },
+    {
+      "name": "Nanaya Aoyama",
+      "nameJp": "ななや 青山店",
+      "city": "Tokyo",
+      "area": "Aoyama / Omotesando, Shibuya-ku (off Aoyama-dori; ~7 min from Shibuya Station)",
+      "founded": "Aoyama direct store opened Aug 19, 2016; parent company Marushichi Seicha (丸七製茶) founded 1908, Fujieda, Shizuoka",
+      "realAndOperating": true,
+      "famousFor": "The \"world's strongest / richest matcha gelato\" (世界一濃い抹茶ジェラート) served in 7 selectable intensity levels (No.1 to No.7), using premium single-origin matcha from Fujieda, Shizuoka. No.7 Premium tastes like eating concentrated pure matcha. Runner-up at the Japan Gelato Contest (Japan Gelato Association).",
+      "unique": "The \"7 levels of matcha intensity\" gradient concept is the borrowable big idea: turn a single core ingredient into a tasting ladder/scale (No.1 mild to No.7 extreme) so customers self-select richness and come back to \"level up.\" The brand name itself (Nanaya = \"seven shop\") is built around this 7-tier system, and it extends beyond gelato into a \"PREMIUM MATCHA 7\" chocolate assortment (7 graduated-intensity matcha chocolates in one box). It is vertically integrated — the parent is a century-old Shizuoka tea wholesaler/factory (Marushichi Seicha) sourcing direct from Fujieda farmers — giving a farm-to-cup authenticity story. The intensity-as-spectacle / \"world's strongest\" framing drives social virality and queues.",
+      "signatures": [
+        {
+          "item": "Matcha Gelato single scoop (No.1-No.6, choose intensity)",
+          "priceYen": 420
+        },
+        {
+          "item": "Matcha Gelato double scoop",
+          "priceYen": 540
+        },
+        {
+          "item": "Matcha Gelato triple scoop",
+          "priceYen": 680
+        },
+        {
+          "item": "Premium No.7 Matcha Gelato (world's strongest) single",
+          "priceYen": 560
+        },
+        {
+          "item": "Premium No.7 Matcha Gelato double",
+          "priceYen": 650
+        },
+        {
+          "item": "PREMIUM MATCHA 7 chocolate assortment (7 graduated-intensity matcha chocolates)",
+          "priceYen": null
+        }
+      ],
+      "popularity": "High / iconic among matcha tourists. Known for queues outside the shop. Tabelog 3.35-3.36 with ~350 reviews; Tripadvisor 4.1/5, ranked #396 of 5,420 Shibuya restaurants. Tokyo's first direct store of the Shizuoka \"Nanaya\" matcha-sweets factory; runner-up at Japan Gelato Contest. Official Instagram @nanaya_aoyama and X account (~1,620 followers on X). Widely covered by Japanese tea blogs, travel media (Arigato Japan), and TV (Gacchiri Monday).",
+      "rating": 4.1,
+      "reviews": 353,
+      "website": "https://nanaya-matcha.com/",
+      "ig": "https://www.instagram.com/nanaya_aoyama/",
+      "uniquenessScore": 9,
+      "popularityScore": 8,
+      "confidence": 0.88,
+      "sources": [
+        "https://nanaya-matcha.com/",
+        "https://tabelog.com/en/tokyo/A1303/A130301/13199165/",
+        "https://chakatsu.com/shop/nanaya_aoyama/",
+        "https://www.omotesando-info.com/webmagazine/nanaya-aoyama-matchagelato/",
+        "https://nihonchafan.com/nanaya-matcha-aoyama/",
+        "https://colocal.jp/news/79249.html",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066456-d11698923-Reviews-Nanaya_Aoyama-Shibuya_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://www.instagram.com/nanaya_aoyama/",
+        "https://x.com/nanaya_aoyama",
+        "https://anzuchan.com/nanaya-matcha/"
+      ],
+      "spotlight": "unique"
+    },
+    {
+      "name": "Nakamura Tokichi Honten",
+      "nameJp": "中村藤吉本店",
+      "city": "Uji, Kyoto",
+      "area": "Uji-bashi-dori (Uji Bridge street), 2 min walk from JR Uji Station; main store beside the Uji River near Byodoin",
+      "founded": "1854 (Ansei 1)",
+      "realAndOperating": true,
+      "famousFor": "Historic Uji-tea house (170+ years, 7th generation) famous for its signature \"Namacha Jelly\" (生茶ゼリイ) — a richly tea-flavored jelly served with matcha ice cream, shiratama and red bean — plus matcha parfaits and matcha soba, served inside a preserved Meiji-era tea-merchant residence and a Taisho-era tea factory converted into a cafe.",
+      "unique": "Borrowable concept: the proprietary \"Namacha Jelly\" (生茶 zeri-i / \"raw tea\" jelly) — a jelly engineered to deliver concentrated tea aroma and umami, sold both as a dine-in dessert (parfait/cup) AND as a premium gift box (6 pcs ~¥2,920), turning one hero product into a retail souvenir line. Also borrowable: theatrical \"old building as the cafe\" storytelling — converting an authentic Taisho-era tea factory (preserved pillars/beams, open terrace) into the cafe, paired with an adjacent original shop, certified as Important Cultural Landscape (2009). Strong product-to-gift pipeline: every signature dessert has a packaged retail twin sold via online store and branch shops.",
+      "signatures": [
+        {
+          "item": "Namacha Jelly [Matcha] (生茶ゼリイ・抹茶) - dine-in dessert with matcha ice cream, shiratama & azuki",
+          "priceYen": null
+        },
+        {
+          "item": "Namacha Jelly gift box (6 pcs, matcha/hojicha) - retail souvenir",
+          "priceYen": 2920
+        },
+        {
+          "item": "Seasonal Maruto Parfait (季節のまるとパフェ) - main store",
+          "priceYen": 1540
+        },
+        {
+          "item": "Summer Namacha Jelly Parfait (takeout)",
+          "priceYen": 756
+        },
+        {
+          "item": "Namacha Jelly single cup (takeaway)",
+          "priceYen": 520
+        },
+        {
+          "item": "Namacha Jelly Assortment gift set [Matcha/Hojicha]",
+          "priceYen": 3340
+        }
+      ],
+      "popularity": "Very high / iconic. Tabelog 3.54 with 1,624 reviews; selected for Tabelog 100 (Sweets/Japanese-sweets cafe WEST) in 2018, 2019 and 2023. TripAdvisor 4.3/5, ranked #1 of 325 restaurants in Uji (448 reviews). Yahoo Maps 4.33; Trip.com 4.9/5. Instagram: ~67K followers (@nakamura_tokichi_official) + ~6K (@nakamura_tokichi_global). Long queues at the Uji honten; multiple branches (Kyoto Station, Ginza/Tokyo, Osaka). No Michelin star (it's a cafe/sweets house), but a nationally recognized must-visit Uji landmark.",
+      "rating": 4.33,
+      "reviews": 1624,
+      "website": "https://tokichi.jp/en",
+      "ig": "https://www.instagram.com/nakamura_tokichi_official/",
+      "uniquenessScore": 8,
+      "popularityScore": 9,
+      "confidence": 0.86,
+      "sources": [
+        "https://tokichi.jp/en",
+        "https://tokichi.jp/pages/history",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26000722/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26000722/dtlmenu/",
+        "https://www.tripadvisor.com/Restaurant_Review-g946495-d1761179-Reviews-Nakamura_Tokichi_Honten-Uji_Kyoto_Prefecture_Kinki.html",
+        "https://www.trip.com/restaurant/japan/uji/detail/nakamura-tokichi-15019454/",
+        "https://map.yahoo.co.jp/v3/place/WHIp3ve2ZCU/review",
+        "https://www.instagram.com/nakamura_tokichi_official/",
+        "https://www.instagram.com/nakamura_tokichi_global/",
+        "https://tokichi.jp/en/collections/jerry",
+        "https://www.fashion-press.net/news/74106"
+      ],
+      "spotlight": "iconic"
+    },
+    {
+      "name": "Saryo Tsujiri (Gion Tsujiri)",
+      "nameJp": "茶寮都路里",
+      "city": "Kyoto",
+      "area": "Gion, Higashiyama Ward (Shijo-dori, near Yasaka Shrine / Gion-Shijo Station) — Gion main store (honten)",
+      "founded": "1978 (Showa 53); parent brand Gion Tsujiri founded 1860 (Man'en 1) in Uji",
+      "realAndOperating": true,
+      "famousFor": "Iconic, queue-forming Uji-matcha parfaits — the flagship Tokusen Tsujiri Parfait — served in a multi-floor Japanese tea salon above the historic Gion Tsujiri tea shop. One of the original and most famous matcha-parfait destinations in Kyoto.",
+      "unique": "The \"saryo\" (tea-salon) concept itself is the borrowable idea: a heritage tea merchant (founded 1860) extending into a sit-down dessert café in 1978 specifically to keep Japanese tea relevant when coffee/black tea were taking over — turning premium Uji matcha into a tiered, layered parfait architecture (matcha ice cream + soft-serve + sherbet + matcha jelly + matcha castella sponge + whipped cream + shiratama + Dainagon azuki anko simmered 2+ hours + matcha warabi mochi). The poetic name 都路里 itself is a brandable concept: 都 (Kyoto capital) + 路 (Shijo street) + 里 (Uji tea village). Borrowable: a flagship signature parfait built as a 'tour' of every form a single matcha can take, plus a retail-tea-shop-downstairs / tasting-salon-upstairs vertical model and a take-home parfait/online product line.",
+      "signatures": [
+        {
+          "item": "Tokusen Tsujiri Parfait (Special-Selection No.1 Matcha Parfait) — the flagship; matcha ice cream, jelly, sherbet, castella, whipped cream, shiratama and slow-cooked Dainagon azuki anko",
+          "priceYen": 1296
+        },
+        {
+          "item": "Tsujiri Parfait (signature Uji-matcha parfait)",
+          "priceYen": 1102
+        },
+        {
+          "item": "Hojicha Parfait (roasted-tea parfait)",
+          "priceYen": 1037
+        },
+        {
+          "item": "Matcha Castella Parfait",
+          "priceYen": 1102
+        },
+        {
+          "item": "Shiratama Parfait (rice-dumpling matcha parfait)",
+          "priceYen": 918
+        },
+        {
+          "item": "Tsujiri Anmitsu",
+          "priceYen": 1016
+        },
+        {
+          "item": "Matcha Warabi Mochi",
+          "priceYen": 692
+        }
+      ],
+      "popularity": "Very high / iconic. Tabelog 3.55 with ~1,070–1,090 reviews; selected for Tabelog 'Sweets WEST Hyakumeiten 100' (2018 & 2019). Famous for near-constant queues on Shijo-dori. Strong cross-map ratings: Yahoo Maps 4.4 (206), NAVITIME 4.3 (275). Official Instagram @giontsujiri_saryotsujiri ~28K followers. Multiple branches (Kyoto Station, Tokyo, Osaka/Shinsaikbashi) extend the brand nationally. No Michelin star (it is a casual saryo, not a fine-dining listing).",
+      "rating": 4.2,
+      "reviews": null,
+      "website": "https://www.giontsujiri.co.jp/",
+      "ig": "https://www.instagram.com/giontsujiri_saryotsujiri/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 9,
+      "confidence": 0.86,
+      "sources": [
+        "https://www.giontsujiri.co.jp/store/saryotsujiri-honten/",
+        "https://www.giontsujiri.co.jp/aboutus/history/",
+        "https://www.giontsujiri.co.jp/products/food/",
+        "https://www.giontsujiri.co.jp/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/dtlmenu/",
+        "https://www.instagram.com/giontsujiri_saryotsujiri/",
+        "https://map.yahoo.co.jp/v3/place/BJ9nESRtrw-",
+        "https://www.navitime.co.jp/poi?spot=02301-1700032",
+        "https://ja.wikipedia.org/wiki/%E7%A5%87%E5%9C%92%E8%BE%BB%E5%88%A9",
+        "https://www.walkerplus.com/article/1164305/"
+      ],
+      "spotlight": "iconic"
+    },
+    {
+      "name": "Ippodo Tea — Kaboku Tearoom",
+      "nameJp": "一保堂茶舗 喫茶室「嘉木」",
+      "city": "Kyoto",
+      "area": "Teramachi-dori Nijo-agaru, Nakagyo Ward (near Kyoto Imperial Palace / Kyoto Shiyakusho-mae Station)",
+      "founded": "1717 (Kyoho 2) — company founding; the Kaboku tearoom is the modern tasting room, fully renovated in 2023",
+      "realAndOperating": true,
+      "famousFor": "A 300-year-old Kyoto Japanese-tea house (one of Japan's most iconic tea merchants) whose attached Kaboku tearoom lets guests learn to hand-brew premium matcha, gyokuro, sencha and hojicha — paired with seasonal wagashi — with staff teaching the brewing technique table-side.",
+      "unique": "The borrowable concept is an \"education-as-experience\" tasting room: rather than just serving a finished drink, staff teach you to brew the tea yourself at the table (water temperature, steeping, second/third infusions), so guests literally taste how technique transforms flavor. Pair this with rotating seasonal wagashi from named local confectioners, limited-time premium pours (特撰抹茶/特撰玉露), and a tiered \"no. of mukashi\" naming system for matcha grades. Three distinct seating zones (inner room, kettle counter, street-view room) give one space multiple moods. A small, replicable idea: a low-commitment \"demitasse matcha\" at ~¥880 and a matcha soy latte as entry points alongside ceremonial pours.",
+      "signatures": [
+        {
+          "item": "Koicha (thick matcha) 'Unmon no Mukashi' — with wagashi",
+          "priceYen": 2420
+        },
+        {
+          "item": "Usucha (thin matcha) 'Kyogoku no Mukashi' — with wagashi",
+          "priceYen": 1650
+        },
+        {
+          "item": "Gyokuro 'Tenka-ichi' — with wagashi",
+          "priceYen": 2750
+        },
+        {
+          "item": "Premium Sencha — with wagashi",
+          "priceYen": 1980
+        },
+        {
+          "item": "Premium Hojicha — with wagashi",
+          "priceYen": 1210
+        },
+        {
+          "item": "Matcha Soy Latte (small sweet)",
+          "priceYen": 1210
+        }
+      ],
+      "popularity": "Highly iconic. Tabelog 3.40 with 564 reviews; Tripadvisor 4.6/5 (75 reviews), Travelers' Choice, ranked ~#380 of 14,157 Kyoto restaurants; official Instagram @ippodotea ~104K followers; routinely cited in international guides; 20+ minute waits common. Multiple branches (Kyoto main, Tokyo Marunouchi) plus US distribution. Brand founded 1717; Kyoto tearoom renovated 2023; runs ongoing 2024–2025 seasonal limited menus.",
+      "rating": 4.6,
+      "reviews": 75,
+      "website": "https://www.ippodo-tea.co.jp/pages/store-kyoto",
+      "ig": "https://www.instagram.com/ippodotea/",
+      "uniquenessScore": 8,
+      "popularityScore": 9,
+      "confidence": 0.9,
+      "sources": [
+        "https://www.ippodo-tea.co.jp/pages/store-kyoto",
+        "https://www.ippodo-tea.co.jp/blogs/news/kyoto-main-store-kaboku-tearoom-map",
+        "https://www.ippodo-tea.co.jp/blogs/news/kabokumenu_20250201",
+        "https://www.umenu.jp/menus/148.html",
+        "https://tabelog.com/en/kyoto/A2601/A260202/26000182/",
+        "https://www.tripadvisor.com/Restaurant_Review-g298564-d1663158-Reviews-Ippodo_Chaho_Kisashitsu_Kaboku-Kyoto_Kyoto_Prefecture_Kinki.html",
+        "https://www.instagram.com/ippodotea/",
+        "https://umaimono-daisuki.com/kyoto-chukyo-ippodokaboku/"
+      ],
+      "spotlight": "iconic"
+    },
+    {
+      "name": "Saryo Tsujiri Gion Honten (Gion Tsujiri)",
+      "nameJp": "茶寮都路里 祇園本店 / 祇園辻利",
+      "city": "Kyoto",
+      "area": "Gion, Higashiyama-ku (四条通祇園町南側, near Gion-Shijo Station)",
+      "founded": "Parent tea house Gion Tsujiri founded 1860 (Man'en era) in Uji by Tsuji Riemon; the Saryo Tsujiri café concept launched 1978 (Showa 53)",
+      "realAndOperating": true,
+      "famousFor": "Iconic Uji-matcha parfaits — above all the ~25cm-tall \"Tokusen Tsujiri Parfait\" (matcha jelly, soft serve, sponge, anmitsu, mochi) — plus matcha/hojicha sweets, kakigori and traditional Japanese tea service. The Gion flagship of one of Kyoto's most recognized 160+ year-old tea brands; a default tourist must-visit for matcha desserts.",
+      "unique": "The \"signboard tower parfait\" as a layered, photogenic, multi-textured experience built on a serious tea pedigree — a borrowable concept: pair an authentic single-origin matcha story (1860 Uji heritage, gyokuro/tea-chest innovation) with a maximalist, Instagrammable 25cm parfait that stacks 8-10 matcha components in one vessel. Also borrowable: a tiered menu from grab-and-go takeout (Gion Tsujiri counter: soft serve, dorayaki) up to a sit-down tea salon (Saryo Tsujiri) and even a Tea & Bar spinoff (\"Sarei\"), plus limited-edition flagship-only \"ultimate\" parfaits (e.g. 建都の極, Oct 2025) that drive repeat visits and PR.",
+      "signatures": [
+        {
+          "item": "Tokusen Tsujiri Parfait / 特選都路里パフェ (matcha) — signature ~25cm tower parfait",
+          "priceYen": 1694
+        },
+        {
+          "item": "Tsujiri Parfait / 都路里パフェ",
+          "priceYen": 1474
+        },
+        {
+          "item": "Matcha Castella Parfait / 抹茶カステラパフェ",
+          "priceYen": 1102
+        },
+        {
+          "item": "Tsujiri Ice Cream / 都路里アイスクリーム (matcha soft serve)",
+          "priceYen": 681
+        },
+        {
+          "item": "Matcha Warabi Mochi / 抹茶わらび餅",
+          "priceYen": 692
+        },
+        {
+          "item": "Matcha tea service / 喫茶去 (Juttoku 十徳 matcha)",
+          "priceYen": 1080
+        }
+      ],
+      "popularity": "Tabelog 3.55-3.56 (~1,090 reviews); selected for Tabelog Sweets WEST \"100 Famous Shops\" (Tabelog 100) in 2018 and 2019; Google Maps ~4.4 (~206 reviews); Instagram ~28K followers; frequent long queues (often 30+ min, spacious seating = fast turnover); strong tourist + domestic fame; limited \"Kento no Kiwami\" 建都の極 ultimate parfait launched Oct 6 2025 (PR Times). No Michelin star (it is a café/甘味処).",
+      "rating": 4.4,
+      "reviews": 206,
+      "website": "https://www.giontsujiri.co.jp/store/saryotsujiri-honten/",
+      "ig": "https://www.instagram.com/giontsujiri_saryotsujiri/",
+      "uniquenessScore": 7,
+      "popularityScore": 9,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.giontsujiri.co.jp/store/saryotsujiri-honten/",
+        "https://www.giontsujiri.co.jp/products/food/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/dtlmenu/",
+        "https://map.yahoo.co.jp/v3/place/BJ9nESRtrw-/menu",
+        "https://www.instagram.com/giontsujiri_saryotsujiri/",
+        "https://x.com/giontsujiri",
+        "https://prtimes.jp/main/html/rd/p/000000292.000011317.html",
+        "https://discoverkyototoday.com/gion-tsujiri-matcha-history-sweets/",
+        "https://www.tripadvisor.com/Restaurant_Review-g298564-d1196778-Reviews-Saryo_Tsujiri_Gion_Honten-Kyoto_Kyoto_Prefecture_Kinki.html"
+      ],
+      "spotlight": "iconic"
+    }
+  ],
+  "all": [
+    {
+      "name": "Nakamura Tokichi Honten",
+      "nameJp": "中村藤吉本店",
+      "city": "Uji, Kyoto",
+      "area": "Uji-bashi-dori (Uji Bridge street), 2 min walk from JR Uji Station; main store beside the Uji River near Byodoin",
+      "founded": "1854 (Ansei 1)",
+      "realAndOperating": true,
+      "famousFor": "Historic Uji-tea house (170+ years, 7th generation) famous for its signature \"Namacha Jelly\" (生茶ゼリイ) — a richly tea-flavored jelly served with matcha ice cream, shiratama and red bean — plus matcha parfaits and matcha soba, served inside a preserved Meiji-era tea-merchant residence and a Taisho-era tea factory converted into a cafe.",
+      "unique": "Borrowable concept: the proprietary \"Namacha Jelly\" (生茶 zeri-i / \"raw tea\" jelly) — a jelly engineered to deliver concentrated tea aroma and umami, sold both as a dine-in dessert (parfait/cup) AND as a premium gift box (6 pcs ~¥2,920), turning one hero product into a retail souvenir line. Also borrowable: theatrical \"old building as the cafe\" storytelling — converting an authentic Taisho-era tea factory (preserved pillars/beams, open terrace) into the cafe, paired with an adjacent original shop, certified as Important Cultural Landscape (2009). Strong product-to-gift pipeline: every signature dessert has a packaged retail twin sold via online store and branch shops.",
+      "signatures": [
+        {
+          "item": "Namacha Jelly [Matcha] (生茶ゼリイ・抹茶) - dine-in dessert with matcha ice cream, shiratama & azuki",
+          "priceYen": null
+        },
+        {
+          "item": "Namacha Jelly gift box (6 pcs, matcha/hojicha) - retail souvenir",
+          "priceYen": 2920
+        },
+        {
+          "item": "Seasonal Maruto Parfait (季節のまるとパフェ) - main store",
+          "priceYen": 1540
+        },
+        {
+          "item": "Summer Namacha Jelly Parfait (takeout)",
+          "priceYen": 756
+        },
+        {
+          "item": "Namacha Jelly single cup (takeaway)",
+          "priceYen": 520
+        },
+        {
+          "item": "Namacha Jelly Assortment gift set [Matcha/Hojicha]",
+          "priceYen": 3340
+        }
+      ],
+      "popularity": "Very high / iconic. Tabelog 3.54 with 1,624 reviews; selected for Tabelog 100 (Sweets/Japanese-sweets cafe WEST) in 2018, 2019 and 2023. TripAdvisor 4.3/5, ranked #1 of 325 restaurants in Uji (448 reviews). Yahoo Maps 4.33; Trip.com 4.9/5. Instagram: ~67K followers (@nakamura_tokichi_official) + ~6K (@nakamura_tokichi_global). Long queues at the Uji honten; multiple branches (Kyoto Station, Ginza/Tokyo, Osaka). No Michelin star (it's a cafe/sweets house), but a nationally recognized must-visit Uji landmark.",
+      "rating": 4.33,
+      "reviews": 1624,
+      "website": "https://tokichi.jp/en",
+      "ig": "https://www.instagram.com/nakamura_tokichi_official/",
+      "uniquenessScore": 8,
+      "popularityScore": 9,
+      "confidence": 0.86,
+      "sources": [
+        "https://tokichi.jp/en",
+        "https://tokichi.jp/pages/history",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26000722/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26000722/dtlmenu/",
+        "https://www.tripadvisor.com/Restaurant_Review-g946495-d1761179-Reviews-Nakamura_Tokichi_Honten-Uji_Kyoto_Prefecture_Kinki.html",
+        "https://www.trip.com/restaurant/japan/uji/detail/nakamura-tokichi-15019454/",
+        "https://map.yahoo.co.jp/v3/place/WHIp3ve2ZCU/review",
+        "https://www.instagram.com/nakamura_tokichi_official/",
+        "https://www.instagram.com/nakamura_tokichi_global/",
+        "https://tokichi.jp/en/collections/jerry",
+        "https://www.fashion-press.net/news/74106"
+      ]
+    },
+    {
+      "name": "ATELIER MATCHA",
+      "nameJp": "アトリエ抹茶",
+      "city": "Tokyo",
+      "area": "Ginza / Higashi-Ginza (Chuo-ku), near Tsukiji Market — relocated from Nihonbashi-Ningyocho (8-18-4 Ginza, 104-0061). Original 2021 location was 1-5-8 Nihonbashi Ningyocho.",
+      "founded": "2021 (opened Aug 2, 2021); Reiwa era. Parent company Yamamasa Koyamaen ~160 years old (early Edo period)",
+      "realAndOperating": true,
+      "famousFor": "Premium ceremonial-grade Uji matcha served casually as \"third wave matcha\" by Yamamasa Koyamaen (a ~160-year Kyoto tea wholesaler holding blends from 18 tea ceremony schools). Known for strong, umami-forward, not-overly-sweet matcha lattes and an inventive \"Gochisou Matcha Drink\" fusion menu.",
+      "unique": "Borrowable concepts: (1) \"MATCHA Shot\" — an espresso-style straight matcha shot priced low (¥220-500) as an accessible flagship entry product, mirroring third-wave coffee culture. (2) Heritage-producer credibility: a centuries-old tea wholesaler launching its first D2C cafe (farm-to-table, full production oversight). (3) \"Gochisou Matcha Drink\" creative-fusion menu pairing matcha with unexpected ingredients (Matcha Gorgonzola, Matcha Warabi Mochi Shiruko, Matcha Affogato, Matcha Peach Melba). (4) Patissier collaboration (Toshi Yoroizuka) for premium sweets credibility. (5) Tiered matcha tasting (single-origin, named ceremonial blends like Ogurayama/Tennouzan, tencha, gyokuro, hojicha) so guests \"explore\" matcha like coffee. (6) Retail integration — selling electric tea whisks (FORMER CHARAKU ¥19,800) and starter sets in-cafe.",
+      "signatures": [
+        {
+          "item": "MATCHA Shot (espresso-style straight matcha, e.g. Okuyama)",
+          "priceYen": 500
+        },
+        {
+          "item": "MATCHA Shot (entry/standard)",
+          "priceYen": 220
+        },
+        {
+          "item": "MATCHA Caramel Mont Blanc",
+          "priceYen": 980
+        },
+        {
+          "item": "MATCHA Peach Melba",
+          "priceYen": 950
+        },
+        {
+          "item": "MATCHA Gateau with Strawberry Topping",
+          "priceYen": 1050
+        },
+        {
+          "item": "MATCHA Warabi Mochi Shiruko",
+          "priceYen": 748
+        },
+        {
+          "item": "MATCHA Cookie Cream Shake",
+          "priceYen": 748
+        }
+      ],
+      "popularity": "High and rising. Tabelog 3.42 with 153 reviews (current Ginza listing); former Ningyocho listing 3.44 / 109 reviews. TripAdvisor 4.8/5 (ranked ~#931 of 6,033 Chuo restaurants). Instagram ~18K followers (782 posts). Reported 30+ minute queues at peak, popular with international tourists. International expansion: official branches in Vietnam (@ateliermatchavn) and Philippines (@ateliermatcha.ph). No Michelin star or major award found.",
+      "rating": 4.8,
+      "reviews": 153,
+      "website": "https://ateliermatcha.com/en",
+      "ig": "https://www.instagram.com/ateliermatcha_tokyo/",
+      "uniquenessScore": 8,
+      "popularityScore": 7,
+      "confidence": 0.82,
+      "sources": [
+        "https://ateliermatcha.com/en",
+        "https://www.yamamasa-koyamaen.co.jp/en/enjoy/2026/yamamasa-koyamaens-first-premium-matcha-cafe/",
+        "https://tabelog.com/en/tokyo/A1313/A131301/13291374/",
+        "https://tabelog.com/en/tokyo/A1302/A130204/13261710/",
+        "https://en.nihonchaseikatsu.com/introduce/ateliermatcha/",
+        "https://flipjapanguide.com/place/atelier-matcha/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066444-d25228781-Reviews-Atelier_Matcha-Chuo_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://www.instagram.com/ateliermatcha_tokyo/",
+        "https://www.timeout.com/tokyo/restaurants/atelier-matcha",
+        "https://www.daisuki-nippon.net/atelier-matcha-a-matcha-cafe-where-you-can-enjoy-authentic-matcha-in-a-casual-atmosphere/"
+      ]
+    },
+    {
+      "name": "THE MATCHA TOKYO",
+      "nameJp": "ザ・マッチャ・トウキョウ",
+      "city": "Tokyo",
+      "area": "Omotesando / Jingumae, Shibuya (Cat Street flagship); branches in Harajuku, Shibuya MIYASHITA PARK, NEWoMan Shinjuku, Tokyo Skytree Town, Fukuoka Airport",
+      "founded": "2018 (first Omotesando organic matcha stand opened Nov 3, 2018; current Cat Street Omotesando location opened March 2023)",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Organic Matcha Latte (hot/iced) — #1 best seller",
+          "priceYen": 580
+        },
+        {
+          "item": "Matcha Coffee Latte / GOLD BLEND",
+          "priceYen": 600
+        },
+        {
+          "item": "Matcha Chai",
+          "priceYen": 640
+        },
+        {
+          "item": "Matcha Experience (watch & learn ceremonial matcha preparation)",
+          "priceYen": 1000
+        },
+        {
+          "item": "Matcha Castella sponge cake (6 pieces)",
+          "priceYen": 2100
+        },
+        {
+          "item": "Matcha Protein & Soy Cookie (1 bag)",
+          "priceYen": 650
+        }
+      ],
+      "famousFor": "100% organic, single-origin ceremonial-grade matcha drinks (lattes, chai, lemonade, smoothies, protein matcha) served in a sleek, minimalist modern tea-stand format on Omotesando's trendy Cat Street; a go-to Instagram-friendly matcha destination for tourists and locals.",
+      "unique": "Vertically integrated 100% organic supply chain — their own tea farm in Kagoshima plus organic-cultivated leaves from Uji (Kyoto) and Shizuoka, first-harvest only, stone-ground by craftsmen. Borrowable ideas: (1) a paid \"Matcha Experience\" (~¥1,000) where guests watch/learn whisking matcha in a home-replicable style — turning education into a premium SKU; (2) a flagship that fuses a take-out matcha stand with a CHASHITSU tea-ceremony room and a yoga space (wellness lifestyle bundling); (3) farm-tool decor (matcha cultivation implements displayed on shelves/counter) as authentic experiential branding; (4) plant-based milk swap for +¥50; (5) a scalable, design-forward franchise model exported to 10+ countries.",
+      "popularity": "Strong: ~31K Instagram followers on the global @the_matcha_tokyo account; Tabelog 3.39 (109 reviews) for current Omotesando, Tripadvisor 4.2/5 (ranked ~#492 of 5,425 Shibuya restaurants); frequently featured in Tokyo travel/cafe guides (Time Out, Tokyo Cheapo, MATCHA, MOSHI MOSHI NIPPON); known queues/limited seating; major international expansion (Hong Kong, Philippines, Thailand, China, UAE, Vietnam, Indonesia, Canada, Guam). No Michelin.",
+      "rating": 4.2,
+      "reviews": 109,
+      "website": "https://www.the-matcha.tokyo/en",
+      "ig": "https://www.instagram.com/the_matcha_tokyo/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 7.5,
+      "confidence": 0.82,
+      "sources": [
+        "https://www.the-matcha.tokyo/en",
+        "https://www.the-matcha.tokyo/en/pages/cafe",
+        "https://www.the-matcha.tokyo/en/pages/menu",
+        "https://tabelog.com/en/tokyo/A1306/A130601/13282522/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066456-d15243468-Reviews-The_Matcha_Tokyo_Omotesando-Shibuya_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://matcha-jp.com/en/10335",
+        "https://www.moshimoshi-nippon.jp/139437",
+        "https://www.instagram.com/the_matcha_tokyo/",
+        "https://tokyocheapo.com/restaurant/the-matcha-tokyo-omotesando/"
+      ]
+    },
+    {
+      "name": "IPPUKU & MATCHA",
+      "nameJp": "いっぷく＆抹茶 (一服 & 抹茶)",
+      "city": "Tokyo",
+      "area": "Nihonbashi, Chuo-ku (Nihonbashi Mitsui Tower 1F, 2-1-1 Nihonbashi-Muromachi)",
+      "founded": "2019",
+      "realAndOperating": true,
+      "famousFor": "A modern Uji-matcha specialty cafe that serves 100% single-origin (single-cultivar, non-blended) Uji matcha so guests can taste the difference between cultivars/estates. Known for a \"hidden tea room\" tasting course and rich matcha desserts (pudding with matcha ice cream, terrine, parfaits) plus novelty drinks like matcha beer.",
+      "unique": "The core borrowable concept is \"single-origin matcha as a tasting flight\" — treating matcha like single-origin coffee or wine, naming the specific cultivar/estate and letting guests compare two single-origin matchas side by side. This is paired with a bookable 4-seat \"secret tea room\" tasting course served in custom Edo Kiriko cut-glass bowls, and an iced matcha \"choose your intensity\" (3 strength levels) ordering system. Together these turn matcha into an experiential, premium, comparison-driven product — a strong template for a pop-up tasting set or tiered-intensity menu.",
+      "signatures": [
+        {
+          "item": "Uji Matcha Pudding (with matcha ice cream)",
+          "priceYen": 700
+        },
+        {
+          "item": "Single Origin Uji Matcha (hot, by cultivar)",
+          "priceYen": 780
+        },
+        {
+          "item": "Secret Tea Room matcha + confectionery tasting course (2 single-origin matchas, Edo Kiriko glassware)",
+          "priceYen": 3500
+        },
+        {
+          "item": "Single Origin Matcha & Sweets Set",
+          "priceYen": 2800
+        },
+        {
+          "item": "Matcha Latte / Matcha Beer / Matcha Lemon (takeout)",
+          "priceYen": null
+        },
+        {
+          "item": "Uji Matcha Terrine / Hojicha Terrine (also sold as gift / online)",
+          "priceYen": null
+        }
+      ],
+      "popularity": "Well-known modern matcha cafe featured by official tourism and media: Tabelog score 3.55 with 405 reviews, Tripadvisor 5.0 (ranked #44 of 415 Nihonbashi restaurants), Trip.com 3.8/5, ~16,000 Instagram followers and ~472 posts. Featured on GO TOKYO (official Tokyo travel guide), Time Out Tokyo, GLT Japan, and Japanese TV (Nariyuki Kaido Tabi). Multiple branches have opened (Nihonbashi flagship, MUFG/Kokuritsu Kyogijo stadium; a Yoyogi-Uehara branch has closed).",
+      "rating": 3.55,
+      "reviews": 405,
+      "website": "https://ippukuandmatcha.jp",
+      "ig": "https://www.instagram.com/ippukuandmatcha/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 6.5,
+      "confidence": 0.85,
+      "sources": [
+        "https://ippukuandmatcha.jp",
+        "https://tabelog.com/en/tokyo/A1302/A130202/13241871/",
+        "https://www.gotokyo.org/en/new-and-now/new-and-trending/221128/topics.html",
+        "https://www.timeout.com/tokyo/restaurants/ippuku-matcha",
+        "https://www.tripadvisor.com/Restaurant_Review-g14129589-d20154372-Reviews-Ippuku_Matcha_Nihonbashi-Nihonbashi_Chuo_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://us.trip.com/restaurant/japan/tokyo/detail/ippuku-and-matcha-82998365/",
+        "https://www.gltjp.com/en/directory/item/10868/",
+        "https://www.instagram.com/ippukuandmatcha/"
+      ]
+    },
+    {
+      "name": "Itohkyuemon",
+      "nameJp": "伊藤久右衛門",
+      "city": "Uji, Kyoto",
+      "area": "Uji honten on the right bank of the Uji River, ~5-7 min walk from Keihan Uji Station and near Byodo-in Temple; also a JR Uji Station-front branch (chabou cafe), Byodo-in branch, plus newer Fushimi Inari and overseas (Taiwan) outposts.",
+      "founded": "Tenpo 3 (1832), late Edo period; tea house tradition in Tawara/Uji-Tawara, with the company formally established in Uji in 1952 under the 5th-generation Ito.",
+      "realAndOperating": true,
+      "famousFor": "A nearly 200-year-old Uji tea merchant turned matcha-sweets powerhouse: its flagship Uji honten cafe (chabou) is one of the most iconic matcha-dessert destinations in Uji, beloved for its signature Itohkyuemon matcha parfait and savory matcha soba, plus a huge retail range of matcha confections.",
+      "unique": "Borrowable ideas: (1) extending matcha into SAVORY territory — green matcha soba noodles and matcha curry, not just sweets; (2) a tea-merchant-to-cafe omotenashi model where retail shop and sit-down chabou share one heritage roof; (3) collaborations with French pastry chefs via their in-house \"Uji Confectionery Workshop\" (matcha tiramisu, raw chocolate, Mont Blanc parfaits) — a tradition x patisserie crossover; (4) gift-ready multi-pack SKUs (matcha parfait ice bars, anmitsu sets) built for nationwide e-commerce and souvenirs.",
+      "signatures": [
+        {
+          "item": "Itohkyuemon Parfait (signature matcha parfait — matcha jelly, shiratama dumplings, sweetened adzuki, matcha cream/ice cream)",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha (green) soba noodles — savory cafe dish",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha Parfait Ice Bar (gift multi-pack, 5-pack)",
+          "priceYen": 4490
+        },
+        {
+          "item": "Uji Matcha Anmitsu (gift multi-pack, 4-pack)",
+          "priceYen": 3999
+        },
+        {
+          "item": "Uji Matcha Daifuku (6-pack)",
+          "priceYen": 1389
+        },
+        {
+          "item": "Uji Matcha Raw Chocolate (16-piece)",
+          "priceYen": 1393
+        }
+      ],
+      "popularity": "Highly famous / must-visit in Uji. Tabelog 3.53-3.54 (\"Very good\"), ~1,250-1,262 reviews; Tripadvisor 4.1/5, ranked #4 of 325 restaurants in Uji; Instagram ~52K followers (599 posts); frequent ~20-min lunchtime queues. Long-established (老舗) brand with multi-store and overseas (Taiwan) expansion and active nationwide online shop. No Michelin star (it is a tea-house cafe, not a fine-dining restaurant).",
+      "rating": 4.1,
+      "reviews": 202,
+      "website": "https://www.itohkyuemon.co.jp/",
+      "ig": "https://www.instagram.com/itohkyuemon/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 8,
+      "confidence": 0.86,
+      "sources": [
+        "https://www.itohkyuemon.co.jp/",
+        "https://www.itohkyuemon.co.jp/corporate/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26002107/",
+        "https://www.tripadvisor.com/Restaurant_Review-g946495-d1679230-Reviews-Itohkyuemon_Uji_Honten-Uji_Kyoto_Prefecture_Kinki.html",
+        "https://www.instagram.com/itohkyuemon/",
+        "https://www.kyototourism.org/en/restaurants/1371/",
+        "https://www.gltjp.com/en/directory/item/14546/",
+        "https://en.atpress.com/news/404581"
+      ]
+    },
+    {
+      "name": "Saryo Tsujiri (Gion Tsujiri)",
+      "nameJp": "茶寮都路里",
+      "city": "Kyoto",
+      "area": "Gion, Higashiyama Ward (Shijo-dori, near Yasaka Shrine / Gion-Shijo Station) — Gion main store (honten)",
+      "founded": "1978 (Showa 53); parent brand Gion Tsujiri founded 1860 (Man'en 1) in Uji",
+      "realAndOperating": true,
+      "famousFor": "Iconic, queue-forming Uji-matcha parfaits — the flagship Tokusen Tsujiri Parfait — served in a multi-floor Japanese tea salon above the historic Gion Tsujiri tea shop. One of the original and most famous matcha-parfait destinations in Kyoto.",
+      "unique": "The \"saryo\" (tea-salon) concept itself is the borrowable idea: a heritage tea merchant (founded 1860) extending into a sit-down dessert café in 1978 specifically to keep Japanese tea relevant when coffee/black tea were taking over — turning premium Uji matcha into a tiered, layered parfait architecture (matcha ice cream + soft-serve + sherbet + matcha jelly + matcha castella sponge + whipped cream + shiratama + Dainagon azuki anko simmered 2+ hours + matcha warabi mochi). The poetic name 都路里 itself is a brandable concept: 都 (Kyoto capital) + 路 (Shijo street) + 里 (Uji tea village). Borrowable: a flagship signature parfait built as a 'tour' of every form a single matcha can take, plus a retail-tea-shop-downstairs / tasting-salon-upstairs vertical model and a take-home parfait/online product line.",
+      "signatures": [
+        {
+          "item": "Tokusen Tsujiri Parfait (Special-Selection No.1 Matcha Parfait) — the flagship; matcha ice cream, jelly, sherbet, castella, whipped cream, shiratama and slow-cooked Dainagon azuki anko",
+          "priceYen": 1296
+        },
+        {
+          "item": "Tsujiri Parfait (signature Uji-matcha parfait)",
+          "priceYen": 1102
+        },
+        {
+          "item": "Hojicha Parfait (roasted-tea parfait)",
+          "priceYen": 1037
+        },
+        {
+          "item": "Matcha Castella Parfait",
+          "priceYen": 1102
+        },
+        {
+          "item": "Shiratama Parfait (rice-dumpling matcha parfait)",
+          "priceYen": 918
+        },
+        {
+          "item": "Tsujiri Anmitsu",
+          "priceYen": 1016
+        },
+        {
+          "item": "Matcha Warabi Mochi",
+          "priceYen": 692
+        }
+      ],
+      "popularity": "Very high / iconic. Tabelog 3.55 with ~1,070–1,090 reviews; selected for Tabelog 'Sweets WEST Hyakumeiten 100' (2018 & 2019). Famous for near-constant queues on Shijo-dori. Strong cross-map ratings: Yahoo Maps 4.4 (206), NAVITIME 4.3 (275). Official Instagram @giontsujiri_saryotsujiri ~28K followers. Multiple branches (Kyoto Station, Tokyo, Osaka/Shinsaikbashi) extend the brand nationally. No Michelin star (it is a casual saryo, not a fine-dining listing).",
+      "rating": 4.2,
+      "reviews": null,
+      "website": "https://www.giontsujiri.co.jp/",
+      "ig": "https://www.instagram.com/giontsujiri_saryotsujiri/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 9,
+      "confidence": 0.86,
+      "sources": [
+        "https://www.giontsujiri.co.jp/store/saryotsujiri-honten/",
+        "https://www.giontsujiri.co.jp/aboutus/history/",
+        "https://www.giontsujiri.co.jp/products/food/",
+        "https://www.giontsujiri.co.jp/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/dtlmenu/",
+        "https://www.instagram.com/giontsujiri_saryotsujiri/",
+        "https://map.yahoo.co.jp/v3/place/BJ9nESRtrw-",
+        "https://www.navitime.co.jp/poi?spot=02301-1700032",
+        "https://ja.wikipedia.org/wiki/%E7%A5%87%E5%9C%92%E8%BE%BB%E5%88%A9",
+        "https://www.walkerplus.com/article/1164305/"
+      ]
+    },
+    {
+      "name": "Ippodo Tea — Kaboku Tearoom",
+      "nameJp": "一保堂茶舗 喫茶室「嘉木」",
+      "city": "Kyoto",
+      "area": "Teramachi-dori Nijo-agaru, Nakagyo Ward (near Kyoto Imperial Palace / Kyoto Shiyakusho-mae Station)",
+      "founded": "1717 (Kyoho 2) — company founding; the Kaboku tearoom is the modern tasting room, fully renovated in 2023",
+      "realAndOperating": true,
+      "famousFor": "A 300-year-old Kyoto Japanese-tea house (one of Japan's most iconic tea merchants) whose attached Kaboku tearoom lets guests learn to hand-brew premium matcha, gyokuro, sencha and hojicha — paired with seasonal wagashi — with staff teaching the brewing technique table-side.",
+      "unique": "The borrowable concept is an \"education-as-experience\" tasting room: rather than just serving a finished drink, staff teach you to brew the tea yourself at the table (water temperature, steeping, second/third infusions), so guests literally taste how technique transforms flavor. Pair this with rotating seasonal wagashi from named local confectioners, limited-time premium pours (特撰抹茶/特撰玉露), and a tiered \"no. of mukashi\" naming system for matcha grades. Three distinct seating zones (inner room, kettle counter, street-view room) give one space multiple moods. A small, replicable idea: a low-commitment \"demitasse matcha\" at ~¥880 and a matcha soy latte as entry points alongside ceremonial pours.",
+      "signatures": [
+        {
+          "item": "Koicha (thick matcha) 'Unmon no Mukashi' — with wagashi",
+          "priceYen": 2420
+        },
+        {
+          "item": "Usucha (thin matcha) 'Kyogoku no Mukashi' — with wagashi",
+          "priceYen": 1650
+        },
+        {
+          "item": "Gyokuro 'Tenka-ichi' — with wagashi",
+          "priceYen": 2750
+        },
+        {
+          "item": "Premium Sencha — with wagashi",
+          "priceYen": 1980
+        },
+        {
+          "item": "Premium Hojicha — with wagashi",
+          "priceYen": 1210
+        },
+        {
+          "item": "Matcha Soy Latte (small sweet)",
+          "priceYen": 1210
+        }
+      ],
+      "popularity": "Highly iconic. Tabelog 3.40 with 564 reviews; Tripadvisor 4.6/5 (75 reviews), Travelers' Choice, ranked ~#380 of 14,157 Kyoto restaurants; official Instagram @ippodotea ~104K followers; routinely cited in international guides; 20+ minute waits common. Multiple branches (Kyoto main, Tokyo Marunouchi) plus US distribution. Brand founded 1717; Kyoto tearoom renovated 2023; runs ongoing 2024–2025 seasonal limited menus.",
+      "rating": 4.6,
+      "reviews": 75,
+      "website": "https://www.ippodo-tea.co.jp/pages/store-kyoto",
+      "ig": "https://www.instagram.com/ippodotea/",
+      "uniquenessScore": 8,
+      "popularityScore": 9,
+      "confidence": 0.9,
+      "sources": [
+        "https://www.ippodo-tea.co.jp/pages/store-kyoto",
+        "https://www.ippodo-tea.co.jp/blogs/news/kyoto-main-store-kaboku-tearoom-map",
+        "https://www.ippodo-tea.co.jp/blogs/news/kabokumenu_20250201",
+        "https://www.umenu.jp/menus/148.html",
+        "https://tabelog.com/en/kyoto/A2601/A260202/26000182/",
+        "https://www.tripadvisor.com/Restaurant_Review-g298564-d1663158-Reviews-Ippodo_Chaho_Kisashitsu_Kaboku-Kyoto_Kyoto_Prefecture_Kinki.html",
+        "https://www.instagram.com/ippodotea/",
+        "https://umaimono-daisuki.com/kyoto-chukyo-ippodokaboku/"
+      ]
+    },
+    {
+      "name": "Marukyu-Koyamaen — Motoan Tea Salon (Nishinotoin store)",
+      "nameJp": "丸久小山園 西洞院店 茶房「元庵」",
+      "city": "Kyoto",
+      "area": "Nishinotoin-dori, Nakagyo Ward (central Kyoto; ~6 min walk from Karasuma Oike Station, near Nijojo-mae)",
+      "founded": "Parent house Marukyu-Koyamaen founded in the Genroku era (1688–1704), ~300+ years; Motoan tea salon is the modern tea-room of its Nishinotoin retail store",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Matcha roll cake set (matcha Swiss roll with plain + matcha whipped cream and azuki, plus a tea of choice)",
+          "priceYen": 1925
+        },
+        {
+          "item": "Matcha roll cake, single slice",
+          "priceYen": 1100
+        },
+        {
+          "item": "Matcha 'Unzuru/Kumotsuru' thin tea (usucha) + wagashi set",
+          "priceYen": 1000
+        },
+        {
+          "item": "Matcha 'Chogan/Changan' thick tea (koicha) + wagashi set",
+          "priceYen": 1500
+        },
+        {
+          "item": "Gyokuro + wagashi set",
+          "priceYen": 1500
+        },
+        {
+          "item": "Matcha baumkuchen with tea set",
+          "priceYen": 1300
+        },
+        {
+          "item": "Uji matcha ice cream",
+          "priceYen": 600
+        },
+        {
+          "item": "Matcha kakigori shaved ice 'Kyoto Himuro' (summer only)",
+          "priceYen": 850
+        }
+      ],
+      "famousFor": "Being the directly-operated Kyoto-city tea salon of Uji's revered 300-year-old Marukyu-Koyamaen matcha house — serving freshly whisked usucha/koicha and its signature matcha roll cake in a restored Kyo-machiya merchant house overlooking a small garden",
+      "unique": "It is the cafe arm of one of the world's most respected matcha producers (the powder matcha masters and tea schools actually source), so the tea quality is reference-grade. Borrowable ideas: (1) name tea sets after specific named matcha grades (e.g. usucha 'Kumotsuru/Unzuru' ¥1000 vs koicha 'Chogan' ¥1500) so guests literally taste up the quality ladder and learn grade vocabulary; (2) a producer-direct 'tasting flight' positioning that turns provenance into the product; (3) the matcha roll cake (plain + matcha cream + azuki) as a hero dessert that converts a wholesale matcha brand into a retail cafe experience; (4) machiya + small garden + soft piano 'hidden hideaway' atmosphere as a premiumizing format; (5) seasonal-only items (summer kakigori, winter matcha zenzai) to drive return visits.",
+      "popularity": "High and iconic among tea lovers: Tabelog 3.62 with 297 reviews and selected to Tabelog Cafe WEST '100' 2025; TripAdvisor 4.7/5 (ranked ~#569 of ~9,981 Kyoto restaurants); parent brand's official Instagram ~54K followers; widely covered by Kyoto travel media and tea guides. A small 10-seat salon, so queues/waits are common.",
+      "rating": 3.62,
+      "reviews": 297,
+      "website": "https://www.marukyu-koyamaen.co.jp/motoan.html",
+      "ig": "https://www.instagram.com/marukyu.koyamaen_official/",
+      "uniquenessScore": 8.5,
+      "popularityScore": 8,
+      "confidence": 0.82,
+      "sources": [
+        "https://www.marukyu-koyamaen.co.jp/motoan.html",
+        "https://www.marukyu-koyamaen.co.jp/english/motoan.html",
+        "https://tabelog.com/en/kyoto/A2601/A260202/26006904/",
+        "https://tabelog.com/kyoto/A2601/A260202/26006904/dtlmenu/",
+        "https://retty.me/area/PRE26/ARE657/SUB10904/100000450095/menu/",
+        "https://www.insidekyoto.com/marukyu-koyamaen-nishinotoin-tea-shop-teahouse-motoan",
+        "https://www.tripadvisor.com/Restaurant_Review-g298564-d7437062-Reviews-Marukyu_Koyamaen_Nishinotoin_Tea_Shop_Motoan_Tea_House-Kyoto.html",
+        "https://www.trip.com/restaurant/japan/kyoto/detail/marukyu-koyamaen-nishinotoin-sabo-moto-an-15019729/",
+        "https://ja.wikipedia.org/wiki/丸久小山園",
+        "https://www.marukyu-koyamaen.co.jp/information/post-150/",
+        "https://www.instagram.com/marukyu.koyamaen_official/",
+        "https://oniwa.garden/marukyu-koyamaen-kyoto/"
+      ]
+    },
+    {
+      "name": "Saryo Tsujiri Gion Honten (Gion Tsujiri)",
+      "nameJp": "茶寮都路里 祇園本店 / 祇園辻利",
+      "city": "Kyoto",
+      "area": "Gion, Higashiyama-ku (四条通祇園町南側, near Gion-Shijo Station)",
+      "founded": "Parent tea house Gion Tsujiri founded 1860 (Man'en era) in Uji by Tsuji Riemon; the Saryo Tsujiri café concept launched 1978 (Showa 53)",
+      "realAndOperating": true,
+      "famousFor": "Iconic Uji-matcha parfaits — above all the ~25cm-tall \"Tokusen Tsujiri Parfait\" (matcha jelly, soft serve, sponge, anmitsu, mochi) — plus matcha/hojicha sweets, kakigori and traditional Japanese tea service. The Gion flagship of one of Kyoto's most recognized 160+ year-old tea brands; a default tourist must-visit for matcha desserts.",
+      "unique": "The \"signboard tower parfait\" as a layered, photogenic, multi-textured experience built on a serious tea pedigree — a borrowable concept: pair an authentic single-origin matcha story (1860 Uji heritage, gyokuro/tea-chest innovation) with a maximalist, Instagrammable 25cm parfait that stacks 8-10 matcha components in one vessel. Also borrowable: a tiered menu from grab-and-go takeout (Gion Tsujiri counter: soft serve, dorayaki) up to a sit-down tea salon (Saryo Tsujiri) and even a Tea & Bar spinoff (\"Sarei\"), plus limited-edition flagship-only \"ultimate\" parfaits (e.g. 建都の極, Oct 2025) that drive repeat visits and PR.",
+      "signatures": [
+        {
+          "item": "Tokusen Tsujiri Parfait / 特選都路里パフェ (matcha) — signature ~25cm tower parfait",
+          "priceYen": 1694
+        },
+        {
+          "item": "Tsujiri Parfait / 都路里パフェ",
+          "priceYen": 1474
+        },
+        {
+          "item": "Matcha Castella Parfait / 抹茶カステラパフェ",
+          "priceYen": 1102
+        },
+        {
+          "item": "Tsujiri Ice Cream / 都路里アイスクリーム (matcha soft serve)",
+          "priceYen": 681
+        },
+        {
+          "item": "Matcha Warabi Mochi / 抹茶わらび餅",
+          "priceYen": 692
+        },
+        {
+          "item": "Matcha tea service / 喫茶去 (Juttoku 十徳 matcha)",
+          "priceYen": 1080
+        }
+      ],
+      "popularity": "Tabelog 3.55-3.56 (~1,090 reviews); selected for Tabelog Sweets WEST \"100 Famous Shops\" (Tabelog 100) in 2018 and 2019; Google Maps ~4.4 (~206 reviews); Instagram ~28K followers; frequent long queues (often 30+ min, spacious seating = fast turnover); strong tourist + domestic fame; limited \"Kento no Kiwami\" 建都の極 ultimate parfait launched Oct 6 2025 (PR Times). No Michelin star (it is a café/甘味処).",
+      "rating": 4.4,
+      "reviews": 206,
+      "website": "https://www.giontsujiri.co.jp/store/saryotsujiri-honten/",
+      "ig": "https://www.instagram.com/giontsujiri_saryotsujiri/",
+      "uniquenessScore": 7,
+      "popularityScore": 9,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.giontsujiri.co.jp/store/saryotsujiri-honten/",
+        "https://www.giontsujiri.co.jp/products/food/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000408/dtlmenu/",
+        "https://map.yahoo.co.jp/v3/place/BJ9nESRtrw-/menu",
+        "https://www.instagram.com/giontsujiri_saryotsujiri/",
+        "https://x.com/giontsujiri",
+        "https://prtimes.jp/main/html/rd/p/000000292.000011317.html",
+        "https://discoverkyototoday.com/gion-tsujiri-matcha-history-sweets/",
+        "https://www.tripadvisor.com/Restaurant_Review-g298564-d1196778-Reviews-Saryo_Tsujiri_Gion_Honten-Kyoto_Kyoto_Prefecture_Kinki.html"
+      ]
+    },
+    {
+      "name": "Itohkyuemon — Uji Honten Tearoom (Sabo)",
+      "nameJp": "伊藤久右衛門 宇治本店 茶房",
+      "city": "Uji, Kyoto",
+      "area": "Todo-Aramaki (莵道荒槇), ~5 min walk from Keihan Uji Station",
+      "founded": "Tea business founded 1832 (Tenpō 3, late Edo period); company incorporated 1952; current Uji Honten with adjoining tearoom (sabo) opened 1996",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Itohkyuemon Matcha Parfait (single) — signature, stone-ground Uji matcha",
+          "priceYen": 1090
+        },
+        {
+          "item": "Premium Greedy Matcha Parfait (tea set)",
+          "priceYen": 2190
+        },
+        {
+          "item": "Matcha Soba — warm or chilled (single)",
+          "priceYen": 1090
+        },
+        {
+          "item": "Matcha Curry Udon (single)",
+          "priceYen": 1390
+        },
+        {
+          "item": "Uji Kintoki Shaved Ice (matcha, seasonal Apr–Sep)",
+          "priceYen": 1090
+        },
+        {
+          "item": "Matcha Craft Cola (seasonal Jul–Sep)",
+          "priceYen": 750
+        }
+      ],
+      "famousFor": "Rich, intensely concentrated matcha parfaits made with stone-ground Uji matcha, plus matcha soba — the flagship tearoom of a historic Uji tea merchant; a certified \"Uji Matcha Cafe\"",
+      "unique": "Total verticalization of a single estate ingredient (their own Uji matcha) across an entire menu — savory (matcha soba, matcha curry udon, beef & Kyoto-scallion matcha soba), sweets (parfaits, zenzai, warabi mochi), shaved ice, floats, and novelty drinks (matcha craft cola). Borrowable concepts: a tightly rotating seasonal parfait/menu calendar (hydrangea, peach, Shine Muscat, chestnut, maple, sakura, plum, Tale-of-Genji strawberry) that drives repeat visits and Instagram content; tea-shop-to-cafe pipeline that converts a retail powder brand into a destination experience; \"tea set\" tiering where every sweet can be paired with a brewed tea.",
+      "popularity": "High / iconic in Uji — one of the two most famous Uji matcha-sweets names (alongside Nakamura Tokichi); Tabelog 3.53 with ~1,262 reviews; frequent queues; ~52K Instagram followers on official account; strong tourism guidebook coverage (Rurubu, Jalan, GLTJP); 62-seat tearoom regularly full",
+      "rating": 4.25,
+      "reviews": 615,
+      "website": "https://www.itohkyuemon.co.jp/corporate/shop/uji/sabo/",
+      "ig": "https://www.instagram.com/itohkyuemon/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 8.5,
+      "confidence": 0.86,
+      "sources": [
+        "https://www.itohkyuemon.co.jp/corporate/shop/uji/sabo/",
+        "https://www.itohkyuemon.co.jp/corporate/about/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26002107/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26002107/dtlmenu/",
+        "https://ja.wikipedia.org/wiki/%E4%BC%8A%E8%97%A4%E4%B9%85%E5%8F%B3%E8%A1%9B%E9%96%80",
+        "https://www.instagram.com/itohkyuemon/",
+        "https://map.yahoo.co.jp/v3/place/uLHZhGm0uGw",
+        "https://www.jalan.net/gourmet/grm_guide000000185518/",
+        "https://www.gltjp.com/en/directory/item/14546/"
+      ]
+    },
+    {
+      "name": "Fukujuen — Uji Tea Workshop (Ujicha Kobo)",
+      "nameJp": "福寿園 宇治茶工房",
+      "city": "Uji, Kyoto",
+      "area": "Uji-Yamada (beside the Uji River, opposite Byodoin Temple), Uji City, Kyoto Prefecture",
+      "founded": "Operator Fukujuen founded 1790 (Kansei era); the Ujicha Kobo workshop facility itself is a modern site on the historic \"Asahi\" tea-garden grounds, one of Uji's seven famous tea gardens",
+      "realAndOperating": true,
+      "famousFor": "A comprehensive Uji-tea culture facility by 230-year-old tea house Fukujuen: hands-on tea-making (stone-mill matcha grinding, ceramic-plate hojicha roasting), a riverside tea cafe (Fukuju Saryo) serving gyokuro/matcha dishes and sweets, plus a shop and link to the adjacent Asahi-yaki pottery kiln",
+      "unique": "Interactive \"make-your-own-tea\" retail concept: guests stone-grind their own matcha (40 min, ¥2,200) or roast sencha into hojicha on a ceramic hotplate (30 min, ¥2,750), then drink/take it home — turning matcha into a participatory craft experience rather than just a purchase. Pairs heritage authenticity (historic Asahi tea-garden site, Byodoin/Uji River views, ties to Asahi-yaki kiln for vessels) with experiential retail. Highly borrowable: a grind-your-own-matcha station, roast-your-own-hojicha bar, and gyokuro-as-cuisine (gyokuro sea-bream chazuke) as premium menu hooks.",
+      "signatures": [
+        {
+          "item": "Matcha Ice Cream Parfait (抹茶アイスパフェ)",
+          "priceYen": 1100
+        },
+        {
+          "item": "Asahi Set — signature tea-soba bowl set (朝日セット)",
+          "priceYen": 2420
+        },
+        {
+          "item": "Freshly whisked Matcha, served per cup (一服点て抹茶)",
+          "priceYen": 1650
+        },
+        {
+          "item": "Matcha Anmitsu (抹茶あんみつ)",
+          "priceYen": 990
+        },
+        {
+          "item": "Matcha Zenzai / Tea-scented Mochi (抹茶ぜんざい・茶の香餅)",
+          "priceYen": 990
+        },
+        {
+          "item": "Stone-mill matcha grinding experience, 40 min (石臼挽き抹茶づくり体験)",
+          "priceYen": 2200
+        },
+        {
+          "item": "Hojicha roasting experience, 30 min (ほうじ茶づくり体験)",
+          "priceYen": 2750
+        },
+        {
+          "item": "Gyokuro Sea-Bream Chazuke (玉露鯛茶漬け) — reservation required",
+          "priceYen": 2750
+        }
+      ],
+      "rating": 4.2,
+      "reviews": null,
+      "popularity": "Tabelog 3.05/5 (~26–36 reviews); TripAdvisor 4.2/5, ranked #9 of 325 restaurants in Uji; featured by official Kyoto tourism bodies (Kyoto Kankou, Ocha-no-Kyoto, JR \"Souda Kyoto\"). Backed by Fukujuen brand (official IG @fukujuen_official ~7.5k, sister cafe @fukucha.fukujuen ~9.1k). Workshop's own IG @ujikoubou_fukujuen ~1,861 followers; secondary @ujichatei.fukujuen ~270. No Michelin star. Famous regionally as an Uji tea-tourism stop rather than a viral destination.",
+      "website": "https://www.ujikoubou.com/ujicha-koubou/",
+      "ig": "https://www.instagram.com/ujikoubou_fukujuen/",
+      "uniquenessScore": 8,
+      "popularityScore": 6,
+      "confidence": 0.86,
+      "sources": [
+        "https://www.ujikoubou.com/ujicha-koubou/",
+        "https://www.ujikoubou.com/ujicha-koubou/saryo/",
+        "https://experience.fukujuen.com/en/modelcourse/ujikoubou-make-uji-tea/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26036318/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26005858/",
+        "https://www.tripadvisor.com/Restaurant_Review-g946495-d7579710-Reviews-Fukujuen_Ujicha_Kobo_Fukuju_Saryo-Uji_Kyoto_Prefecture_Kinki.html",
+        "https://www.yelp.com/biz/%E7%A6%8F%E5%AF%BF%E5%9C%92%E5%AE%87%E6%B2%BB%E8%8C%B6%E5%B7%A5%E6%88%BF-%E5%AE%87%E6%B2%BB%E5%B8%82-2",
+        "https://www.kyoto-kankou.or.jp/info_search/9481",
+        "https://www.instagram.com/ujikoubou_fukujuen/",
+        "https://www.instagram.com/fukujuen_official/"
+      ]
+    },
+    {
+      "name": "Horii Shichimeien",
+      "nameJp": "堀井七茗園",
+      "city": "Uji",
+      "area": "Myoraku, near Agata-jinja Shrine and Byodoin Temple, Uji, Kyoto",
+      "founded": "1879 (Meiji 12); tea-garden heritage traces to the Muromachi-period \"Uji Shichimeien\" seven gardens (14th-15th c.)",
+      "realAndOperating": true,
+      "famousFor": "Owning \"Okunoyama\" (奥ノ山), the only surviving garden of the seven Muromachi-era Uji Shichimeien gardens designated by the Ashikaga shogunate; premium award-winning Uji matcha and the \"Seiri-no/Nariino\" (成里乃) cultivar.",
+      "unique": "This is a deeply pedigreed, ideas-rich house. (1) It is the SOLE active grower of one of the original seven historic Uji \"famous gardens\" — a 600-year provenance story money cannot buy. (2) The 3rd-generation owner Horii Chojiro invented the \"Horii-style tencha machine\" in 1924, now the prototype for essentially every tencha machine in Japan — a manufacturer-innovator heritage. (3) They ran a 20-year (1981-2002) cultivar breeding program producing their own registered varietals (\"Seiri-no/Nariino\" for matcha, \"Okunoyama\" for gyokuro), which then won the national Minister of Agriculture Prize (2010). Borrowable concepts: a single-origin \"heritage garden\" hero product with a named, registered house cultivar; tiered matcha line named by terroir/grade (\"...no Mukashi\" naming ladder); a tasting room overlooking the source garden where staff demonstrate proper brewing; and storytelling structured as \"seven chapters\" mirroring the seven gardens. A small farm-to-cup brand could borrow the \"named house blend + provenance chapter narrative + in-house brewing demo\" framework.",
+      "signatures": [
+        {
+          "item": "Matcha Seiri-no / Nariino (成里乃) — flagship, 2010 Minister of Agriculture Prize winner, 20g",
+          "priceYen": 3780
+        },
+        {
+          "item": "Matcha Uji Mukashi (宇治昔), 30g can",
+          "priceYen": 2484
+        },
+        {
+          "item": "Matcha Choko no Mukashi (長閑の昔) — top cafe-grade matcha",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha Shichimei no Mukashi (七茗の昔)",
+          "priceYen": null
+        },
+        {
+          "item": "Cafe matcha tasting (usucha) served with a confection",
+          "priceYen": 600
+        },
+        {
+          "item": "Okunoyama Gyokuro (奥ノ山 玉露) — flagship gyokuro from the heritage garden",
+          "priceYen": null
+        }
+      ],
+      "popularity": "Tabelog 3.09 (5 reviews) — modest as a \"restaurant,\" but it is fundamentally a revered tea producer, not a cafe. Strong global wholesale fame: stocked by Sazen Tea, Rocky's Matcha, Tsukimi, and featured by matcha influencers. ~12K Instagram followers / ~134 posts. National competition awards (2010 Minister of Agriculture Prize; 2025 Kansai Tea Competition award-winning lot sold). Praised on Wanderlog/travel guides for personalized tastings and English-speaking owners.",
+      "rating": 3.09,
+      "reviews": 5,
+      "website": "https://horiishichimeien.com/en-sb",
+      "ig": "https://www.instagram.com/horiishichimeien/",
+      "uniquenessScore": 9,
+      "popularityScore": 7,
+      "confidence": 0.88,
+      "sources": [
+        "https://horiishichimeien.com/en-sb",
+        "https://horiishichimeien.com/products/matcha-ujimukashi",
+        "https://horiishichimeien.com/en-sb/collections/all",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26021818/",
+        "https://www.instagram.com/horiishichimeien/",
+        "https://nihonchaseikatsu.com/introduce/horiishichimeien/",
+        "https://www.ujimiyage.com/store/profile60",
+        "https://wanderlog.com/place/details/5930818/horii-shichimeien",
+        "https://www.sazentea.com/en/products/c41-horii-shichimeien-matcha",
+        "https://www.rockysmatcha.com/products/rockys-matcha-horii-shichimeien-ceremonial-blend-20g",
+        "https://ochanokyoto.jp/spot/detail.php?sid=776"
+      ]
+    },
+    {
+      "name": "Tsuen Tea (Tsuen Chaya)",
+      "nameJp": "通圓 茶屋",
+      "city": "Uji, Kyoto",
+      "area": "East end of Uji Bridge (Uji Higashiuchi), in front of Keihan Uji Station; ~7 min walk from JR Uji Station",
+      "founded": "1160 (Eikyo era); current building constructed 1672. Now run by the 24th generation of the Tsuen family.",
+      "realAndOperating": true,
+      "famousFor": "Being the oldest tea house in Japan (founded 1160) and one of the oldest continuously operating companies in the world. Traditional Uji tea (matcha, gyokuro, sencha) plus a historic tea salon (chabo) serving matcha sweets next to the Uji River.",
+      "unique": "Living 860+ years of heritage as the original \"bridge keeper\" tea house at Uji Bridge, run unbroken by 24 generations of one family in a 1672 Edo-period merchant building. It is a cultural artifact: subject of its own Kyogen farce (\"Tsuen\"), featured in Eiji Yoshikawa's novel Musashi (hence the \"Musashi Set\" on the menu), and historically served shoguns Ashikaga Yoshimasa, Toyotomi Hideyoshi and Tokugawa Ieyasu. Borrowable concepts: (1) named menu sets tied to the brand's own legend/literature (e.g. a signature \"house set\" and a \"founder/story set\"); (2) leaning the founding-year date hard into branding (the IG handle @tsuen1160 literally IS the founding year — a memorable, ownable number); (3) a \"tea for travelers / safe passage\" origin story that frames tea-serving as hospitality + blessing, not just retail.",
+      "signatures": [
+        {
+          "item": "Matcha Parfait (抹茶パフェ) — kanten, shiratama, azuki, vanilla & matcha ice cream, gyuhi, cream, chestnut, wafer",
+          "priceYen": 850
+        },
+        {
+          "item": "Matcha Sundae (抹茶サンデー)",
+          "priceYen": 780
+        },
+        {
+          "item": "Uji Kintoki soft serve (宇治金時ソフトクリーム)",
+          "priceYen": 600
+        },
+        {
+          "item": "Tsuen Set / Musashi Set (matcha sweets sets)",
+          "priceYen": 850
+        },
+        {
+          "item": "Zaru Cha Soba (cold tea soba / 茶そば)",
+          "priceYen": 880
+        },
+        {
+          "item": "Premium Matcha & Sweets set (上抹茶と菓子)",
+          "priceYen": 840
+        }
+      ],
+      "popularity": "Tabelog 3.58 with ~373 reviews (\"Very good\" tier); TripAdvisor 4.0/5 with ~70 reviews, ranked #6 of 325 restaurants in Uji; widely cited as \"the oldest tea house in Japan\" / world's oldest teashop across travel media (Wikipedia, SBS Food, Kansai Odyssey). Frequent tourist queues near Uji Bridge. Modest Instagram reach (@tsuen1160 ~3,866 followers, ~504 posts) relative to its fame — its renown is heritage/media-driven, not social-media-driven.",
+      "rating": 4,
+      "reviews": 70,
+      "website": "https://tsuentea.com/",
+      "ig": "https://www.instagram.com/tsuen1160/",
+      "uniquenessScore": 8.5,
+      "popularityScore": 7.5,
+      "confidence": 0.86,
+      "sources": [
+        "https://tsuentea.com/",
+        "https://tsuentea.com/pages/history",
+        "http://www.tsuentea.com/shop/teasalon.html",
+        "https://en.wikipedia.org/wiki/Tsuen_Tea",
+        "https://ja.wikipedia.org/wiki/%E9%80%9A%E5%9C%93",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26000727/",
+        "https://tabelog.com/en/kyoto/A2607/A260701/26000727/dtlmenu/",
+        "https://www.tripadvisor.com/Restaurant_Review-g946495-d3753425-Reviews-Tsuen-Uji_Kyoto_Prefecture_Kinki.html",
+        "https://www.instagram.com/tsuen1160/",
+        "https://kansai-odyssey.com/tsuen-tea-worlds-oldest-teashop/",
+        "https://www.sbs.com.au/food/article/visiting-the-oldest-tea-shop-in-japan/xt6l2p6ip"
+      ]
+    },
+    {
+      "name": "SAKURAI JAPANESE TEA EXPERIENCE",
+      "nameJp": "櫻井焙茶研究所",
+      "city": "Tokyo",
+      "area": "Minami-Aoyama / Omotesando, Minato-ku (5F Spiral Building, 5-6-23 Minami-Aoyama)",
+      "founded": "2014 (opened December 3, 2014; Heisei era)",
+      "realAndOperating": true,
+      "famousFor": "A modern \"tea research laboratory\" (焙茶研究所 = roasted-tea research institute) that roasts hojicha to order in front of guests and reinterprets the tea ceremony as a multi-sensory, minimalist experience. Equally renowned by night as a tea-cocktail bar — one of Tokyo's most acclaimed bars, featured on The World's 50 Best Bars Discovery list. Founded by tea master Shinya Sakurai; the celebrated interior/spatial design is by Shinichiro Ogata's Simplicity studio.",
+      "unique": "The \"roast-to-order\" hojicha concept: tea is roasted fresh at the counter (baicha), so aroma becomes a live, theatrical act rather than a pre-packaged product. Two equally strong, borrowable ideas: (1) the 茶酒 \"chashu\" tea-and-liquor program — 18 differently-processed teas each infused into a matched spirit, served as a day-time flight, then flipped at night into a full tea-cocktail bar (Gyokuro Martini, Hojicha Toddy, Bancha Negroni); and (2) a tiered \"experience ladder\" — a casual tea+wagashi pairing (¥2,500) up to a guided multi-infusion Tea Course (gyokuro → blend → roasted → matcha, ¥5,950) — that turns tea drinking into a curated, reservation-worthy omakase. The whole brand (utensils, packaging, retail tea, gelato, interior) is designed as one coherent system, making it a model for an elevated, design-led matcha/tea retail-plus-experience concept.",
+      "signatures": [
+        {
+          "item": "Tea Course — guided tasting: gyokuro, seasonal blend, freshly-roasted hojicha, matcha + wagashi",
+          "priceYen": 5950
+        },
+        {
+          "item": "Tea & Japanese Sweets — choose a tea, brewed up to 3 infusions, paired with wagashi",
+          "priceYen": 2500
+        },
+        {
+          "item": "Chashu / 茶酒 — tea infused into a matched liquor (18 varieties)",
+          "priceYen": 1620
+        },
+        {
+          "item": "Gyokuro Martini (tea cocktail, bar time)",
+          "priceYen": 2200
+        },
+        {
+          "item": "Hojicha Toddy (tea cocktail, bar time)",
+          "priceYen": 1950
+        },
+        {
+          "item": "Bancha Negroni (tea cocktail, bar time)",
+          "priceYen": 1900
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 46,
+      "popularity": "High / iconic within tea-culture and design circles. Tabelog 3.55-3.56 (189 reviews) — strong for a tea house; Tripadvisor 4.6/5, ranked #153 of 7,707 restaurants in Minato; Instagram @sakurai_tea_shop ~34.7K followers; on The World's 50 Best Bars Discovery list; frequently covered by Time Out, design/travel media. Counter is only 10 seats, reservation-recommended, average spend ¥8,000-9,999 — a sought-after, must-know Tokyo tea destination.",
+      "website": "https://sakurai-tea.jp/en",
+      "ig": "https://www.instagram.com/sakurai_tea_shop/",
+      "uniquenessScore": 9,
+      "popularityScore": 8,
+      "confidence": 0.9,
+      "sources": [
+        "https://sakurai-tea.jp/en",
+        "https://sakurai-tea.jp/about",
+        "https://sakurai-tea.jp/experience-daytime",
+        "https://sakurai-tea.jp/en/experience-bartime",
+        "https://tabelog.com/en/tokyo/A1306/A130602/13197815/",
+        "https://www.instagram.com/sakurai_tea_shop/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066451-d11689654-Reviews-Sakurai_Tea_Experience-Minato_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://www.theworlds50best.com/discovery/Establishments/Japan/Tokyo/Sakurai.html",
+        "https://www.timeout.com/tokyo/restaurants/sakurai",
+        "https://whenin.tokyo/Sakurai-Japanese-Tea-Experience-Aoyama"
+      ]
+    },
+    {
+      "name": "Nakamura Tokichi Ginza",
+      "nameJp": "中村藤吉本店 銀座店",
+      "city": "Tokyo",
+      "area": "Ginza, Chuo-ku (GINZA SIX 4F)",
+      "founded": "1854 (Ansei 1 / 安政元年); brand founded in Uji, Kyoto. Ginza store opened 2017.",
+      "realAndOperating": true,
+      "famousFor": "A 170-year-old Kyoto Uji tea house (founded 1854) renowned for premium Uji matcha and its iconic \"Maruto\" matcha parfait and namacha (fresh-tea) jelly. The Ginza outpost in GINZA SIX is a famous wagashi/matcha cafe destination, known for a Ginza-exclusive multi-layer premium parfait and a free seasonal welcome tea.",
+      "unique": "Borrowable concepts: (1) The \"Maruto\" 9-layer signature parfait built around a single hero ingredient (premium \"bessei\" tencha-grade matcha) — a stacked, photogenic, layered dessert with matcha sauce, ice cream, sponge, anko, matcha jelly, shiratama dumplings and chestnut; a location-EXCLUSIVE premium tier of the same parfait drives destination visits and FOMO. (2) Heritage \"maru-to\" (○十) mark from the original shop name \"Maruya Tokichi\" used as consistent brand/logo storytelling. (3) A free seasonal welcome tea on seating — low-cost hospitality ritual that elevates perceived value. (4) Namacha \"fresh tea\" jelly served in distinctive vessels (bamboo-tube/jar) as a giftable, shippable retail SKU bridging cafe and e-commerce. (5) Tea-soba (chasoba) as a savory anchor so the cafe is a full meal stop, not just dessert.",
+      "signatures": [
+        {
+          "item": "Bessei Maruto Parfait (別製まるとパフェ) — Ginza-exclusive 9-layer premium matcha parfait",
+          "priceYen": 2200
+        },
+        {
+          "item": "Maruto Parfait (まるとパフェ) — signature layered matcha parfait",
+          "priceYen": 2500
+        },
+        {
+          "item": "Chasoba / fresh tea-soba noodles (生麺 茶蕎麦), hot or cold",
+          "priceYen": 1210
+        },
+        {
+          "item": "Namacha Jelly Assortment (生茶ゼリイ, Matcha/Hojicha) — retail/gift box",
+          "priceYen": 3340
+        },
+        {
+          "item": "Assorted Jelly (Matcha, Hojicha, Natsu-no-ka) — gift box",
+          "priceYen": 3480
+        },
+        {
+          "item": "Nakamura-cha teabags (4g x 10)",
+          "priceYen": 1500
+        }
+      ],
+      "popularity": "Very high. 170-year heritage brand; Uji main-store building is a nationally designated Important Cultural Landscape (2009). Ginza store: Tabelog 3.45 (~965-967 reviews), Yahoo! Maps 4.28 (303 reviews), active Yelp listing (33 reviews, 172 photos, updated Feb 2026). Official Instagram @nakamura_tokichi_official ~67K followers, 5,100+ posts. Frequently featured in Tokyo parfait rankings and Japanese tea/cafe media; known for queues at GINZA SIX.",
+      "rating": 4.28,
+      "reviews": 303,
+      "website": "https://tokichi.jp/en",
+      "ig": "https://www.instagram.com/nakamura_tokichi_official/",
+      "uniquenessScore": 8,
+      "popularityScore": 8.5,
+      "confidence": 0.86,
+      "sources": [
+        "https://tokichi.jp/en",
+        "https://tokichi.jp/en/blogs/menu/ginza",
+        "https://tokichi.jp/pages/history",
+        "https://tabelog.com/en/tokyo/A1301/A130101/13207589/",
+        "https://map.yahoo.co.jp/v3/place/rcCuflFERMo",
+        "https://www.yelp.com/biz/%E4%B8%AD%E6%9D%91%E8%97%A4%E5%90%89%E6%9C%AC%E5%BA%97-%E9%8A%80%E5%BA%A7%E5%BA%97-%E4%B8%AD%E5%A4%AE%E5%8C%BA",
+        "https://www.instagram.com/nakamura_tokichi_official/",
+        "https://ginza6.tokyo/shops/1159",
+        "https://retty.news/34702/",
+        "https://nihonchaseikatsu.com/introduce/nakamuratokichihontenginza/"
+      ]
+    },
+    {
+      "name": "Hatoya Asakusa",
+      "nameJp": "八十八 浅草（八十八良葉舎）",
+      "city": "Tokyo",
+      "area": "Asakusa (Hanakawado), Taito-ku — near Sumida Park / Sumida River, ~5 min from Asakusa Station",
+      "founded": "Asakusa branch opened 20 Jan 2023 (Kanto/Tokyo debut); parent brand \"Hatoya Ryoyosha\" originated as a tea stand in Arashiyama, Kyoto",
+      "realAndOperating": true,
+      "famousFor": "Premium Kyoto matcha whisked by hand to order; Tokyo's go-to \"viral\" intense-matcha stand. Famous for its thick, sugar-free matcha and the Asakusa-exclusive two-layer matcha-milk pudding (浅草プリン). Known for using only first-flush (ichiban-cha) single-harvest leaves and offering multiple single-cultivar matcha grades.",
+      "unique": "Borrowable concepts: (1) Build-your-own iced matcha \"float\" — pick a tea base then add ice-cream / topping (foam matcha, mochi balls, butter-sand, ice cream) for a customizable, photogenic SKU. (2) Single-cultivar matcha menu by grade/varietal (Samidori, Ujihikari, Asahi, Saemidori) tiered by price — sell matcha like single-origin coffee. (3) \"Ichi (壱) vs Ni (弐)\" numbered tiers contrasting region/roast so customers can level-up. (4) Live front-of-counter chasen whisking as built-in theater/content. (5) A flagship sugar-free intense matcha sauce (matcha + water + white-bean an only) used across drinks and the signature pudding — uncompromising-bitterness positioning as a brand identity. (6) Insisting on first-flush leaves for everything (not just drinks) as a quality story worth marketing.",
+      "signatures": [
+        {
+          "item": "Matcha Latte 壱 (Ichi) — Ujitawara leaves, classic bitter matcha",
+          "priceYen": 700
+        },
+        {
+          "item": "Matcha Latte 弐 (Ni) — roasted/Shirakawa leaves, nuttier, milder",
+          "priceYen": 900
+        },
+        {
+          "item": "Asakusa Pudding 浅草プリン — Asakusa-exclusive two-layer matcha-milk pudding + sugar-free matcha-an",
+          "priceYen": 600
+        },
+        {
+          "item": "Asakusa Pudding with mochi (白玉) topping",
+          "priceYen": 750
+        },
+        {
+          "item": "Foam matcha (泡抹茶) add-on",
+          "priceYen": 350
+        },
+        {
+          "item": "Ice cream / float topping (matcha or milk) for build-your-own ice float",
+          "priceYen": 350
+        }
+      ],
+      "popularity": "High / viral. Tabelog 3.46 (183 reviews); LINE Place (Google-style local) 4.2 (115 reviews); active Instagram presence (@8108asakusa; Shibuya account @8108asakusa_shibuya ~27K followers, Kamakura @8108kamakura ~7.5K). Regular 30-60 min queues 10:00-16:00, frequently reported by tourists and Japanese food blogs; covered by Rurubu, Rocket News 24, San-tatsu, enjoyTokyo; pop-ups at Shinjuku Takashimaya. Brand has expanded to ~5 branches (Arashiyama, Kiyomizu, Asakusa, Shibuya, Kamakura). No Michelin/Hyakumeiten designation found.",
+      "rating": 4.2,
+      "reviews": 115,
+      "website": "https://www.8108kyoto.com/",
+      "ig": "https://www.instagram.com/8108asakusa/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 7,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.8108kyoto.com/",
+        "https://tabelog.com/en/tokyo/A1323/A132301/13280896/",
+        "https://rurubu.jp/andmore/article/18726",
+        "https://irohameguri.jp/food/hatoya-matcha/",
+        "https://www.instagram.com/8108asakusa/",
+        "https://www.instagram.com/8108asakusa_shibuya/",
+        "https://place.line.me/businesses/220596447/menus",
+        "https://visitingcafe.com/",
+        "https://san-tatsu.jp/articles/388896/",
+        "https://rocketnews24.com/2024/01/26/2162087/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066461-d25442784-Reviews-Hatoya_Asakusa-Taito_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://wanderlog.com/place/details/5773012/hatoya-asakusa",
+        "https://becomingtia.com/hatoya/"
+      ]
+    },
+    {
+      "name": "Kagura Chaka Petit (Asakusa)",
+      "nameJp": "かぐらちゃかプチ 浅草店",
+      "city": "Tokyo",
+      "area": "Nishi-Asakusa, Taito-ku (International Street / Kokusai-dori)",
+      "founded": "July 2016 (Heisei 28)",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Universe's Thickest Matcha Latte (宇宙一濃い抹茶ラテ) — 8 selectable intensity levels; Level 8 'interdimensional' only unlocked after finishing Level 7",
+          "priceYen": 864
+        },
+        {
+          "item": "Kagura Chaka Parfait (custom build-your-own: pick 5 of 21-24 toppings — mochi, pudding, jelly, gelato; marketed as '2 trillion combinations')",
+          "priceYen": 850
+        },
+        {
+          "item": "Matcha Toast Set (uses bread from Pelican bakery est. 1942; topped with matcha powder, matcha gelato, anko, butter, mochi bear)",
+          "priceYen": 1200
+        },
+        {
+          "item": "Warabi-mochi Matcha au Lait drink (わらび餅ドリンク抹茶オレ)",
+          "priceYen": 650
+        },
+        {
+          "item": "Mizu-yokan Affogato (水ようかんアフォガード)",
+          "priceYen": 700
+        },
+        {
+          "item": "Fresh Matcha Beer (生抹茶ビール)",
+          "priceYen": null
+        }
+      ],
+      "famousFor": "The \"Universe's thickest matcha latte\" with 8 customizable concentration levels (using single-origin Nishio/Aichi matcha), plus a fully customizable Japanese parfait. A small (4-counter-seat) Instagram-famous takeout matcha stand popular with international tourists.",
+      "unique": "Two highly borrowable, ownable concepts: (1) a gamified 8-level matcha-intensity ladder with a 'finish level 7 to unlock the interdimensional level 8' mechanic that drives social-media bragging/challenge content and upsell pricing (¥500-¥1,100); and (2) a fully build-your-own parfait where guests pick 5 of 21-24 toppings, marketed as '2 trillion combinations' — turning customization into a shareable, no-two-alike experience. Both are cheap to operate, takeout-friendly, and engineered for UGC/virality rather than relying on premium real estate.",
+      "popularity": "Active Instagram @kagurachaka ~7,000 followers / 1,800+ posts; Tabelog 3.23-3.25 with ~89 reviews; Tripadvisor 4.8/5 (12 reviews), ranked #374 of 4,745 restaurants in Taito; Yahoo Maps 4.2 (77 reviews). Frequently featured in Asakusa matcha-cafe roundups and Japanese gourmet blogs (2024 reviews present). Tourist favorite but a niche/local-famous spot, not Michelin or nationally iconic.",
+      "rating": 4.2,
+      "reviews": 77,
+      "website": "",
+      "ig": "https://www.instagram.com/kagurachaka/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 5,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.instagram.com/kagurachaka/",
+        "https://tabelog.com/en/tokyo/A1311/A131102/13184130/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066461-d12534471-Reviews-Kagurachaka_Petit-Taito_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://irohameguri.jp/food/kagurachaka/",
+        "https://kaigyou.kojincafe.com/series/series2-27/",
+        "https://gourmetyossy-blog.com/2024/08/27/47941/",
+        "https://map.yahoo.co.jp/v3/place/XclQiExEk5Y",
+        "https://www.navitime.co.jp/poi?spot=02022-1141010",
+        "https://retty.me/area/PRE13/ARE9/SUB902/100001318624/"
+      ]
+    },
+    {
+      "name": "MATCHA&",
+      "nameJp": "マッチャアンド（抹茶アンド）清澄白河店",
+      "city": "Tokyo",
+      "area": "Kiyosumi-Shirakawa, Koto-ku (inside the \"MITSUME / MITUME\" creative space, 1-15-1 Tokiwa)",
+      "founded": "August 30, 2024 (Reiwa 6); launched simultaneously with a London location. Tokyo cafe renewed/expanded Feb 2026.",
+      "realAndOperating": true,
+      "famousFor": "Being the self-described first matcha brand to blend premium 100% Uji matcha with fermented foods (miso, amazake, koji) and global superfoods into modern hand-whisked lattes. Best known for the savory-sweet Miso Matcha Latte (Uji matcha + white miso + oat milk + millet/cane sugar), and for its vegan, wellness-forward \"Matcha and something more\" concept bridging London and Tokyo.",
+      "unique": "A genuinely novel \"matcha x fermentation x superfood\" platform that treats matcha as a base for endless flavor pairings rather than a finished drink. Borrowable ideas: (1) the Miso Matcha Latte savory-sweet category, which reviewers compare to salted burnt-caramel; (2) a modular \"&\" naming/menu system (Amazake&, Kinako&, Black Sesame&, Turmeric-Ginger&, Banana&) that makes line extensions feel like a brand world; (3) fully vegan formulation using oat milk + millet/cane sugar instead of dairy/refined sugar; (4) hand-whisked-but-not-ceremony ritual that is fast and approachable; (5) a tight retail funnel — same blends sold as canned matcha powders (30g ¥3,300 / 100g ¥6,600) + whisk (¥2,900) via an online store, turning the cafe taste into a take-home product; (6) a dual London/Tokyo identity that uses overseas matcha hype to drive inbound tourist visits to the Tokyo flagship.",
+      "signatures": [
+        {
+          "item": "Miso Matcha Latte (みそ抹茶ラテ) — Uji matcha + white miso + oat milk + millet/cane sugar; signature savory-sweet drink",
+          "priceYen": 880
+        },
+        {
+          "item": "Amazake Matcha Latte (甘酒抹茶ラテ) — fermented-rice amazake for gentle natural sweetness",
+          "priceYen": 880
+        },
+        {
+          "item": "Kinako Matcha Latte (きなこ抹茶ラテ) — roasted soybean flour",
+          "priceYen": 880
+        },
+        {
+          "item": "Black Sesame Matcha Latte (黒ごま抹茶ラテ)",
+          "priceYen": 880
+        },
+        {
+          "item": "Turmeric Ginger Matcha Latte (ターメリックジンジャー抹茶ラテ) — seasonal wellness/winter item",
+          "priceYen": 880
+        },
+        {
+          "item": "Iced Matcha / 冷やし抹茶 — straight Uji matcha (entry drink)",
+          "priceYen": 600
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 24,
+      "popularity": "Tabelog score 3.08 (14 reviews). Google Maps 4.4 stars (~24 reviews) with strongly positive, repeat-visit reviews (\"by far the best matcha I ever had,\" \"excellent matcha and really warm service\"). Featured by the official Tokyo travel guide GO TOKYO and multiple matcha-media roundups; covered by PR Times press releases. Expanding fast — second Tokyo stand opened near Yotsuya Sept 2025; dual London + Tokyo presence draws inbound tourists. Instagram @matchaand_tokyo (plus @matchaand_london ~390 followers and @matchabox_matchaand sub-brand); follower counts modest, so fame is more critic/press/tourist-driven than mass-viral. No Michelin/major awards found.",
+      "website": "https://matchaand.com/",
+      "ig": "https://www.instagram.com/matchaand_tokyo/",
+      "uniquenessScore": 8.5,
+      "popularityScore": 5,
+      "confidence": 0.85,
+      "sources": [
+        "https://tabelog.com/en/tokyo/A1312/A131201/13300910/",
+        "https://matchaand.com/en/pages/cafe",
+        "https://matchaand.com/ja/pages/cafe",
+        "https://matchaand.com/en",
+        "https://www.gotokyo.org/en/new-and-now/new-and-trending/251222/topics.html",
+        "https://wanderlog.com/place/details/11798335/%E6%8A%B9%E8%8C%B6%E3%82%A2%E3%83%B3%E3%83%89%E6%B8%85%E6%BE%84%E7%99%BD%E6%B2%B3-matcha-kiyostmishirakawa",
+        "https://prtimes.jp/main/html/rd/p/000000002.000148589.html",
+        "https://prtimes.jp/main/html/rd/p/000000004.000148589.html",
+        "https://matcha-times.jp/2025/06/05/kiyosumi-shirakawa-matcha-cafes/",
+        "https://www.instagram.com/matchaand_tokyo/",
+        "https://www.instagram.com/matchaand_london/",
+        "https://www.enjoytokyo.jp/news/202533/"
+      ]
+    },
+    {
+      "name": "d:matcha Kyoto",
+      "nameJp": "ディーマッチャ京都 和束（d:matcha Kyoto CAFE & KITCHEN）",
+      "city": "Kyoto",
+      "area": "Wazuka Town (和束町), Soraku District, southern Kyoto Prefecture — historic tea-growing region / Japanese landscape heritage site",
+      "founded": "D-matcha Corporation established June 2016; cafe opened April 2017 (relocated within Wazuka in 2023)",
+      "realAndOperating": true,
+      "famousFor": "A tea-farmer-run matcha cafe and tea-farm-experience operator in Wazuka. Famous for its signature savory matcha \"extra-dry tantanmen\" (homemade brown-rice noodles milled with their own matcha, topped with 6-7g of finely ground matcha) and for immersive farm-to-cup tea tours, tea-picking, and freshly whisked matcha tastings using 100% Wazuka-grown tea.",
+      "unique": "Vertically integrated \"farm-to-cup\" model: they grow the tea, run the cafe, sell e-commerce worldwide, and host reservation-only tea-farm tours with English-speaking guides. Borrowable ideas: (1) savory matcha applications — milling your own matcha into noodles/pasta for a nutty, umami-rich dish rather than only sweets; (2) concentration-graded (\"濃度別\") matcha tasting flights from light to ultra-rich; (3) a \"MATCHA 55\" parfait showcasing many matcha-flavor gradations; (4) bundling local-farm salad/veg with every set to tell a terroir story; (5) experience-as-product (tours + picking) monetized separately from the cafe.",
+      "signatures": [
+        {
+          "item": "Matcha Extra-Dry Tantanmen Set (homemade matcha brown-rice noodles + 6-7g finely ground matcha, with drink & dessert)",
+          "priceYen": 2000
+        },
+        {
+          "item": "Green Tea & Perilla (shiso) Genovese Pasta Set with squid, drink & dessert",
+          "priceYen": 2000
+        },
+        {
+          "item": "Slow-Cooked Mild Chicken Curry Set (domestic chicken thigh), with drink & dessert",
+          "priceYen": 2000
+        },
+        {
+          "item": "MATCHA 55 Parfait (matcha parfait showcasing many matcha-flavor gradations)",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha Tiramisu",
+          "priceYen": null
+        },
+        {
+          "item": "Sakura Marble Matcha Cheesecake",
+          "priceYen": null
+        }
+      ],
+      "popularity": "Strong fame within the matcha/tea-tourism niche but not a mass-market icon. Tripadvisor #1 of 10 restaurants in Wazuka (tea-farm experiences 4.8, cafe 4.7); Tabelog 3.25 (35 reviews); Instagram @dmatcha_kyoto ~18K followers with 1,300+ posts; international e-commerce/brand reach and multiple outlets (Wazuka, Demachiyanagi, Sapporo). No Michelin star noted.",
+      "rating": 3.25,
+      "reviews": 35,
+      "website": "https://dmatcha.jp/",
+      "ig": "https://www.instagram.com/dmatcha_kyoto/",
+      "uniquenessScore": 8.5,
+      "popularityScore": 5.5,
+      "confidence": 0.82,
+      "sources": [
+        "https://dmatcha.jp/",
+        "https://dmatcha.jp/pages/store-information",
+        "https://tabelog.com/en/kyoto/A2607/A260705/26028965/",
+        "https://tabelog.com/en/kyoto/A2607/A260705/26028965/dtlmenu/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1121282-d12420415-Reviews-D_matcha_Kyoto_CAFE_KITCHEN-Wazuka_cho_Soraku_gun_Kyoto_Prefecture_Kinki.html",
+        "https://www.tripadvisor.com/Attraction_Review-g1121282-d34129253-Reviews-D_matcha_Kyoto_Tea_Farm_Experiences-Wazuka_cho_Soraku_gun_Kyoto_Prefecture_Kink.html",
+        "https://www.instagram.com/dmatcha_kyoto/",
+        "https://ochanokyoto.jp/spot/detail.php?sid=652"
+      ]
+    },
+    {
+      "name": "Kasho-an (Classic Tea & Cocktails Gion Shinbashi)",
+      "nameJp": "何生庵 ぎをん新橋（CLASSIC TEA & COCKTAILS）",
+      "city": "Kyoto",
+      "area": "Gion / Gion Shinbashi, Higashiyama Ward (46 Motoyoshicho, near Tatsumibashi / 3-min walk from Gion-Shijo Station)",
+      "founded": "Autumn (Fall) 2021",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Green Soda — freshly whisked matcha + botanical gin (sparkling, signature)",
+          "priceYen": null
+        },
+        {
+          "item": "Drinking Wagashi (飲む和菓子) — matcha + tequila",
+          "priceYen": null
+        },
+        {
+          "item": "Gosho-guruma (御所車) — matcha + brandy",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha & Rose — matcha + rose-petal herbal tea (non-alcoholic / mocktail)",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha Margarita / Wagashi Margarita (cited by Google reviewers)",
+          "priceYen": null
+        },
+        {
+          "item": "Retail matcha sold in-house: Koimaro ¥1,620; Wakaroku-no-mukashi ¥3,564; Yachiyo-mukashi ¥3,240; Manzu-no-mukashi ¥6,480",
+          "priceYen": 1620
+        }
+      ],
+      "famousFor": "Japan's first bar built around cocktails made from freshly whisked (usucha-style) matcha blended with spirits — a literal fusion of the tea-ceremony world with bartending, served by daylight in a hidden traditional Gion machiya with a garden view.",
+      "unique": "The borrowable core idea: open in the MORNING/daytime (10:00-17:00) on purpose because natural light is the only way matcha's vivid green reads beautifully in the glass — nighttime bar lighting kills the color. Founder Oogi Tomosuke whisks matcha fresh per drink and treats matcha (not the spirit) as the lead ingredient so tea and alcohol mutually amplify each other, rejecting sweetened \"matcha latte\" treatments. Tea-ceremony-trained bartender + English-speaking, omotenashi service, tranquil alley/garden setting. Concept to steal: a \"matcha-forward craft cocktail / drinking-wagashi\" program where each drink pairs one spirit (gin/tequila/brandy) to a single matcha grade, plus a non-alcoholic matcha-and-flower mocktail tier, and retail single-origin matcha sold alongside.",
+      "popularity": "Niche but well-loved hidden gem. Google Maps 4.7/5 (62 reviews); Tabelog 3.08-3.09/5 (9 reviews), no Michelin or Tabelog award; Instagram @matcha.bar.classicteacocktails ~491 followers / ~23 posts (plus secondary handle @matchabarjapan); featured on Wanderlog and Kyoto matcha-cafe travel roundups as a craft matcha-cocktail standout praised for quality over gimmick. Not a mass-market icon — known to in-the-know visitors and matcha enthusiasts.",
+      "rating": 4.7,
+      "reviews": 62,
+      "website": "https://shop.chanoma.co.jp/special/detail/118",
+      "ig": "https://www.instagram.com/matcha.bar.classicteacocktails/",
+      "uniquenessScore": 8.5,
+      "popularityScore": 4,
+      "confidence": 0.83,
+      "sources": [
+        "https://shop.chanoma.co.jp/special/detail/118 (official feature page — concept, founder Oogi Tomosuke, four signature cocktails, fall 2021 opening, morning/daylight rationale, retail matcha prices)",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26037299/ (Tabelog: score 3.08-3.09/5, 9 reviews, hours Wed-Sun 10:00-17:00 L.O.16:30, closed Mon/Tue, budget ¥1,000-1,999, category Bar, no awards)",
+        "https://retty.me/area/PRE26/ARE112/SUB11201/100001627165/ (Retty: address 46 Motoyoshicho Higashiyama-ku, café listing, closed Mon/Tue)",
+        "https://wanderlog.com/place/details/6017398/premium-matcha--bar-kashoan-classic-tea--cocktails (Google rating 4.7/5, 62 reviews; review highlights, signature drinks)",
+        "https://www.instagram.com/matcha.bar.classicteacocktails/ (official Instagram, ~491 followers / ~23 posts; login-walled in browser, follower count via search snippet)",
+        "https://www.instagram.com/matchabarjapan/ (secondary/related Instagram handle)",
+        "https://www.facebook.com/classictea.cocktails/ (official Facebook page, Kyoto)"
+      ]
+    },
+    {
+      "name": "Restaurant 1899 Ochanomizu",
+      "nameJp": "レストラン1899お茶の水",
+      "city": "Tokyo",
+      "area": "Kanda-Surugadai, Chiyoda (Ochanomizu)",
+      "founded": "Restaurant opened 2014; name \"1899\" from parent Ryumeikan, the hotel company founded in 1899 (Meiji 32)",
+      "realAndOperating": true,
+      "famousFor": "House-brand \"1899 Matcha Maccha Beer\" (a patent-pending green-tea beer) and \"eating tea\" (茶を食す) cuisine that uses tea leaves as a cooking ingredient; seasonal Matcha Beer Garden and all-tea afternoon tea",
+      "unique": "The hook is treating tea as an edible ingredient rather than just a beverage: signature 1899 Matcha Beer (matcha whisked into beer for aroma masking + catechins/theanine, marketed as a healthier beer), plus a whole \"matcha beer garden\" format with ~40 tea-themed dishes (matcha cheese seafood pizza, hojicha spare ribs, salmon cutlet with matcha tartar, matcha black beer, hojicha black beer). Borrowable concepts: matcha/hojicha craft beer line, tea-sommelier (\"chabarie\") service brewing single cups, a seasonal limited \"matcha beer garden\" event, and savory tea-infused dishes — all strong, differentiated, easy-to-borrow ideas for a pop-up matcha brand.",
+      "signatures": [
+        {
+          "item": "1899 Matcha Beer (抹茶ビール) — signature green tea beer, patent-pending",
+          "priceYen": null
+        },
+        {
+          "item": "Meat-focused Matcha Beer Garden Middle Plan (tea appetizers, salad, meat plate, ice cream)",
+          "priceYen": 6000
+        },
+        {
+          "item": "All-you-can-drink plan (120 min, includes tea cocktails/mocktails)",
+          "priceYen": 3500
+        },
+        {
+          "item": "Matcha Cheese Seafood Pizza",
+          "priceYen": 1500
+        },
+        {
+          "item": "Hojicha-infused Spare Ribs",
+          "priceYen": 2000
+        },
+        {
+          "item": "Salmon Rare Cutlet with Matcha Tartar Sauce",
+          "priceYen": 1300
+        }
+      ],
+      "popularity": "Well-known niche/iconic in Tokyo as the original \"matcha beer / eating tea\" spot since 2014; covered by media (Cotrip, blogs) and on Tabelog English, Tripadvisor, Hot Pepper, Gurunavi, Uber Eats. Tabelog 3.49 (607 reviews); Hot Pepper 4.2 (~551-573 reviews); Tripadvisor ~4.0-4.2; Instagram @1899_official ~17K followers. No Michelin star found. Known for queues/time-limited seating in reviews.",
+      "rating": 3.49,
+      "reviews": 607,
+      "website": "https://1899.jp/ochanomizu/",
+      "ig": "https://www.instagram.com/1899_official/",
+      "uniquenessScore": 8.5,
+      "popularityScore": 6.5,
+      "confidence": 0.86,
+      "sources": [
+        "https://1899.jp/ochanomizu/",
+        "https://1899.jp/ochanomizu/matcha-beergarden/",
+        "https://1899.jp/ochanomizu/en/menu/maccha-beer/",
+        "https://1899.jp/ochanomizu/about/",
+        "https://tabelog.com/en/tokyo/A1310/A131002/13170863/",
+        "https://www.hotpepper.jp/strJ001099591/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066443-d6983707-Reviews-Restaurant_1899_Ochanomizu-Chiyoda_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://www.instagram.com/1899_official/",
+        "https://nihonchaseikatsu.com/introduce/restaurant1899/",
+        "https://co-trip.jp/article/691840"
+      ]
+    },
+    {
+      "name": "Tokyo Saryo",
+      "nameJp": "東京茶寮",
+      "city": "Tokyo",
+      "area": "Sangenjaya (Kamiuma), Setagaya",
+      "founded": "2017 (opened January 5, 2017)",
+      "realAndOperating": true,
+      "famousFor": "The world's first hand-drip Japanese green tea (sencha) specialty cafe — brewing single-origin sencha pour-over style like specialty coffee, served as a temperature-progression tasting flight.",
+      "unique": "BORROWABLE CONCEPT (very rich): \"Hand-drip tea\" reframes Japanese sencha as a specialty-coffee-style ritual. They invented a proprietary branded brewing tool (GREEN DRIPPER) that holds the poured water inside to steam the leaves — a productizable, sellable object. The signature tasting format takes ONE single-origin leaf and serves it as THREE different drinks: 1st infusion at 70°C (sweet/umami), 2nd at 80°C (astringent/aroma), 3rd blended with genmaicha (roasted rice) — teaching customers how temperature transforms a single leaf. Combined with a minimalist white U-shaped counter where a \"tea barista\" brews in front of you, single-origin sourcing by farm/cultivar/steaming/roasting, and a strong design-led brand (run by design firm LUCY ALTER DESIGN) with a retail arm (Senchado Tokyo) selling single-origin teas in display-window glass jars. Highly translatable to a matcha context: a 'hand-drip matcha flight,' a branded brewing/whisking tool, single-origin matcha by farm/cultivar, and counter-side preparation as theater.",
+      "signatures": [
+        {
+          "item": "Sencha 2-variety tasting flight + tea confection (same leaf served at 70°C, 80°C, then as genmaicha)",
+          "priceYen": 1400
+        },
+        {
+          "item": "Sencha 1-variety + tea confection",
+          "priceYen": 900
+        },
+        {
+          "item": "Take-out iced tea",
+          "priceYen": 450
+        }
+      ],
+      "popularity": "Cult/iconic design-press darling rather than a queue-driven mass attraction. Widely covered in English-language Tokyo guides (Time Out, goop, When in Tokyo, Savvy Tokyo, Japan Travel) and Japanese media (Yahoo Life Magazine, XD, goodroom, Santatsu). Pioneered the now-widely-imitated 'hand-drip Japanese tea' category. Tabelog score 3.11 with ~40-42 reviews (a low number typical of a tiny 9-seat reservation-only tearoom). Sister/parent brand Senchado Tokyo Instagram (@senchado_tokyo) ~44K followers; dedicated @tokyosaryo ~3,100 followers. No Michelin star. Tiny footprint (9 seats), now open on an irregular/reduced schedule (Sundays per latest site info), reservation-recommended.",
+      "rating": 3.11,
+      "reviews": 42,
+      "website": "https://www.tokyosaryo.jp/",
+      "ig": "https://www.instagram.com/tokyosaryo/",
+      "uniquenessScore": 9,
+      "popularityScore": 6.5,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.tokyosaryo.jp/",
+        "https://tabelog.com/en/tokyo/A1317/A131706/13204215/",
+        "https://shop.senchado.jp/pages/tokyosaryo",
+        "https://www.instagram.com/tokyosaryo/",
+        "https://www.instagram.com/senchado_tokyo/",
+        "https://lifemagazine.yahoo.co.jp/articles/6413",
+        "https://fashionmarketingjournal.com/2017/01/greenbrewing-tokyosaryo.html",
+        "https://exp-d.com/interview/6097/",
+        "https://www.timeout.com/tokyo/restaurants/tokyo-saryo",
+        "https://whenin.tokyo/Tokyo-Saryo-Sangenjaya",
+        "https://goop.com/place/japan/sangenjaya/tokyo-saryo"
+      ]
+    },
+    {
+      "name": "Hatoya Ryoyosha (8108 Kyoto)",
+      "nameJp": "八十八良葉舎",
+      "city": "Kyoto",
+      "area": "Arashiyama / Sagano (Saga-Tenryuji, Ukyo Ward) — flagship 1 min from Togetsukyo Bridge",
+      "founded": "2019 (brand founded; Arashiyama flagship opened Nov 2, 2024)",
+      "realAndOperating": true,
+      "famousFor": "Premium single-origin Kyoto/Uji matcha served casually as a tea stand — rich, deep-umami matcha lattes whisked to order in front of guests; the Arashiyama flagship adds a riverside terrace and foot bath (ashiyu).",
+      "unique": "Flagship-exclusive \"Matcha Latte Set\" (¥3,000) where the customer whisks their own matcha to finish the drink — turning consumption into a hands-on tea ceremony experience. Also notable: 7 distinct single-origin matcha grades (e.g. Samidori, Ujihikari) offered side-by-side so guests can taste-compare cultivars, a \"specialty-coffee-shop\" framing applied to matcha (founder is an ex-barista), and matcha whisked fresh per order in open view.",
+      "signatures": [
+        {
+          "item": "Matcha Latte Set (whisk-your-own, Arashiyama flagship exclusive, with seasonal sweet)",
+          "priceYen": 3000
+        },
+        {
+          "item": "Matcha Latte (blended)",
+          "priceYen": 600
+        },
+        {
+          "item": "Matcha Latte (hojicha/roasted)",
+          "priceYen": 850
+        },
+        {
+          "item": "Plain matcha (usucha, grade-dependent)",
+          "priceYen": 550
+        },
+        {
+          "item": "88 Pudding (Hachijuhachi pudding)",
+          "priceYen": 650
+        },
+        {
+          "item": "Financier",
+          "priceYen": 600
+        },
+        {
+          "item": "Matcha Terrine",
+          "priceYen": 800
+        }
+      ],
+      "popularity": "Tabelog 3.16 (52 reviews) for Arashiyama; ~47K Instagram followers (@8108kyoto, ~1,400 posts) plus TikTok and X presence; grew from a 2-tsubo shop in 2019 to 5 locations (Arashiyama, Saga-Arashiyama original, Kiyomizu, Asakusa Tokyo, Kamakura). Founder Maruyama Nobuhiro chaired the Kyoto Tea Industry Youth Association (2022). Widely featured in Japanese media (Rurubu, Co-Trip, Fashion Press, PR Times). No Michelin/Bib Gourmand/Tabelog Hyakumeiten.",
+      "rating": 3.16,
+      "reviews": 52,
+      "website": "https://www.8108kyoto.com/",
+      "ig": "https://www.instagram.com/8108kyoto/",
+      "uniquenessScore": 8,
+      "popularityScore": 6,
+      "confidence": 0.83,
+      "sources": [
+        "https://www.8108kyoto.com/",
+        "https://prtimes.jp/main/html/rd/p/000000049.000112859.html",
+        "https://www.fashion-press.net/news/125873",
+        "https://nihonchaseikatsu.com/introduce/hatoyaryoyousha/",
+        "https://tabelog.com/en/kyoto/A2601/A260403/26042026/",
+        "https://tabelog.com/en/kyoto/A2601/A260403/26033166/",
+        "https://www.instagram.com/8108kyoto/",
+        "https://kinabal.co.jp/en/gokyoto/shop/hatoya_arashiyama/",
+        "https://rurubu.jp/andmore/article/23565",
+        "https://co-trip.jp/article/634037"
+      ]
+    },
+    {
+      "name": "108 Matcha Saro",
+      "nameJp": "一〇八抹茶茶廊 (いちまるはち まっちゃさろう)",
+      "city": "Sapporo",
+      "area": "Originally Sapporo ESTA B1F (JR Sapporo Station); later relocated to Aeon Catepri Shin-Sapporo B2F food court (Atsubetsu Ward). Brand was founded in Asahikawa, Hokkaido. NOTE: all Hokkaido/Sapporo branches are now closed.",
+      "founded": "2013 (Heisei era); 1st store opened in Asahikawa, Hokkaido",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Matcha Custard obanyaki/imagawayaki (抹茶カスタード) — fresh-baked matcha-filled pancake",
+          "priceYen": 180
+        },
+        {
+          "item": "Matcha Umami Azuki obanyaki (抹茶うま味あずき)",
+          "priceYen": 180
+        },
+        {
+          "item": "Double Cream obanyaki (ダブルクリーム)",
+          "priceYen": 160
+        },
+        {
+          "item": "Azuki Cream obanyaki (あずきクリーム)",
+          "priceYen": 160
+        },
+        {
+          "item": "Mix soft serve ice cream (matcha + milk swirl, eat-in)",
+          "priceYen": 397
+        },
+        {
+          "item": "Matcha-infused Sencha drink (抹茶入り煎茶)",
+          "priceYen": 320
+        },
+        {
+          "item": "Kyoto Matcha Warabi Parfait / Matcha Jelly Parfait (京の抹茶わらびパフェ／抹茶ゼリーパフェ) — 5+ parfait varieties; price not published",
+          "priceYen": null
+        },
+        {
+          "item": "Matcha latte / Hojicha latte; matcha cream daifuku; matcha financier & dacquoise (prices not published)",
+          "priceYen": null
+        }
+      ],
+      "famousFor": "Billed as one of Japan's first matcha-sweets specialty shops (founded Hokkaido 2013). Famous for freshly-baked matcha obanyaki/imagawayaki made on-site, matcha & hojicha soft serve, and Kyoto-Uji-matcha parfaits — a takeout-first matcha dessert specialist using organic/whole-leaf matcha positioned as a 'Japanese superfood.'",
+      "unique": "Strong borrowable concept kit: (1) Numerology branding — the kanji for tea 茶 decomposes to 108 (十+十+八十八), and 108 years = 茶寿 'tea longevity' symbolizing health/happiness (also nods to the Buddhist 108 desires); concept tagline 「おいしいお茶のお福分け」(sharing tea's blessings), brand story tied to the folktale Bunbuku Chagama. (2) Signature obanyaki (matcha-filled griddle pancake) cross-sold with matcha drinks — a hot, made-to-order hook most matcha-drink rivals lack, driving impulse + light-meal sales. (3) Takeout-first, small-footprint mall/food-court model that scales into high-traffic locations and overseas franchises without seating. (4) Organic whole-leaf, premium-grade matcha as a wellness/superfood narrative.",
+      "popularity": "Regionally iconic Hokkaido-born brand that scaled nationally and abroad, but the Sapporo flagship era is OVER: original Asahikawa store closed; Sapporo ESTA store closed (ESTA demolished 2023); relocated Catepri Shin-Sapporo store opened Jan 20, 2024 and CLOSED Mar 31, 2025 with a closing sale; the Japan IG was renamed '旧 (former) 108 MATCHA SARO JAPAN.' Tabelog: 3.49 (ESTA, 86 reviews) and 3.04 (Shin-Sapporo, 17 reviews) — both listings marked closed. TripAdvisor 4.1. No Michelin / no Tabelog award (Bronze/Silver/Gold) / no Hyakumeiten. Brand remains active: ~13 stores in Greater Tokyo/Saitama/Kanagawa + ~11 overseas (Taiwan, Singapore, Malaysia, Batam); Singapore IG ~26K followers.",
+      "rating": 4.1,
+      "reviews": 86,
+      "website": "https://www.108matcha-saro.com/",
+      "ig": "https://www.instagram.com/108matchasarojp.matchacafe/",
+      "uniquenessScore": 7,
+      "popularityScore": 5.5,
+      "confidence": 0.82,
+      "sources": [
+        "https://www.108matcha-saro.com/",
+        "http://www.108matcha-saro.com/concept.html",
+        "https://www.108matchasaro-sapporo.com/",
+        "https://tabelog.com/en/hokkaido/A0101/A010101/1049263/",
+        "https://tabelog.com/en/hokkaido/A0101/A010302/1077261/",
+        "https://tabelog.com/en/hokkaido/A0104/A010401/1043441/",
+        "https://www.tripadvisor.com/Restaurant_Review-g298560-d9843393-Reviews-108_Matcha_Saro_Sapporo_Esta-Sapporo_Hokkaido.html",
+        "https://news.yahoo.co.jp/expert/articles/2bc095e83a09c24c2fa49a4f1b09e9a395db106f",
+        "https://www.threads.com/@sapporo_list/post/DHvNc-By-A6/",
+        "https://www.japanesefood-franchise.com/matcha-teacafe/108matchasaro.html",
+        "https://shutaku-design.jp/work/108matcha-saro-asahikawa/",
+        "https://prtimes.jp/main/html/rd/p/000000021.000054859.html",
+        "https://www.instagram.com/108matchasarosg/",
+        "https://www.instagram.com/108matchasaro_jp/"
+      ]
+    },
+    {
+      "name": "Kissako Wazuka",
+      "nameJp": "きっさこ和束",
+      "city": "Kyoto",
+      "area": "Higashiyama Ward (Honmachi), near Shichijo Station, Keihan Line — serves tea sourced from Wazuka, Kyoto's premier tea village",
+      "founded": "",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Matcha + fresh Japanese confectionery (wagashi) set",
+          "priceYen": 850
+        },
+        {
+          "item": "Sencha with Japanese sweets",
+          "priceYen": 850
+        },
+        {
+          "item": "Matcha ice cream served with matcha",
+          "priceYen": 900
+        },
+        {
+          "item": "Hojicha ice cream served with matcha",
+          "priceYen": 900
+        },
+        {
+          "item": "Matcha shiratama zenzai (sweet bean soup with rice dumplings)",
+          "priceYen": 800
+        },
+        {
+          "item": "Matcha Art Experience (whisk your own usucha, then paint on the foam with koicha; ~50 min, max 4 people) — adult",
+          "priceYen": 2300
+        }
+      ],
+      "famousFor": "A renovated ~100-year-old Kyoto machiya tea cafe serving Wazuka-grown Japanese tea (sencha, matcha) and its signature hands-on \"matcha art\" experience where guests draw pictures on their own whisked matcha.",
+      "unique": "The \"matcha art\" experience: you whisk your own light usucha, then paint a picture or characters on the foam surface using thick dark koicha as the \"ink\" — and because it's just matcha, you can re-whisk and redraw endlessly. A genuinely borrowable, low-cost, highly Instagrammable interactive ritual (edible latte-art-meets-calligraphy) that turns drinking matcha into a participatory creative session. Also borrowable: pairing direct-from-farmer single-origin Wazuka tea with a heritage machiya setting (preservation-designated building) plus a 3-tea tasting flight, and a 2nd-floor rentable exhibition/event space.",
+      "popularity": "Modest / niche. No Michelin, awards, or notable queues. Low review volume across platforms: Tabelog 3.06 (7 reviews), Jalan 4.5 (2 reviews), TripAdvisor 4.5 (2 reviews). Active Instagram and Facebook (@kissakowazuka) and listed on Jalan, Hot Pepper, Activity Japan, Spacemarket. Known mainly to matcha-experience seekers and tea enthusiasts rather than the general public.",
+      "rating": 4.5,
+      "reviews": 2,
+      "website": "https://kissako-wazuka.jimdo.com/",
+      "ig": "https://www.instagram.com/kissakowazuka/",
+      "uniquenessScore": 7,
+      "popularityScore": 3,
+      "confidence": 0.82,
+      "sources": [
+        "https://nihonchaseikatsu.com/introduce/kissakowazuka/",
+        "https://nihonchaseikatsu.com/kyototeacafe/",
+        "https://kissako-wazuka.jimdo.com/",
+        "https://tabelog.com/en/kyoto/A2601/A260304/26030202/",
+        "https://www.jalan.net/kankou/spt_guide000000193360/activity/l00004DBBD/",
+        "https://www.jalan.net/kankou/spt_guide000000193360/kuchikomi/",
+        "https://www.tripadvisor.com/Restaurant_Review-g298564-d13429499-Reviews-Kissako_Wazuka-Kyoto_Kyoto_Prefecture_Kinki.html",
+        "https://www.instagram.com/kissakowazuka/",
+        "https://www.facebook.com/kissakowazuka/",
+        "https://www.spacemarket.com/spaces/kissako-wazuka/",
+        "https://wazukanko.com/event/matchaart/"
+      ]
+    },
+    {
+      "name": "Nanaya",
+      "nameJp": "ななや（丸七製茶）",
+      "city": "Fujieda, Shizuoka",
+      "area": "Uchiseto, Fujieda (main store / factory); also Shizuoka Gofukucho, Aoyama Tokyo, Kyoto Sanjo",
+      "founded": "Parent Marushichi Seicha founded 1907 (Meiji era); Nanaya gelato brand / Fujieda store opened 2010",
+      "realAndOperating": true,
+      "famousFor": "The \"world's darkest/strongest matcha gelato\" served in a 7-level intensity gradient (No.1 to No.7), using premium Fujieda-grown Shizuoka matcha. No.7 is the headline item — capped because only top-grade matcha can be pushed to extreme concentration without becoming unpalatably bitter.",
+      "unique": "The numbered 1-to-7 matcha intensity ladder is a brilliant, borrowable concept: it turns \"how strong do you want your matcha?\" into a guided, gamified menu and a photogenic green color-gradient display. No.7 uses leaves costing ~3x No.6 from an Agriculture Minister Prize-winning tea garden, and the \"world's strongest\" claim is defensible because only premium matcha stays delicious at extreme density. The same intensity-tier framework extends across their line (e.g., Premium No.7 tea chocolate). Borrowable: an intensity-numbered menu, a gradient flight/sampler, and a flagship \"max strength\" hero product positioned as a destination/bragging item.",
+      "signatures": [
+        {
+          "item": "Matcha Gelato No.7 (world's strongest, single scoop)",
+          "priceYen": 560
+        },
+        {
+          "item": "Matcha Gelato No.7 (double scoop)",
+          "priceYen": 650
+        },
+        {
+          "item": "Matcha Gelato No.7 (triple scoop)",
+          "priceYen": 700
+        },
+        {
+          "item": "Standard matcha gelato No.1-No.6 (single scoop)",
+          "priceYen": 370
+        },
+        {
+          "item": "Standard matcha gelato (double scoop)",
+          "priceYen": 470
+        },
+        {
+          "item": "Premium No.7 tea chocolate (TEA CHOCOLATE MATCHA 7, gift box)",
+          "priceYen": null
+        }
+      ],
+      "popularity": "High and iconic. Weekend car queues at the Fujieda main store; frequently featured on Japanese TV (e.g., Gacchiri Monday) and food/travel media; multi-city expansion (Shizuoka, Tokyo Aoyama, Kyoto Sanjo, plus an overseas Brisbane presence). Selected for Tabelog Ice Cream/Gelato \"Tabelog 100\" 2023. Multiple official Instagram accounts per store.",
+      "rating": 3.51,
+      "reviews": 520,
+      "website": "https://nanaya-matcha.com/",
+      "ig": "https://www.instagram.com/nanaya_fujieda/",
+      "uniquenessScore": 9,
+      "popularityScore": 8,
+      "confidence": 0.9,
+      "sources": [
+        "https://nanaya-matcha.com/",
+        "https://tabelog.com/en/shizuoka/A2203/A220301/22018670/",
+        "https://cake.tokyo/16931",
+        "https://nihonchaseikatsu.com/introduce/nanayashizuoka/",
+        "https://www.sakuyaoi.com/entry/nanayashizuoka",
+        "https://co-trip.jp/spot/74788",
+        "https://www.instagram.com/nanaya_fujieda/",
+        "https://www.instagram.com/nanaya_aoyama/",
+        "https://www.instagram.com/nanaya_kyoto/",
+        "https://www.instagram.com/nanaya_shizuoka/",
+        "https://map.yahoo.co.jp/v3/place/fOAKks35mvw/review",
+        "https://www.marushichi-group.jp/shop/default.asp",
+        "https://carapeko.com/gattiri-mattya"
+      ]
+    },
+    {
+      "name": "Suzukien x Nanaya (Asakusa)",
+      "nameJp": "壽々喜園×ななや 浅草本店",
+      "city": "Tokyo",
+      "area": "Asakusa (Taito Ward) — 3-4-3 Asakusa, near Sensoji Temple",
+      "founded": "Tea house (Suzukien): late Edo period, c.1848 (Kaei era), 150+ years; Suzukien×Nanaya matcha-gelato collaboration shop opened Jan 4, 2016",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Matcha Gelato No.1–No.6 (high-grade matcha, escalating intensity), single cup",
+          "priceYen": 390
+        },
+        {
+          "item": "Matcha Gelato No.1–No.6, double cup",
+          "priceYen": 500
+        },
+        {
+          "item": "Matcha Gelato Premium No.7 — 'world's richest matcha gelato' (uses Minister of Agriculture award-winning matcha ~¥150,000/kg), single cup",
+          "priceYen": 590
+        },
+        {
+          "item": "Matcha Gelato No.7 double (paired with one non-No.7 flavor)",
+          "priceYen": 680
+        },
+        {
+          "item": "Cone upgrade (add-on to any cup)",
+          "priceYen": 20
+        },
+        {
+          "item": "Four-types matcha an-dango (matcha-bean dumplings) with sencha set",
+          "priceYen": 500
+        }
+      ],
+      "famousFor": "The \"world's richest matcha gelato\" — seven graded intensity levels (No.1 to No.7), where No.7 is roughly 7x the matcha concentration of ordinary premium matcha gelato and pushes past the No.5 'richness limit' that the gelato industry considers the point where gelato can no longer set.",
+      "unique": "The graded 1-to-7 intensity ladder is a brilliant borrowable concept: it turns matcha richness into a gamified, photogenic spectrum (a visual gradient of green) that drives upsell (pay more for No.7), repeat visits to 'climb' the scale, and viral social content. It pairs a 150-year-old Asakusa tea wholesaler (Suzukien / Tokyo Tea Wholesale Co.) with a Shizuoka matcha-sweets maker (Nanaya, matcha sourced from Marushichi Seicha, est. 1907), using single contract-farm matcha for consistency — and anchors a premium tier with genuinely award-winning (Minister of Agriculture) matcha. The model: heritage tea brand + dessert collaborator + a tiered 'how intense can you go' menu architecture.",
+      "popularity": "Iconic Asakusa tourist destination with frequent queues; featured on Japanese TV (Matsuko no Shiranai Sekai) and covered by Hanako, Colocal, Rurubu, GIGAZINE, MATCHA, etc. Instagram @suzukien.asakusa ~10K followers. Selected for Tabelog Ice Cream/Gelato 'Tabelog 100' (2023). Cross-platform praise: Tripadvisor 4.5/5 (183 reviews, #17 of 800 Asakusa restaurants), Facebook 98% recommend (619 reviews).",
+      "rating": 3.69,
+      "reviews": 1405,
+      "website": "https://www.suzukien.tokyo/",
+      "ig": "https://www.instagram.com/suzukien.asakusa/",
+      "uniquenessScore": 9,
+      "popularityScore": 9,
+      "confidence": 0.88,
+      "sources": [
+        "https://www.tocha.co.jp/",
+        "https://www.suzukien.tokyo/",
+        "https://www.suzukien.tokyo/view/company",
+        "https://tabelog.com/en/tokyo/A1311/A131102/13153620/",
+        "https://www.instagram.com/suzukien.asakusa/",
+        "https://colocal.jp/news/61163.html",
+        "https://namalog.jeez.jp/namalog/suzukien/",
+        "https://rurubu.jp/andmore/article/4171",
+        "https://gigazine.net/gsc_news/en/20160906-suzukien-matcha-gelato/",
+        "https://magazineworld.jp/hanako/comme-ca/newshop1104-2/",
+        "https://www.tripadvisor.com/Restaurant_Review-g14134311-d7494173-Reviews-Suzukien_Asakusa_Honten-Asakusa_Taito_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://matcha-jp.com/en/1632"
+      ]
+    },
+    {
+      "name": "Kagurazaka Saryo",
+      "nameJp": "神楽坂 茶寮",
+      "city": "Tokyo",
+      "area": "Kagurazaka (Honten, Kakurenbo Yokocho, Shinjuku-ku); also Shibuya Scramble Square 14F and Ikebukuro Sunshine City",
+      "founded": "2003 (Honten relocated and renewed March 18, 2022)",
+      "realAndOperating": true,
+      "famousFor": "Authentic Japanese tea house (nihoncha cafe) famous for Kyoto Uji matcha desserts. Credited as the pioneer (\"hitsuke-yaku\") of the matcha fondue trend in Japan, and now best known for its freshly-extruded \"Hekira\" matcha Mont Blanc pressed to order at the counter into silk-fine green strands.",
+      "unique": "Two strongly borrowable concepts. (1) Theater dessert: the \"Hekira\" matcha Mont Blanc is extruded to order in front of the guest from a press, forming silk-thread-fine matcha+chestnut cream over a Japanese-garden-styled plate — a performance/made-to-order moment that drives queues and social video. (2) Matcha fondue: a warm Kyoto Uji matcha + white-chocolate fondue served with mochi, shiratama dumplings, strawberries, house pastry and vanilla ice cream for dipping — they originated this format in Japan. Also borrowable: a curated 'kiki-cha' tea flight from named famous tea estates (Marukyu Koyamaen, Sasaki Seicha, Chiran tea garden) with Shizuoka/Kyoto/Kagoshima terroir cards, and a parfait plated to evoke a Japanese garden.",
+      "signatures": [
+        {
+          "item": "Hekira matcha freshly-extruded Mont Blanc (pressed to order at counter), Japanese tea set",
+          "priceYen": 2420
+        },
+        {
+          "item": "Hekira matcha Mont Blanc, matcha/gyokuro set",
+          "priceYen": 2530
+        },
+        {
+          "item": "saryo Parfait (matcha ice cream, matcha jelly, matcha pudding, genmaicha ice; garden-styled), Japanese tea set",
+          "priceYen": 1760
+        },
+        {
+          "item": "saryo Parfait, matcha/gyokuro set",
+          "priceYen": 1870
+        },
+        {
+          "item": "Kyo-matcha (Uji matcha + white chocolate) chocolate fondue, a la carte (the dish they pioneered)",
+          "priceYen": 1020
+        },
+        {
+          "item": "Chocolat matcha parfait, Japanese tea set",
+          "priceYen": 1870
+        },
+        {
+          "item": "Kyo-matcha frozen s'more (matcha ice + granola in toasted marshmallow), Japanese tea set",
+          "priceYen": 1485
+        },
+        {
+          "item": "Marukyu Koyamaen matcha 'Isuzu' (whisked bowl)",
+          "priceYen": 990
+        },
+        {
+          "item": "Gyokuro 'Suiryoku' (Marukyu Koyamaen, served low-temperature)",
+          "priceYen": 990
+        },
+        {
+          "item": "Kiki-cha ice cream flight (matcha / sencha / genmaicha), Japanese tea set",
+          "priceYen": 1375
+        }
+      ],
+      "popularity": "Long-running and well-known Tokyo matcha-cafe icon. Honten draws weekend queues (often ~10 groups before opening); featured across Tabelog, Tripadvisor, Time Out Tokyo and many matcha-cafe roundups. Multiple Tokyo locations plus overseas branches in Milan, Toronto and Bangkok. No Michelin or Tabelog Hyakumeiten designation found.",
+      "rating": 3.55,
+      "reviews": 772,
+      "website": "https://saryo.jp/",
+      "ig": "https://www.instagram.com/kagurazaka_saryo/",
+      "uniquenessScore": 8,
+      "popularityScore": 7,
+      "confidence": 0.88,
+      "sources": [
+        "https://saryo.jp/",
+        "https://saryo.jp/wp/wp-content/themes/saryo/pdf/menu_honten.pdf",
+        "https://tabelog.com/en/tokyo/A1309/A130905/13268377/",
+        "https://tabelog.com/en/tokyo/A1303/A130301/13240659/",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066457-d1663342-Reviews-Kagurazaka_Saryo_Honten-Shinjuku_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://www.instagram.com/kagurazaka_saryo/",
+        "https://www.favy.jp/topics/17600",
+        "https://ichigaya.keizai.biz/headline/3259/",
+        "https://nihonchaseikatsu.com/introduce/kagurazakasaryohonten/",
+        "https://saryo.jp/2022/11/04/1131/"
+      ]
+    },
+    {
+      "name": "Gion Komori",
+      "nameJp": "ぎをん 小森",
+      "city": "Kyoto",
+      "area": "Gion (Gion Shinbashi, Higashiyama Ward) — along the Shirakawa stream in the Traditional Buildings Preservation District",
+      "founded": "Opened as the current kanmidokoro (sweets parlor) roughly in the late 1990s; the building previously operated as an ochaya (geisha teahouse) for years until about 28 years ago when it was converted",
+      "realAndOperating": true,
+      "famousFor": "Kyoto-style matcha and warabi-mochi sweets served inside a beautifully preserved former geisha teahouse (machiya) overlooking the Shirakawa stream. Best known for its warabi mochi (made fresh each morning from 100% warabi powder) and its tower-like layered matcha/warabi parfaits.",
+      "unique": "The whole experience is built around dining inside an authentic ex-ochaya machiya — bengara red-lattice facade, tatami rooms where you remove your shoes, a small well, a tsuboniwa courtyard garden, and the sound of the Shirakawa stream right outside. The borrowable concepts: (1) warabi mochi made-to-order/fresh-daily from 100% pure warabi powder as a hero product with extreme texture quality, and (2) a \"Japanese-meets-Western\" layered parfait architecture (warabi mochi + tokinako kinako, bean paste, matcha chiffon, agar, matcha jelly, bavarois) that turns a humble wagashi into a photogenic dessert tower. The setting-as-product idea — converting a heritage teahouse into an atmospheric sweets cafe over running water — is itself highly borrowable.",
+      "signatures": [
+        {
+          "item": "Warabi Mochi Parfait (わらびもちパフェ) — signature, layered with kinako, bean paste, matcha elements",
+          "priceYen": 1800
+        },
+        {
+          "item": "Matcha Bavarois Parfait (抹茶ババロアパフェ)",
+          "priceYen": 1700
+        },
+        {
+          "item": "Matcha Warabi Mochi (抹茶わらびもち)",
+          "priceYen": 1500
+        },
+        {
+          "item": "Komori Anmitsu (小森あんみつ)",
+          "priceYen": 1400
+        },
+        {
+          "item": "Warabi Mochi Zenzai (わらびもちぜんざい) — sweet red bean soup",
+          "priceYen": 1200
+        },
+        {
+          "item": "Matcha Ice Cream (抹茶アイス)",
+          "priceYen": 900
+        }
+      ],
+      "popularity": "Highly famous and iconic in Gion's matcha-sweets scene. Selected as a Tabelog Hyakumeiten (Top 100 / \"Japanese Sweets & Cafe WEST\" Select) in 2023. Routinely featured in \"best matcha parfait in Gion/Kyoto\" magazine and Tabelog roundups. Tabelog rating 3.66 with 1,513 reviews (very high review volume for a wagashi cafe); Tripadvisor 4.2/5 with ~97 reviews, ranked #20 of 975 dessert spots in Kyoto. Typical ~10-minute queues; no reservations, cash only, 124 seats including tatami.",
+      "rating": 4.2,
+      "reviews": 97,
+      "website": "https://www.giwon-komori.com/",
+      "ig": "https://www.instagram.com/explore/locations/662314726/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 8,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.giwon-komori.com/ (official site)",
+        "https://www.giwon-komori.com/?mode=f2 (official menu/prices)",
+        "https://www.giwon-komori.com/?mode=f1 (official 'philosophy/history' page)",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26000280/ (Tabelog: 3.66, 1,513 reviews, Hyakumeiten 2023, address/hours)",
+        "https://www.tripadvisor.com/Restaurant_Review-g298564-d3749729-Reviews-Gion_Komori-Kyoto_Kyoto_Prefecture_Kinki.html (Tripadvisor 4.2, #20/975)",
+        "https://www.gltjp.com/en/directory/item/17188/ (Good Luck Trip: former teahouse, warabi mochi made fresh daily)",
+        "https://ikidane-nippon.com/en/spots/gion-komori",
+        "https://www.kyoto-kankou.or.jp/info_search/7745 (Kyoto Tourism Federation)",
+        "https://www.facebook.com/giwonkomori/",
+        "https://twitter.com/giwon_komori"
+      ]
+    },
+    {
+      "name": "KISSHOKARYO",
+      "nameJp": "吉祥菓寮",
+      "city": "Kyoto",
+      "area": "Gion / Higashiyama (near Chion-in, along the Shirakawa River, northern Gion)",
+      "founded": "Gion flagship opened 2015; brand lineage from Edo-period (mid-1600s) confectioner, \"Keikado\" roasted-soybean shop founded 1934, pivoted to kinako focus in 2006",
+      "realAndOperating": true,
+      "signatures": [
+        {
+          "item": "Kinako Parfait (きな粉パフェ / Burnt-roasted Kinako Parfait)",
+          "priceYen": 1390
+        },
+        {
+          "item": "Matcha Parfait -Pink Grapefruit-",
+          "priceYen": 1660
+        },
+        {
+          "item": "Warabimochi (bracken-starch mochi)",
+          "priceYen": 1230
+        },
+        {
+          "item": "Warabimochi - Kyo Matcha",
+          "priceYen": 1560
+        },
+        {
+          "item": "Chocolate daifuku with kinako (4-pack)",
+          "priceYen": 594
+        },
+        {
+          "item": "Deep-roasted Kinako Latte (Miyagi Shirome soybean)",
+          "priceYen": null
+        }
+      ],
+      "famousFor": "Kinako (roasted soybean powder) sweets specialist — viral burnt-kinako parfait and warabi mochi, served in a restored Kyoto machiya townhouse in Gion. The modern matcha-grapefruit parfait is also a signature.",
+      "unique": "A confectionery built around a single humble, underused ingredient — house deep-roasted kinako — rather than matcha. Borrowable concepts: (1) own-roasted single-origin kinako with roast profiles tuned per soybean variety, framed like specialty coffee; (2) a layered signature parfait (burnt kinako + vanilla ice cream + soy-milk blancmange + hojicha + kuromitsu) that turns a cheap ingredient into a premium ¥1,390 hero item; (3) brand storytelling (\"sprinkle kinako, make a wish, one bite of happiness\") tying a souvenir-able product to a wish/ritual; (4) deep multi-generational heritage narrative (Edo-era → Setsubun beans → kinako pivot) used as authenticity equity; (5) pairing a traditional ingredient with a modern twist (matcha x pink grapefruit) to appeal to younger/social-media diners.",
+      "popularity": "High and iconic among Kyoto kinako/matcha cafes: Tabelog 3.59 with ~574 reviews; selected for Tabelog \"Cafe WEST Hyakumeiten (100 Best)\" 2025; ~14-15K Instagram followers; viral parfait drawing domestic and international visitors; expanded to Tokyo and a Fushimi-Inari location plus a national online shop (launched Dec 2025).",
+      "rating": 3.59,
+      "reviews": 574,
+      "website": "https://kisshokaryo.jp/",
+      "ig": "https://www.instagram.com/kisshokaryo/",
+      "uniquenessScore": 8,
+      "popularityScore": 7,
+      "confidence": 0.86,
+      "sources": [
+        "https://kisshokaryo.jp/",
+        "https://kisshokaryo.jp/shop/gion/",
+        "https://kisshokaryo.jp/aboutkaryo/",
+        "https://tabelog.com/en/kyoto/A2601/A260301/26025412/",
+        "https://tabelog.com/kyoto/A2601/A260301/26025412/dtlmenu/",
+        "https://www.instagram.com/kisshokaryo/",
+        "https://prtimes.jp/main/html/rd/p/000000389.000007024.html",
+        "https://ignite.jp/2020/03/190747/",
+        "https://www.digistyle-kyoto.com/magazine/21466"
+      ]
+    },
+    {
+      "name": "Nanaya Aoyama",
+      "nameJp": "ななや 青山店",
+      "city": "Tokyo",
+      "area": "Aoyama / Omotesando, Shibuya-ku (off Aoyama-dori; ~7 min from Shibuya Station)",
+      "founded": "Aoyama direct store opened Aug 19, 2016; parent company Marushichi Seicha (丸七製茶) founded 1908, Fujieda, Shizuoka",
+      "realAndOperating": true,
+      "famousFor": "The \"world's strongest / richest matcha gelato\" (世界一濃い抹茶ジェラート) served in 7 selectable intensity levels (No.1 to No.7), using premium single-origin matcha from Fujieda, Shizuoka. No.7 Premium tastes like eating concentrated pure matcha. Runner-up at the Japan Gelato Contest (Japan Gelato Association).",
+      "unique": "The \"7 levels of matcha intensity\" gradient concept is the borrowable big idea: turn a single core ingredient into a tasting ladder/scale (No.1 mild to No.7 extreme) so customers self-select richness and come back to \"level up.\" The brand name itself (Nanaya = \"seven shop\") is built around this 7-tier system, and it extends beyond gelato into a \"PREMIUM MATCHA 7\" chocolate assortment (7 graduated-intensity matcha chocolates in one box). It is vertically integrated — the parent is a century-old Shizuoka tea wholesaler/factory (Marushichi Seicha) sourcing direct from Fujieda farmers — giving a farm-to-cup authenticity story. The intensity-as-spectacle / \"world's strongest\" framing drives social virality and queues.",
+      "signatures": [
+        {
+          "item": "Matcha Gelato single scoop (No.1-No.6, choose intensity)",
+          "priceYen": 420
+        },
+        {
+          "item": "Matcha Gelato double scoop",
+          "priceYen": 540
+        },
+        {
+          "item": "Matcha Gelato triple scoop",
+          "priceYen": 680
+        },
+        {
+          "item": "Premium No.7 Matcha Gelato (world's strongest) single",
+          "priceYen": 560
+        },
+        {
+          "item": "Premium No.7 Matcha Gelato double",
+          "priceYen": 650
+        },
+        {
+          "item": "PREMIUM MATCHA 7 chocolate assortment (7 graduated-intensity matcha chocolates)",
+          "priceYen": null
+        }
+      ],
+      "popularity": "High / iconic among matcha tourists. Known for queues outside the shop. Tabelog 3.35-3.36 with ~350 reviews; Tripadvisor 4.1/5, ranked #396 of 5,420 Shibuya restaurants. Tokyo's first direct store of the Shizuoka \"Nanaya\" matcha-sweets factory; runner-up at Japan Gelato Contest. Official Instagram @nanaya_aoyama and X account (~1,620 followers on X). Widely covered by Japanese tea blogs, travel media (Arigato Japan), and TV (Gacchiri Monday).",
+      "rating": 4.1,
+      "reviews": 353,
+      "website": "https://nanaya-matcha.com/",
+      "ig": "https://www.instagram.com/nanaya_aoyama/",
+      "uniquenessScore": 9,
+      "popularityScore": 8,
+      "confidence": 0.88,
+      "sources": [
+        "https://nanaya-matcha.com/",
+        "https://tabelog.com/en/tokyo/A1303/A130301/13199165/",
+        "https://chakatsu.com/shop/nanaya_aoyama/",
+        "https://www.omotesando-info.com/webmagazine/nanaya-aoyama-matchagelato/",
+        "https://nihonchafan.com/nanaya-matcha-aoyama/",
+        "https://colocal.jp/news/79249.html",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066456-d11698923-Reviews-Nanaya_Aoyama-Shibuya_Tokyo_Tokyo_Prefecture_Kanto.html",
+        "https://www.instagram.com/nanaya_aoyama/",
+        "https://x.com/nanaya_aoyama",
+        "https://anzuchan.com/nanaya-matcha/"
+      ]
+    },
+    {
+      "name": "Matcha An",
+      "nameJp": "抹茶庵",
+      "city": "Sakai (Mikuni), Fukui",
+      "area": "Mikuni-cho, Kitahonmachi (historic Kitamaebune merchant district), Sakai City; plus branches in central Fukui City, Awara Onsen, and Yamanaka Onsen (Kaga, Ishikawa)",
+      "founded": "2020 (Mikuni Honten opened Nov 19, 2020; brand born from a tea-shop background, occupying a former long-established sake-manju shop)",
+      "realAndOperating": true,
+      "famousFor": "\"World's richest / most concentrated matcha\" sweets. The signature matcha fondant au chocolat (terrine) packs 20g+ of stone-ground Uji matcha per piece and won the ESSE Furusato Grand Prix Gold Award; also famous for ultra-dark \"o-koicha\" (strong-tea) pudding and bottled parfaits.",
+      "unique": "Single-minded \"matcha is the main character, not a supporting ingredient\" positioning, pushing matcha density to a level \"that would confuse a pastry chef.\" Borrowable ideas: (1) a flagship hero SKU built around an extreme, quantifiable claim (20g+ matcha per piece, \"world's richest\") that doubles as PR; (2) hometown-tax (furusato nozei) gifting channel that turned an award win into a national sales engine; (3) bottled \"King Matcha Dragon\" parfait-in-a-bottle as a travel-friendly takeout format; (4) a tiered intensity ladder from approachable (hojicha pudding) to punishing koicha for matcha purists; (5) playful experiential branding (\"SPACE MATCHA EXPERIMENT\").",
+      "signatures": [
+        {
+          "item": "Matcha Fondant au Chocolat / terrine (約270g, ESSE Gold Award, TV-featured; per-slice drink set ¥1,380)",
+          "priceYen": 2900
+        },
+        {
+          "item": "O-koicha (strong-tea) Pudding — aiming for world's richest matcha taste",
+          "priceYen": 550
+        },
+        {
+          "item": "Rich Matcha Pudding 'Ousu' / Hojicha Pudding",
+          "priceYen": 380
+        },
+        {
+          "item": "King Matcha Dragon — bottled matcha parfait (jelly, cream, white dango, crackers)",
+          "priceYen": 770
+        },
+        {
+          "item": "Rich Matcha Canelé",
+          "priceYen": 400
+        },
+        {
+          "item": "Uji Matcha powder (100g)",
+          "priceYen": 3800
+        }
+      ],
+      "popularity": "Strong regional/national niche fame: ESSE Furusato Grand Prix Gold Award (1st place) for the fondant chocolat; high furusato-tax (hometown tax) ranking for baked goods; TV-featured; reportedly served at a Japanese embassy Emperor's-birthday reception. Grew from one shop to 4 stores across Fukui & Ishikawa within a few years. No Michelin. Instagram @matchaan_official ~5,260 followers, @matchaan_mikuni ~1,329.",
+      "popularityScore": 6,
+      "rating": 3.06,
+      "reviews": 21,
+      "uniquenessScore": 7.5,
+      "website": "https://matchaan.com/",
+      "ig": "https://www.instagram.com/matchaan_official/",
+      "confidence": 0.82,
+      "sources": [
+        "https://matchaan.com/",
+        "https://matchaan.com/pages/store",
+        "https://matchaan.com/products/matcha-fondant-chocolat",
+        "https://tabelog.com/en/fukui/A1801/A180102/18008468/",
+        "https://tabelog.com/en/fukui/A1801/A180101/18009204/",
+        "https://eat-fukui.com/store/detail.php?id=171&lang=en",
+        "https://www.instagram.com/matchaan_official/",
+        "https://www.instagram.com/matchaan_mikuni/",
+        "https://map.yahoo.co.jp/v3/place/LdtCqfLq5eo/review",
+        "https://www.furusato-tax.jp/product/detail/18210/4996447",
+        "https://fuku-iro.jp/gourmet/detail_10782.html",
+        "https://urala.today/103336/"
+      ]
+    },
+    {
+      "name": "Kaminari Issa",
+      "nameJp": "雷一茶（濃茶茶寮 一茶）",
+      "city": "Tokyo",
+      "area": "Asakusa, Taito Ward",
+      "founded": "Operating company Rex Berry Co., Ltd. (株式会社レックス・ベリー) established 2005; Saryo Issa tea lounge opened April 2021, renewed/expanded June 2024",
+      "realAndOperating": true,
+      "famousFor": "Specialty koicha (thick matcha) sweets in Asakusa near Senso-ji, built on the philosophy \"good matcha is not bitter\" using only first-flush (ichibancha) stone-ground Uji/Kyoto matcha. Iconic for its Koicha Affogato, matcha warabi mochi served with a cute teddy bear, and graded super-strong matcha lattes.",
+      "unique": "Borrowable concepts: (1) tiered matcha intensity — lattes offered in Normal / Strong / Super-Strong using 4-8g of matcha, letting customers dial richness like coffee shots; (2) \"Koicha Affogato\" — matcha sauce poured tableside over matcha + vanilla ice cream (40+ orders/day, a signature theatrical dessert); (3) Instagrammable plating gimmick — warabi mochi served alongside a teddy bear for shareable content; (4) novel matcha SKUs that cross categories: matcha beer, warabi-mochi lattes (drink + chewy mochi pearls in one cup), matcha Sanuki udon; (5) a vertically integrated, multi-format Asakusa cluster (takeout stand + experience shop + hotel-lounge-style tea saryo) under one brand, plus a frozen-dessert mail-order line.",
+      "signatures": [
+        {
+          "item": "Koicha Affogato (濃茶アフォガート) — signature, 40+ orders/day",
+          "priceYen": 1705
+        },
+        {
+          "item": "Koicha Warabi Latte (お濃茶わらびラテ, matcha latte with warabi-mochi pearls)",
+          "priceYen": 1500
+        },
+        {
+          "item": "Special Matcha Warabi Gelato (お濃茶わらびジェラート)",
+          "priceYen": 1250
+        },
+        {
+          "item": "Kaminari Issa Special Whisked Matcha (雷一茶流 お抹茶)",
+          "priceYen": 1180
+        },
+        {
+          "item": "Special Matcha Ice Cream (お濃茶アイス)",
+          "priceYen": 950
+        },
+        {
+          "item": "Matcha Beer (抹茶ビール)",
+          "priceYen": 980
+        }
+      ],
+      "popularity": "Well-known Asakusa matcha-dessert destination with 4+ storefronts plus the Saryo Issa lounge (expanded 30→50 seats in 2024 due to demand). Tabelog: Asakusa Honten 3.47 (267 reviews), Saryo Issa 3.18 (32 reviews), Denpoin-dori 3.29 (92 reviews). Instagram @kaminari_issa ~13K followers; also active on YouTube, X, Facebook. Widely featured by tourism/food media (Moshi Moshi Nippon, Trip.com, Umami Bites). No Michelin/Tabelog Award/Hyakumeiten badge found.",
+      "rating": null,
+      "reviews": null,
+      "website": "https://www.kaminari-issa.com/",
+      "ig": "https://www.instagram.com/kaminari_issa/",
+      "uniquenessScore": 7.5,
+      "popularityScore": 6.5,
+      "confidence": 0.85,
+      "sources": [
+        "https://www.kaminari-issa.com/",
+        "https://www.kaminari-issa.com/menu",
+        "https://www.kaminari-issa.com/saryo-issa",
+        "https://tabelog.com/en/tokyo/A1311/A131102/13183530/",
+        "https://tabelog.com/tokyo/A1311/A131102/13257706/",
+        "https://tabelog.com/en/tokyo/A1311/A131102/13253097/",
+        "https://prtimes.jp/main/html/rd/p/000000007.000108169.html",
+        "https://www.instagram.com/kaminari_issa/",
+        "https://www.moshimoshi-nippon.jp/368899",
+        "https://umamibites.com/food_and_drink/kaminari-issa-matcha-sweets-asakusa",
+        "https://www.tripadvisor.com/Restaurant_Review-g1066461-d9931058-Reviews-Kaminari_Issa-Taito_Tokyo_Tokyo_Prefecture_Kanto.html"
+      ]
+    }
+  ]
+}
