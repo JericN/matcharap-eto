@@ -3,7 +3,7 @@ export default function Hero() {
   return (
     <header
       className="relative text-center overflow-hidden border-[2.5px] border-forest rounded-[30px_24px_32px_22px] shadow-hard px-[18px] py-[14px] max-md:px-3 max-md:py-3"
-      style={{ background: 'radial-gradient(60% 80% at 50% 12%, rgba(167,192,106,.18), transparent 70%), #e3d4b0' }}
+      style={{ background: 'radial-gradient(60% 80% at 50% 12%, rgb(var(--c-matcha-bright) / .18), transparent 70%), rgb(var(--c-kraft))' }}
     >
       <span className="absolute top-[14px] left-[18px] font-mono text-[.58rem] tracking-[.16em] uppercase text-brown-soft max-md:hidden">est. 2026</span>
       <span className="absolute bottom-4 left-[18px] font-mono text-[.58rem] tracking-[.16em] uppercase text-brown-soft max-md:hidden">metro manila</span>

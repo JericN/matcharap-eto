@@ -5,17 +5,18 @@ import PowderCard from "@/features/powders/PowderCard";
 import SectionTitle from "@/components/SectionTitle";
 
 const GRID = "card-grid";
-const SECTION = "mb-12 max-md:mb-9"; // shared section spacing (matches drinks + calculator)
+const SECTION = "mb-12 max-md:mb-9";
+const CATS = [["all", "All"], ["ph", "🇵🇭 PH Homegrown"], ["jp", "🇯🇵 Japanese · in PH"], ["import", "🌏 Imported"]];
 
 export default function PowderGrid({ powders, images, initialSaved }) {
-  const [f, setF] = useState("all");
+  const [cat, setCat] = useState("all");
   const [saved, setSaved] = useState(initialSaved); // shared state, seeded from the server
   const [, startTransition] = useTransition();
 
   const savedSet = new Set(saved);
   const toggle = (name) => {
-    setSaved((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name])); // optimistic
-    startTransition(() => togglePowder(name)); // persist to the centralized store
+    setSaved((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name]));
+    startTransition(() => togglePowder(name));
   };
 
   const card = (p) => (
@@ -30,7 +31,7 @@ export default function PowderGrid({ powders, images, initialSaved }) {
 
   const selected = powders.filter((p) => savedSet.has(p.name));
   const rest = powders.filter((p) => !savedSet.has(p.name));
-  const shown = rest.filter((p) => f === "all" || p.cat === f);
+  const shown = rest.filter((p) => cat === "all" || p.cat === cat);
 
   return (
     <>
@@ -43,11 +44,10 @@ export default function PowderGrid({ powders, images, initialSaved }) {
 
       <section className={SECTION}>
         <SectionTitle icon="🍃" title="The Whole Shelf" meta={`${rest.length} powders`} />
-        <div className="chiprow flex flex-wrap gap-[9px] mb-[22px]">
-          <button className={"chip" + (f === "all" ? " chip--active" : "")} onClick={() => setF("all")}>All</button>
-          <button className={"chip" + (f === "ph" ? " chip--active" : "")} onClick={() => setF("ph")}>🇵🇭 PH Homegrown</button>
-          <button className={"chip" + (f === "jp" ? " chip--active" : "")} onClick={() => setF("jp")}>🇯🇵 Japanese · in PH</button>
-          <button className={"chip" + (f === "import" ? " chip--active" : "")} onClick={() => setF("import")}>🌏 Imported</button>
+        <div className="flex flex-wrap gap-[9px] mb-[22px]">
+          {CATS.map(([k, label]) => (
+            <button key={k} className={"chip" + (cat === k ? " chip--active" : "")} onClick={() => setCat(k)}>{label}</button>
+          ))}
         </div>
         <div className={GRID}>{shown.map(card)}</div>
       </section>

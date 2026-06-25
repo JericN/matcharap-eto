@@ -6,14 +6,15 @@ import { TextField, NumberField } from "@/components/form";
 import SectionTitle from "@/components/SectionTitle";
 
 const GRID = "card-grid";
-const SECTION = "mb-12 max-md:mb-9"; // shared section spacing (matches the calculator)
+const SECTION = "mb-12 max-md:mb-9";
 const EMPTY = { name: "", emoji: "", price: "", link: "" };
+const isUrl = (s) => { try { new URL(s); return true; } catch { return false; } };
 
 export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
   const [saved, setSaved] = useState(initialSaved);
   const [attachMap, setAttachMap] = useState(() => Object.fromEntries(drinks.map((d) => [d.name, d.ingredients])));
   const [baseMap, setBaseMap] = useState(() => Object.fromEntries(drinks.map((d) => [d.name, { matcha: d.hasMatcha, milk: d.hasMilk }])));
-  const [cat, setCat] = useState(ingredients);
+  const [catalog, setCatalog] = useState(ingredients);
   const [form, setForm] = useState(EMPTY);
   const [, startTransition] = useTransition();
 
@@ -42,8 +43,8 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const create = () => {
     const ing = { name: form.name.trim(), emoji: form.emoji.trim(), price: Number(form.price) || 0, link: form.link.trim() || null };
-    if (!ing.name || cat.some((c) => c.name === ing.name)) return;
-    setCat((c) => [...c, ing]);
+    if (!ing.name || (ing.link && !isUrl(ing.link)) || catalog.some((c) => c.name === ing.name)) return;
+    setCatalog((c) => [...c, ing]);
     startTransition(() => addIngredient(ing));
     setForm(EMPTY);
   };
@@ -55,7 +56,7 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
       drink={{ ...d, ingredients: attachMap[d.name], hasMatcha: baseMap[d.name].matcha, hasMilk: baseMap[d.name].milk }}
       saved={savedSet.has(d.name)}
       onToggleSave={() => toggle(d.name)}
-      catalog={cat}
+      catalog={catalog}
       onAttach={(ing) => attach(d.name, ing)}
       onDetach={(ing) => detach(d.name, ing)}
       onToggleBase={(base) => flipBase(d.name, base)}
@@ -82,11 +83,11 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
       )}
 
       <section className={SECTION}>
-        <SectionTitle title="Ingredients" meta={`${cat.length} add-ons`} />
+        <SectionTitle title="Ingredients" meta={`${catalog.length} add-ons`} />
         <p className="sec-sub mb-4 -mt-3">The shared add-on catalog · ₱ per cup. Attach any of these to a drink above; ones with a ↗ are clickable — hover for detail, click to open the reference.</p>
 
         <div className="flex flex-wrap gap-[9px] mb-5">
-          {cat.map((ing) => {
+          {catalog.map((ing) => {
             const inner = (
               <>
                 <span className="text-[1.05rem] leading-none">{ing.emoji}</span>

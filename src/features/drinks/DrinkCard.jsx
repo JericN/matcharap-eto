@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import SaveButton from "@/components/SaveButton";
 
@@ -22,7 +22,7 @@ export default function DrinkCard({ drink, saved, onToggleSave, catalog, onAttac
   const [lightbox, setLightbox] = useState(null); // image index, or null
   const attached = drink.ingredients;
   const unattached = catalog.filter((i) => !attached.includes(i.name));
-  const emojiOf = (name) => catalog.find((i) => i.name === name).emoji;
+  const emojiOf = (name) => catalog.find((i) => i.name === name)?.emoji ?? "";
 
   // the "+ add" menu: removed bases first (to re-add), then unattached add-ons
   const addItems = [
@@ -33,6 +33,18 @@ export default function DrinkCard({ drink, saved, onToggleSave, catalog, onAttac
 
   const images = drink.images;
   const move = (delta) => setLightbox((i) => (i + delta + images.length) % images.length);
+
+  // keyboard control for the open lightbox: Escape closes, arrows page photos
+  useEffect(() => {
+    if (lightbox == null) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setLightbox(null);
+      else if (e.key === "ArrowLeft" && images.length > 1) setLightbox((i) => (i - 1 + images.length) % images.length);
+      else if (e.key === "ArrowRight" && images.length > 1) setLightbox((i) => (i + 1 + images.length) % images.length);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, images.length]);
 
   return (
     <article className={`paper-card${saved ? " is-star" : ""}`}>
@@ -112,7 +124,7 @@ export default function DrinkCard({ drink, saved, onToggleSave, catalog, onAttac
         </div>
       )}
 
-      {lightbox != null && images[lightbox] && typeof document !== "undefined" && createPortal(
+      {lightbox != null && createPortal(
         <div
           className="fixed inset-0 z-[60] bg-forest/85 backdrop-blur-sm grid place-items-center p-6"
           onClick={() => setLightbox(null)}

@@ -2,7 +2,7 @@ import { repo } from "@/config/repo";
 import SectionHeader from "@/components/SectionHeader";
 import PowderGrid from "@/features/powders/PowderGrid";
 
-export const dynamic = "force-dynamic"; // read the shared state fresh each request
+export const dynamic = "force-dynamic"; // read the shared saved state fresh each request
 
 export default async function PowdersPage() {
   const powders = await repo.powders();

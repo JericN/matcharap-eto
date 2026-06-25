@@ -3,7 +3,7 @@ import { toMatchaOptions } from "@/features/powders/pricing";
 import SectionHeader from "@/components/SectionHeader";
 import Calculator from "@/features/calculator/Calculator";
 
-export const dynamic = "force-dynamic"; // read the shared state fresh each request
+export const dynamic = "force-dynamic"; // read the shared saved state fresh each request
 
 export default async function CalculatorPage() {
   // Matcha options come from the powders the team has hearted on /powders (single

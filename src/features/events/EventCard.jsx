@@ -20,8 +20,7 @@ export default function EventCard({ event, saved, onToggleSave }) {
 
   // Confirmed dates carry a ✓ marker in the `date` string → render a small dot;
   // "to confirm" → nothing. Either way, strip the marker so only the date shows.
-  const toConfirm = /to\s*confirm/i.test(event.date);
-  const confirmed = !toConfirm && event.date.includes('✓');
+  const confirmed = event.date.includes('✓');
   const dateText = event.date
     .split('·')
     .map((s) => s.trim())

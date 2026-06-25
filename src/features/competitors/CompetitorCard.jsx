@@ -11,16 +11,9 @@ const LINK_META = {
   maps: { icon: "🗺️", label: "Reviews" },
   order: { icon: "🛒", label: "Order" },
 };
-// top-left badge — PH = competitive threat, Japan = why it made the cut. Opaque so it reads over anything.
-const THREAT = {
-  strong: { label: "🎯 Strong" },
-  moderate: { label: "🎯 Moderate" },
-  niche: { label: "🎯 Niche" },
-};
-const SPOTLIGHT = {
-  unique: { label: "✨ Unique" },
-  iconic: { label: "🌟 Iconic" },
-};
+// top-row pill — PH cards show competitive threat; Japan cards show why it made the cut.
+const THREAT = { strong: "🎯 Strong", moderate: "🎯 Moderate", niche: "🎯 Niche" };
+const SPOTLIGHT = { unique: "✨ Unique", iconic: "🌟 Iconic" };
 const JPY_TO_PHP = 0.379; // ¥→₱ conversion rate (open.er-api, Jun 2026)
 
 function fmtK(n) {
@@ -54,20 +47,30 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
     <article className="paper-card">
       <div className="flex items-start justify-between gap-2 px-3.5 pt-3 pb-1">
         <div className="flex flex-wrap items-center gap-[6px] min-w-0">
-          <span className={PILL}>{stamp.label}</span>
+          <span className={PILL}>{stamp}</span>
           <span className={PILL}>{c.healthTxt}</span>
-          <span title="Verified · Jun 2026" aria-label="Verified June 2026" className="shrink-0 grid place-items-center w-[19px] h-[19px] rounded-full border-2 border-forest bg-cream-card text-forest text-[.62rem] font-bold leading-none">✓</span>
+          <span aria-hidden="true" className="shrink-0 grid place-items-center w-[19px] h-[19px] rounded-full border-2 border-forest bg-cream-card text-forest text-[.62rem] font-bold leading-none">✓</span>
         </div>
         <SaveButton saved={saved} onToggle={onToggleSave} label={c.name} className="shrink-0" />
       </div>
 
       <div className="flex gap-[13px] items-center px-4 pt-1 pb-1.5">
-        <span
-          className="shrink-0 w-14 h-14 rounded-full border-[2.4px] border-forest grid place-items-center font-display font-bold text-[1.7rem] text-cream-light leading-none"
-          style={{ background: dotBg }}
-        >
-          {c.rank}
-        </span>
+        {c.img ? (
+          <img
+            src={c.img}
+            alt={`${c.name} logo`}
+            referrerPolicy="no-referrer"
+            loading="lazy"
+            className="shrink-0 w-14 h-14 rounded-full border-[2.4px] border-forest object-cover bg-cream-card"
+          />
+        ) : (
+          <span
+            className="shrink-0 w-14 h-14 rounded-full border-[2.4px] border-forest grid place-items-center font-display font-bold text-[1.7rem] text-cream-light leading-none"
+            style={{ background: dotBg }}
+          >
+            {c.rank}
+          </span>
+        )}
         <div className="flex-1 min-w-0">
           <div className="font-mono text-[.55rem] tracking-[.08em] uppercase text-clay mb-[3px]">
             <span className={`${leaf.cls} font-medium`}>{leaf.txt}</span> · {c.format}

@@ -5,8 +5,6 @@ import SaveButton from "@/components/SaveButton";
 const PDOT = { ph: "rgb(var(--c-cat-ph))", jp: "rgb(var(--c-cat-jp))", import: "rgb(var(--c-cat-import))" };
 
 export default function PowderCard({ powder, img, saved, onToggleSave }) {
-  const perg = perGramLabel(powder);
-
   return (
     <article className={`paper-card${powder.star ? " is-star" : ""}`}>
       <SaveButton saved={saved} onToggle={onToggleSave} label={powder.name} className="absolute top-[10px] right-[10px] z-[3]" />
@@ -23,7 +21,7 @@ export default function PowderCard({ powder, img, saved, onToggleSave }) {
               loading="lazy"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover block"
-              onError={(e) => e.currentTarget.remove()}
+              onError={(e) => { e.currentTarget.style.display = "none"; }}
             />
           )}
         </span>
@@ -41,7 +39,7 @@ export default function PowderCard({ powder, img, saved, onToggleSave }) {
       </div>
       <div className="perg-box">
         <span className="font-display font-bold text-[2rem] leading-[.9] text-cream-light whitespace-nowrap">
-          {perg}
+          {perGramLabel(powder)}
         </span>
         <span className="flex flex-col gap-px">
           <span className="font-mono text-[.5rem] tracking-[.18em] uppercase text-matcha-bright">

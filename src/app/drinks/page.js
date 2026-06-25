@@ -2,7 +2,7 @@ import { repo } from "@/config/repo";
 import SectionHeader from "@/components/SectionHeader";
 import DrinksGrid from "@/features/drinks/DrinksGrid";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic"; // read the shared saved state fresh each request
 
 export default async function DrinksPage() {
   const drinks = await repo.drinks();

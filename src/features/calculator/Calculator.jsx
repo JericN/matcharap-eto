@@ -7,7 +7,7 @@ import SectionTitle from "@/components/SectionTitle";
 
 const CAT_EMOJI = { ph: "🇵🇭", jp: "🇯🇵", import: "🌏" };
 const peso = (n) => "₱" + Math.round(n).toLocaleString("en-US");
-const SECTION = "mb-12 max-md:mb-9"; // one spacing value shared by every section
+const SECTION = "mb-12 max-md:mb-9";
 
 export default function Calculator({ matchaOptions, usingAllPowders, milkOptions, drinks, savedDrinks, ingredients, costs, srp, priceOverrides }) {
   // ---- local (session) selections — not synced ----
@@ -60,7 +60,7 @@ export default function Calculator({ matchaOptions, usingAllPowders, milkOptions
   const editCost = (k, v) => setCost((c) => ({ ...c, [k]: v }));
   const commitCost = (k) => startTransition(() => setCosts({ [k]: cost[k] }));
   const editSrp = (name, v) => setSrpMap((m) => ({ ...m, [name]: v }));
-  const commitSrp = (name) => startTransition(() => setSrp(name, srpMap[name] ?? 0));
+  const commitSrp = (name) => { if (name in srpMap) startTransition(() => setSrp(name, srpMap[name])); };
   const editOv = (key, raw) => setOv((o) => { const n = { ...o }; if (raw === "") delete n[key]; else n[key] = Number(raw) || 0; return n; });
   const commitOv = (key) => startTransition(() => (key in ov ? setPriceOverride(key, ov[key]) : resetPriceOverride(key)));
 
@@ -80,7 +80,7 @@ export default function Calculator({ matchaOptions, usingAllPowders, milkOptions
             onChange={(e) => setMLabel(e.target.value)}
           >
             {matchaOptions.map((o) => (
-              <option key={o.l} value={o.l}>{(CAT_EMOJI[o.cat] || "") + " "}{o.l} — ₱{o.g.toFixed(2)}/g</option>
+              <option key={o.l} value={o.l}>{CAT_EMOJI[o.cat] + " "}{o.l} — ₱{o.g.toFixed(2)}/g</option>
             ))}
           </SelectField>
           <SelectField
@@ -143,7 +143,7 @@ export default function Calculator({ matchaOptions, usingAllPowders, milkOptions
               <PriceRow label={`🍵 ${sel.l}`} unit="/g" refVal={sel.g} okey={matchaKey} ov={ov} editOv={editOv} commitOv={commitOv} />
               <PriceRow label={`🥛 ${milkOpt.l.split(" — ")[0]}`} unit="/L" refVal={milkRefPerL} okey={milkKey} ov={ov} editOv={editOv} commitOv={commitOv} />
               {usedIngredients.map((nm) => (
-                <PriceRow key={nm} label={`${emojiOf[nm] || ""} ${nm}`} unit="/cup" refVal={refPrice[nm]} okey={`ing:${nm}`} ov={ov} editOv={editOv} commitOv={commitOv} link={linkOf[nm]} />
+                <PriceRow key={nm} label={`${emojiOf[nm]} ${nm}`} unit="/cup" refVal={refPrice[nm]} okey={`ing:${nm}`} ov={ov} editOv={editOv} commitOv={commitOv} link={linkOf[nm]} />
               ))}
             </div>
             </div>
@@ -211,7 +211,7 @@ export default function Calculator({ matchaOptions, usingAllPowders, milkOptions
                 <div className="grid gap-[7px] [grid-template-columns:repeat(auto-fill,minmax(160px,1fr))]">
                   {Object.entries(tot.addonByName).map(([nm, v]) => (
                     <div key={nm} className="flex items-center justify-between gap-2 bg-forest/40 border border-onforest-mut/25 rounded-[9px] px-2.5 py-1.5">
-                      <span className="font-mono text-[.62rem] text-onforest-soft truncate">{emojiOf[nm] || ""} {nm}</span>
+                      <span className="font-mono text-[.62rem] text-onforest-soft truncate">{emojiOf[nm]} {nm}</span>
                       <span className="font-mono text-[.72rem] font-semibold text-cream-light shrink-0">{peso(v)}</span>
                     </div>
                   ))}

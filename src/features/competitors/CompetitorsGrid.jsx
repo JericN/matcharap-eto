@@ -41,8 +41,8 @@ export default function CompetitorsGrid({ competitors, initialSaved = [] }) {
   const savedSet = new Set(saved);
   const savedRank = new Map(saved.map((n, i) => [n, i])); // heart order: first-hearted = 0
   const toggleSave = (name) => {
-    setSaved((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name])); // optimistic
-    startTransition(() => toggleCompetitor(name)); // persist centrally
+    setSaved((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name]));
+    startTransition(() => toggleCompetitor(name));
   };
 
   const match = (c) =>

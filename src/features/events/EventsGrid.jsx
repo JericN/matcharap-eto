@@ -27,8 +27,8 @@ export default function EventsGrid({ events, initialSaved }) {
 
   const savedSet = new Set(saved);
   const toggle = (name) => {
-    setSaved((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name])); // optimistic
-    startTransition(() => toggleEvent(name)); // persist to the centralized store
+    setSaved((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name]));
+    startTransition(() => toggleEvent(name));
   };
 
   const card = (e) => (

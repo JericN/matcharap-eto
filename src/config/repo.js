@@ -28,7 +28,11 @@ export const repo = {
   },
   powders: async () => (await getSiteData()).powders,
   powderImages: async () => (await getSiteData()).powderImages,
-  competitors: async () => (await getSiteData()).competitors,
+  // competitors, with brand logo overlaid from seed (img = null ⇒ colored numbered circle)
+  competitors: async () => {
+    const { competitors, competitorImages } = await getSiteData();
+    return competitors.map((c) => ({ ...c, img: competitorImages[c.name] ?? null }));
+  },
   milkOptions: async () => (await getSiteData()).milkOptions,
 
   // drinks, with per-drink ingredient attachments + base (matcha/milk) toggles

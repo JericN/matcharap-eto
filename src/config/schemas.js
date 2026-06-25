@@ -17,7 +17,6 @@ export const LinkSchema = z.object({
 export const EventSchema = z.object({
   name: z.string(),
   org: z.string(),
-  tags: z.array(z.enum(['upcoming', 'recurring'])),
   status: z.tuple([z.string(), z.string()]), // [label, pill-class]
   start: z.string().nullable().default(null), // ISO 'YYYY-MM-DD' for sort + month grouping; null = recurring/rolling
   theme: z.string(),
@@ -45,7 +44,8 @@ export const PowderSchema = z.object({
 // Matcha-drink competitors (Metro Manila). Ratings/open-status are
 // Google-Maps-verified; follower counts are Instagram-verified.
 // tier: 'general' = the smaller local field ("Little Leaves" 🌱),
-//       'giant'   = corporate / multi-branch chains ("Big Leaves" 🍃).
+//       'giant'   = corporate / multi-branch chains ("Big Leaves" 🍃),
+//       'japan'   = benchmark Japan-based brands (spotlight: unique/iconic).
 export const CompetitorSchema = z.object({
   tier: z.enum(['general', 'giant', 'japan']).default('general'),
   rank: z.number().int().positive(),
@@ -127,6 +127,9 @@ export const SiteDataSchema = z.object({
   drinkImages: z.record(z.string(), z.array(DrinkImageSchema)).default({}),
   // absolute URL (hotlinked) or root-relative path (self-hosted under /public)
   powderImages: z.record(z.string(), z.string().refine((s) => /^(https?:\/\/|\/)/.test(s), 'must be an absolute URL or a root-relative path')),
+  // brand logo per competitor, keyed by exact competitor name (overlay, like powderImages).
+  // absolute URL (hotlinked) or root-relative path (self-hosted under /public). No entry ⇒ colored numbered circle.
+  competitorImages: z.record(z.string(), z.string().refine((s) => /^(https?:\/\/|\/)/.test(s), 'must be an absolute URL or a root-relative path')).default({}),
 });
 
 // Shared mutable state (Redis `state` key) — one global record for everyone.
