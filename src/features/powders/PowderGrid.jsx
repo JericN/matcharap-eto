@@ -1,9 +1,11 @@
 "use client";
 import { useState, useTransition } from "react";
-import { toggleSaved } from "@/config/actions";
+import { togglePowder } from "@/config/actions";
 import PowderCard from "@/features/powders/PowderCard";
+import SectionTitle from "@/components/SectionTitle";
 
 const GRID = "card-grid";
+const SECTION = "mb-12 max-md:mb-9"; // shared section spacing (matches drinks + calculator)
 
 export default function PowderGrid({ powders, images, initialSaved }) {
   const [f, setF] = useState("all");
@@ -13,7 +15,7 @@ export default function PowderGrid({ powders, images, initialSaved }) {
   const savedSet = new Set(saved);
   const toggle = (name) => {
     setSaved((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name])); // optimistic
-    startTransition(() => toggleSaved(name)); // persist to the centralized store
+    startTransition(() => togglePowder(name)); // persist to the centralized store
   };
 
   const card = (p) => (
@@ -33,23 +35,22 @@ export default function PowderGrid({ powders, images, initialSaved }) {
   return (
     <>
       {selected.length > 0 && (
-        <section className="mb-9">
-          <div className="flex items-baseline gap-2 mb-3">
-            <h3 className="font-doodle font-bold text-[1.2rem] text-forest">♥ Our selection</h3>
-            <span className="font-mono text-[.6rem] tracking-[.08em] uppercase text-brown-soft">{selected.length} saved</span>
-          </div>
+        <section className={SECTION}>
+          <SectionTitle icon="♥" title="Our Selection" meta={`${selected.length} saved`} />
           <div className={GRID}>{selected.map(card)}</div>
-          <hr className="rule" />
         </section>
       )}
 
-      <div className="chiprow flex flex-wrap gap-[9px] mb-[22px]">
-        <button className={"chip" + (f === "all" ? " chip--active" : "")} onClick={() => setF("all")}>All</button>
-        <button className={"chip" + (f === "ph" ? " chip--active" : "")} onClick={() => setF("ph")}>🇵🇭 PH Homegrown</button>
-        <button className={"chip" + (f === "jp" ? " chip--active" : "")} onClick={() => setF("jp")}>🇯🇵 Japanese · in PH</button>
-        <button className={"chip" + (f === "import" ? " chip--active" : "")} onClick={() => setF("import")}>🌏 Imported</button>
-      </div>
-      <div className={GRID}>{shown.map(card)}</div>
+      <section className={SECTION}>
+        <SectionTitle icon="🍃" title="The Whole Shelf" meta={`${rest.length} powders`} />
+        <div className="chiprow flex flex-wrap gap-[9px] mb-[22px]">
+          <button className={"chip" + (f === "all" ? " chip--active" : "")} onClick={() => setF("all")}>All</button>
+          <button className={"chip" + (f === "ph" ? " chip--active" : "")} onClick={() => setF("ph")}>🇵🇭 PH Homegrown</button>
+          <button className={"chip" + (f === "jp" ? " chip--active" : "")} onClick={() => setF("jp")}>🇯🇵 Japanese · in PH</button>
+          <button className={"chip" + (f === "import" ? " chip--active" : "")} onClick={() => setF("import")}>🌏 Imported</button>
+        </div>
+        <div className={GRID}>{shown.map(card)}</div>
+      </section>
     </>
   );
 }

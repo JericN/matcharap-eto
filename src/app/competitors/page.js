@@ -4,20 +4,21 @@ import CompetitorsGrid from "@/features/competitors/CompetitorsGrid";
 
 export const metadata = {
   title: "Competitors · Matcharap Eto",
-  description: "Top 10 indie matcha-drink rivals around Metro Manila — for competitor study.",
+  description: "Who else is whisking? 🍃 Big Leaves + 🌱 Little Leaves in Metro Manila, plus 🇯🇵 Japan-only houses for ideas.",
 };
 
 export default async function CompetitorsPage() {
-  const competitors = await repo.competitors();
+  const [competitors, savedCompetitors] = await Promise.all([repo.competitors(), repo.savedCompetitors()]);
   return (
     <section>
       <SectionHeader
+        big
         num="04"
-        kicker="competitors"
-        title="Top 10 indie matcha rivals to study"
-        sub="small Metro Manila matcha-drink brands · ranked from 30 researched & validated · ⭐ ratings + open-status live-verified on Google Maps, Jun 2026"
+        kicker="the competition"
+        title="Who else is whisking? 🍵"
+        sub="🍃 Big Leaves (PH corporate giants) → 🌱 Little Leaves (homegrown locals) → 🇯🇵 Straight from Japan (authentic Japan-only houses, for ideas you can't get here) · verified on Google Maps + the brands' own sites"
       />
-      <CompetitorsGrid competitors={competitors} />
+      <CompetitorsGrid competitors={competitors} initialSaved={savedCompetitors} />
     </section>
   );
 }

@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic"; // read the shared state fresh each requ
 export default async function PowdersPage() {
   const powders = await repo.powders();
   const powderImages = await repo.powderImages();
-  const saved = await repo.selection.list();
+  const saved = await repo.savedPowders();
   return (
     <section>
       <SectionHeader
