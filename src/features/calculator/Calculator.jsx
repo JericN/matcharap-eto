@@ -359,24 +359,24 @@ export default function Calculator({
               meta={`${tot.cups} cups across ${saved.length} drinks`}
             />
             <div className="bg-forest text-cream-light border-[2.2px] border-forest rounded-card shadow-hard px-5 py-[18px] max-md:p-[14px]">
-              <div className="grid grid-cols-3 gap-3 max-md:grid-cols-1">
+              <div className="grid grid-cols-3 gap-3 max-md:gap-2">
                 <div>
                   <div className="font-mono text-[.54rem] tracking-[.12em] uppercase text-onforest-mut">
                     Total COGS
                   </div>
-                  <div className="font-display font-bold text-2xl">{peso(tot.cogs)}</div>
+                  <div className="font-display font-bold text-2xl max-md:text-[1.2rem]">{peso(tot.cogs)}</div>
                 </div>
                 <div>
                   <div className="font-mono text-[.54rem] tracking-[.12em] uppercase text-onforest-mut">
                     Total revenue
                   </div>
-                  <div className="font-display font-bold text-2xl">{peso(tot.revenue)}</div>
+                  <div className="font-display font-bold text-2xl max-md:text-[1.2rem]">{peso(tot.revenue)}</div>
                 </div>
                 <div>
                   <div className="font-mono text-[.54rem] tracking-[.12em] uppercase text-onforest-mut">
                     Total profit
                   </div>
-                  <div className="font-display font-bold text-2xl text-matcha-bright">
+                  <div className="font-display font-bold text-2xl max-md:text-[1.2rem] text-matcha-bright">
                     {peso(tot.profit)}
                   </div>
                 </div>
