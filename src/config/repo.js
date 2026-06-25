@@ -57,7 +57,6 @@ export const repo = {
     return [...ingredients, ...extras];
   },
 
-  // packaging + additional, with overrides applied
   costs: async () => {
     const { pricing } = await getSiteData();
     const { costs } = await getState();
@@ -99,8 +98,7 @@ export const repo = {
     return writeState({ ...s, drinkIngredients: { ...s.drinkIngredients, [drink]: current.filter((n) => n !== ingredient) } });
   },
 
-  // flip whether a drink includes matcha or milk (base = 'matcha' | 'milk').
-  // Absent key means present, so the first toggle removes it.
+  // base = 'matcha' | 'milk'; absent key means present, so the first toggle removes it.
   toggleBase: async (drink, base) => {
     const s = await getState();
     const current = s.drinkBases[drink] ?? {};

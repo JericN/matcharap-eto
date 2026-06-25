@@ -55,29 +55,24 @@ export const CompetitorSchema = z.object({
   area: z.string(),
   price: z.number().nonnegative(),        // signature ~16oz matcha latte, PHP
   band: z.enum(['budget', 'mid', 'premium']),
-  rating: z.number(),                     // Google Maps stars
+  rating: z.number(),
   reviews: z.number().int().nonnegative(),
-  open: z.boolean(),                      // currently operating
+  open: z.boolean(),
   ig: z.number().int().nullable(),        // Instagram followers (research-sourced)
-  tt: z.number().int().nullable(),        // TikTok followers
   sig: z.string(),
   menu: z.array(z.object({ i: z.string(), p: z.number().nullable() })),
   sourcing: z.string(),
   hook: z.string(),
   scale: z.string(),
-  channels: z.string(),
-  health: z.enum(['go', 'warn', 'wait']),
   healthTxt: z.string(),
   note: z.string().optional(),
-  opened: z.string(),                               // year / "Est. ..." — momentum
-  threat: z.enum(['strong', 'moderate', 'niche']),  // competitive threat tier
-  takeaway: z.string(),                             // one-line strategic read
-  // Clickable channels for human follow-up research (rendered in array order).
+  opened: z.string(),
+  threat: z.enum(['strong', 'moderate', 'niche']),
+  // Clickable source links for human follow-up research (rendered in array order).
   links: z.array(z.object({
     kind: z.enum(['web', 'ig', 'fb', 'tiktok', 'maps', 'order']),
     url: z.string().url(),
   })).min(1),
-  star: z.boolean().optional(),
   // Japan-tier only: why it made the cut — '✨ unique' idea vs '🌟 iconic' must-know.
   spotlight: z.enum(['unique', 'iconic']).optional(),
 });
@@ -117,15 +112,13 @@ export const PricingSchema = z.object({
   additional: z.number().nonnegative(),  // ₱ per cup — ice, sugar, misc adjustments
 });
 
-// The whole config blob (one Edge Config key / one seed object).
+// The whole config blob (the single seed object).
 export const SiteDataSchema = z.object({
   events: z.array(EventSchema).min(1),
   // source links per event, keyed by event name (overlay, like powderImages)
   eventLinks: z.record(z.string(), z.array(LinkSchema)).default({}),
   powders: z.array(PowderSchema).min(1),
   competitors: z.array(CompetitorSchema).default([]),
-  // matchaOptions is no longer stored — the calculator derives it from `powders`
-  // (single source of truth) in app/calculator/page.js.
   milkOptions: z.array(MilkOptionSchema).min(1),
   drinks: z.array(DrinkSchema).min(1),
   ingredients: z.array(IngredientSchema).min(1),  // priced add-ons drinks attach (each carries its own link)

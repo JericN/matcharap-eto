@@ -2,6 +2,8 @@ import { repo } from "@/config/repo";
 import SectionHeader from "@/components/SectionHeader";
 import CompetitorsGrid from "@/features/competitors/CompetitorsGrid";
 
+export const dynamic = "force-dynamic"; // read the shared saved state fresh each request
+
 export const metadata = {
   title: "Competitors · Matcharap Eto",
   description: "Who else is whisking? 🍃 Big Leaves + 🌱 Little Leaves in Metro Manila, plus 🇯🇵 Japan-only houses for ideas.",

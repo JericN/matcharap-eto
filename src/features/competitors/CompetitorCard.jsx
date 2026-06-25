@@ -11,19 +11,21 @@ const LINK_META = {
 };
 // top-left badge — PH = competitive threat, Japan = why it made the cut. Opaque so it reads over anything.
 const THREAT = {
-  strong: { label: "🎯 Strong", color: "text-clay border-clay" },
-  moderate: { label: "🎯 Moderate", color: "text-olive border-olive" },
-  niche: { label: "🎯 Niche", color: "text-brown-soft border-brown-soft" },
+  strong: { label: "🎯 Strong" },
+  moderate: { label: "🎯 Moderate" },
+  niche: { label: "🎯 Niche" },
 };
 const SPOTLIGHT = {
-  unique: { label: "✨ Unique", color: "text-clay border-clay" },
-  iconic: { label: "🌟 Iconic", color: "text-olive border-olive" },
+  unique: { label: "✨ Unique" },
+  iconic: { label: "🌟 Iconic" },
 };
 const JPY_TO_PHP = 0.379; // ¥→₱ conversion rate (open.er-api, Jun 2026)
 
 function fmtK(n) {
   if (n == null) return "—";
-  return n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "K" : "" + n;
+  if (n < 1000) return "" + n;
+  const k = (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "");
+  return k + "K";
 }
 
 export default function CompetitorCard({ c, saved, onToggleSave }) {
@@ -32,10 +34,10 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
   const toPeso = (n) => (isJapan ? Math.round(n * JPY_TO_PHP) : n); // Japan menu data is stored in ¥
   const menuTxt = c.menu.map((m) => `${m.i}${m.p ? ` ₱${toPeso(m.p)}` : ""}`).join(" · ");
   const prices = c.menu.map((m) => m.p).filter((p) => typeof p === "number").map(toPeso);
-  const range = prices.length
-    ? (Math.min(...prices) === Math.max(...prices) ? `₱${prices[0]}` : `₱${Math.min(...prices)}–${Math.max(...prices)}`)
-    : "—";
-  const stamp = isJapan ? (SPOTLIGHT[c.spotlight] || SPOTLIGHT.unique) : (THREAT[c.threat] || THREAT.moderate);
+  const lo = prices.length ? Math.min(...prices) : 0;
+  const hi = prices.length ? Math.max(...prices) : 0;
+  const range = prices.length ? (lo === hi ? `₱${lo}` : `₱${lo}–${hi}`) : "—";
+  const stamp = isJapan ? SPOTLIGHT[c.spotlight] : THREAT[c.threat];
   const dotBg = isJapan ? "rgb(var(--c-clay))" : isGiant ? "rgb(var(--c-brown))" : RDOT[c.region];
   const leaf = isJapan
     ? { txt: "🇯🇵 Japan", cls: "text-clay" }
@@ -44,15 +46,15 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
     : { txt: "🌱 Little Leaf", cls: "text-olive" };
   // every top-row pill shares one colour (aligned), regardless of threat/health value
   const PILL = "font-mono text-[.55rem] font-medium uppercase tracking-[.06em] px-[9px] py-[3px] rounded-pill border-2 bg-cream-card text-forest border-forest";
+  const META = "meta-line normal-case tracking-normal items-start";
 
   return (
     <article className="paper-card">
-      {/* top bar: status tags + verified ✓ (left) · heart (right) */}
       <div className="flex items-start justify-between gap-2 px-3.5 pt-3 pb-1">
         <div className="flex flex-wrap items-center gap-[6px] min-w-0">
           <span className={PILL}>{stamp.label}</span>
           <span className={PILL}>{c.healthTxt}</span>
-          <span className={`${PILL} shrink-0`} title="Verified · Jun 2026" aria-label="Verified June 2026">✓ Verified</span>
+          <span title="Verified · Jun 2026" aria-label="Verified June 2026" className="shrink-0 grid place-items-center w-[19px] h-[19px] rounded-full border-2 border-forest bg-cream-card text-forest text-[.62rem] font-bold leading-none">✓</span>
         </div>
         <button
           type="button"
@@ -68,7 +70,6 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
         </button>
       </div>
 
-      {/* header: rank + tier·format + name */}
       <div className="flex gap-[13px] items-center px-4 pt-1 pb-1.5">
         <span
           className="shrink-0 w-14 h-14 rounded-full border-[2.4px] border-forest grid place-items-center font-display font-bold text-[1.7rem] text-cream-light leading-none"
@@ -83,10 +84,8 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
           <h3 className="font-doodle font-bold text-[1.18rem] text-forest leading-snug">{c.name}</h3>
         </div>
       </div>
-      {/* short description — its own full-width line under the icon/name */}
       <p className="font-body text-[.82rem] text-olive-soft px-4 pb-2 leading-snug">{c.hook}</p>
 
-      {/* price box */}
       <div className="perg-box">
         <span className="font-display font-bold text-[2rem] leading-[.9] text-cream-light whitespace-nowrap">
           {isJapan ? "≈" : ""}₱{toPeso(c.price)}
@@ -104,22 +103,20 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
         </span>
       </div>
 
-      {/* the claim */}
       <p className="text-[.82rem] text-olive px-4 mt-2.5 mb-2">🍵 {c.sourcing}</p>
 
-      {/* description: location · menu · reach */}
       <div className="px-4 pb-3 flex flex-col gap-[5px]">
-        <div className="meta-line normal-case tracking-normal items-start">📍 {c.area}</div>
-        <div className="meta-line normal-case tracking-normal items-start">📋 {menuTxt}</div>
-        <div className="meta-line normal-case tracking-normal items-start">
+        <div className={META}>📍 {c.area}</div>
+        <div className={META}>📋 {menuTxt}</div>
+        <div className={META}>
           {c.ig != null ? <>👥 IG {fmtK(c.ig)} · {c.scale}</> : <>🏠 {c.scale}</>}
         </div>
         {c.note && (
-          <div className="meta-line normal-case tracking-normal items-start text-clay">⚠️ {c.note}</div>
+          <div className={`${META} text-clay`}>⚠️ {c.note}</div>
         )}
       </div>
 
-      {/* links — the only pill-shaped, tappable elements */}
+      {/* links — the only tappable, pill-shaped elements */}
       <div className="px-4 pb-4 flex flex-wrap gap-[6px]">
         {c.links.map((l) => {
           const meta = LINK_META[l.kind];

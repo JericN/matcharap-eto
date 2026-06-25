@@ -1,4 +1,3 @@
-// Reusable section header: numbered tag + doodle title + sub-line.
 // `big` opts into a larger title (utilities override the .sec-title size).
 export default function SectionHeader({ num, kicker, title, sub, big = false }) {
   return (

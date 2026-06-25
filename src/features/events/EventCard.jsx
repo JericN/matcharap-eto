@@ -17,9 +17,8 @@ export default function EventCard({ event, saved, onToggleSave }) {
   const stampText = event.status[0].replace(/^[^A-Za-z]+/, '').trim();
   const stampVariant = STAMP_VARIANT[event.status[1]] || '';
 
-  // Verification lives inline in the `date` string. Show a green ✓ when the date
-  // is confirmed (marked with ✓); show nothing when it's "to confirm". Either
-  // way, strip those marker clauses so only the date itself renders.
+  // Confirmed dates carry a ✓ marker in the `date` string → render a small dot;
+  // "to confirm" → nothing. Either way, strip the marker so only the date shows.
   const toConfirm = /to\s*confirm/i.test(event.date);
   const confirmed = !toConfirm && event.date.includes('✓');
   const dateText = event.date
@@ -52,7 +51,7 @@ export default function EventCard({ event, saved, onToggleSave }) {
         <div className="flex-1 min-w-0">
           <h3 className="font-doodle font-bold text-[1.18rem] text-forest leading-snug mb-[5px] pr-[40px] max-md:text-[1.1rem]">{event.name}</h3>
           <div className="font-mono text-[.58rem] tracking-[.03em] text-olive-soft mb-1.5">{event.org}</div>
-          <div className="meta-line"><CalIcon /> {dateText}{confirmed && <span className="ml-1 text-matcha font-bold" title="Confirmed">✓</span>}</div>
+          <div className="meta-line"><CalIcon /> {dateText}{confirmed && <span className="inline-block w-[6px] h-[6px] rounded-full bg-matcha align-middle ml-1.5" title="Confirmed date" aria-label="confirmed" />}</div>
           <div className="meta-line"><PinIcon /> {event.venue}</div>
         </div>
       </div>

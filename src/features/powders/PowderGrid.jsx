@@ -9,7 +9,7 @@ const SECTION = "mb-12 max-md:mb-9"; // shared section spacing (matches drinks +
 
 export default function PowderGrid({ powders, images, initialSaved }) {
   const [f, setF] = useState("all");
-  const [saved, setSaved] = useState(initialSaved); // shared state, seeded from Edge Config
+  const [saved, setSaved] = useState(initialSaved); // shared state, seeded from the server
   const [, startTransition] = useTransition();
 
   const savedSet = new Set(saved);
