@@ -9,12 +9,18 @@
 export default function SectionTitle({ badge, icon, title, meta, className = "" }) {
   return (
     <div className={`flex items-baseline gap-2.5 flex-wrap mb-5 ${className}`}>
-      {badge != null && <span className="font-mono text-[1rem] leading-none text-clay">{badge}</span>}
+      {badge != null && (
+        <span className="font-mono text-[1rem] leading-none text-clay">{badge}</span>
+      )}
       <h3 className="font-doodle font-bold text-[1.5rem] leading-none text-forest max-md:text-[1.25rem]">
         {icon != null && <span className="mr-1.5">{icon}</span>}
         {title}
       </h3>
-      {meta != null && <span className="font-mono text-[.6rem] tracking-[.1em] uppercase text-brown-soft self-end mb-1">{meta}</span>}
+      {meta != null && (
+        <span className="font-mono text-[.6rem] tracking-[.1em] uppercase text-brown-soft self-end mb-1">
+          {meta}
+        </span>
+      )}
     </div>
   );
 }

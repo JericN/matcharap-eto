@@ -4,7 +4,20 @@ import { toggleEvent } from "@/config/actions";
 import EventCard from "@/features/events/EventCard";
 
 const GRID = "card-grid";
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 // Chronological: dated events ascending (soonest first); recurring (no start) last.
 const byDate = (a, b) => {
@@ -32,7 +45,12 @@ export default function EventsGrid({ events, initialSaved }) {
   };
 
   const card = (e) => (
-    <EventCard key={e.name} event={e} saved={savedSet.has(e.name)} onToggleSave={() => toggle(e.name)} />
+    <EventCard
+      key={e.name}
+      event={e}
+      saved={savedSet.has(e.name)}
+      onToggleSave={() => toggle(e.name)}
+    />
   );
 
   const selected = events.filter((e) => savedSet.has(e.name)).sort(byDate);
@@ -43,7 +61,10 @@ export default function EventsGrid({ events, initialSaved }) {
   const byKey = {};
   for (const e of rest) {
     const key = bucketKey(e);
-    if (!(key in byKey)) { byKey[key] = groups.length; groups.push({ key, items: [] }); }
+    if (!(key in byKey)) {
+      byKey[key] = groups.length;
+      groups.push({ key, items: [] });
+    }
     groups[byKey[key]].items.push(e);
   }
 
@@ -53,7 +74,9 @@ export default function EventsGrid({ events, initialSaved }) {
         <section className="mb-9">
           <div className="flex items-baseline gap-2 mb-3">
             <h3 className="font-doodle font-bold text-[1.2rem] text-forest">♥ Our selection</h3>
-            <span className="font-mono text-[.6rem] tracking-[.08em] uppercase text-brown-soft">{selected.length} saved</span>
+            <span className="font-mono text-[.6rem] tracking-[.08em] uppercase text-brown-soft">
+              {selected.length} saved
+            </span>
           </div>
           <div className={GRID}>{selected.map(card)}</div>
           <hr className="rule" />
@@ -65,9 +88,15 @@ export default function EventsGrid({ events, initialSaved }) {
           <div className="flex items-baseline gap-2 mb-3">
             <h3 className="font-doodle font-bold text-[1.2rem] text-forest">
               {bucketLabel(g.key)}
-              {g.key === "recurring" && <span className="font-mono text-[.62rem] tracking-[.04em] normal-case text-brown-soft ml-2">(no date confirmed yet)</span>}
+              {g.key === "recurring" && (
+                <span className="font-mono text-[.62rem] tracking-[.04em] normal-case text-brown-soft ml-2">
+                  (no date confirmed yet)
+                </span>
+              )}
             </h3>
-            <span className="font-mono text-[.6rem] tracking-[.08em] uppercase text-brown-soft">{g.items.length} event{g.items.length > 1 ? "s" : ""}</span>
+            <span className="font-mono text-[.6rem] tracking-[.08em] uppercase text-brown-soft">
+              {g.items.length} event{g.items.length > 1 ? "s" : ""}
+            </span>
           </div>
           <div className={GRID}>{g.items.map(card)}</div>
         </section>

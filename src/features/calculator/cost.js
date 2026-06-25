@@ -4,12 +4,16 @@
 
 export const matchaCostPerCup = (pricePerGram, doseGrams) => Math.round(pricePerGram * doseGrams);
 export const milkCostPerCup = (milkPricePerMl, milkMl) => Math.round(milkPricePerMl * milkMl);
-export const addonCostPerCup = (drink, priceOf) => drink.ingredients.reduce((sum, n) => sum + priceOf(n), 0);
+export const addonCostPerCup = (drink, priceOf) =>
+  drink.ingredients.reduce((sum, n) => sum + priceOf(n), 0);
 
 // Per-cup COGS: matcha + milk + add-ons + packaging + additional. Each part is
 // whole ₱ so the on-screen breakdown sums exactly. A drink can drop matcha or
 // milk (e.g. matcha+coffee, or a no-milk drink) — the removed base costs 0.
-export function cogsForDrink(drink, { pricePerGram, doseGrams, milkPricePerMl, priceOf, packaging, additional }) {
+export function cogsForDrink(
+  drink,
+  { pricePerGram, doseGrams, milkPricePerMl, priceOf, packaging, additional },
+) {
   return (
     (drink.hasMatcha ? matchaCostPerCup(pricePerGram, doseGrams) : 0) +
     (drink.hasMilk ? milkCostPerCup(milkPricePerMl, drink.milkMl) : 0) +
@@ -21,14 +25,23 @@ export function cogsForDrink(drink, { pricePerGram, doseGrams, milkPricePerMl, p
 
 export const profit = (srp, cogs) => srp - cogs;
 export const marginPct = (srp, cogs) => (srp > 0 ? Math.round(((srp - cogs) / srp) * 100) : 0);
-export const marginWord = (m) => (m >= 65 ? 'healthy ✓' : m >= 45 ? 'ok' : 'tight');
+export const marginWord = (m) => (m >= 65 ? "healthy ✓" : m >= 45 ? "ok" : "tight");
 
 // Roll the costed drinks up into grand totals + a COGS breakdown by component.
 // `lines` = [{ drink, cups, srp }]. Each component total is Σ (cups × whole-₱
 // per-cup part), so matcha+milk+addons+packaging+additional sum EXACTLY to cogs,
 // and cogs equals Σ (cups × cogsForDrink) — breakdown and total never disagree.
 export function tallyTotals(lines, ctx) {
-  const t = { cups: 0, matcha: 0, milk: 0, addons: 0, packaging: 0, additional: 0, cogs: 0, revenue: 0 };
+  const t = {
+    cups: 0,
+    matcha: 0,
+    milk: 0,
+    addons: 0,
+    packaging: 0,
+    additional: 0,
+    cogs: 0,
+    revenue: 0,
+  };
   const addonByName = {}; // ingredient name -> ₱ across all cups (breakdown of `addons`)
   for (const { drink, cups, srp } of lines) {
     t.cups += cups;

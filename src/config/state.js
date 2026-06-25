@@ -1,6 +1,6 @@
-import { cache } from 'react';
-import { redis } from './redis';
-import { StateSchema } from './schemas';
+import { cache } from "react";
+import { redis } from "./redis";
+import { StateSchema } from "./schemas";
 
 // ============================================================================
 // SHARED STATE — ONE global record for everyone (NOT per-user). Stored under
@@ -13,14 +13,14 @@ import { StateSchema } from './schemas';
 // consumer above this boundary trusts the result and never re-checks.
 // ============================================================================
 
-const KEY = 'state';
+const KEY = "state";
 
 function client() {
   if (!redis) {
     throw new Error(
-      'Redis is not configured. Set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN ' +
-      '(or the KV_REST_API_* pair) in .env.local (dev) and the Vercel project env (prod). ' +
-      'Shared state requires it — there is no local fallback.'
+      "Redis is not configured. Set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN " +
+        "(or the KV_REST_API_* pair) in .env.local (dev) and the Vercel project env (prod). " +
+        "Shared state requires it — there is no local fallback.",
     );
   }
   return redis;
@@ -30,7 +30,7 @@ function client() {
 // on the next request so writes show up immediately.
 export const getState = cache(async () => {
   const value = await client().get(KEY); // @upstash/redis auto-parses stored JSON
-  return StateSchema.parse(value ?? {});  // empty/fresh store → all fields default
+  return StateSchema.parse(value ?? {}); // empty/fresh store → all fields default
 });
 
 export async function writeState(next) {

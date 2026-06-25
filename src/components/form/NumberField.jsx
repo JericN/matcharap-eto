@@ -6,7 +6,15 @@ import Field, { cx } from "./Field";
 // `prefix` (e.g. "₱") and `suffix` (e.g. "/g") render as non-interactive
 // adornments inside the box variant. Spinners are stripped via CSS.
 export default function NumberField({
-  label, hint, id, variant = "box", prefix, suffix, className, inputClassName, ...rest
+  label,
+  hint,
+  id,
+  variant = "box",
+  prefix,
+  suffix,
+  className,
+  inputClassName,
+  ...rest
 }) {
   const base = variant === "underline" ? "field-underline" : "field-box";
   const input = (
@@ -22,11 +30,21 @@ export default function NumberField({
     <Field label={label} hint={hint} htmlFor={id} className={className}>
       {prefix || suffix ? (
         <div className="relative">
-          {prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-[.78rem] text-brown-soft pointer-events-none">{prefix}</span>}
+          {prefix && (
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-[.78rem] text-brown-soft pointer-events-none">
+              {prefix}
+            </span>
+          )}
           {input}
-          {suffix && <span className="absolute right-2.5 top-1/2 -translate-y-1/2 font-mono text-[.6rem] text-brown-soft pointer-events-none">{suffix}</span>}
+          {suffix && (
+            <span className="absolute right-2.5 top-1/2 -translate-y-1/2 font-mono text-[.6rem] text-brown-soft pointer-events-none">
+              {suffix}
+            </span>
+          )}
         </div>
-      ) : input}
+      ) : (
+        input
+      )}
     </Field>
   );
 }

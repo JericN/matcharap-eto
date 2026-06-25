@@ -1,6 +1,12 @@
 "use client";
 import { useState, useTransition } from "react";
-import { toggleDrink, attachIngredient, detachIngredient, addIngredient, toggleBase } from "@/config/actions";
+import {
+  toggleDrink,
+  attachIngredient,
+  detachIngredient,
+  addIngredient,
+  toggleBase,
+} from "@/config/actions";
 import DrinkCard from "@/features/drinks/DrinkCard";
 import { TextField, NumberField } from "@/components/form";
 import SectionTitle from "@/components/SectionTitle";
@@ -8,12 +14,23 @@ import SectionTitle from "@/components/SectionTitle";
 const GRID = "card-grid";
 const SECTION = "mb-12 max-md:mb-9";
 const EMPTY = { name: "", emoji: "", price: "", link: "" };
-const isUrl = (s) => { try { new URL(s); return true; } catch { return false; } };
+const isUrl = (s) => {
+  try {
+    new URL(s);
+    return true;
+  } catch {
+    return false;
+  }
+};
 
 export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
   const [saved, setSaved] = useState(initialSaved);
-  const [attachMap, setAttachMap] = useState(() => Object.fromEntries(drinks.map((d) => [d.name, d.ingredients])));
-  const [baseMap, setBaseMap] = useState(() => Object.fromEntries(drinks.map((d) => [d.name, { matcha: d.hasMatcha, milk: d.hasMilk }])));
+  const [attachMap, setAttachMap] = useState(() =>
+    Object.fromEntries(drinks.map((d) => [d.name, d.ingredients])),
+  );
+  const [baseMap, setBaseMap] = useState(() =>
+    Object.fromEntries(drinks.map((d) => [d.name, { matcha: d.hasMatcha, milk: d.hasMilk }])),
+  );
   const [catalog, setCatalog] = useState(ingredients);
   const [form, setForm] = useState(EMPTY);
   const [, startTransition] = useTransition();
@@ -42,8 +59,14 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const create = () => {
-    const ing = { name: form.name.trim(), emoji: form.emoji.trim(), price: Number(form.price) || 0, link: form.link.trim() || null };
-    if (!ing.name || (ing.link && !isUrl(ing.link)) || catalog.some((c) => c.name === ing.name)) return;
+    const ing = {
+      name: form.name.trim(),
+      emoji: form.emoji.trim(),
+      price: Number(form.price) || 0,
+      link: form.link.trim() || null,
+    };
+    if (!ing.name || (ing.link && !isUrl(ing.link)) || catalog.some((c) => c.name === ing.name))
+      return;
     setCatalog((c) => [...c, ing]);
     startTransition(() => addIngredient(ing));
     setForm(EMPTY);
@@ -53,7 +76,12 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
   const card = (d) => (
     <DrinkCard
       key={d.name}
-      drink={{ ...d, ingredients: attachMap[d.name], hasMatcha: baseMap[d.name].matcha, hasMilk: baseMap[d.name].milk }}
+      drink={{
+        ...d,
+        ingredients: attachMap[d.name],
+        hasMatcha: baseMap[d.name].matcha,
+        hasMilk: baseMap[d.name].milk,
+      }}
       saved={savedSet.has(d.name)}
       onToggleSave={() => toggle(d.name)}
       catalog={catalog}
@@ -84,16 +112,25 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
 
       <section className={SECTION}>
         <SectionTitle title="Ingredients" meta={`${catalog.length} add-ons`} />
-        <p className="sec-sub mb-4 -mt-3">The shared add-on catalog · ₱ per cup. Attach any of these to a drink above; ones with a ↗ are clickable — hover for detail, click to open the reference.</p>
+        <p className="sec-sub mb-4 -mt-3">
+          The shared add-on catalog · ₱ per cup. Attach any of these to a drink above; ones with a ↗
+          are clickable — hover for detail, click to open the reference.
+        </p>
 
         <div className="flex flex-wrap gap-[9px] mb-5">
           {catalog.map((ing) => {
             const inner = (
               <>
                 <span className="text-[1.05rem] leading-none">{ing.emoji}</span>
-                <span className="font-doodle font-bold text-[.92rem] text-forest leading-none">{ing.name}</span>
+                <span className="font-doodle font-bold text-[.92rem] text-forest leading-none">
+                  {ing.name}
+                </span>
                 <span className="font-mono text-[.7rem] text-clay leading-none">₱{ing.price}</span>
-                {ing.link && <span className="text-[.95rem] text-olive leading-none" aria-hidden="true">↗</span>}
+                {ing.link && (
+                  <span className="text-[.95rem] text-olive leading-none" aria-hidden="true">
+                    ↗
+                  </span>
+                )}
               </>
             );
             return ing.link ? (
@@ -123,8 +160,12 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
         {/* compact creator bar — emoji · name · URL · price · Add */}
         <div className="paper-card !static p-[14px]">
           <div className="flex items-baseline gap-2 mb-2.5">
-            <span className="font-doodle font-bold text-[.98rem] text-forest leading-none">Add new ingredients</span>
-            <span className="font-mono text-[.56rem] tracking-[.04em] text-brown-soft">emoji + name + link + ₱/cup · all optional but the name</span>
+            <span className="font-doodle font-bold text-[.98rem] text-forest leading-none">
+              Add new ingredients
+            </span>
+            <span className="font-mono text-[.56rem] tracking-[.04em] text-brown-soft">
+              emoji + name + link + ₱/cup · all optional but the name
+            </span>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <TextField

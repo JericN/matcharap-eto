@@ -6,11 +6,15 @@ export const dynamic = "force-dynamic"; // read the shared saved state fresh eac
 
 export const metadata = {
   title: "Competitors · Matcharap Eto",
-  description: "Who else is whisking? 🍃 Big Leaves + 🌱 Little Leaves in Metro Manila, plus 🇯🇵 Japan-only houses for ideas.",
+  description:
+    "Who else is whisking? 🍃 Big Leaves + 🌱 Little Leaves in Metro Manila, plus 🇯🇵 Japan-only houses for ideas.",
 };
 
 export default async function CompetitorsPage() {
-  const [competitors, savedCompetitors] = await Promise.all([repo.competitors(), repo.savedCompetitors()]);
+  const [competitors, savedCompetitors] = await Promise.all([
+    repo.competitors(),
+    repo.savedCompetitors(),
+  ]);
   return (
     <section>
       <SectionHeader

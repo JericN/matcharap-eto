@@ -17,9 +17,24 @@ const BANDS = [
 ];
 // stacked sections, top → bottom
 const SECTIONS = [
-  { tier: "giant", emoji: "🍃", title: "Big Leaves", blurb: "the corporate giants & multi-branch chains" },
-  { tier: "general", emoji: "🌱", title: "Little Leaves", blurb: "the smaller homegrown Metro Manila field" },
-  { tier: "japan", emoji: "🇯🇵", title: "Straight from Japan", blurb: "iconic & one-of-a-kind houses to borrow ideas from · ¥ prices shown as ≈₱ (×0.379)" },
+  {
+    tier: "giant",
+    emoji: "🍃",
+    title: "Big Leaves",
+    blurb: "the corporate giants & multi-branch chains",
+  },
+  {
+    tier: "general",
+    emoji: "🌱",
+    title: "Little Leaves",
+    blurb: "the smaller homegrown Metro Manila field",
+  },
+  {
+    tier: "japan",
+    emoji: "🇯🇵",
+    title: "Straight from Japan",
+    blurb: "iconic & one-of-a-kind houses to borrow ideas from · ¥ prices shown as ≈₱ (×0.379)",
+  },
 ];
 
 const colCount = (w) => (w < 640 ? 1 : w < 1280 ? 2 : 3);

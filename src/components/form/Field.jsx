@@ -8,7 +8,11 @@ export default function Field({ label, hint, htmlFor, className, children }) {
       {label != null && (
         <label htmlFor={htmlFor} className="field-label">
           {label}
-          {hint != null && <span className="float-right font-normal normal-case tracking-normal text-olive">{hint}</span>}
+          {hint != null && (
+            <span className="float-right font-normal normal-case tracking-normal text-olive">
+              {hint}
+            </span>
+          )}
         </label>
       )}
       {children}

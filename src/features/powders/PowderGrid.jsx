@@ -6,7 +6,12 @@ import SectionTitle from "@/components/SectionTitle";
 
 const GRID = "card-grid";
 const SECTION = "mb-12 max-md:mb-9";
-const CATS = [["all", "All"], ["ph", "🇵🇭 PH Homegrown"], ["jp", "🇯🇵 Japanese · in PH"], ["import", "🌏 Imported"]];
+const CATS = [
+  ["all", "All"],
+  ["ph", "🇵🇭 PH Homegrown"],
+  ["jp", "🇯🇵 Japanese · in PH"],
+  ["import", "🌏 Imported"],
+];
 
 export default function PowderGrid({ powders, images, initialSaved }) {
   const [cat, setCat] = useState("all");
@@ -46,7 +51,13 @@ export default function PowderGrid({ powders, images, initialSaved }) {
         <SectionTitle icon="🍃" title="The Whole Shelf" meta={`${rest.length} powders`} />
         <div className="flex flex-wrap gap-[9px] mb-[22px]">
           {CATS.map(([k, label]) => (
-            <button key={k} className={"chip" + (cat === k ? " chip--active" : "")} onClick={() => setCat(k)}>{label}</button>
+            <button
+              key={k}
+              className={"chip" + (cat === k ? " chip--active" : "")}
+              onClick={() => setCat(k)}
+            >
+              {label}
+            </button>
           ))}
         </div>
         <div className={GRID}>{shown.map(card)}</div>

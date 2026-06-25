@@ -14,15 +14,16 @@ export default async function CalculatorPage() {
   const usingAllPowders = savedOptions.length === 0;
   const matchaOptions = usingAllPowders ? toMatchaOptions(powders) : savedOptions;
 
-  const [milkOptions, drinks, savedDrinks, ingredients, costs, srp, priceOverrides] = await Promise.all([
-    repo.milkOptions(),
-    repo.drinks(),
-    repo.savedDrinks(),
-    repo.ingredients(),
-    repo.costs(),
-    repo.srp(),
-    repo.priceOverrides(),
-  ]);
+  const [milkOptions, drinks, savedDrinks, ingredients, costs, srp, priceOverrides] =
+    await Promise.all([
+      repo.milkOptions(),
+      repo.drinks(),
+      repo.savedDrinks(),
+      repo.ingredients(),
+      repo.costs(),
+      repo.srp(),
+      repo.priceOverrides(),
+    ]);
 
   return (
     <section>

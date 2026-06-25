@@ -23,30 +23,51 @@
     --c-matcha: 138 161 90;
     --c-matcha-bright: 167 192 106;
     --c-matcha-fill: 169 192 138;
-    --c-clay: 185 84 45;    --c-star: 249 243 228;        /* star-card highlight */
+    --c-clay: 185 84 45;
+    --c-star: 249 243 228; /* star-card highlight */
     --c-onforest-mut: 205 217 189; /* muted text on forest */
-    --c-onforest-soft: 223 230 210;/* soft text on forest */
-    --c-cat-ph: 94 123 58;        /* powder category swatches */
+    --c-onforest-soft: 223 230 210; /* soft text on forest */
+    --c-cat-ph: 94 123 58; /* powder category swatches */
     --c-cat-jp: 122 148 71;
     --c-cat-import: 155 177 92;
   }
 
   /* Scale the whole UI down a notch on phones — most type & spacing is rem-based,
      so dropping the root size shrinks it all proportionally. */
-  html { font-size: 16px; }
-  @media (max-width: 640px) { html { font-size: 15px; } }
-  @media (max-width: 380px) { html { font-size: 14px; } }
+  html {
+    font-size: 16px;
+  }
+  @media (max-width: 640px) {
+    html {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 380px) {
+    html {
+      font-size: 14px;
+    }
+  }
 
   body {
     @apply font-body text-forest bg-cream leading-relaxed antialiased;
     background-image:
-      radial-gradient(rgb(var(--c-brown) / .05) 1px, transparent 1.4px),
-      radial-gradient(rgb(var(--c-forest) / .045) 1px, transparent 1.4px),
+      radial-gradient(rgb(var(--c-brown) / 0.05) 1px, transparent 1.4px),
+      radial-gradient(rgb(var(--c-forest) / 0.045) 1px, transparent 1.4px),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E"),
-      linear-gradient(125deg, rgba(255,255,255,.28), rgba(255,255,255,0) 45%),
+      linear-gradient(125deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 45%),
       radial-gradient(120% 120% at 80% 0%, rgb(var(--c-cream-light)), rgb(var(--c-cream-deep)));
-    background-size: 7px 7px, 11px 11px, 180px 180px, 100% 100%, 100% 100%;
-    background-position: 0 0, 3px 4px, 0 0, 0 0, 0 0;
+    background-size:
+      7px 7px,
+      11px 11px,
+      180px 180px,
+      100% 100%,
+      100% 100%;
+    background-position:
+      0 0,
+      3px 4px,
+      0 0,
+      0 0,
+      0 0;
     background-attachment: fixed;
   }
 }
@@ -54,58 +75,140 @@
 /* ---------- the hand-drawn design-system primitives ---------- */
 @layer components {
   /* section headers */
-  .section-tag { @apply inline-flex items-center gap-2 font-mono text-[.62rem] tracking-[.2em] uppercase text-brown bg-cream-light border-2 border-brown rounded-pill px-[13px] py-1 mb-3 -rotate-[1.2deg]; }
-  .sec-title { @apply font-doodle font-bold text-2xl text-forest leading-tight mb-4 max-md:text-xl; }
-  .sec-sub { @apply block font-body font-normal text-[.85rem] text-olive-soft mt-[3px]; }
-  .rule { @apply border-0 border-t-2 border-dashed border-ink opacity-60 mt-12 max-md:mt-9; }
+  .section-tag {
+    @apply inline-flex items-center gap-2 font-mono text-[.62rem] tracking-[.2em] uppercase text-brown bg-cream-light border-2 border-brown rounded-pill px-[13px] py-1 mb-3 -rotate-[1.2deg];
+  }
+  .sec-title {
+    @apply font-doodle font-bold text-2xl text-forest leading-tight mb-4 max-md:text-xl;
+  }
+  .sec-sub {
+    @apply block font-body font-normal text-[.85rem] text-olive-soft mt-[3px];
+  }
+  .rule {
+    @apply border-0 border-t-2 border-dashed border-ink opacity-60 mt-12 max-md:mt-9;
+  }
 
   /* responsive auto-fill card grid (events, powders, drinks) */
-  .card-grid { @apply grid gap-[18px] [grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))]; }
+  .card-grid {
+    @apply grid gap-[18px] [grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))];
+  }
 
   /* card shells */
-  .paper-card { @apply relative bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard-sm overflow-hidden flex flex-col transition-transform hover:-translate-x-px hover:-translate-y-0.5; }
-  .paper-card.is-star { background: linear-gradient(180deg, rgb(var(--c-star)), rgb(var(--c-cream-card))); }
+  .paper-card {
+    @apply relative bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard-sm overflow-hidden flex flex-col transition-transform hover:-translate-x-px hover:-translate-y-0.5;
+  }
+  .paper-card.is-star {
+    background: linear-gradient(180deg, rgb(var(--c-star)), rgb(var(--c-cream-card)));
+  }
 
   /* chips (filters) */
-  .chip { @apply font-mono text-[.64rem] tracking-[.1em] uppercase text-brown bg-cream-light border-2 border-brown rounded-pill px-[15px] py-[7px] cursor-pointer leading-tight text-center transition-transform hover:-translate-y-0.5; }
-  .chip--active { @apply bg-forest text-cream-light border-forest; }
+  .chip {
+    @apply font-mono text-[.64rem] tracking-[.1em] uppercase text-brown bg-cream-light border-2 border-brown rounded-pill px-[15px] py-[7px] cursor-pointer leading-tight text-center transition-transform hover:-translate-y-0.5;
+  }
+  .chip--active {
+    @apply bg-forest text-cream-light border-forest;
+  }
 
   /* meta line (mono row with leading icon) */
-  .meta-line { @apply font-mono text-[.64rem] text-brown flex gap-[7px] items-center my-[3px] uppercase; }
+  .meta-line {
+    @apply font-mono text-[.64rem] text-brown flex gap-[7px] items-center my-[3px] uppercase;
+  }
 
   /* stamp status badge */
-  .stamp { @apply absolute top-[11px] right-[11px] z-[2] font-mono font-medium uppercase tracking-[.08em] text-[.55rem] text-clay border-2 border-clay rounded-[8px_13px_9px_12px] px-2 py-[5px] -rotate-[7deg] leading-none; background: rgb(var(--c-clay) / .07); box-shadow: inset 0 0 0 1px rgb(var(--c-clay) / .2); }
-  .stamp--rec { @apply text-olive-soft border-olive-soft; background: rgb(var(--c-olive-soft) / .09); box-shadow: inset 0 0 0 1px rgb(var(--c-olive-soft) / .2); }
+  .stamp {
+    @apply absolute top-[11px] right-[11px] z-[2] font-mono font-medium uppercase tracking-[.08em] text-[.55rem] text-clay border-2 border-clay rounded-[8px_13px_9px_12px] px-2 py-[5px] -rotate-[7deg] leading-none;
+    background: rgb(var(--c-clay) / 0.07);
+    box-shadow: inset 0 0 0 1px rgb(var(--c-clay) / 0.2);
+  }
+  .stamp--rec {
+    @apply text-olive-soft border-olive-soft;
+    background: rgb(var(--c-olive-soft) / 0.09);
+    box-shadow: inset 0 0 0 1px rgb(var(--c-olive-soft) / 0.2);
+  }
 
   /* form controls (appearance resets utilities can't do).
      Three field skins, consumed by the <Field*> components in components/form:
        .field-box        boxed text / number / url input  (NO chevron)
        .field-select     boxed <select> only              (chevron — it really drops down)
        .field-underline  inline dashed-underline number   (cups / SRP / price overrides) */
-  .field-label { @apply block font-mono text-[.58rem] tracking-[.12em] uppercase text-brown mb-[5px]; }
-  .field-box { @apply w-full font-mono text-[.8rem] text-forest bg-cream-card border-2 border-olive rounded-[10px_8px_11px_8px] py-2 px-[11px] outline-none transition-colors; -moz-appearance: textfield; }
-  .field-box:focus { @apply border-forest; }
-  .field-box::placeholder { @apply text-brown-soft; opacity: .65; }
-  .field-box::-webkit-outer-spin-button, .field-box::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-  .field-select { @apply w-full font-mono text-[.8rem] text-forest bg-cream-card border-2 border-olive rounded-[10px_8px_11px_8px] py-2 pl-[11px] pr-7 cursor-pointer appearance-none bg-no-repeat outline-none transition-colors; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%233f5031' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E"); background-position: right 10px center; }
-  .field-select:focus { @apply border-forest; }  .field-underline { @apply font-mono font-medium text-[1.05rem] text-clay bg-transparent border-0 w-full text-center mt-[3px] pb-px outline-none border-b-[1.6px] border-dashed border-clay; -moz-appearance: textfield; }
-  .field-underline:focus { @apply border-solid; }
-  .field-underline::-webkit-outer-spin-button, .field-underline::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .field-label {
+    @apply block font-mono text-[.58rem] tracking-[.12em] uppercase text-brown mb-[5px];
+  }
+  .field-box {
+    @apply w-full font-mono text-[.8rem] text-forest bg-cream-card border-2 border-olive rounded-[10px_8px_11px_8px] py-2 px-[11px] outline-none transition-colors;
+    -moz-appearance: textfield;
+  }
+  .field-box:focus {
+    @apply border-forest;
+  }
+  .field-box::placeholder {
+    @apply text-brown-soft;
+    opacity: 0.65;
+  }
+  .field-box::-webkit-outer-spin-button,
+  .field-box::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .field-select {
+    @apply w-full font-mono text-[.8rem] text-forest bg-cream-card border-2 border-olive rounded-[10px_8px_11px_8px] py-2 pl-[11px] pr-7 cursor-pointer appearance-none bg-no-repeat outline-none transition-colors;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%233f5031' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 10px center;
+  }
+  .field-select:focus {
+    @apply border-forest;
+  }
+  .field-underline {
+    @apply font-mono font-medium text-[1.05rem] text-clay bg-transparent border-0 w-full text-center mt-[3px] pb-px outline-none border-b-[1.6px] border-dashed border-clay;
+    -moz-appearance: textfield;
+  }
+  .field-underline:focus {
+    @apply border-solid;
+  }
+  .field-underline::-webkit-outer-spin-button,
+  .field-underline::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
   /* drink cost cells */
-  .cost-cell { @apply text-center border-2 border-brown rounded-cell px-1 py-2 bg-cream-card; }
-  .cost-cell--hl { @apply bg-forest border-forest; }
-  .margin-fill { background: repeating-linear-gradient(45deg, rgb(var(--c-matcha)) 0 7px, rgb(var(--c-matcha-bright)) 7px 14px); border-right: 2px solid rgb(var(--c-brown)); border-radius: 8px 3px 3px 8px; }
+  .cost-cell {
+    @apply text-center border-2 border-brown rounded-cell px-1 py-2 bg-cream-card;
+  }
+  .cost-cell--hl {
+    @apply bg-forest border-forest;
+  }
+  .margin-fill {
+    background: repeating-linear-gradient(
+      45deg,
+      rgb(var(--c-matcha)) 0 7px,
+      rgb(var(--c-matcha-bright)) 7px 14px
+    );
+    border-right: 2px solid rgb(var(--c-brown));
+    border-radius: 8px 3px 3px 8px;
+  }
 
   /* powder per-gram badge */
-  .perg-box { @apply flex items-center gap-[11px] mx-4 mb-[11px] px-[14px] py-2 bg-forest rounded-[13px_10px_14px_9px] shadow-hard-sm; }
+  .perg-box {
+    @apply flex items-center gap-[11px] mx-4 mb-[11px] px-[14px] py-2 bg-forest rounded-[13px_10px_14px_9px] shadow-hard-sm;
+  }
 
   /* buy link / ingredient tile */
-  .buylink { @apply mt-auto mx-4 mb-4 font-mono text-[.58rem] tracking-[.04em] uppercase text-cream-light bg-forest rounded-[12px_9px_13px_9px] px-[13px] py-[9px] no-underline flex flex-col gap-0.5 hover:bg-olive; }
-  .ing-tile { @apply bg-cream-light border-[1.8px] border-ink rounded-soft px-[13px] py-[11px] flex flex-col gap-[3px]; }
+  .buylink {
+    @apply mt-auto mx-4 mb-4 font-mono text-[.58rem] tracking-[.04em] uppercase text-cream-light bg-forest rounded-[12px_9px_13px_9px] px-[13px] py-[9px] no-underline flex flex-col gap-0.5 hover:bg-olive;
+  }
+  .ing-tile {
+    @apply bg-cream-light border-[1.8px] border-ink rounded-soft px-[13px] py-[11px] flex flex-col gap-[3px];
+  }
 
   /* navbar + landing */
-  .nav-link { @apply font-mono text-[.62rem] tracking-[.1em] uppercase text-brown no-underline px-[13px] py-[7px] border-2 border-transparent rounded-pill transition-transform whitespace-nowrap hover:-translate-y-px hover:border-ink max-md:px-[9px] max-md:py-[5px] max-md:text-[.55rem] max-md:tracking-[.06em]; }
-  .nav-link--active { @apply bg-forest text-cream-light border-forest; }
-  .home-card { @apply relative flex flex-col gap-[9px] bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard p-6 no-underline text-inherit transition-transform hover:-translate-x-0.5 hover:-translate-y-[3px]; }
+  .nav-link {
+    @apply font-mono text-[.62rem] tracking-[.1em] uppercase text-brown no-underline px-[13px] py-[7px] border-2 border-transparent rounded-pill transition-transform whitespace-nowrap hover:-translate-y-px hover:border-ink max-md:px-[9px] max-md:py-[5px] max-md:text-[.55rem] max-md:tracking-[.06em];
+  }
+  .nav-link--active {
+    @apply bg-forest text-cream-light border-forest;
+  }
+  .home-card {
+    @apply relative flex flex-col gap-[9px] bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard p-6 no-underline text-inherit transition-transform hover:-translate-x-0.5 hover:-translate-y-[3px];
+  }
 }

@@ -2,12 +2,21 @@ import { perGramLabel } from "@/features/powders/pricing";
 import SaveButton from "@/components/SaveButton";
 
 // category swatch colours (themeable via :root --c-cat-*)
-const PDOT = { ph: "rgb(var(--c-cat-ph))", jp: "rgb(var(--c-cat-jp))", import: "rgb(var(--c-cat-import))" };
+const PDOT = {
+  ph: "rgb(var(--c-cat-ph))",
+  jp: "rgb(var(--c-cat-jp))",
+  import: "rgb(var(--c-cat-import))",
+};
 
 export default function PowderCard({ powder, img, saved, onToggleSave }) {
   return (
     <article className={`paper-card${powder.star ? " is-star" : ""}`}>
-      <SaveButton saved={saved} onToggle={onToggleSave} label={powder.name} className="absolute top-[10px] right-[10px] z-[3]" />
+      <SaveButton
+        saved={saved}
+        onToggle={onToggleSave}
+        label={powder.name}
+        className="absolute top-[10px] right-[10px] z-[3]"
+      />
 
       <div className="flex gap-[13px] items-start px-4 pt-4 pb-2.5">
         <span
@@ -21,13 +30,16 @@ export default function PowderCard({ powder, img, saved, onToggleSave }) {
               loading="lazy"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover block"
-              onError={(e) => { e.currentTarget.style.display = "none"; }}
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
             />
           )}
         </span>
         <div className="flex-1 min-w-0 pr-9">
           <div className="font-mono text-[.55rem] tracking-[.08em] uppercase text-clay mb-[3px]">
-            {powder.catlabel}{powder.star ? " · ⭐ top pick" : ""}
+            {powder.catlabel}
+            {powder.star ? " · ⭐ top pick" : ""}
           </div>
           <h3 className="font-doodle font-bold text-[1.18rem] text-forest leading-snug">
             {powder.name}

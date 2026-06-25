@@ -90,7 +90,7 @@ behind server actions (`actions.js`).
 2. Set both in `web/.env.local` (local) **and** the Vercel project env (prod):
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
-   (`KV_REST_API_URL` / `KV_REST_API_TOKEN` are also accepted.)
+     (`KV_REST_API_URL` / `KV_REST_API_TOKEN` are also accepted.)
 3. Restart `npm run dev` / redeploy. Verify with `npm run check:redis`.
 
 `/events`, `/powders`, `/drinks`, `/calculator` are `force-dynamic` so saved

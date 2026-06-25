@@ -1,7 +1,11 @@
 import SaveButton from "@/components/SaveButton";
 
 // region swatch colours reuse the powder-category greens (themeable via :root --c-cat-*)
-const RDOT = { north: "rgb(var(--c-cat-ph))", central: "rgb(var(--c-cat-jp))", south: "rgb(var(--c-cat-import))" };
+const RDOT = {
+  north: "rgb(var(--c-cat-ph))",
+  central: "rgb(var(--c-cat-jp))",
+  south: "rgb(var(--c-cat-import))",
+};
 const BAND = { budget: "₱", mid: "₱₱", premium: "₱₱₱" };
 const LINK_META = {
   web: { icon: "🌐", label: "Website" },
@@ -28,7 +32,10 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
   const isJapan = c.tier === "japan";
   const toPeso = (n) => (isJapan ? Math.round(n * JPY_TO_PHP) : n); // Japan menu data is stored in ¥
   const menuTxt = c.menu.map((m) => `${m.i}${m.p ? ` ₱${toPeso(m.p)}` : ""}`).join(" · ");
-  const prices = c.menu.map((m) => m.p).filter((p) => typeof p === "number").map(toPeso);
+  const prices = c.menu
+    .map((m) => m.p)
+    .filter((p) => typeof p === "number")
+    .map(toPeso);
   const lo = prices.length ? Math.min(...prices) : 0;
   const hi = prices.length ? Math.max(...prices) : 0;
   const range = prices.length ? (lo === hi ? `₱${lo}` : `₱${lo}–${hi}`) : "—";
@@ -37,10 +44,11 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
   const leaf = isJapan
     ? { txt: "🇯🇵 Japan", cls: "text-clay" }
     : isGiant
-    ? { txt: "🍃 Big Leaf", cls: "text-brown" }
-    : { txt: "🌱 Little Leaf", cls: "text-olive" };
+      ? { txt: "🍃 Big Leaf", cls: "text-brown" }
+      : { txt: "🌱 Little Leaf", cls: "text-olive" };
   // every top-row pill shares one colour (aligned), regardless of threat/health value
-  const PILL = "font-mono text-[.55rem] font-medium uppercase tracking-[.06em] px-[9px] py-[3px] rounded-pill border-2 bg-cream-card text-forest border-forest";
+  const PILL =
+    "font-mono text-[.55rem] font-medium uppercase tracking-[.06em] px-[9px] py-[3px] rounded-pill border-2 bg-cream-card text-forest border-forest";
   const META = "meta-line normal-case tracking-normal items-start";
 
   return (
@@ -49,7 +57,12 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
         <div className="flex flex-wrap items-center gap-[6px] min-w-0">
           <span className={PILL}>{stamp}</span>
           <span className={PILL}>{c.healthTxt}</span>
-          <span aria-hidden="true" className="shrink-0 grid place-items-center w-[19px] h-[19px] rounded-full border-2 border-forest bg-cream-card text-forest text-[.62rem] font-bold leading-none">✓</span>
+          <span
+            aria-hidden="true"
+            className="shrink-0 grid place-items-center w-[19px] h-[19px] rounded-full border-2 border-forest bg-cream-card text-forest text-[.62rem] font-bold leading-none"
+          >
+            ✓
+          </span>
         </div>
         <SaveButton saved={saved} onToggle={onToggleSave} label={c.name} className="shrink-0" />
       </div>
@@ -75,7 +88,9 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
           <div className="font-mono text-[.55rem] tracking-[.08em] uppercase text-clay mb-[3px]">
             <span className={`${leaf.cls} font-medium`}>{leaf.txt}</span> · {c.format}
           </div>
-          <h3 className="font-doodle font-bold text-[1.18rem] text-forest leading-snug">{c.name}</h3>
+          <h3 className="font-doodle font-bold text-[1.18rem] text-forest leading-snug">
+            {c.name}
+          </h3>
         </div>
       </div>
       <p className="font-body text-[.82rem] text-olive-soft px-4 pb-2 leading-snug">{c.hook}</p>
@@ -103,11 +118,15 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
         <div className={META}>📍 {c.area}</div>
         <div className={META}>📋 {menuTxt}</div>
         <div className={META}>
-          {c.ig != null ? <>👥 IG {fmtK(c.ig)} · {c.scale}</> : <>🏠 {c.scale}</>}
+          {c.ig != null ? (
+            <>
+              👥 IG {fmtK(c.ig)} · {c.scale}
+            </>
+          ) : (
+            <>🏠 {c.scale}</>
+          )}
         </div>
-        {c.note && (
-          <div className={`${META} text-clay`}>⚠️ {c.note}</div>
-        )}
+        {c.note && <div className={`${META} text-clay`}>⚠️ {c.note}</div>}
       </div>
 
       {/* links — the only tappable, pill-shaped elements */}

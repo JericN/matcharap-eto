@@ -1,4 +1,4 @@
-import { Redis } from '@upstash/redis';
+import { Redis } from "@upstash/redis";
 
 // ============================================================================
 // Upstash Redis client — the shared store for mutable state (hearts + SRP).

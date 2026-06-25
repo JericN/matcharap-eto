@@ -14,7 +14,7 @@ export function perGram(powder) {
 // display ₱/g, range preserved (e.g. "₱27–70") — for the badge
 export function perGramLabel(powder) {
   const m = powder.price.match(PER_G_LABEL);
-  return m ? m[0].replace(/\s*\/\s*g/, '') : '—';
+  return m ? m[0].replace(/\s*\/\s*g/, "") : "—";
 }
 
 // Matcha choices for the calculator, derived from the powder list (single
