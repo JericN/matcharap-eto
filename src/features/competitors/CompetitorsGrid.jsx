@@ -1,10 +1,8 @@
 "use client";
-import { useState, useTransition } from "react";
+import { useState, useEffect, useTransition } from "react";
 import { toggleCompetitor } from "@/config/actions";
 import CompetitorCard from "@/features/competitors/CompetitorCard";
 
-// left-to-right rows, but each card keeps its natural height (items-start = no row-stretch)
-const GRID = "grid gap-[18px] [grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))] items-start";
 const REGIONS = [
   { k: "all", label: "All areas" },
   { k: "north", label: "🧭 North · QC·Caloocan·Marikina" },
@@ -24,11 +22,21 @@ const SECTIONS = [
   { tier: "japan", emoji: "🇯🇵", title: "Straight from Japan", blurb: "iconic & one-of-a-kind houses to borrow ideas from · ¥ prices shown as ≈₱ (×0.379)" },
 ];
 
+const colCount = (w) => (w < 640 ? 1 : w < 1280 ? 2 : 3);
+
 export default function CompetitorsGrid({ competitors, initialSaved = [] }) {
   const [region, setRegion] = useState("all");
   const [band, setBand] = useState("all");
   const [saved, setSaved] = useState(initialSaved); // shared Redis state, seeded from the server
+  const [cols, setCols] = useState(3); // desktop default for SSR; corrected on mount
   const [, startTransition] = useTransition();
+
+  useEffect(() => {
+    const calc = () => setCols(colCount(window.innerWidth));
+    calc();
+    window.addEventListener("resize", calc);
+    return () => window.removeEventListener("resize", calc);
+  }, []);
 
   const savedSet = new Set(saved);
   const toggleSave = (name) => {
@@ -62,6 +70,10 @@ export default function CompetitorsGrid({ competitors, initialSaved = [] }) {
           .filter((c) => c.tier === s.tier && match(c))
           .sort((a, b) => a.rank - b.rank);
         if (!cards.length) return null;
+        // round-robin into columns → reads left-to-right (1,2,3 / 4,5,6 …) AND packs
+        // with no row gaps (each column flows at its own natural height).
+        const columns = Array.from({ length: cols }, () => []);
+        cards.forEach((c, i) => columns[i % cols].push(c));
         return (
           <section key={s.tier} className="mt-16 first:mt-4 mb-0">
             <div className="flex items-center gap-[12px] flex-wrap mb-1">
@@ -74,14 +86,18 @@ export default function CompetitorsGrid({ competitors, initialSaved = [] }) {
             </div>
             <p className="font-body text-[.9rem] text-olive-soft mb-4">{s.blurb}</p>
             <hr className="border-0 border-t-2 border-dashed border-ink opacity-60 mb-7 mt-0" />
-            <div className={GRID}>
-              {cards.map((c) => (
-                <CompetitorCard
-                  key={c.name}
-                  c={c}
-                  saved={savedSet.has(c.name)}
-                  onToggleSave={() => toggleSave(c.name)}
-                />
+            <div className="flex gap-[18px] items-start">
+              {columns.map((col, ci) => (
+                <div key={ci} className="flex-1 min-w-0 flex flex-col gap-[18px]">
+                  {col.map((c) => (
+                    <CompetitorCard
+                      key={c.name}
+                      c={c}
+                      saved={savedSet.has(c.name)}
+                      onToggleSave={() => toggleSave(c.name)}
+                    />
+                  ))}
+                </div>
               ))}
             </div>
           </section>

@@ -112,7 +112,7 @@ export default function CompetitorCard({ c, saved, onToggleSave }) {
         <div className="meta-line normal-case tracking-normal items-start">📍 {c.area}</div>
         <div className="meta-line normal-case tracking-normal items-start">📋 {menuTxt}</div>
         <div className="meta-line normal-case tracking-normal items-start">
-          {isJapan ? <>🏠 {c.scale}</> : <>👥 IG {fmtK(c.ig)} · {c.scale}</>}
+          {c.ig != null ? <>👥 IG {fmtK(c.ig)} · {c.scale}</> : <>🏠 {c.scale}</>}
         </div>
         {c.note && (
           <div className="meta-line normal-case tracking-normal items-start text-clay">⚠️ {c.note}</div>

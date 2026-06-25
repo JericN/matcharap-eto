@@ -4,7 +4,7 @@
 import { execSync } from 'node:child_process';
 import { mkdirSync, rmSync, existsSync, copyFileSync } from 'node:fs';
 
-const KEEP = 4;
+const KEEP = 8;
 const MINPX = 380;       // reject tiny/broken images
 const MAXPX = 640;       // thumbnail long edge (commercial license → resize OK)
 const UA = 'matcharap-eto-research/1.0';
