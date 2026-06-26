@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import SaveButton from "@/components/SaveButton";
 
@@ -37,8 +37,26 @@ export default function DrinkCard({
   onDelete,
 }) {
   const [addOpen, setAddOpen] = useState(false);
+  const [addPos, setAddPos] = useState(null); // viewport coords for the portaled "+ add" menu
+  const addBtnRef = useRef(null);
   const [lightbox, setLightbox] = useState(null); // image index, or null
   const [menu, setMenu] = useState(null); // right-click context menu position {x, y}, or null
+
+  // Open the "+ add" menu as a portal anchored to the button, clamped to the
+  // viewport — `.paper-card` is overflow-hidden, so an in-card dropdown clips.
+  const openAdd = () => {
+    const r = addBtnRef.current?.getBoundingClientRect();
+    if (r) {
+      const W = 200,
+        H = 240,
+        pad = 8;
+      setAddPos({
+        left: Math.max(pad, Math.min(r.left, window.innerWidth - W - pad)),
+        top: Math.max(pad, Math.min(r.bottom + 4, window.innerHeight - H - pad)),
+      });
+    }
+    setAddOpen(true);
+  };
   const attached = drink.ingredients;
   const unattached = catalog.filter((i) => !attached.includes(i.name));
   const emojiOf = (name) => catalog.find((i) => i.name === name)?.emoji ?? "";
@@ -123,41 +141,16 @@ export default function DrinkCard({
         ))}
 
         {addItems.length > 0 && (
-          <span className="relative inline-flex">
-            <button
-              type="button"
-              onClick={() => setAddOpen((o) => !o)}
-              aria-expanded={addOpen}
-              aria-label={"Add to " + drink.name}
-              className="font-mono text-[.58rem] uppercase tracking-[.06em] text-olive bg-cream-card border-2 border-dashed border-olive rounded-pill px-[10px] py-[4px] hover:border-forest hover:text-forest transition"
-            >
-              ＋ add
-            </button>
-            {addOpen && (
-              <>
-                <div
-                  className="fixed inset-0 z-[20]"
-                  onClick={() => setAddOpen(false)}
-                  aria-hidden="true"
-                />
-                <div className="absolute left-0 top-full mt-1 z-[21] min-w-[190px] max-h-[230px] overflow-auto bg-cream-card border-2 border-forest rounded-[11px] shadow-hard-sm p-1">
-                  {addItems.map((it) => (
-                    <button
-                      key={it.key}
-                      type="button"
-                      onClick={() => {
-                        it.pick();
-                        setAddOpen(false);
-                      }}
-                      className="block w-full text-left px-2.5 py-1.5 rounded-[7px] font-mono text-[.66rem] text-forest hover:bg-cream-light transition"
-                    >
-                      {it.label}
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
-          </span>
+          <button
+            ref={addBtnRef}
+            type="button"
+            onClick={() => (addOpen ? setAddOpen(false) : openAdd())}
+            aria-expanded={addOpen}
+            aria-label={"Add to " + drink.name}
+            className="font-mono text-[.58rem] uppercase tracking-[.06em] text-olive bg-cream-card border-2 border-dashed border-olive rounded-pill px-[10px] py-[4px] hover:border-forest hover:text-forest transition"
+          >
+            ＋ add
+          </button>
         )}
       </div>
 
@@ -193,6 +186,38 @@ export default function DrinkCard({
           </div>
         </div>
       )}
+
+      {addOpen &&
+        addPos &&
+        typeof document !== "undefined" &&
+        createPortal(
+          <>
+            <div
+              className="fixed inset-0 z-[55]"
+              onClick={() => setAddOpen(false)}
+              aria-hidden="true"
+            />
+            <div
+              className="fixed z-[56] min-w-[190px] max-h-[230px] overflow-auto bg-cream-card border-2 border-forest rounded-[11px] shadow-hard-sm p-1"
+              style={{ left: addPos.left, top: addPos.top }}
+            >
+              {addItems.map((it) => (
+                <button
+                  key={it.key}
+                  type="button"
+                  onClick={() => {
+                    it.pick();
+                    setAddOpen(false);
+                  }}
+                  className="block w-full text-left px-2.5 py-1.5 rounded-[7px] font-mono text-[.66rem] text-forest hover:bg-cream-light transition"
+                >
+                  {it.label}
+                </button>
+              ))}
+            </div>
+          </>,
+          document.body,
+        )}
 
       {lightbox != null &&
         createPortal(
