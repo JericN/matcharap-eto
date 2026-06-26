@@ -16,6 +16,12 @@ export async function togglePowder(name) {
   revalidatePath("/calculator"); // matcha options derive from saved powders
 }
 
+export async function toggleMilk(name) {
+  await repo.toggleMilk(name);
+  revalidatePath("/milks");
+  revalidatePath("/calculator");
+}
+
 export async function toggleDrink(name) {
   await repo.toggleDrink(name);
   revalidatePath("/drinks");
@@ -81,4 +87,19 @@ export async function deleteDrink(name) {
 export async function setCosts(patch) {
   await repo.setCosts(patch);
   revalidatePath("/calculator");
+}
+
+export async function addExpense(row) {
+  await repo.addExpense(row);
+  revalidatePath("/expenses");
+}
+
+export async function updateExpense(id, patch) {
+  await repo.updateExpense(id, patch);
+  revalidatePath("/expenses");
+}
+
+export async function removeExpense(id) {
+  await repo.removeExpense(id);
+  revalidatePath("/expenses");
 }

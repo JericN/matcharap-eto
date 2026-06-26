@@ -9,7 +9,7 @@ import { Redis } from "@upstash/redis";
 // `redis` is null only when unconfigured. There is NO local-file fallback:
 // state.js throws loudly if it ever gets null, so a missing/typo'd credential
 // fails fast instead of silently diverging per-machine. Set the env vars below
-// in web/.env.local for dev and in the Vercel project env for prod.
+// in .env.local for dev and in the Vercel project env for prod.
 // ============================================================================
 
 const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;

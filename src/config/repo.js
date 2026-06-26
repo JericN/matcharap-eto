@@ -1,5 +1,6 @@
 import { getSiteData } from "./store";
 import { getState, writeState } from "./state";
+import { toMilkOptions } from "@/features/milks/pricing";
 
 // ============================================================================
 // DATA-ACCESS LAYER — the single interface the app uses for data.
@@ -36,7 +37,11 @@ export const repo = {
     const { competitors, competitorImages } = await getSiteData();
     return competitors.map((c) => ({ ...c, img: competitorImages[c.name] ?? null }));
   },
-  milkOptions: async () => (await getSiteData()).milkOptions,
+  milks: async () => (await getSiteData()).milks,
+  milkImages: async () => (await getSiteData()).milkImages,
+  // calculator milk dropdown, DERIVED from the milk catalog (single source of truth,
+  // mirrors toMatchaOptions): [{ l, ml }] cheapest-first, so Calculator.jsx is unchanged.
+  milkOptions: async () => toMilkOptions((await getSiteData()).milks),
 
   // drinks = seed built-ins ∪ user-created (extraDrinks), each with overlays
   // applied from shared state: text/milk edits (drinkOverrides), attached
@@ -83,14 +88,17 @@ export const repo = {
   // ---- shared-state reads ----
   savedEvents: async () => (await getState()).savedEvents,
   savedPowders: async () => (await getState()).savedPowders,
+  savedMilks: async () => (await getState()).savedMilks,
   savedDrinks: async () => (await getState()).savedDrinks,
   savedCompetitors: async () => (await getState()).savedCompetitors,
   srp: async () => (await getState()).srp,
   priceOverrides: async () => (await getState()).priceOverrides,
+  expenses: async () => (await getState()).expenses,
 
   // ---- shared-state writes (read-modify-write the one record) ----
   toggleEvent: (name) => mutate((s) => ({ ...s, savedEvents: toggle(s.savedEvents, name) })),
   togglePowder: (name) => mutate((s) => ({ ...s, savedPowders: toggle(s.savedPowders, name) })),
+  toggleMilk: (name) => mutate((s) => ({ ...s, savedMilks: toggle(s.savedMilks, name) })),
   toggleDrink: (name) => mutate((s) => ({ ...s, savedDrinks: toggle(s.savedDrinks, name) })),
   toggleCompetitor: (name) =>
     mutate((s) => ({ ...s, savedCompetitors: toggle(s.savedCompetitors, name) })),
@@ -177,4 +185,16 @@ export const repo = {
     })),
 
   setCosts: (patch) => mutate((s) => ({ ...s, costs: { ...s.costs, ...patch } })),
+
+  // ---- expense-planner rows (the client builds each row's id) ----
+  // Append, patch-by-id, and remove-by-id all work off the FRESH list, so a
+  // teammate editing a different row concurrently is preserved.
+  addExpense: (row) => mutate((s) => ({ ...s, expenses: [...s.expenses, row] })),
+  updateExpense: (id, patch) =>
+    mutate((s) => ({
+      ...s,
+      expenses: s.expenses.map((r) => (r.id === id ? { ...r, ...patch } : r)),
+    })),
+  removeExpense: (id) =>
+    mutate((s) => ({ ...s, expenses: s.expenses.filter((r) => r.id !== id) })),
 };

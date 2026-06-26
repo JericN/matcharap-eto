@@ -18,6 +18,12 @@ const BANDS = [
 // stacked sections, top → bottom
 const SECTIONS = [
   {
+    tier: "japan",
+    emoji: "🇯🇵",
+    title: "Straight from Japan",
+    blurb: "iconic & one-of-a-kind houses to borrow ideas from · ¥ prices shown as ≈₱ (×0.379)",
+  },
+  {
     tier: "giant",
     emoji: "🍃",
     title: "Big Leaves",
@@ -28,12 +34,6 @@ const SECTIONS = [
     emoji: "🌱",
     title: "Little Leaves",
     blurb: "the smaller homegrown Metro Manila field",
-  },
-  {
-    tier: "japan",
-    emoji: "🇯🇵",
-    title: "Straight from Japan",
-    blurb: "iconic & one-of-a-kind houses to borrow ideas from · ¥ prices shown as ≈₱ (×0.379)",
   },
 ];
 

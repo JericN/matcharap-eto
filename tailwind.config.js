@@ -28,7 +28,13 @@ module.exports = {
         clay: c("--c-clay"),
         star: c("--c-star"),
         onforest: { mut: c("--c-onforest-mut"), soft: c("--c-onforest-soft") },
-        cat: { ph: c("--c-cat-ph"), jp: c("--c-cat-jp"), import: c("--c-cat-import") },
+        cat: {
+          ph: c("--c-cat-ph"),
+          jp: c("--c-cat-jp"),
+          import: c("--c-cat-import"),
+          authentic: c("--c-cat-authentic"),
+          unique: c("--c-cat-unique"),
+        },
       },
       borderColor: {
         ink: "rgb(var(--c-forest) / 0.30)",

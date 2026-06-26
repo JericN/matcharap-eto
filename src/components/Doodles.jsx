@@ -87,6 +87,19 @@ export default function Doodles() {
             <path d="M40 14 l5 -9" stroke="#b9542d" />
           </g>
         </symbol>
+        <symbol id="mm-receipt" viewBox="0 0 64 64">
+          <g
+            fill="none"
+            stroke="#3f5031"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 8 h28 V52 l-4 -4 -4 4 -4 -4 -4 4 -4 -4 -4 4 -4 -4 V8 z" />
+            <path d="M24 18 h16 M24 25 h16 M24 32 h11" stroke="#8aa15a" />
+            <path d="M24 41 h16" stroke="#b9542d" strokeWidth="2.6" />
+          </g>
+        </symbol>
       </defs>
     </svg>
   );

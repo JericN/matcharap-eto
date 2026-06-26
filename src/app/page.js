@@ -104,6 +104,24 @@ export default function Home() {
               open →
             </span>
           </Link>
+          <Link href="/expenses" className="home-card">
+            <span className="absolute top-3.5 right-4 font-mono text-[.6rem] tracking-[.1em] text-brown-soft">
+              06
+            </span>
+            <svg className="w-14 h-14" viewBox="0 0 64 64" aria-hidden="true">
+              <use href="#mm-receipt" />
+            </svg>
+            <div className="font-doodle font-bold text-[1.4rem] text-forest leading-tight">
+              Expense Planner
+            </div>
+            <p className="text-[.86rem] text-olive-soft flex-1">
+              Plan the spend — add a line per cost; totals, shares &amp; a grand total
+              auto-calculate, shared with the team.
+            </p>
+            <span className="font-mono text-[.6rem] tracking-[.1em] uppercase text-clay">
+              open →
+            </span>
+          </Link>
         </div>
       </section>
     </>

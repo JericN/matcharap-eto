@@ -81,7 +81,22 @@ export const CompetitorSchema = z.object({
   spotlight: z.enum(["unique", "iconic"]).optional(),
 });
 
-export const MilkOptionSchema = z.object({ l: z.string(), ml: z.number().positive() });
+// Milk options for matcha lattes — a researched sourcing catalog (mirrors PowderSchema).
+// `price` MUST carry a "₱NN/L" token; the card's per-liter / per-cup figures AND the
+// calculator's milk dropdown are DERIVED from it (src/features/milks/pricing.js).
+export const MilkSchema = z.object({
+  cat: z.enum(["ph", "import", "authentic", "unique"]),
+  catlabel: z.string(),
+  star: z.boolean().optional(),
+  name: z.string(),
+  type: z.string(), // "Oat · barista" / "Fresh dairy · full cream" — shown as kicker
+  origin: z.string(),
+  taste: z.string(), // flavor + how it behaves in a matcha latte (foam / split risk)
+  price: z.string(), // carries a "₱NN/L" token, e.g. "₱114 / 1L · ₱114/L (Landers)"
+  hype: z.string(),
+  buy: z.string(),
+  url: z.string().url(),
+});
 
 // A priced, attachable add-on ingredient (strawberry, cream foam, …) — one
 // self-contained object: emoji + market price (₱/cup reference, overridable in
@@ -125,7 +140,7 @@ export const SiteDataSchema = z.object({
   eventLinks: z.record(z.string(), z.array(LinkSchema)).default({}),
   powders: z.array(PowderSchema).min(1),
   competitors: z.array(CompetitorSchema).default([]),
-  milkOptions: z.array(MilkOptionSchema).min(1),
+  milks: z.array(MilkSchema).min(1),
   drinks: z.array(DrinkSchema).min(1),
   ingredients: z.array(IngredientSchema).min(1), // priced add-ons drinks attach (each carries its own link)
   pricing: PricingSchema,
@@ -154,6 +169,19 @@ export const SiteDataSchema = z.object({
         ),
     )
     .default({}),
+  // product photo per milk, keyed by exact milk name (overlay, like powderImages).
+  // absolute URL (hotlinked) or root-relative path (self-hosted under /public). No entry ⇒ colored circle.
+  milkImages: z
+    .record(
+      z.string(),
+      z
+        .string()
+        .refine(
+          (s) => /^(https?:\/\/|\/)/.test(s),
+          "must be an absolute URL or a root-relative path",
+        ),
+    )
+    .default({}),
 });
 
 // Shared mutable state (Redis `state` key) — one global record for everyone.
@@ -161,6 +189,7 @@ export const SiteDataSchema = z.object({
 export const StateSchema = z.object({
   savedEvents: z.array(z.string()).default([]), // hearted events
   savedPowders: z.array(z.string()).default([]), // hearted powders
+  savedMilks: z.array(z.string()).default([]), // hearted milks
   savedDrinks: z.array(z.string()).default([]), // hearted drinks (costed in calculator)
   savedCompetitors: z.array(z.string()).default([]), // hearted competitors
   srp: z.record(z.string(), z.number()).default({}), // drink name -> SRP override
@@ -181,4 +210,18 @@ export const StateSchema = z.object({
     })
     .partial()
     .default({}), // overrides of pricing defaults
+  // Expense-planner line items — an ordered array (not a name-keyed record):
+  // items repeat, may be blank while typing, and need a stable id for React
+  // keys + targeted update/delete. `id` is generated client-side.
+  expenses: z
+    .array(
+      z.object({
+        id: z.string(),
+        item: z.string().default(""),
+        notes: z.string().default(""),
+        price: z.number().nonnegative().default(0), // ₱ per unit
+        qty: z.number().nonnegative().default(1),
+      }),
+    )
+    .default([]),
 });

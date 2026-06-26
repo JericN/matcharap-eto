@@ -19,7 +19,7 @@ npm run check:redis  # verify the Upstash connection (set→get→del round-trip
 
 The landing/content renders from the bundled seed with no setup. The pages that
 read **shared saved state** (`/events`, `/powders`, `/drinks`, `/calculator`)
-need Upstash Redis credentials in `web/.env.local` — without them those pages
+need Upstash Redis credentials in `.env.local` — without them those pages
 error (there is no local fallback). See **Shared state** below.
 
 ---
@@ -87,7 +87,7 @@ behind server actions (`actions.js`).
 
 1. Provision **Upstash for Redis** (Vercel → Storage → Marketplace, or the
    Upstash console). Free tier is plenty.
-2. Set both in `web/.env.local` (local) **and** the Vercel project env (prod):
+2. Set both in `.env.local` (local) **and** the Vercel project env (prod):
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
      (`KV_REST_API_URL` / `KV_REST_API_TOKEN` are also accepted.)

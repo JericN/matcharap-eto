@@ -27,9 +27,11 @@
     --c-star: 249 243 228; /* star-card highlight */
     --c-onforest-mut: 205 217 189; /* muted text on forest */
     --c-onforest-soft: 223 230 210; /* soft text on forest */
-    --c-cat-ph: 94 123 58; /* powder category swatches */
+    --c-cat-ph: 94 123 58; /* powder + milk category swatches */
     --c-cat-jp: 122 148 71;
     --c-cat-import: 155 177 92;
+    --c-cat-authentic: 196 142 92; /* milk: authentic-matcha pairing (warm tan) */
+    --c-cat-unique: 162 128 170; /* milk: unique / specialty (muted mauve) */
   }
 
   /* Scale the whole UI down a notch on phones — most type & spacing is rem-based,

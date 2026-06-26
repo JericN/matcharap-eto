@@ -1,5 +1,5 @@
 // Smoke-test the Upstash Redis wiring without deploying.
-//   npm run check:redis        (loads web/.env.local automatically)
+//   npm run check:redis        (loads .env.local automatically)
 // Proves the REST creds work end-to-end (set → get → del round-trip) and prints
 // the current shared `state` key. Exit 0 = wired correctly.
 
@@ -11,7 +11,7 @@ const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TO
 if (!url || !token) {
   console.error("✗ No Redis REST creds found in env.");
   console.error(
-    "  Set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN (or the KV_* pair) in web/.env.local,",
+    "  Set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN (or the KV_* pair) in .env.local,",
   );
   console.error("  then re-run `npm run check:redis`.");
   process.exit(1);
