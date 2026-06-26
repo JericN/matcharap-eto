@@ -1,6 +1,7 @@
 "use client";
 import { useState, useTransition } from "react";
-import { toggleMilk } from "@/config/actions";
+import { toggleMilk, setPriceOverride, resetPriceOverride } from "@/config/actions";
+import { perLiter, milkOptionLabel } from "@/features/milks/pricing";
 import MilkCard from "@/features/milks/MilkCard";
 import SectionTitle from "@/components/SectionTitle";
 
@@ -14,8 +15,9 @@ const BUCKETS = [
   ["unique", "✨ Unique / specialty"],
 ];
 
-export default function MilkGrid({ milks, images, initialSaved }) {
+export default function MilkGrid({ milks, images, initialSaved, initialOverrides }) {
   const [saved, setSaved] = useState(initialSaved); // shared state, seeded from the server
+  const [overrides, setOverrides] = useState(initialOverrides); // priceOverrides, seeded from server
   const [, startTransition] = useTransition();
 
   const savedSet = new Set(saved);
@@ -24,15 +26,40 @@ export default function MilkGrid({ milks, images, initialSaved }) {
     startTransition(() => toggleMilk(name));
   };
 
-  const card = (m) => (
-    <MilkCard
-      key={m.name}
-      milk={m}
-      img={images[m.name]}
-      saved={savedSet.has(m.name)}
-      onToggleSave={() => toggle(m.name)}
-    />
-  );
+  // Edit a milk's ₱/L — same "milk:<label>" override the calculator reads, so it
+  // flows straight into costing. Empty / unchanged-from-default ⇒ clear it.
+  const commitPrice = (m, raw) => {
+    const label = milkOptionLabel(m);
+    if (!label) return; // no parseable ₱/L (concentrates) → not editable
+    const key = "milk:" + label;
+    const n = parseFloat(raw);
+    if (raw === "" || !Number.isFinite(n) || n < 0 || n === perLiter(m)) {
+      setOverrides((o) => {
+        const c = { ...o };
+        delete c[key];
+        return c;
+      });
+      startTransition(() => resetPriceOverride(key));
+    } else {
+      setOverrides((o) => ({ ...o, [key]: n }));
+      startTransition(() => setPriceOverride(key, n));
+    }
+  };
+
+  const card = (m) => {
+    const label = milkOptionLabel(m);
+    return (
+      <MilkCard
+        key={m.name}
+        milk={m}
+        img={images[m.name]}
+        saved={savedSet.has(m.name)}
+        onToggleSave={() => toggle(m.name)}
+        override={label ? overrides["milk:" + label] : undefined}
+        onCommitPrice={(raw) => commitPrice(m, raw)}
+      />
+    );
+  };
 
   // hearted milks (in heart order) lift into "Our Selection"; the rest stay in their bucket
   const selected = saved.map((n) => milks.find((m) => m.name === n)).filter(Boolean);

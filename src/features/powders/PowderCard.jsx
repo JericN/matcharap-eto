@@ -1,5 +1,6 @@
-import { perGramLabel } from "@/features/powders/pricing";
+import { perGram, perGramLabel } from "@/features/powders/pricing";
 import SaveButton from "@/components/SaveButton";
+import EditablePrice from "@/components/EditablePrice";
 
 // category swatch colours (themeable via :root --c-cat-*)
 const PDOT = {
@@ -8,7 +9,9 @@ const PDOT = {
   import: "rgb(var(--c-cat-import))",
 };
 
-export default function PowderCard({ powder, img, saved, onToggleSave }) {
+export default function PowderCard({ powder, img, saved, onToggleSave, override, onCommitPrice }) {
+  const ref = perGram(powder); // numeric ₱/g default (null ⇒ no parseable price)
+  const overridden = override != null;
   return (
     <article className={`paper-card${powder.star ? " is-star" : ""}`}>
       <SaveButton
@@ -50,15 +53,18 @@ export default function PowderCard({ powder, img, saved, onToggleSave }) {
         </div>
       </div>
       <div className="perg-box">
-        <span className="font-display font-bold text-[2rem] leading-[.9] text-cream-light whitespace-nowrap">
-          {perGramLabel(powder)}
-        </span>
+        <EditablePrice
+          display={overridden ? `₱${override}` : perGramLabel(powder)}
+          value={overridden ? override : ref}
+          editable={ref != null}
+          onCommit={onCommitPrice}
+        />
         <span className="flex flex-col gap-px">
           <span className="font-mono text-[.5rem] tracking-[.18em] uppercase text-matcha-bright">
-            per gram
+            per gram{overridden ? " · ✎ edited" : ""}
           </span>
           <span className="font-mono text-[.58rem] tracking-[.02em] text-onforest-soft">
-            ☕ {powder.serving} / serving
+            {overridden ? `↩︎ was ${perGramLabel(powder)}` : `☕ ${powder.serving} / serving`}
           </span>
         </span>
       </div>

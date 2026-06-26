@@ -1,5 +1,6 @@
-import { perLiterLabel, perCupLabel } from "@/features/milks/pricing";
+import { perLiter, perLiterLabel } from "@/features/milks/pricing";
 import SaveButton from "@/components/SaveButton";
+import EditablePrice from "@/components/EditablePrice";
 
 // category swatch colours (themeable via :root --c-cat-*) — fallback behind the logo
 const MDOT = {
@@ -9,7 +10,11 @@ const MDOT = {
   unique: "rgb(var(--c-cat-unique))",
 };
 
-export default function MilkCard({ milk, img, saved, onToggleSave }) {
+export default function MilkCard({ milk, img, saved, onToggleSave, override, onCommitPrice }) {
+  const ref = perLiter(milk); // numeric ₱/L default (null ⇒ no parseable price)
+  const overridden = override != null;
+  const effPl = overridden ? override : ref; // effective ₱/L drives the per-cup line
+  const perCup = effPl != null ? `₱${Math.round((effPl / 1000) * 180)}` : "—";
   return (
     <article className={`paper-card${milk.star ? " is-star" : ""}`}>
       <SaveButton
@@ -51,15 +56,18 @@ export default function MilkCard({ milk, img, saved, onToggleSave }) {
         </div>
       </div>
       <div className="perg-box">
-        <span className="font-display font-bold text-[2rem] leading-[.9] text-cream-light whitespace-nowrap">
-          {perLiterLabel(milk)}
-        </span>
+        <EditablePrice
+          display={overridden ? `₱${override}` : perLiterLabel(milk)}
+          value={overridden ? override : ref}
+          editable={ref != null}
+          onCommit={onCommitPrice}
+        />
         <span className="flex flex-col gap-px">
           <span className="font-mono text-[.5rem] tracking-[.18em] uppercase text-matcha-bright">
-            per liter
+            per liter{overridden ? " · ✎ edited" : ""}
           </span>
           <span className="font-mono text-[.58rem] tracking-[.02em] text-onforest-soft">
-            ☕ ≈{perCupLabel(milk)} / cup
+            {overridden ? `↩︎ was ${perLiterLabel(milk)} · ≈${perCup}/cup` : `☕ ≈${perCup} / cup`}
           </span>
         </span>
       </div>

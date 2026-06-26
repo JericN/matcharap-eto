@@ -29,6 +29,15 @@ export function perCupLabel(milk, ml = 180) {
 // powder sweetened-mix exclusion in toMatchaOptions).
 const CONCENTRATE = /evaporat|condensed|creamer/i;
 
+// The calculator's milk-option label, which is ALSO the identity for a
+// "milk:<label>" price override. Returns null when there's no parseable ₱/L.
+// One source of truth so the milks-page price-override key matches the
+// calculator's exactly (the label embeds the parsed ₱/L).
+export function milkOptionLabel(milk) {
+  const pl = perLiter(milk);
+  return pl == null ? null : `${milk.name} — ₱${pl}/L`;
+}
+
 // Milk choices for the calculator dropdown, derived from the milk list (single
 // source of truth, like toMatchaOptions). Skips concentrates + milks with no
 // parseable ₱/L; cheapest-first. `l` splits on " — " in the calculator to show
@@ -40,5 +49,5 @@ export function toMilkOptions(milks) {
     .map((m) => ({ milk: m, pl: perLiter(m) }))
     .filter((x) => x.pl != null)
     .sort((a, b) => a.pl - b.pl)
-    .map(({ milk, pl }) => ({ l: `${milk.name} — ₱${pl}/L`, ml: pl / 1000, cat: milk.cat }));
+    .map(({ milk, pl }) => ({ l: milkOptionLabel(milk), ml: pl / 1000, cat: milk.cat }));
 }
