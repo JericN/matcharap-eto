@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Doodles from "@/components/Doodles";
+import CalculatorWidget from "@/components/CalculatorWidget";
 
 export const metadata = {
   title: "Matcharap Eto · Vendor Board",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </div>
+        <CalculatorWidget />
       </body>
     </html>
   );
