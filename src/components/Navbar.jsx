@@ -12,6 +12,7 @@ const LINKS = [
   { href: "/drinks", label: "Drinks" },
   { href: "/competitors", label: "Competitors" },
   { href: "/expenses", label: "Expenses" },
+  { href: "/documents", label: "Documents" },
 ];
 
 export default function Navbar() {

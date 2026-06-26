@@ -1,6 +1,7 @@
 "use server";
 import { revalidatePath } from "next/cache";
 import { repo } from "@/config/repo";
+import * as docs from "@/config/documents";
 
 // Client-callable boundary: write through the DAL, then revalidate the routes
 // whose server reads depend on the changed state.
@@ -141,4 +142,24 @@ export async function renameExpenseTab(id, name) {
 export async function removeExpenseTab(id) {
   await repo.removeExpenseTab(id);
   revalidatePath("/expenses");
+}
+
+export async function createDoc(id, title) {
+  const d = await docs.createDoc(id, title);
+  revalidatePath("/documents");
+  return d;
+}
+
+export async function updateDoc(id, patch) {
+  await docs.updateDoc(id, patch);
+  revalidatePath("/documents");
+}
+
+export async function deleteDoc(id) {
+  await docs.deleteDoc(id);
+  revalidatePath("/documents");
+}
+
+export async function getDoc(id) {
+  return docs.getDoc(id);
 }

@@ -219,3 +219,75 @@
     @apply relative flex flex-col gap-[9px] bg-cream-card border-[2.2px] border-forest rounded-card shadow-hard p-6 no-underline text-inherit transition-transform hover:-translate-x-0.5 hover:-translate-y-[3px];
   }
 }
+
+/* ── Documents WYSIWYG editor (TipTap) content — paper theme ─────────────── */
+.doc-prose {
+  @apply text-[.9rem] text-brown leading-relaxed;
+}
+.doc-prose h1 {
+  @apply font-doodle font-bold text-forest text-[1.6rem] mt-4 mb-1;
+}
+.doc-prose h2 {
+  @apply font-doodle font-bold text-forest text-[1.3rem] mt-4 mb-1;
+}
+.doc-prose h3 {
+  @apply font-doodle font-bold text-forest text-[1.1rem] mt-3 mb-1;
+}
+.doc-prose p {
+  @apply my-2;
+}
+.doc-prose ul {
+  @apply list-disc pl-6 my-2;
+}
+.doc-prose ol {
+  @apply list-decimal pl-6 my-2;
+}
+.doc-prose li {
+  @apply my-1;
+}
+.doc-prose a {
+  @apply text-clay underline;
+}
+.doc-prose strong {
+  @apply font-bold text-forest;
+}
+.doc-prose em {
+  @apply italic;
+}
+.doc-prose code {
+  @apply font-mono bg-kraft px-1 rounded text-[.82rem];
+}
+.doc-prose pre {
+  @apply font-mono bg-kraft p-3 rounded my-2 text-[.82rem] overflow-x-auto;
+}
+.doc-prose pre code {
+  @apply bg-transparent p-0;
+}
+.doc-prose blockquote {
+  @apply border-l-2 border-olive pl-3 text-olive my-2;
+}
+.doc-prose hr {
+  @apply border-0 border-t-2 border-dashed border-brown-soft/40 my-4;
+}
+.doc-prose ul[data-type="taskList"] {
+  @apply list-none pl-0 my-2;
+}
+.doc-prose ul[data-type="taskList"] li {
+  @apply flex items-center gap-2;
+}
+.doc-prose ul[data-type="taskList"] li > label {
+  @apply shrink-0 flex items-center;
+}
+.doc-prose ul[data-type="taskList"] li > div {
+  @apply flex-1 min-w-0;
+}
+.doc-prose ul[data-type="taskList"] li > div p {
+  @apply my-0 leading-snug;
+}
+.doc-prose ul[data-type="taskList"] input[type="checkbox"] {
+  @apply accent-forest cursor-pointer w-[15px] h-[15px] block;
+}
+.doc-prose p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  @apply text-brown-soft/50 float-left h-0 pointer-events-none;
+}
