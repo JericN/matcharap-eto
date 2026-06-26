@@ -113,7 +113,6 @@ export const DrinkSchema = z.object({
   name: z.string(),
   note: z.string(), // short subtitle
   desc: z.string().default(""), // long researched description (rendered under the pills)
-  milkMl: z.number().nonnegative(), // milk volume per cup
   ingredients: z.array(z.string()).default([]), // attached add-on ingredient names
   srp: z.number().nonnegative(), // default selling price
 });
@@ -199,10 +198,10 @@ export const StateSchema = z.object({
     .record(z.string(), z.object({ matcha: z.boolean(), milk: z.boolean() }).partial())
     .default({}), // drink name -> which base (matcha/milk) is removed (absent key = present)
   extraIngredients: z.record(z.string(), IngredientSchema.omit({ name: true })).default({}), // user-created: name -> { emoji, price, link }
-  extraDrinks: z.record(z.string(), DrinkSchema.omit({ name: true })).default({}), // user-created drinks: name -> { note, desc, milkMl, ingredients, srp }
+  extraDrinks: z.record(z.string(), DrinkSchema.omit({ name: true })).default({}), // user-created drinks: name -> { note, desc, ingredients, srp }
   drinkOverrides: z
-    .record(z.string(), DrinkSchema.pick({ note: true, desc: true, milkMl: true }).partial())
-    .default({}), // edits to a drink's text/milk fields (seed or extra) -> { note?, desc?, milkMl? }
+    .record(z.string(), DrinkSchema.pick({ note: true, desc: true }).partial())
+    .default({}), // edits to a drink's text fields (seed or extra) -> { note?, desc? }
   costs: z
     .object({
       packaging: z.number().nonnegative(),
@@ -210,6 +209,10 @@ export const StateSchema = z.object({
     })
     .partial()
     .default({}), // overrides of pricing defaults
+  ingredientOverrides: z
+    .record(z.string(), IngredientSchema.omit({ name: true }).partial())
+    .default({}), // edits to a SEED ingredient's emoji/price/link (overlay)
+  deletedIngredients: z.array(z.string()).default([]), // tombstoned SEED ingredient names (hidden from the catalog)
   // Expense-planner line items — an ordered array (not a name-keyed record):
   // items repeat, may be blank while typing, and need a stable id for React
   // keys + targeted update/delete. `id` is generated client-side.

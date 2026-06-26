@@ -9,7 +9,7 @@ import { toMilkOptions } from "@/features/milks/pricing";
 // modify-write helper against the single Redis `state` record.
 //
 // Price model: a drink's COGS = matcha (global dose × selected powder ₱/g) +
-// milk (drink.milkMl × selected milk ₱/ml) + Σ attached add-on ingredient ₱ +
+// milk (global ml/cup × selected milk ₱/ml) + Σ attached add-on ingredient ₱ +
 // packaging + additional. Matcha & milk unit prices and each ingredient price
 // are overridable; overrides are keyed "matcha:<powder>" / "milk:<label>" /
 // "ing:<name>" in priceOverrides.
@@ -44,12 +44,18 @@ export const repo = {
   milkOptions: async () => toMilkOptions((await getSiteData()).milks),
 
   // drinks = seed built-ins ∪ user-created (extraDrinks), each with overlays
-  // applied from shared state: text/milk edits (drinkOverrides), attached
+  // applied from shared state: text edits (drinkOverrides), attached
   // ingredients (drinkIngredients), base toggles (drinkBases), reference photos.
   drinks: async () => {
-    const { drinks, drinkImages } = await getSiteData();
-    const { drinkIngredients, drinkBases, extraDrinks, drinkOverrides } = await getState();
+    const { drinks, drinkImages, ingredients } = await getSiteData();
+    const { drinkIngredients, drinkBases, extraDrinks, drinkOverrides, extraIngredients, deletedIngredients } =
+      await getState();
     const created = Object.entries(extraDrinks).map(([name, d]) => ({ name, ...d }));
+    const del = new Set(deletedIngredients);
+    const validIng = new Set([
+      ...ingredients.map((i) => i.name).filter((n) => !del.has(n)),
+      ...Object.keys(extraIngredients),
+    ]);
     return [...drinks, ...created].map((d) => {
       const ov = drinkOverrides[d.name] ?? {};
       const base = drinkBases[d.name] ?? {};
@@ -57,8 +63,7 @@ export const repo = {
         ...d,
         note: ov.note ?? d.note,
         desc: ov.desc ?? d.desc,
-        milkMl: ov.milkMl ?? d.milkMl,
-        ingredients: drinkIngredients[d.name] ?? d.ingredients,
+        ingredients: (drinkIngredients[d.name] ?? d.ingredients).filter((n) => validIng.has(n)),
         images: drinkImages[d.name] ?? [],
         hasMatcha: base.matcha ?? true, // absent key ⇒ base present
         hasMilk: base.milk ?? true,
@@ -71,9 +76,13 @@ export const repo = {
   // (Price overrides live in priceOverrides — the calculator shows ref + override.)
   ingredients: async () => {
     const { ingredients } = await getSiteData();
-    const { extraIngredients } = await getState();
-    const extras = Object.entries(extraIngredients).map(([name, v]) => ({ name, ...v }));
-    return [...ingredients, ...extras];
+    const { extraIngredients, ingredientOverrides, deletedIngredients } = await getState();
+    const del = new Set(deletedIngredients);
+    const seed = ingredients
+      .filter((i) => !del.has(i.name))
+      .map((i) => ({ ...i, ...(ingredientOverrides[i.name] ?? {}), custom: false }));
+    const extras = Object.entries(extraIngredients).map(([name, v]) => ({ name, ...v, custom: true }));
+    return [...seed, ...extras];
   },
 
   costs: async () => {
@@ -149,23 +158,48 @@ export const repo = {
       extraIngredients: { ...s.extraIngredients, [name]: { emoji, price, link } },
     })),
 
+  // Edit an ingredient's display fields. Custom → update its extraIngredients
+  // record; seed (built-in) → write an ingredientOverrides overlay. The name is
+  // the key and never changes.
+  editIngredient: (name, { emoji, price, link }) =>
+    mutate((s) =>
+      name in s.extraIngredients
+        ? { ...s, extraIngredients: { ...s.extraIngredients, [name]: { emoji, price, link } } }
+        : { ...s, ingredientOverrides: { ...s.ingredientOverrides, [name]: { emoji, price, link } } },
+    ),
+
+  // Delete an ingredient. Custom → remove from extraIngredients. Seed →
+  // tombstone it in deletedIngredients. Always drop its override + price
+  // override; drink refs to it are filtered out at read time, so no cascade.
+  deleteIngredient: (name) =>
+    mutate((s) => ({
+      ...s,
+      extraIngredients: without(s.extraIngredients, name),
+      ingredientOverrides: without(s.ingredientOverrides, name),
+      deletedIngredients:
+        name in s.extraIngredients
+          ? s.deletedIngredients
+          : [...new Set([...s.deletedIngredients, name])],
+      priceOverrides: without(s.priceOverrides, `ing:${name}`),
+    })),
+
   // Add or edit a drink. New drink -> stored whole in extraDrinks. Editing any
   // drink (built-in or custom) -> writes the same overlays the inline UI uses
-  // (drinkOverrides for text/milk, drinkIngredients, drinkBases, srp) so there
+  // (drinkOverrides for text, drinkIngredients, drinkBases, srp) so there
   // is one home per field and no precedence conflicts.
-  saveDrink: ({ name, note, desc, milkMl, srp, ingredients, hasMatcha, hasMilk }, isNew) =>
+  saveDrink: ({ name, note, desc, srp, ingredients, hasMatcha, hasMilk }, isNew) =>
     mutate((s) => {
       const drinkBases = { ...s.drinkBases, [name]: { matcha: hasMatcha, milk: hasMilk } };
       if (isNew) {
         return {
           ...s,
-          extraDrinks: { ...s.extraDrinks, [name]: { note, desc, milkMl, ingredients, srp } },
+          extraDrinks: { ...s.extraDrinks, [name]: { note, desc, ingredients, srp } },
           drinkBases,
         };
       }
       return {
         ...s,
-        drinkOverrides: { ...s.drinkOverrides, [name]: { note, desc, milkMl } },
+        drinkOverrides: { ...s.drinkOverrides, [name]: { note, desc } },
         drinkIngredients: { ...s.drinkIngredients, [name]: ingredients },
         srp: { ...s.srp, [name]: srp },
         drinkBases,

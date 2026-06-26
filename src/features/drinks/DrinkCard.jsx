@@ -129,12 +129,7 @@ export default function DrinkCard({
           <Pill emoji="🍵" label="Matcha" base onRemove={() => onToggleBase("matcha")} />
         )}
         {drink.hasMilk && (
-          <Pill
-            emoji="🥛"
-            label={`Milk ${drink.milkMl}ml`}
-            base
-            onRemove={() => onToggleBase("milk")}
-          />
+          <Pill emoji="🥛" label="Milk" base onRemove={() => onToggleBase("milk")} />
         )}
         {attached.map((name) => (
           <Pill key={name} emoji={emojiOf(name)} label={name} onRemove={() => onDetach(name)} />

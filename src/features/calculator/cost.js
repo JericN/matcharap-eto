@@ -12,11 +12,11 @@ export const addonCostPerCup = (drink, priceOf) =>
 // milk (e.g. matcha+coffee, or a no-milk drink) — the removed base costs 0.
 export function cogsForDrink(
   drink,
-  { pricePerGram, doseGrams, milkPricePerMl, priceOf, packaging, additional },
+  { pricePerGram, doseGrams, milkPricePerMl, milkMl, priceOf, packaging, additional },
 ) {
   return (
     (drink.hasMatcha ? matchaCostPerCup(pricePerGram, doseGrams) : 0) +
-    (drink.hasMilk ? milkCostPerCup(milkPricePerMl, drink.milkMl) : 0) +
+    (drink.hasMilk ? milkCostPerCup(milkPricePerMl, milkMl) : 0) +
     addonCostPerCup(drink, priceOf) +
     packaging +
     additional
@@ -46,7 +46,7 @@ export function tallyTotals(lines, ctx) {
   for (const { drink, cups, srp } of lines) {
     t.cups += cups;
     t.matcha += drink.hasMatcha ? cups * matchaCostPerCup(ctx.pricePerGram, ctx.doseGrams) : 0;
-    t.milk += drink.hasMilk ? cups * milkCostPerCup(ctx.milkPricePerMl, drink.milkMl) : 0;
+    t.milk += drink.hasMilk ? cups * milkCostPerCup(ctx.milkPricePerMl, ctx.milkMl) : 0;
     t.packaging += cups * ctx.packaging;
     t.additional += cups * ctx.additional;
     t.revenue += cups * srp;

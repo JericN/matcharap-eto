@@ -1,5 +1,6 @@
 "use client";
 import { useState, useTransition } from "react";
+import { createPortal } from "react-dom";
 import {
   toggleDrink,
   attachIngredient,
@@ -8,9 +9,12 @@ import {
   toggleBase,
   saveDrink,
   deleteDrink,
+  editIngredient,
+  deleteIngredient,
 } from "@/config/actions";
 import DrinkCard from "@/features/drinks/DrinkCard";
 import DrinkForm from "@/features/drinks/DrinkForm";
+import IngredientForm from "@/features/drinks/IngredientForm";
 import { TextField, NumberField } from "@/components/form";
 import SectionTitle from "@/components/SectionTitle";
 
@@ -21,7 +25,6 @@ const BLANK_DRINK = {
   name: "",
   note: "",
   desc: "",
-  milkMl: 180,
   srp: 150,
   ingredients: [],
   hasMatcha: true,
@@ -42,6 +45,8 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
   const [catalog, setCatalog] = useState(ingredients);
   const [form, setForm] = useState(EMPTY); // the ingredient creator bar
   const [editing, setEditing] = useState(null); // { drink, isNew } for the drink form, or null
+  const [ingMenu, setIngMenu] = useState(null); // ingredient right-click menu { x, y, ing } or null
+  const [editingIng, setEditingIng] = useState(null); // ingredient object for the edit form, or null
   const [, startTransition] = useTransition();
 
   const toggle = (name) => {
@@ -96,6 +101,15 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
     setCatalog((c) => [...c, ing]);
     startTransition(() => addIngredient(ing));
     setForm(EMPTY);
+  };
+  const removeIng = (name) => {
+    setCatalog((c) => c.filter((i) => i.name !== name));
+    startTransition(() => deleteIngredient(name));
+  };
+  const saveIng = (name, patch) => {
+    setCatalog((c) => c.map((i) => (i.name === name ? { ...i, ...patch } : i)));
+    startTransition(() => editIngredient(name, patch));
+    setEditingIng(null);
   };
 
   const savedSet = new Set(saved);
@@ -173,7 +187,11 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
                 href={ing.link}
                 target="_blank"
                 rel="noopener"
-                title={`${ing.emoji} ${ing.name} · ₱${ing.price}/cup — open reference ↗`}
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                  setIngMenu({ x: e.clientX, y: e.clientY, ing });
+                }}
+                title={`${ing.emoji} ${ing.name} · ₱${ing.price}/cup — open reference ↗ · right-click to edit/delete`}
                 aria-label={`${ing.name}, ₱${ing.price} per cup — open reference`}
                 className="ing-tile flex-row items-center gap-[9px] !py-2 no-underline cursor-pointer transition hover:border-forest hover:-translate-y-0.5"
               >
@@ -182,7 +200,11 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
             ) : (
               <div
                 key={ing.name}
-                title={`${ing.emoji} ${ing.name} · ₱${ing.price}/cup — no reference link yet`}
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                  setIngMenu({ x: e.clientX, y: e.clientY, ing });
+                }}
+                title={`${ing.emoji} ${ing.name} · ₱${ing.price}/cup — no reference link yet · right-click to edit/delete`}
                 className="ing-tile flex-row items-center gap-[9px] !py-2"
               >
                 {inner}
@@ -258,6 +280,56 @@ export default function DrinksGrid({ drinks, ingredients, initialSaved }) {
           catalog={catalog}
           onSave={persistDrink}
           onClose={() => setEditing(null)}
+        />
+      )}
+
+      {ingMenu &&
+        typeof document !== "undefined" &&
+        createPortal(
+          <>
+            <div
+              className="fixed inset-0 z-[55]"
+              onClick={() => setIngMenu(null)}
+              onContextMenu={(e) => {
+                e.preventDefault();
+                setIngMenu(null);
+              }}
+              aria-hidden="true"
+            />
+            <div
+              className="fixed z-[56] min-w-[150px] bg-cream-card border-2 border-forest rounded-[10px] shadow-hard-sm p-1"
+              style={{ top: ingMenu.y, left: ingMenu.x }}
+            >
+              <button
+                type="button"
+                onClick={() => {
+                  setEditingIng(ingMenu.ing);
+                  setIngMenu(null);
+                }}
+                className="block w-full text-left px-2.5 py-1.5 rounded-[7px] font-mono text-[.66rem] text-forest hover:bg-cream-light transition"
+              >
+                ✎ Edit ingredient
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  removeIng(ingMenu.ing.name);
+                  setIngMenu(null);
+                }}
+                className="block w-full text-left px-2.5 py-1.5 rounded-[7px] font-mono text-[.66rem] text-clay hover:bg-cream-light transition"
+              >
+                🗑 Delete ingredient
+              </button>
+            </div>
+          </>,
+          document.body,
+        )}
+
+      {editingIng && (
+        <IngredientForm
+          ingredient={editingIng}
+          onSave={(patch) => saveIng(editingIng.name, patch)}
+          onClose={() => setEditingIng(null)}
         />
       )}
     </>

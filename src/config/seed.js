@@ -787,13 +787,12 @@ export const seed = {
   ],
   pricing: { packaging: 8, additional: 3 }, // ₱/cup defaults — cup+lid / ice+sugar+misc
 
-  // Drinks reference add-on ingredients by name; matcha (global dose) + milk
-  // (milkMl) are implicit on every drink. `srp` is the calculator's default.
+  // Drinks reference add-on ingredients by name; matcha (global dose) and milk
+  // (global ml/cup) are implicit on every drink. `srp` is the calculator's default.
   drinks: [
     {
       name: "Basic Matcha Latte",
       note: "the everyday hero",
-      milkMl: 180,
       ingredients: [],
       srp: 150,
       desc: "The benchmark every matcha bar is judged on — ceremonial-grade matcha whisked smooth and poured over milk and ice. Filipino customers treat it as the gateway drink, so a clean, not-too-bitter, lightly sweet build wins the repeat orders; most Metro Manila cafés price it ₱140–180. Nail this one and the rest of the menu sells itself.",
@@ -801,7 +800,6 @@ export const seed = {
     {
       name: "Ichigo Matcha Latte",
       note: "strawberry compote",
-      milkMl: 180,
       ingredients: ["Strawberry compote"],
       srp: 180,
       desc: 'The runaway social-media favorite — strawberry compote layered under green matcha and milk for a pink-and-green gradient that photographs beautifully. "Strawberry matcha" is consistently the most-searched flavored matcha in the PH, peaking Dec–May when local Baguio strawberries are cheap. A dependable upsell over the basic latte.',
@@ -809,7 +807,6 @@ export const seed = {
     {
       name: "Seasalt Matcha Latte",
       note: "salted cream foam",
-      milkMl: 180,
       ingredients: ["Salted cream foam"],
       srp: 180,
       desc: 'A salted cream-cheese foam cap (the "cheese tea" crossover) floats on top, so you sip bittersweet matcha through a salty-sweet cream layer. It reads premium and carries straight over from milk-tea culture, justifying a ₱20–40 markup. The stir-or-don\'t ritual gives booths a fun interactive hook.',
@@ -817,7 +814,6 @@ export const seed = {
     {
       name: "Shoyu Matcha",
       note: "umami-sweet novelty",
-      milkMl: 180,
       ingredients: ["Soy + caramel"],
       srp: 160,
       desc: "A novelty build where a touch of soy sauce and caramel deepens matcha's umami into a savory-sweet, almost butterscotch note. It's a conversation-starter / signature item rather than a volume seller — cheap to make and great for standing out at a crowded pop-up. Best aimed at adventurous, returning customers.",
@@ -825,7 +821,6 @@ export const seed = {
     {
       name: "Pistachio Matcha Latte",
       note: "nutty pistachio",
-      milkMl: 180,
       ingredients: ["Pistachio"],
       srp: 200,
       desc: 'Pistachio syrup (usually Monin) lends a rich, nutty roundness that tempers matcha\'s grassiness — a "dessert in a cup" that commands the highest price on the menu. The imported syrup is the cost driver, so margins run thinner; position it as a premium treat and finish with a pistachio-crumb garnish.',
@@ -833,7 +828,6 @@ export const seed = {
     {
       name: "Sakura Matcha Latte",
       note: "floral, seasonal",
-      milkMl: 180,
       ingredients: ["Sakura syrup"],
       srp: 200,
       desc: 'Delicate cherry-blossom syrup gives a floral, faintly almond aroma and a soft pink tint — a limited seasonal "drop" that creates urgency and buzz around spring and Japan-themed events. Like pistachio, the imported syrup keeps margins tight, so run it as a timed premium special with a strong story.',
@@ -841,7 +835,6 @@ export const seed = {
     {
       name: "Calamansi Matcha",
       note: "citrus, light/no milk",
-      milkMl: 80,
       ingredients: ["Calamansi + honey"],
       srp: 160,
       desc: "A bright local twist — calamansi and honey over matcha, usually served light- or no-milk so the citrus stays crisp and refreshing. It's the cheapest add-on on the list and a perfect hot-weather, milk-free option for lactose-avoiders. Distinctly Filipino, which makes it a memorable booth signature.",
@@ -849,7 +842,6 @@ export const seed = {
     {
       name: "Iced Lychee Matcha",
       note: "light & fruity",
-      milkMl: 80,
       ingredients: ["Lychee"],
       srp: 180,
       desc: "Lychee syrup or purée over iced matcha with minimal milk — fruity, floral and very refreshing, riding the same fruit-tea wave as strawberry. It also works as a sparkling / soda variant. A light, crowd-pleasing alternative for guests who find milk lattes too heavy.",
@@ -857,7 +849,6 @@ export const seed = {
     {
       name: "Horchata Matcha",
       note: "cinnamon-rice cream",
-      milkMl: 150,
       ingredients: ["Horchata mix"],
       srp: 170,
       desc: "A cinnamon-rice-milk (horchata) base brings a creamy, dessert-spiced warmth that flatters matcha — comforting and a little unexpected. It leans on the horchata mix for body so it needs less dairy milk, and the cinnamon aroma practically sells itself at a booth. A cozy, autumn-leaning specialty.",
@@ -865,7 +856,6 @@ export const seed = {
     {
       name: "Ube Matcha Latte",
       note: "ube purple-yam",
-      milkMl: 180,
       ingredients: ["Ube halaya"],
       srp: 190,
       desc: "Purple ube halaya swirled under green matcha for the ultimate Filipino IG drink — the purple-and-green gradient is unbeatable on camera. The Matcha Tokyo's ube latte is a proven PH flagship (now even sold seasonally in Japan), so it's both crowd-tested and unmistakably local. A natural booth signature.",
@@ -873,7 +863,6 @@ export const seed = {
     {
       name: "Buko Pandan Matcha",
       note: "buko-pandan, light milk",
-      milkMl: 120,
       ingredients: ["Pandan syrup", "Young coconut"],
       srp: 180,
       desc: "Aromatic pandan with young-coconut (buko) strips over matcha — the beloved buko-pandan dessert turned into a latte. Pandan is being called \"the next ube/matcha,\" so it lands as both instantly familiar locally and globally on-trend. Light, fragrant, and an easy story to tell at a booth.",
@@ -881,7 +870,6 @@ export const seed = {
     {
       name: "Matcha Taho",
       note: "silken tofu + arnibal + sago",
-      milkMl: 100,
       ingredients: ["Silken tofu", "Brown sugar syrup", "Sago pearls"],
       srp: 170,
       desc: "Drinkable street food — silken tofu, brown-sugar arnibal and chewy sago folded through matcha, echoing the morning taho vendor. Deeply local and highly distinctive, it's a novelty signature with built-in nostalgia rather than a volume seller: cheap to build and a guaranteed conversation-starter.",
@@ -889,7 +877,6 @@ export const seed = {
     {
       name: "Dirty Matcha",
       note: "espresso shot",
-      milkMl: 180,
       ingredients: ["Espresso shot"],
       srp: 170,
       desc: "A shot of espresso poured over matcha and milk — the year's defining cross-over trend, with a layered green-over-brown look that converts coffee drinkers. Nearly free to add if you already pull espresso, and the caffeine kick widens your audience. Serve iced for the cleanest layers.",
@@ -897,7 +884,6 @@ export const seed = {
     {
       name: "Brown Sugar Matcha",
       note: "muscovado, boba stripes",
-      milkMl: 180,
       ingredients: ["Brown sugar syrup", "Sago pearls"],
       srp: 180,
       desc: "Caramelized brown-sugar (muscovado) syrup streaked down the cup with chewy sago, borrowing the brown-sugar-boba aesthetic milk-tea fans already love. It reads locally as a panutsa/muscovado treat, and the tiger-stripe walls photograph well. Cheap add-ons keep the margin comfortable.",
@@ -905,7 +891,6 @@ export const seed = {
     {
       name: "Tiramisu Matcha",
       note: "mascarpone + cocoa, dessert",
-      milkMl: 180,
       ingredients: ["Espresso shot", "Mascarpone cream", "Cocoa dust"],
       srp: 230,
       desc: "Matcha layered with espresso and a mascarpone cream cap, dusted with cocoa — tiramisu in a cup, and a booming TikTok/café dessert drink. The cocoa-dusted foam gives instant topping theater and justifies the highest price on the menu; mascarpone is the cost driver, so run it as a premium treat.",
@@ -913,7 +898,6 @@ export const seed = {
     {
       name: "White Chocolate Matcha",
       note: "sweet, rounds the bitterness",
-      milkMl: 180,
       ingredients: ["White chocolate"],
       srp: 190,
       desc: "White chocolate melted into matcha rounds off the grassy edge for a smooth, sweet, approachable cup — a proven café staple that wins over first-timers and sweet-tooths. An easy upsell from the basic latte with a dependable, familiar flavor.",
@@ -921,7 +905,6 @@ export const seed = {
     {
       name: "Yuzu Matcha",
       note: "yuzu, sparkling/no milk",
-      milkMl: 40,
       ingredients: ["Yuzu"],
       srp: 170,
       desc: "Bright Japanese yuzu citrus over iced matcha, served sparkling or as a lemonade with little to no milk — \"yuzu is the new lemon\" and the leading no-milk refresher of the year. Crisp, aromatic and perfect for hot-weather, lactose-avoiding guests.",
@@ -929,7 +912,6 @@ export const seed = {
     {
       name: "Blueberry Matcha",
       note: "deep-berry, light milk",
-      milkMl: 120,
       ingredients: ["Blueberry compote"],
       srp: 180,
       desc: "Blueberry compote under matcha for a deep purple-on-green contrast — it rides the \"double berry\" wave without overlapping your strawberry latte. Fruity, very shareable, and a fresh berry option for guests who want something other than the pink one.",
@@ -1387,8 +1369,8 @@ export const seed = {
       origin: "“Kasane” · 1st-harvest ceremonial · Shizuoka → PH · wholesale + private label",
       taste:
         "Deep umami, delicate sweetness, low bitterness — holds up in milk. Built to SUPPLY cafés (1kg bulk + OEM).",
-      price: "₱1,250 / 40g · ₱31/g (far less at 1kg)",
-      serving: "~₱62 retail (much less wholesale)",
+      price: "₱1,250 / 40g · ₱31.3/g (sold out)",
+      serving: "~₱63 / 2g",
       hype: "“Trusted by 300+ PH cafés” — the B2B insider pick. Best path to protected margins.",
       buy: "ritualmatcha.ph + wholesale form",
       url: "https://ritualmatcha.ph",
@@ -1428,11 +1410,11 @@ export const seed = {
       origin: "“Komo” · latte-tuned everyday ceremonial blend · Uji, Kyoto",
       taste:
         "Mild, creamy, soft pistachio, custard-like, low astringency — designed not to fight the milk.",
-      price: "from ₱839 / 60g · ₱14/g",
-      serving: "~₱28 (best boutique margin)",
+      price: "₱929 / 30g · ₱31/g (sold out)",
+      serving: "~₱62 / 2g",
       hype: "Strong TikTok presence; the everyday-latte favorite. Small-batch drops sell out.",
-      buy: "nokorimatcha.com · Lazada",
-      url: "https://nokorimatcha.com",
+      buy: "nokorimatcha.myshopify.com · Lazada",
+      url: "https://nokorimatcha.myshopify.com/products/nokori-komo-matcha",
     },
     {
       cat: "ph",
@@ -1454,8 +1436,8 @@ export const seed = {
       origin: "Pure Unsweetened · culinary + ceremonial grades · QC, PH (Japan region unspecified)",
       taste:
         "No-frills unsweetened powder you sweeten yourself — the budget workhorse for high-volume value lattes.",
-      price: "Culinary 100g ₱180 · ₱1.8/g · 1kg ₱1,188 (₱1.19/g) · Ceremonial 100g ₱3.25/g",
-      serving: "~₱2.4–3.6 / 2g (culinary)",
+      price: "₱325 / 100g · ₱3.3/g (ceremonial; in stock)",
+      serving: "~₱7 / 2g",
       hype: "The cheapest credible ₱/g in PH; ranked #3 in my-best's 2026 PH matcha guide.",
       buy: "littleretailph.com · Lazada · Shopee",
       url: "https://littleretailph.com/products/pure-unsweetened-matcha-powder",
@@ -1495,11 +1477,50 @@ export const seed = {
         "“Everyday” blend / “Ukiyo” single-origin · Kagoshima (Yabukita) · locally stone-milled “farm-to-cup”",
       taste:
         "Everyday: balanced, grassy, light umami, gentle bitterness. Ukiyo: smooth, umami-rich, creamy, subtly sweet.",
-      price: "Everyday 30g ₱950 · ₱31.7/g · Ukiyo single-origin 30g ₱1,800 (₱60/g)",
-      serving: "~₱63 / 2g (Everyday) · ~₱120 (Ukiyo)",
+      price: "₱950 / 30g · ₱31.7/g (in stock)",
+      serving: "~₱63 / 2g",
       hype: "Buzzy Filipino “farm-to-cup” brand — Kagoshima leaf stone-ground locally, sold on cultivar transparency.",
       buy: "madeinmatcha.com",
       url: "https://madeinmatcha.com/products/everyday-matcha-30g-blend",
+    },
+    {
+      cat: "ph",
+      catlabel: "🇵🇭 PH Homegrown",
+      name: "The Superfood Grocer",
+      origin: "“Pure” ceremonial · stone-ground · shade-grown Uji, Kyoto",
+      taste:
+        "Smooth, creamy ceremonial with vivid color and no bitter aftertaste — mellow, lightly grassy, naturally sweet. Whisks clean and stays creamy in a latte; a dependable everyday base.",
+      price: "₱329 / 40g · ₱8.23/g (in stock)",
+      serving: "~₱16 / 2g",
+      hype: "Real Uji ceremonial at homegrown-PH prices — creamy, zero bitter bite, ~₱8 a gram. (Their premium Hatsu tier runs ₱40/g.)",
+      buy: "thesuperfoodgrocer.com",
+      url: "https://www.thesuperfoodgrocer.com/products/organic-matcha-powder-manila-philippines",
+    },
+    {
+      cat: "ph",
+      catlabel: "🇵🇭 PH Homegrown",
+      name: "Kumatcha",
+      origin: "“Okashi” 1st-harvest blend · Mt. Fuji farm-café · Okumidori / Asanoka / Yabukita",
+      taste:
+        "Nutty with nori + dark-chocolate aroma; as a latte it reads pistachio-pastry and floral — dessert-like, almost matcha ice cream. Beginner-friendly.",
+      price: "₱950 / 30g · ₱31.7/g",
+      serving: "~₱63 / 2g",
+      hype: "A dessert-in-a-cup blend; the bolder Okumidori 2.0 (₱920/30g) is its sibling. (Restocks regularly.)",
+      buy: "shopkumatcha.com",
+      url: "https://shopkumatcha.com/products/okashi-30g",
+    },
+    {
+      cat: "ph",
+      catlabel: "🇵🇭 PH Homegrown",
+      name: "Kyoto Whisk",
+      origin: "“Tsukiji” 1st-harvest ceremonial · Okumidori + Yabukita · stone-milled (Uji-style)",
+      taste:
+        "Earthy and nutty, smooth and creamy with light umami, subtle vegetal notes and a hint of chocolate — a versatile latte base.",
+      price: "₱780 / 30g · ₱26/g (100g ₱2,200 ≈ ₱22/g)",
+      serving: "~₱52 / 2g",
+      hype: "First-harvest Okumidori + Yabukita blend — nutty-earthy with a chocolate edge; in stock.",
+      buy: "kyotowhiskmatcha.com",
+      url: "https://kyotowhiskmatcha.myshopify.com/products/tsukiji",
     },
     {
       cat: "jp",
@@ -1509,11 +1530,11 @@ export const seed = {
       origin: "“Matsukaze / Ogurayama” · ceremonial · Uji, Kyoto (est. 1704)",
       taste:
         "Ogurayama: creamy, velvety, umami + sweet, floral-nutty. Matsukaze: vegetal, light, holds color in milk.",
-      price: "30g cans ~₱800–2,100 · ₱27–70/g",
-      serving: "~₱53 – ₱93",
+      price: "₱1,000 / 30g · ₱33.3/g (Samidori bestseller; in stock)",
+      serving: "~₱67 / 2g",
       hype: "Very high on TikTok, near Ippodo tier — in stock at Midori PH, sells out fast.",
       buy: "Midori Matcha PH · japanmatcha.ph",
-      url: "https://midorimatchaph.com/collections/yamamasa-koyamaen",
+      url: "https://midorimatchaph.com/products/samidori-matcha-by-yamamasa-koyamaen",
     },
     {
       cat: "jp",
@@ -1522,8 +1543,8 @@ export const seed = {
       origin: "“Tokyo Rich / Japan Premium” · 100% organic · Kagoshima/Uji leaf",
       taste:
         "Bold umami, low astringency, grassy, rich bitter finish. Tokyo Rich is latte-optimized.",
-      price: "Tokyo Rich ₱1,540/20g (₱77/g)",
-      serving: "~₱154–220 (retail — negotiate B2B)",
+      price: "₱1,090 / 20g · ₱54.5/g (in stock)",
+      serving: "~₱109 / 2g",
       hype: "High — viral on TikTok, top Manila matcha; 13+ PH cafés.",
       buy: "PH cafés · GrabFood · order site",
       url: "https://thematchatokyo-ph.tablevibe.co/",
@@ -1536,26 +1557,37 @@ export const seed = {
         "“Ume No Shiro” ceremonial · Uji, Kyoto heritage (est. 1860) · tins sold in-store at PH cafés",
       taste:
         "Smooth, creamy ceremonial Uji with balanced sweetness-to-bitterness — the “beginner's ceremonial,” vegetal-forward, mild umami.",
-      price: "30g / 100g tins · ≈ ₱48/g (est. from import; no confirmed PH online price)",
-      serving: "~₱97 / 2g (est.)",
+      price: "₱1,101 / 30g · ₱36.7/g (Tsuji Midori, import est.; café-only in PH)",
+      serving: "~₱73 / 2g",
       hype: "160-yr Uji-Kyoto matcha dynasty — soft-serve queues & ceremonial tins from one heritage. Ask in-store for tins.",
       buy: "TSUJIRI PH cafés (Podium, SM Aura, Greenbelt 5…) · FB tsujiri.ph",
       url: "https://www.facebook.com/tsujiri.ph/",
     },
     {
+      cat: "import",
+      catlabel: "🌏 Imported",
+      name: "Ito En",
+      origin: "“matcha LOVE” organic ceremonial · stone-ground tencha · Japan (Ito En, est. Shizuoka)",
+      taste:
+        "Velvety with a just-plucked herbaceous freshness, finishing smooth and crisp — a clean, bright organic profile rather than a thick umami bomb. Delicate in a latte, so bump the dose to read through milk.",
+      price: "₱1,035 / 20g · ₱52/g (US import @ $17.85; often sold out)",
+      serving: "~₱104 / 2g",
+      hype: "Big-brand organic ceremonial done clean — herbaceous, velvety, zero sugar. Import-only (PH shelves carry only their sweetened latte mix).",
+      buy: "itoen.com (US ship) · import",
+      url: "https://itoen.com/products/matcha-love-organic",
+    },
+    {
       cat: "jp",
       catlabel: "🇯🇵 Japanese · in PH",
-      name: "Ito En",
-      origin:
-        "Japan's #1 green-tea brand (Shizuoka, 1966) · mass-market · PH shelf SKU = sweetened matcha-latte mix",
+      name: "JapanMatcha (Nagatani)",
+      origin: "“Okumidori” single-cultivar ceremonial · 1st-harvest · Ujitawara, Kyoto (Nagatani, 7th-gen)",
       taste:
-        "Sweet Matcha: mellow, sweet, lightly grassy — a ready-to-mix latte flavor (sugar-added), NOT a bitter ceremonial whisk.",
-      price:
-        "Sweet Matcha mix 120g ≈ ₱730 · ₱6/g (sweetened) · pure culinary ~₱11.6/g (not stocked in PH)",
-      serving: "~₱12 / 2g (sweetened mix)",
-      hype: "The easy supermarket “matcha latte” grab — cheap & everywhere, but a sweetened mix, not pure matcha (verify live PHP price).",
-      buy: "Lazada PH (official store) · Shopee · SM / Landers",
-      url: "https://www.lazada.com.ph/ito-en/",
+        "Smooth and umami-rich — steamed greens and sweet pea, creamy and lightly sweet with a clean, low-bitterness finish.",
+      price: "₱1,095 / 30g · ₱36.5/g (refill ₱1,045)",
+      serving: "~₱73 / 2g",
+      hype: "Single-cultivar Okumidori from a 7th-generation Kyoto tea house, imported by JapanMatcha PH — in stock.",
+      buy: "japanmatcha.ph",
+      url: "https://www.japanmatcha.ph/products/nagatani-okumidori",
     },
     {
       cat: "import",
@@ -1578,11 +1610,11 @@ export const seed = {
       origin: "“Ikuyo” (latte) / “Sayaka” (premium) · Uji/Kyoto (est. 1717)",
       taste:
         "Ikuyo: balanced, mild umami, snappy, nutty/white-chocolate, photogenic green. The prestige benchmark.",
-      price: "PH café 100g ₱3,000 · ₱30/g",
-      serving: "~₱60 (₱90 at 3g)",
+      price: "₱1,900 / 40g · ₱47.5/g (Sayaka 40g; Midori PH, sold out)",
+      serving: "~₱95 / 2g",
       hype: "Top benchmark; won't ship to PH direct — buy via resellers. Shortage + sellouts.",
-      buy: "MODO @ Mitsukoshi BGC · Matcha Tana",
-      url: "https://modo.ph/collections/ippodo-tea",
+      buy: "Midori Matcha PH · MODO @ Mitsukoshi BGC",
+      url: "https://midorimatchaph.com/collections/ippodo",
     },
     {
       cat: "import",
@@ -1592,8 +1624,8 @@ export const seed = {
       origin: "“Barista Blend” · latte/barista grade · Kagoshima + Uji leaf",
       taste:
         "Bold, earthy, roasty — built to cut through milk. Great-value café-quality; B2B program available.",
-      price: "40g ≈ ₱1,025 · ₱26/g (culinary ~₱8.5/g)",
-      serving: "~₱52",
+      price: "₱1,043 / 40g · ₱26.1/g (Barista Blend; in stock)",
+      serving: "~₱52 / 2g",
       hype: "Loved on TikTok/Lemon8 as best-value café-quality; gripe: duller color.",
       buy: "Shopee PH · direct import · B2B",
       url: "https://naokimatcha.com/products/barista-blend-matcha",
@@ -1605,11 +1637,11 @@ export const seed = {
       origin: "“Latte / Barista Grade” · organic single-origin Uji",
       taste:
         "Latte Grade: bold, cuts through milk. Barista: nutty, toasted, chocolate. Best value in 500g bulk.",
-      price: "Latte 500g ₱17/g · Barista 500g ₱11/g",
-      serving: "Latte ~₱34 · Barista ~₱22",
+      price: "₱1,565 / 30g · ₱52.2/g (ceremonial; US import @ $26.99)",
+      serving: "~₱104 / 2g",
       hype: "Popular organic/value pick — import-only, and a 2025 heavy-metals flag worth knowing.",
       buy: "Import-only · Lazada cross-border",
-      url: "https://encha.com/collections/all",
+      url: "https://encha.com/products/encha-ceremonial-grade",
     },
     {
       cat: "import",
@@ -1618,11 +1650,11 @@ export const seed = {
       origin: "“Culinary” (Ceremonial for premium) · Nishio, Aichi (since 1888)",
       taste:
         "Culinary: bolder, mildly astringent, strong enough for milk. World's largest producer — café bulk workhorse.",
-      price: "Culinary 100g ₱18/g · 1kg ~₱9.7/g",
-      serving: "~₱19–20 (bulk culinary)",
+      price: "₱2,030 / 30g · ₱67.7/g (ceremonial 30g; import via Aiya America)",
+      serving: "~₱135 / 2g",
       hype: "Reliable café workhorse; enthusiasts rate ceremonial “mid”. No confirmed PH distributor.",
       buy: "Import via Aiya America / wholesale",
-      url: "https://aiya-america.com/retail/matcha-products/",
+      url: "https://aiya-america.com/ceremonial-matcha-30g-tin/",
     },
     {
       cat: "import",
@@ -1643,11 +1675,11 @@ export const seed = {
       origin: "Barista Edition / Teahouse · organic first-harvest · US brand, Uji + Kagoshima leaf",
       taste:
         "Smooth, mild nuttiness + umami, made to cut through milk — an affordable, consistent gateway latte matcha.",
-      price: "Barista 50g ₱1,698 (₱34/g) · 1lb bulk ₱24.4/g · ceremonial 30g ₱50/g",
-      serving: "~₱50–70 / 2g (Barista)",
+      price: "₱1,797 / 50g · ₱35.9/g (Barista Edition; US import @ $30.99)",
+      serving: "~₱72 / 2g",
       hype: "Top US-market organic “gateway” brand — affordable & consistent, not a connoisseur single-origin.",
       buy: "Ubuy PH (cross-border import) · jadeleafmatcha.com",
-      url: "https://www.ubuy.com.ph/brand/jade-leaf-matcha",
+      url: "https://www.jadeleafmatcha.com/products/organic-barista-edition-ceremonial-matcha",
     },
     {
       cat: "import",
@@ -1657,11 +1689,11 @@ export const seed = {
         "single-estate Uji, Kyoto · direct-from-Japan grower · Superior → Premium → Super Premium → Pinnacle",
       taste:
         "Super Premium: bright, thick, umami-rich, koicha-capable ceremonial. Superior = everyday usucha entry; Pinnacle = smoothest flagship.",
-      price: "₱30–90/g across grades · Super Premium 40g US$39 (₱59.5/g) · 120g refill ₱49.8/g",
-      serving: "~₱61–119 / 2g",
+      price: "₱1,624 / 80g · ₱20.3/g (House Matcha everyday; @ US$28)",
+      serving: "~₱41 / 2g",
       hype: "Cult Uji grower selling genuine farm-direct ceremonial — real Kyoto leaf without a middleman.",
       buy: "hibiki-an.com (ships to PH, direct import + duties)",
-      url: "https://www.hibiki-an.com/sp/product_info.php/products_id/349",
+      url: "https://www.hibiki-an.com/sp/product_info.php/products_id/353",
     },
     {
       cat: "import",
@@ -1670,9 +1702,8 @@ export const seed = {
       origin: "historic Uji tea house (est. 1854) · usucha → flagship koicha · Uji, Kyoto",
       taste:
         "Fuji-no-Shiro: delicate bitterness, balanced astringency, clean light finish — versatile for usucha or lattes.",
-      price:
-        "Fuji-no-Shiro 30g ¥2,000 ≈ ₱26/g · Standard 100g ₱46.8/g · flagship Uji-no-Mukashi ₱117/g",
-      serving: "~₱52 / 2g (entry) · ~₱234 (flagship)",
+      price: "₱760 / 30g · ₱25.3/g (Fuji-no-Shiro; ¥2,000 +DHL)",
+      serving: "~₱51 / 2g",
       hype: "170-year-old Uji institution — authentic ceremonial Kyoto matcha shipped straight from the source.",
       buy: "global.tokichi.jp (ships to PH via DHL + duties)",
       url: "https://global.tokichi.jp/products/mc2",
@@ -1684,8 +1715,8 @@ export const seed = {
       origin: "premium Yame, Fukuoka (Hoshino Seichaen) · ceremonial Okumidori · TikTok-viral",
       taste:
         "Smooth, nutty-toasted, lightly smoky, subtly sweet with almost no bitterness — creamy in lattes; rated ~10/10 for the price.",
-      price: "30g ¥2,500 ≈ ₱32.5/g (origin) · ~₱45–60/g landed after forwarder",
-      serving: "~₱65 / 2g (origin) · ~₱90–120 landed",
+      price: "₱950 / 30g · ₱31.7/g (¥2,500 origin; +PH forwarder)",
+      serving: "~₱63 / 2g",
       hype: "TikTok-viral Yame matcha (“10/10 for the price”) — but import/forwarder-only & almost always SOLD OUT.",
       buy: "Wakokoro Tea (ships from Japan) · forwarder — no PH reseller",
       url: "https://wakokoro-tea.com/products/matcha-yame-no-hana-by-hoshino-seichaen-40g",
@@ -2631,6 +2662,10 @@ export const seed = {
 
   // product photos (validated, hotlinkable) — brands not listed fall back to a colour dot
   powderImages: {
+    "The Superfood Grocer": "/powders/superfood-grocer-pure.jpg",
+    Kumatcha: "/powders/kumatcha-okashi.webp",
+    "JapanMatcha (Nagatani)": "/powders/japanmatcha-nagatani.jpg",
+    "Kyoto Whisk": "/powders/kyoto-whisk-tsukiji.png",
     "Ritual Matcha Co.":
       "https://ritualmatcha.ph/cdn/shop/files/82C527CD-8412-417F-A044-C8B35484610D-m.jpg?v=1765003806&width=1080",
     "Matcha Moments":

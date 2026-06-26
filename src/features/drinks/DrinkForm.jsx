@@ -9,7 +9,6 @@ export default function DrinkForm({ drink, isNew, existingNames, catalog, onSave
   const [name, setName] = useState(drink.name);
   const [note, setNote] = useState(drink.note);
   const [desc, setDesc] = useState(drink.desc);
-  const [milkMl, setMilkMl] = useState(drink.milkMl);
   const [srp, setSrp] = useState(drink.srp);
   const [ingredients, setIngredients] = useState(drink.ingredients);
   const [hasMatcha, setHasMatcha] = useState(drink.hasMatcha);
@@ -35,7 +34,6 @@ export default function DrinkForm({ drink, isNew, existingNames, catalog, onSave
         name: trimmed,
         note: note.trim(),
         desc: desc.trim(),
-        milkMl: Number(milkMl) || 0,
         srp: Number(srp) || 0,
         ingredients,
         hasMatcha,
@@ -102,28 +100,15 @@ export default function DrinkForm({ drink, isNew, existingNames, catalog, onSave
               placeholder="a sentence or two about the drink & how it fits the market…"
             />
           </div>
-          <div className="flex gap-3">
-            <NumberField
-              label="🥛 Milk (ml)"
-              id="df-milk"
-              className="flex-1"
-              inputClassName="text-center"
-              min="0"
-              step="10"
-              value={milkMl}
-              onChange={(e) => setMilkMl(e.target.value)}
-            />
-            <NumberField
-              label="SRP"
-              id="df-srp"
-              prefix="₱"
-              className="flex-1"
-              min="0"
-              step="5"
-              value={srp}
-              onChange={(e) => setSrp(e.target.value)}
-            />
-          </div>
+          <NumberField
+            label="SRP"
+            id="df-srp"
+            prefix="₱"
+            min="0"
+            step="5"
+            value={srp}
+            onChange={(e) => setSrp(e.target.value)}
+          />
           <div className="flex gap-2">
             <Toggle on={hasMatcha} onClick={() => setHasMatcha((v) => !v)} label="🍵 Matcha" />
             <Toggle on={hasMilk} onClick={() => setHasMilk((v) => !v)} label="🥛 Milk" />

@@ -44,6 +44,7 @@ export default function Calculator({
   });
   const [ki, setKi] = useLocalState("calc:milk", 1);
   const [dose, setDose] = useLocalState("calc:dose", 3);
+  const [milkMl, setMilkMl] = useLocalState("calc:milkml", 180);
   const [cups, setCups] = useLocalState("calc:cups", () =>
     Object.fromEntries(savedDrinks.map((n) => [n, 10])),
   );
@@ -77,7 +78,7 @@ export default function Calculator({
   const emojiOf = Object.fromEntries(ingredients.map((i) => [i.name, i.emoji]));
   const priceOf = (name) => ov[`ing:${name}`] ?? refPrice[name];
 
-  const ctx = { pricePerGram, doseGrams: dose, milkPricePerMl, priceOf, packaging, additional };
+  const ctx = { pricePerGram, doseGrams: dose, milkPricePerMl, milkMl, priceOf, packaging, additional };
   const saved = drinks.filter((d) => savedDrinks.includes(d.name));
   const cupsOf = (name) => cups[name] ?? 0;
   const srpOf = (d) => (d.name in srpMap ? srpMap[d.name] : d.srp);
@@ -107,7 +108,7 @@ export default function Calculator({
     <>
       {/* ① Recipe — selectors + per-cup overhead */}
       <section className={SECTION}>
-        <SectionTitle badge="①" title="Recipe" meta="matcha · milk · dose · per-cup overhead" />
+        <SectionTitle badge="①" title="Recipe" meta="matcha · milk · dose · volume · overhead" />
         <div className="bg-kraft border-[2.2px] border-forest rounded-card shadow-hard-sm px-5 py-[18px] max-md:p-[14px]">
           {/* two selectors on top */}
           <div className="flex gap-[18px] flex-wrap max-md:gap-3">
@@ -157,6 +158,15 @@ export default function Calculator({
               step="0.5"
               value={dose}
               onChange={(e) => setDose(Math.max(0, +e.target.value || 0))}
+            />
+            <NumberField
+              className="flex-1 min-w-[150px] max-md:basis-[45%]"
+              inputClassName="text-center"
+              label="🥛 Milk ml/cup"
+              min="0"
+              step="10"
+              value={milkMl}
+              onChange={(e) => setMilkMl(Math.max(0, +e.target.value || 0))}
             />
             <NumberField
               className="flex-1 min-w-[150px] max-md:basis-[45%]"
@@ -252,7 +262,7 @@ export default function Calculator({
             <div className="card-grid">
               {saved.map((d) => {
                 const matchaC = d.hasMatcha ? matchaCostPerCup(pricePerGram, dose) : 0;
-                const milkC = d.hasMilk ? milkCostPerCup(milkPricePerMl, d.milkMl) : 0;
+                const milkC = d.hasMilk ? milkCostPerCup(milkPricePerMl, milkMl) : 0;
                 const cogs = cogsForDrink(d, ctx);
                 const s = srpOf(d);
                 const p = profit(s, cogs);
