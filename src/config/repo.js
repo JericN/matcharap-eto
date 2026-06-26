@@ -103,6 +103,7 @@ export const repo = {
   srp: async () => (await getState()).srp,
   priceOverrides: async () => (await getState()).priceOverrides,
   expenses: async () => (await getState()).expenses,
+  expenseTabs: async () => (await getState()).expenseTabs,
 
   // ---- shared-state writes (read-modify-write the one record) ----
   toggleEvent: (name) => mutate((s) => ({ ...s, savedEvents: toggle(s.savedEvents, name) })),
@@ -231,4 +232,23 @@ export const repo = {
     })),
   removeExpense: (id) =>
     mutate((s) => ({ ...s, expenses: s.expenses.filter((r) => r.id !== id) })),
+
+  // ---- expense-planner sheets/tabs (group rows by tabId) ----
+  addExpenseTab: (tab) => mutate((s) => ({ ...s, expenseTabs: [...s.expenseTabs, tab] })),
+  renameExpenseTab: (id, name) =>
+    mutate((s) => ({
+      ...s,
+      expenseTabs: s.expenseTabs.map((t) => (t.id === id ? { ...t, name } : t)),
+    })),
+  // delete the tab AND its rows; refuse to remove the last remaining tab
+  removeExpenseTab: (id) =>
+    mutate((s) =>
+      s.expenseTabs.length <= 1
+        ? s
+        : {
+            ...s,
+            expenseTabs: s.expenseTabs.filter((t) => t.id !== id),
+            expenses: s.expenses.filter((r) => r.tabId !== id),
+          },
+    ),
 };

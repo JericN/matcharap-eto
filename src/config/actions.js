@@ -115,3 +115,18 @@ export async function removeExpense(id) {
   await repo.removeExpense(id);
   revalidatePath("/expenses");
 }
+
+export async function addExpenseTab(tab) {
+  await repo.addExpenseTab(tab);
+  revalidatePath("/expenses");
+}
+
+export async function renameExpenseTab(id, name) {
+  await repo.renameExpenseTab(id, name);
+  revalidatePath("/expenses");
+}
+
+export async function removeExpenseTab(id) {
+  await repo.removeExpenseTab(id);
+  revalidatePath("/expenses");
+}

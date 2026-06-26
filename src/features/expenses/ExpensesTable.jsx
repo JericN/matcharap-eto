@@ -1,6 +1,4 @@
 "use client";
-import { useState, useTransition } from "react";
-import { addExpense, updateExpense, removeExpense } from "@/config/actions";
 import { TextField, NumberField } from "@/components/form";
 import { lineTotal, grandTotal, sharePct } from "@/features/expenses/calc";
 
@@ -8,30 +6,8 @@ import { lineTotal, grandTotal, sharePct } from "@/features/expenses/calc";
 const peso = (n) => "₱" + n.toLocaleString("en-US", { maximumFractionDigits: 2 });
 const num = (v) => Math.max(0, Number(v) || 0);
 
-export default function ExpensesTable({ initialExpenses }) {
-  // Optimistic local list mirroring the shared store; edits persist on blur,
-  // add/delete persist immediately (same pattern as DrinksGrid / Calculator).
-  const [rows, setRows] = useState(initialExpenses);
-  const [, startTransition] = useTransition();
-
-  const editField = (id, key, value) =>
-    setRows((rs) => rs.map((r) => (r.id === id ? { ...r, [key]: value } : r)));
-  // Commit the field's latest local value (this render closes over fresh `rows`).
-  const commitField = (id, key) => {
-    const r = rows.find((x) => x.id === id);
-    if (r) startTransition(() => updateExpense(id, { [key]: r[key] }));
-  };
-
-  const addRow = () => {
-    const row = { id: crypto.randomUUID(), item: "", notes: "", price: 0, qty: 1 };
-    setRows((rs) => [...rs, row]);
-    startTransition(() => addExpense(row));
-  };
-  const deleteRow = (id) => {
-    setRows((rs) => rs.filter((r) => r.id !== id));
-    startTransition(() => removeExpense(id));
-  };
-
+export default function ExpensesTable({ rows, onAddRow, onEditField, onCommitField, onDeleteRow }) {
+  // Presentational: renders one sheet's rows; parent owns state + persistence.
   const grand = grandTotal(rows);
 
   return (
@@ -62,8 +38,8 @@ export default function ExpensesTable({ initialExpenses }) {
                       aria-label="Item name"
                       inputClassName="w-full"
                       value={r.item}
-                      onChange={(e) => editField(r.id, "item", e.target.value)}
-                      onBlur={() => commitField(r.id, "item")}
+                      onChange={(e) => onEditField(r.id, "item", e.target.value)}
+                      onBlur={() => onCommitField(r.id, "item")}
                       placeholder="e.g. Matcha powder"
                     />
                   </td>
@@ -72,8 +48,8 @@ export default function ExpensesTable({ initialExpenses }) {
                       aria-label="Notes"
                       inputClassName="w-full"
                       value={r.notes}
-                      onChange={(e) => editField(r.id, "notes", e.target.value)}
-                      onBlur={() => commitField(r.id, "notes")}
+                      onChange={(e) => onEditField(r.id, "notes", e.target.value)}
+                      onBlur={() => onCommitField(r.id, "notes")}
                       placeholder="optional note"
                     />
                   </td>
@@ -85,8 +61,8 @@ export default function ExpensesTable({ initialExpenses }) {
                       min="0"
                       step="0.5"
                       value={r.price}
-                      onChange={(e) => editField(r.id, "price", num(e.target.value))}
-                      onBlur={() => commitField(r.id, "price")}
+                      onChange={(e) => onEditField(r.id, "price", num(e.target.value))}
+                      onBlur={() => onCommitField(r.id, "price")}
                     />
                   </td>
                   <td className="px-2 py-1.5">
@@ -96,8 +72,8 @@ export default function ExpensesTable({ initialExpenses }) {
                       min="0"
                       step="1"
                       value={r.qty}
-                      onChange={(e) => editField(r.id, "qty", num(e.target.value))}
-                      onBlur={() => commitField(r.id, "qty")}
+                      onChange={(e) => onEditField(r.id, "qty", num(e.target.value))}
+                      onBlur={() => onCommitField(r.id, "qty")}
                     />
                   </td>
                   <td className="px-2 py-1.5 text-right font-mono text-[.92rem] font-medium text-forest whitespace-nowrap">
@@ -109,7 +85,7 @@ export default function ExpensesTable({ initialExpenses }) {
                   <td className="px-2 py-1.5 text-center">
                     <button
                       type="button"
-                      onClick={() => deleteRow(r.id)}
+                      onClick={() => onDeleteRow(r.id)}
                       aria-label={`Remove ${r.item || "row"}`}
                       className="font-mono text-[1rem] leading-none text-brown-soft hover:text-clay transition"
                     >
@@ -140,7 +116,7 @@ export default function ExpensesTable({ initialExpenses }) {
       <div className="mt-4">
         <button
           type="button"
-          onClick={addRow}
+          onClick={onAddRow}
           className="chip chip--active normal-case tracking-normal"
         >
           ＋ Add row

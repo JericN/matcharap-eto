@@ -213,6 +213,10 @@ export const StateSchema = z.object({
     .record(z.string(), IngredientSchema.omit({ name: true }).partial())
     .default({}), // edits to a SEED ingredient's emoji/price/link (overlay)
   deletedIngredients: z.array(z.string()).default([]), // tombstoned SEED ingredient names (hidden from the catalog)
+  // Expense-planner sheets/tabs — ordered list grouping expense rows by tabId.
+  expenseTabs: z
+    .array(z.object({ id: z.string(), name: z.string().default("") }))
+    .default([{ id: "default", name: "Sheet 1" }]),
   // Expense-planner line items — an ordered array (not a name-keyed record):
   // items repeat, may be blank while typing, and need a stable id for React
   // keys + targeted update/delete. `id` is generated client-side.
@@ -220,6 +224,7 @@ export const StateSchema = z.object({
     .array(
       z.object({
         id: z.string(),
+        tabId: z.string().default("default"), // which sheet/tab this row belongs to
         item: z.string().default(""),
         notes: z.string().default(""),
         price: z.number().nonnegative().default(0), // ₱ per unit
